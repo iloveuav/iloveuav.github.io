@@ -8,14 +8,14 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JavaEE-Spring JDBC&amp;JUnit 连接MySql（Java代码idea实现） | Hfly(汇飞工作室技术分享博客)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、Spring JDBC1、Spring jdbc Template 的解析 jdbcTemplate类（Spring框架数据抽象层的基础 也是Spring JDBC的核心类） JdbcTemplate主要提供以下五类方法： execute方法：可以用于执行任何SQL语句，一般用于执行DDL语句；update方法：update方法用于执行新增、修改、删除等语句；batchUpdate方法：bat">
+  <meta name="description" content="上课的时候顺便记了点笔记关于Spring jdbc 基础、Junit及相关测试代码">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaEE-Spring JDBC&amp;JUnit 连接MySql（Java代码idea实现）">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;11&#x2F;JavaEE-Spring-JDBC-JUnit-%E8%BF%9E%E6%8E%A5MySql%EF%BC%88Java%E4%BB%A3%E7%A0%81idea%E5%AE%9E%E7%8E%B0%EF%BC%89&#x2F;index.html">
 <meta property="og:site_name" content="Hfly(汇飞工作室技术分享博客)">
-<meta property="og:description" content="一、Spring JDBC1、Spring jdbc Template 的解析 jdbcTemplate类（Spring框架数据抽象层的基础 也是Spring JDBC的核心类） JdbcTemplate主要提供以下五类方法： execute方法：可以用于执行任何SQL语句，一般用于执行DDL语句；update方法：update方法用于执行新增、修改、删除等语句；batchUpdate方法：bat">
+<meta property="og:description" content="上课的时候顺便记了点笔记关于Spring jdbc 基础、Junit及相关测试代码">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-11T02:57:10.994Z">
+<meta property="og:updated_time" content="2019-11-11T03:03:24.266Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hfly(汇飞工作室技术分享博客)" type="application/atom+xml">
@@ -176,7 +176,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、Spring-JDBC"><a href="#一、Spring-JDBC" class="headerlink" title="一、Spring JDBC"></a>一、Spring JDBC</h2><p>1、Spring jdbc Template 的解析</p>
+        <p>上课的时候顺便记了点笔记<br>关于Spring jdbc 基础、Junit及相关测试代码</p>
+<a id="more"></a>
+
+<h2 id="一、Spring-JDBC"><a href="#一、Spring-JDBC" class="headerlink" title="一、Spring JDBC"></a>一、Spring JDBC</h2><p>1、Spring jdbc Template 的解析</p>
 <p>jdbcTemplate类（Spring框架数据抽象层的基础 也是Spring JDBC的核心类）</p>
 <p>JdbcTemplate主要提供以下五类方法：</p>
 <p>execute方法：可以用于执行任何SQL语句，一般用于执行DDL语句；<br>update方法：update方法用于执行新增、修改、删除等语句；<br>batchUpdate方法：batchUpdate方法用于执行批处理相关语句；<br>query方法及queryForXXX方法：用于执行查询相关语句；<br>call方法：用于执行存储过程、函数相关语句。</p>

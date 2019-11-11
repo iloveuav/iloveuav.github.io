@@ -177,92 +177,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、Spring-JDBC"><a href="#一、Spring-JDBC" class="headerlink" title="一、Spring JDBC"></a>一、Spring JDBC</h2><p>1、Spring jdbc Template 的解析</p>
-<p>jdbcTemplate类（Spring框架数据抽象层的基础 也是Spring JDBC的核心类）</p>
-<p>JdbcTemplate主要提供以下五类方法：</p>
-<p>execute方法：可以用于执行任何SQL语句，一般用于执行DDL语句；<br>update方法：update方法用于执行新增、修改、删除等语句；<br>batchUpdate方法：batchUpdate方法用于执行批处理相关语句；<br>query方法及queryForXXX方法：用于执行查询相关语句；<br>call方法：用于执行存储过程、函数相关语句。</p>
-<p>DataSoutce:获取数据库连接<br>SQLExceptionTranslator:完成转译工作<br>jdbcOperations:定义操作集合：增加、删除、修改等</p>
-<p>2、Spring JDBC的配置</p>
-<?xml version="1.0" encoding="UTF-8"?>
-<p><beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans 
-     http://www.springframework.org/schema/beans/spring-beans-4.3.xsd"><br>    <!-- 1配置数据源 --><br>    <bean id="dataSource" class=
-     "org.springframework.jdbc.datasource.DriverManagerDataSource"><br>        <!--数据库驱动 --><br>        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver" /></p>
-<!--        //com.mysql.jdbc.Driver-->
-<pre><code>    &lt;!--连接数据库的url --&gt;
-    &lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://localhost:3306/spring?serverTimezone=GMT&quot; /&gt;
-    &lt;!--连接数据库的用户名 --&gt;
-    &lt;property name=&quot;username&quot; value=&quot;root&quot; /&gt;
-    &lt;!--连接数据库的密码 --&gt;
-    &lt;property name=&quot;password&quot; value=&quot;123456&quot; /&gt;
-&lt;/bean&gt;
-&lt;!-- 2配置JDBC模板 --&gt;
-&lt;bean id=&quot;jdbcTemplate&quot; 
-       class=&quot;org.springframework.jdbc.core.JdbcTemplate&quot;&gt;
-    &lt;!-- 默认必须使用数据源 --&gt;
-    &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt;
-&lt;/bean&gt;
-
-&lt;!--定义id为accountDao的Bean--&gt;
-&lt;bean id=&quot;accountDao&quot; class=&quot;com.itheima.jdbc.AccountDaoImpl&quot;&gt;
-    &lt;!-- 将jdbcTemplate注入到accountDao实例中 --&gt;
-    &lt;property name=&quot;jdbcTemplate&quot; ref=&quot;jdbcTemplate&quot; /&gt;
-&lt;/bean&gt;</code></pre></beans>
-
-
-<h2 id="二、Spring-jdbcTemplate的常用方法"><a href="#二、Spring-jdbcTemplate的常用方法" class="headerlink" title="二、Spring jdbcTemplate的常用方法"></a>二、Spring jdbcTemplate的常用方法</h2><p>  1、execute()   :execute(String sql) 方法可以完成执行SQL语句的功能 例子如下<br>       public static void main(String[] args) {<br>        // 加载配置文件<br>        ApplicationContext applicationContext =<br>           new ClassPathXmlApplicationContext(“applicationContext.xml”);<br>        // 获取JdbcTemplate实例<br>        JdbcTemplate jdTemplate =<br>               (JdbcTemplate) applicationContext.getBean(“jdbcTemplate”);<br>        // 使用execute()方法执行SQL语句，创建用户账户管理表account<br>        jdTemplate.execute(“create table account(“ +<br>                             “id int primary key auto_increment,” +<br>                             “username varchar(50),” +<br>                             “balance double)”);<br>        System.out.println(“账户表account创建成功！”);</p>
-<p>下面这部分可以用来测试连接数据库  上面是基于applicationContext.xml来连接数据库  下面则是传统的直接连接<br>//        Connection conn=null;<br>//        try<br>//        {<br>//            Class.forName(“com.mysql.cj.jdbc.Driver”);// 加载驱动程序，此次无需更改<br>//            System.out.println(“registered success!”);//输出registered success表示驱动加载成功<br>//            //创建对象连接，连接数据库，此例中employeedbms为数据库名，root为用户名，123456位密码，该三项均需根据实际情况进行修改，其它代码无需变动。注：确保数据库名、用户名和密码的准确性。<br>////            conn = (Connection) DriverManager.getConnection(“jdbc:mysql://localhost:3306/spring?useSSL=false&amp;serverTimezone=UTC”,”root”,”123456”);<br>//            conn = (Connection) DriverManager.getConnection(“jdbc:mysql://127.0.0.1:3306/spring?useSSL=true&amp;serverTimezone=GMT”, “root”, “123456”);<br>//            System.out.println(“connection success!”);//输出connection success表示数据库已成功连接<br>//            conn.close();<br>//        }<br>//        catch(Exception e)<br>//        {<br>//            System.out.println(e);<br>//        }<br>//        finally{<br>//        }</p>
-<pre><code>}</code></pre><p>代码例子（实现数据库中增加Acountl类型的一条记录、修改及删除）</p>
-<p>—————————————Account类———————————————–</p>
-<p>package com.itheima.jdbc;<br>public class Account {<br>    private Integer id;       // 账户id<br>    private String username; // 用户名<br>    private Double balance;  // 账户余额<br>    public Integer getId() {<br>        return id;<br>    }<br>    public void setId(Integer id) {<br>        this.id = id;<br>    }<br>    public String getUsername() {<br>        return username;<br>    }<br>    public void setUsername(String username) {<br>        this.username = username;<br>    }<br>    public Double getBalance() {<br>        return balance;<br>    }<br>    public void setBalance(Double balance) {<br>        this.balance = balance;<br>    }<br>    public String toString() {<br>        return “Account [id=” + id + “, “<br>                + “username=” + username +<br>                “, balance=” + balance + “]”;<br>    }<br>}</p>
-<p>————————————-AccountDao接口————————————————–<br>package com.itheima.jdbc;</p>
-<p>import java.util.List;</p>
-<p>public interface AccountDao {<br>    // 添加<br>    public int addAccount(Account account);<br>    // 更新<br>    public int updateAccount(Account account);<br>    // 删除<br>    public int deleteAccount(int id);</p>
-<pre><code>// 通过id查询
-public Account findAccountById(int id);
-// 查询所有账户
-public List&lt;Account&gt; findAllAccount();</code></pre><p>}</p>
-<p>————————————–实现方法的具体类AccountDaoImpl————————————-</p>
-<p>package com.itheima.jdbc;<br>import java.util.List;</p>
-<p>import org.springframework.jdbc.core.BeanPropertyRowMapper;<br>import org.springframework.jdbc.core.JdbcTemplate;<br>import org.springframework.jdbc.core.RowMapper;<br>public class AccountDaoImpl implements AccountDao {<br>    // 声明JdbcTemplate属性及其setter方法<br>    private JdbcTemplate jdbcTemplate;<br>    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {<br>        this.jdbcTemplate = jdbcTemplate;<br>    }<br>    // 添加账户<br>    public int addAccount(Account account) {<br>        // 定义SQL<br>        String sql = “insert into account(id,username,balance) value(?,?,?)”;<br>        // 定义数组来存放SQL语句中的参数<br>        Object[] obj = new Object[] {<br>                           account.getId(),<br>                           account.getUsername(),<br>                           account.getBalance()<br>         };<br>        // 执行添加操作，返回的是受SQL语句影响的记录条数<br>        int num = this.jdbcTemplate.update(sql, obj);<br>        return num;<br>    }<br>    // 更新账户<br>    public int updateAccount(Account account) {<br>        // 定义SQL<br>        String sql = “update account set username=?,balance=? where id = ?”;<br>        // 定义数组来存放SQL语句中的参数<br>        Object[] params = new Object[] {<br>                               account.getUsername(),<br>                               account.getBalance(),<br>                               account.getId()<br>          };<br>        // 执行添加操作，返回的是受SQL语句影响的记录条数<br>        int num = this.jdbcTemplate.update(sql, params);<br>        return num;<br>    }<br>    // 删除账户<br>    public int deleteAccount(int id) {<br>        // 定义SQL<br>        String sql = “delete  from account where id = ? “;<br>        // 执行添加操作，返回的是受SQL语句影响的记录条数<br>        int num = this.jdbcTemplate.update(sql, id);<br>        return num;<br>    }</p>
-<pre><code>// 通过id查询账户数据信息
-public Account findAccountById(int id) {
-    //定义SQL语句
-    String sql = &quot;select * from account where id = ?&quot;;
-    // 创建一个新的BeanPropertyRowMapper对象
-    RowMapper&lt;Account&gt; rowMapper = 
-new BeanPropertyRowMapper&lt;Account&gt;(Account.class);
-    // 将id绑定到SQL语句中，并通过RowMapper返回一个Object类型的单行记录
-    return this.jdbcTemplate.queryForObject(sql, rowMapper, id);
-}
-// 查询所有账户信息
-public List&lt;Account&gt; findAllAccount() {
-    // 定义SQL语句
-    String sql = &quot;select * from account&quot;;
-    // 创建一个新的BeanPropertyRowMapper对象
-    RowMapper&lt;Account&gt; rowMapper = 
-new BeanPropertyRowMapper&lt;Account&gt;(Account.class);
-    // 执行静态的SQL查询，并通过RowMapper返回结果
-    return this.jdbcTemplate.query(sql, rowMapper);
-}</code></pre><p>}</p>
-<p>————————————–测试类JdbcTemplateTest（里面包含Junit测试）————————————-<br>package com.itheima.jdbc;<br>import java.sql.Connection;<br>import java.sql.DriverManager;<br>import java.util.List;</p>
-<p>//import org.junit.Test;</p>
-<p>import org.springframework.context.ApplicationContext;<br>import<br>     org.springframework.context.support.ClassPathXmlApplicationContext;<br>import org.springframework.jdbc.core.JdbcTemplate;<br>public class JdbcTemplateTest {<br>    /**<br>     * 使用execute()方法建表<br>     */<br>    public static void main(String[] args) {<br>        // 加载配置文件<br>        ApplicationContext applicationContext =<br>           new ClassPathXmlApplicationContext(“applicationContext.xml”);<br>        // 获取JdbcTemplate实例<br>        JdbcTemplate jdTemplate =<br>               (JdbcTemplate) applicationContext.getBean(“jdbcTemplate”);<br>        // 使用execute()方法执行SQL语句，创建用户账户管理表account<br>        jdTemplate.execute(“create table account(“ +<br>                             “id int primary key auto_increment,” +<br>                             “username varchar(50),” +<br>                             “balance double)”);<br>        System.out.println(“账户表account创建成功！”);</p>
-<p>//        Connection conn=null;<br>//        try<br>//        {<br>//            Class.forName(“com.mysql.cj.jdbc.Driver”);// 加载驱动程序，此次无需更改<br>//            System.out.println(“registered success!”);//输出registered success表示驱动加载成功<br>//            //创建对象连接，连接数据库，此例中employeedbms为数据库名，root为用户名，123456位密码，该三项均需根据实际情况进行修改，其它代码无需变动。注：确保数据库名、用户名和密码的准确性。<br>////            conn = (Connection) DriverManager.getConnection(“jdbc:mysql://localhost:3306/spring?useSSL=false&amp;serverTimezone=UTC”,”root”,”123456”);<br>//            conn = (Connection) DriverManager.getConnection(“jdbc:mysql://127.0.0.1:3306/spring?useSSL=true&amp;serverTimezone=GMT”, “root”, “123456”);<br>//            System.out.println(“connection success!”);//输出connection success表示数据库已成功连接<br>//            conn.close();<br>//        }<br>//        catch(Exception e)<br>//        {<br>//            System.out.println(e);<br>//        }<br>//        finally{<br>//        }</p>
-<pre><code>}</code></pre><p>//    —————————jUNIT TEST——————————————<br>    @org.junit.Test<br>    public void mainTest() {<br>        // 加载配置文件<br>        ApplicationContext applicationContext =<br>                new ClassPathXmlApplicationContext(“applicationContext.xml”);<br>        // 获取JdbcTemplate实例<br>        JdbcTemplate jdTemplate =<br>                (JdbcTemplate) applicationContext.getBean(“jdbcTemplate”);<br>        // 使用execute()方法执行SQL语句，创建用户账户管理表account<br>        jdTemplate.execute(“create table account(“ +<br>                “id int primary key auto_increment,” +<br>                “username varchar(50),” +<br>                “balance double)”);<br>        System.out.println(“账户表account创建成功！”);<br>    }</p>
-<p>//    @Test<br>    @org.junit.Test<br>    public void addAccountTest() {<br>        // 加载配置文件<br>        ApplicationContext applicationContext =<br>                new ClassPathXmlApplicationContext(“applicationContext.xml”);<br>        // 获取AccountDao实例<br>        AccountDao accountDao =<br>                (AccountDao) applicationContext.getBean(“accountDao”);<br>        // 创建Account对象，并向Account对象中添加数据<br>        Account account = new Account();<br>        account.setId(1);<br>        account.setUsername(“tom”);<br>        account.setBalance(1000.00);<br>        // 执行addAccount()方法，并获取返回结果<br>        int num = accountDao.addAccount(account);<br>        if (num &gt; 0) {<br>            System.out.println(“成功插入了” + num + “条数据！”);<br>        } else {<br>            System.out.println(“插入操作执行失败！”);<br>        }<br>    }</p>
-<p>//    @Test<br>        @org.junit.Test<br>    public void updateAccountTest() {<br>        // 加载配置文件<br>        ApplicationContext applicationContext =<br>                new ClassPathXmlApplicationContext(“applicationContext.xml”);<br>        // 获取AccountDao实例<br>        AccountDao accountDao =<br>                (AccountDao) applicationContext.getBean(“accountDao”);<br>        // 创建Account对象，并向Account对象中添加数据<br>        Account account = new Account();<br>        account.setId(2);<br>        account.setUsername(“tom”);<br>        account.setBalance(2000.00);<br>        // 执行updateAccount()方法，并获取返回结果<br>        int num = accountDao.updateAccount(account);<br>        if (num &gt; 0) {<br>            System.out.println(“成功修改了” + num + “条数据！”);<br>        } else {<br>            System.out.println(“修改操作执行失败！”);<br>        }<br>    }</p>
-<p>//    @Test<br>    @org.junit.Test<br>    public void deleteAccountTest() {<br>        // 加载配置文件<br>        ApplicationContext applicationContext =<br>                new ClassPathXmlApplicationContext(“applicationContext.xml”);<br>        // 获取AccountDao实例<br>        AccountDao accountDao =<br>                (AccountDao) applicationContext.getBean(“accountDao”);<br>        // 执行deleteAccount()方法，并获取返回结果<br>        int num = accountDao.deleteAccount(1);<br>        if (num &gt; 0) {<br>            System.out.println(“成功删除了” + num + “条数据！”);<br>        } else {<br>            System.out.println(“删除操作执行失败！”);<br>        }<br>    }</p>
-<p>//    @Test<br>        @org.junit.Test<br>    public void findAccountByIdTest() {<br>        // 加载配置文件<br>        ApplicationContext applicationContext =<br>                new ClassPathXmlApplicationContext(“applicationContext.xml”);<br>        // 获取AccountDao实例<br>        AccountDao accountDao =<br>                (AccountDao) applicationContext.getBean(“accountDao”);<br>        // 执行findAccountById()方法<br>        Account account = accountDao.findAccountById(1);<br>        System.out.println(account);<br>    }</p>
-<p>//    @Test<br>    @org.junit.Test<br>    public void findAllAccountTest() {<br>        // 加载配置文件<br>        ApplicationContext applicationContext =<br>                new ClassPathXmlApplicationContext(“applicationContext.xml”);<br>        // 获取AccountDao实例<br>        AccountDao accountDao =<br>                (AccountDao) applicationContext.getBean(“accountDao”);<br>        // 执行findAllAccount()方法,获取Account对象的集合<br>        List<Account> account = accountDao.findAllAccount();<br>        // 循环输出集合中的对象<br>        for (Account act : account) {<br>            System.out.println(act);<br>        }<br>    }<br>}</p>
-<h3 id="jdbcTemplate类中的提供了大量query-方法来处理各种查询操作"><a href="#jdbcTemplate类中的提供了大量query-方法来处理各种查询操作" class="headerlink" title="jdbcTemplate类中的提供了大量query()方法来处理各种查询操作"></a>jdbcTemplate类中的提供了大量query()方法来处理各种查询操作</h3><p>在AccountDao中，分别创建一个通过id查单个的和查询所有账户的方法</p>
-<pre><code>// 通过id查询
-public Account findAccountById(int id);
-// 查询所有账户
-public List&lt;Account&gt; findAllAccount();</code></pre><p>在实现类中加入（上面的实现类其实已经加好了）运行测试类即可</p>
-<p>// 通过id查询账户数据信息<br>    public Account findAccountById(int id) {<br>        //定义SQL语句<br>        String sql = “select * from account where id = ?”;<br>        // 创建一个新的BeanPropertyRowMapper对象<br>        RowMapper<Account> rowMapper =<br>    new BeanPropertyRowMapper<Account>(Account.class);<br>        // 将id绑定到SQL语句中，并通过RowMapper返回一个Object类型的单行记录<br>        return this.jdbcTemplate.queryForObject(sql, rowMapper, id);<br>    }<br>    // 查询所有账户信息<br>    public List<Account> findAllAccount() {<br>        // 定义SQL语句<br>        String sql = “select * from account”;<br>        // 创建一个新的BeanPropertyRowMapper对象<br>        RowMapper<Account> rowMapper =<br>    new BeanPropertyRowMapper<Account>(Account.class);<br>        // 执行静态的SQL查询，并通过RowMapper返回结果<br>        return this.jdbcTemplate.query(sql, rowMapper);<br>    }</p>
-
+        <p>上课的时候顺便记了点笔记<br>关于Spring jdbc 基础、Junit及相关测试代码</p>
+        
+          <a class="article-more-a" href="/2019/11/11/JavaEE-Spring-JDBC-JUnit-%E8%BF%9E%E6%8E%A5MySql%EF%BC%88Java%E4%BB%A3%E7%A0%81idea%E5%AE%9E%E7%8E%B0%EF%BC%89/#more">more >></a>
+        
       
 
       
