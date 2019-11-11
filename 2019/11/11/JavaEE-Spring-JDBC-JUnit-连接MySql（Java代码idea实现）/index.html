@@ -9,13 +9,14 @@
   <title>JavaEE-Spring JDBC&amp;JUnit 连接MySql（Java代码idea实现） | Hfly(汇飞工作室技术分享博客)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="上课的时候顺便记了点笔记主要关于Spring jdbcTemplate对象、Junit使用及相关测试代码 Spring 框架对JDBC的简单封装 提供一个JDBC Template对象简化JDBC的开发JDBC模块主要负责数据库资源管理和错误处理~">
+<meta name="keywords" content="Sping,JUNIT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaEE-Spring JDBC&amp;JUnit 连接MySql（Java代码idea实现）">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;11&#x2F;JavaEE-Spring-JDBC-JUnit-%E8%BF%9E%E6%8E%A5MySql%EF%BC%88Java%E4%BB%A3%E7%A0%81idea%E5%AE%9E%E7%8E%B0%EF%BC%89&#x2F;index.html">
 <meta property="og:site_name" content="Hfly(汇飞工作室技术分享博客)">
 <meta property="og:description" content="上课的时候顺便记了点笔记主要关于Spring jdbcTemplate对象、Junit使用及相关测试代码 Spring 框架对JDBC的简单封装 提供一个JDBC Template对象简化JDBC的开发JDBC模块主要负责数据库资源管理和错误处理~">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-11T03:14:34.360Z">
+<meta property="og:updated_time" content="2019-11-11T03:41:18.932Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hfly(汇飞工作室技术分享博客)" type="application/atom+xml">
@@ -169,7 +170,7 @@
 
         
         <a href="/2019/11/11/JavaEE-Spring-JDBC-JUnit-%E8%BF%9E%E6%8E%A5MySql%EF%BC%88Java%E4%BB%A3%E7%A0%81idea%E5%AE%9E%E7%8E%B0%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2019-11-11T02:30:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-11</time>
+  	<time datetime="2019-11-11T02:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-11</time>
 </a>
         
       </header>
@@ -227,7 +228,7 @@
 public Account findAccountById(int id);
 // 查询所有账户
 public List&lt;Account&gt; findAllAccount();</code></pre><p>}</p>
-<h4 id="———实现方法的具体类AccountDaoImpl———"><a href="#———实现方法的具体类AccountDaoImpl———" class="headerlink" title="———实现方法的具体类AccountDaoImpl———-"></a>———实现方法的具体类AccountDaoImpl———-</h4><p>package com.itheima.jdbc;<br>import java.util.List;</p>
+<h4 id="—实现方法的具体类AccountDaoImpl—"><a href="#—实现方法的具体类AccountDaoImpl—" class="headerlink" title="—实现方法的具体类AccountDaoImpl—"></a>—实现方法的具体类AccountDaoImpl—</h4><p>package com.itheima.jdbc;<br>import java.util.List;</p>
 <p>import org.springframework.jdbc.core.BeanPropertyRowMapper;<br>import org.springframework.jdbc.core.JdbcTemplate;<br>import org.springframework.jdbc.core.RowMapper;<br>public class AccountDaoImpl implements AccountDao {<br>    // 声明JdbcTemplate属性及其setter方法<br>    private JdbcTemplate jdbcTemplate;<br>    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {<br>        this.jdbcTemplate = jdbcTemplate;<br>    }<br>    // 添加账户<br>    public int addAccount(Account account) {<br>        // 定义SQL<br>        String sql = “insert into account(id,username,balance) value(?,?,?)”;<br>        // 定义数组来存放SQL语句中的参数<br>        Object[] obj = new Object[] {<br>                           account.getId(),<br>                           account.getUsername(),<br>                           account.getBalance()<br>         };<br>        // 执行添加操作，返回的是受SQL语句影响的记录条数<br>        int num = this.jdbcTemplate.update(sql, obj);<br>        return num;<br>    }<br>    // 更新账户<br>    public int updateAccount(Account account) {<br>        // 定义SQL<br>        String sql = “update account set username=?,balance=? where id = ?”;<br>        // 定义数组来存放SQL语句中的参数<br>        Object[] params = new Object[] {<br>                               account.getUsername(),<br>                               account.getBalance(),<br>                               account.getId()<br>          };<br>        // 执行添加操作，返回的是受SQL语句影响的记录条数<br>        int num = this.jdbcTemplate.update(sql, params);<br>        return num;<br>    }<br>    // 删除账户<br>    public int deleteAccount(int id) {<br>        // 定义SQL<br>        String sql = “delete  from account where id = ? “;<br>        // 执行添加操作，返回的是受SQL语句影响的记录条数<br>        int num = this.jdbcTemplate.update(sql, id);<br>        return num;<br>    }</p>
 <pre><code>// 通过id查询账户数据信息
 public Account findAccountById(int id) {
@@ -249,11 +250,11 @@ new BeanPropertyRowMapper&lt;Account&gt;(Account.class);
     // 执行静态的SQL查询，并通过RowMapper返回结果
     return this.jdbcTemplate.query(sql, rowMapper);
 }</code></pre><p>}</p>
-<h4 id="———测试类JdbcTemplateTest（里面包含Junit测试）———"><a href="#———测试类JdbcTemplateTest（里面包含Junit测试）———" class="headerlink" title="———测试类JdbcTemplateTest（里面包含Junit测试）———-"></a>———测试类JdbcTemplateTest（里面包含Junit测试）———-</h4><p>package com.itheima.jdbc;<br>import java.sql.Connection;<br>import java.sql.DriverManager;<br>import java.util.List;</p>
+<h4 id="—测试类JdbcTemplateTest（里面包含Junit测试）—"><a href="#—测试类JdbcTemplateTest（里面包含Junit测试）—" class="headerlink" title="—测试类JdbcTemplateTest（里面包含Junit测试）—"></a>—测试类JdbcTemplateTest（里面包含Junit测试）—</h4><p>package com.itheima.jdbc;<br>import java.sql.Connection;<br>import java.sql.DriverManager;<br>import java.util.List;</p>
 <p>//import org.junit.Test;</p>
 <p>import org.springframework.context.ApplicationContext;<br>import<br>     org.springframework.context.support.ClassPathXmlApplicationContext;<br>import org.springframework.jdbc.core.JdbcTemplate;<br>public class JdbcTemplateTest {<br>    /**<br>     * 使用execute()方法建表<br>     */<br>    public static void main(String[] args) {<br>        // 加载配置文件<br>        ApplicationContext applicationContext =<br>           new ClassPathXmlApplicationContext(“applicationContext.xml”);<br>        // 获取JdbcTemplate实例<br>        JdbcTemplate jdTemplate =<br>               (JdbcTemplate) applicationContext.getBean(“jdbcTemplate”);<br>        // 使用execute()方法执行SQL语句，创建用户账户管理表account<br>        jdTemplate.execute(“create table account(“ +<br>                             “id int primary key auto_increment,” +<br>                             “username varchar(50),” +<br>                             “balance double)”);<br>        System.out.println(“账户表account创建成功！”);</p>
 <p>//        Connection conn=null;<br>//        try<br>//        {<br>//            Class.forName(“com.mysql.cj.jdbc.Driver”);// 加载驱动程序，此次无需更改<br>//            System.out.println(“registered success!”);//输出registered success表示驱动加载成功<br>//            //创建对象连接，连接数据库，此例中employeedbms为数据库名，root为用户名，123456位密码，该三项均需根据实际情况进行修改，其它代码无需变动。注：确保数据库名、用户名和密码的准确性。<br>////            conn = (Connection) DriverManager.getConnection(“jdbc:mysql://localhost:3306/spring?useSSL=false&amp;serverTimezone=UTC”,”root”,”123456”);<br>//            conn = (Connection) DriverManager.getConnection(“jdbc:mysql://127.0.0.1:3306/spring?useSSL=true&amp;serverTimezone=GMT”, “root”, “123456”);<br>//            System.out.println(“connection success!”);//输出connection success表示数据库已成功连接<br>//            conn.close();<br>//        }<br>//        catch(Exception e)<br>//        {<br>//            System.out.println(e);<br>//        }<br>//        finally{<br>//        }</p>
-<pre><code>}</code></pre><p>//    —————————jUNIT TEST——————————————<br>    @org.junit.Test<br>    public void mainTest() {<br>        // 加载配置文件<br>        ApplicationContext applicationContext =<br>                new ClassPathXmlApplicationContext(“applicationContext.xml”);<br>        // 获取JdbcTemplate实例<br>        JdbcTemplate jdTemplate =<br>                (JdbcTemplate) applicationContext.getBean(“jdbcTemplate”);<br>        // 使用execute()方法执行SQL语句，创建用户账户管理表account<br>        jdTemplate.execute(“create table account(“ +<br>                “id int primary key auto_increment,” +<br>                “username varchar(50),” +<br>                “balance double)”);<br>        System.out.println(“账户表account创建成功！”);<br>    }</p>
+<pre><code>}</code></pre><p>//    —————————jUNIT TEST——————-<br>    @org.junit.Test<br>    public void mainTest() {<br>        // 加载配置文件<br>        ApplicationContext applicationContext =<br>                new ClassPathXmlApplicationContext(“applicationContext.xml”);<br>        // 获取JdbcTemplate实例<br>        JdbcTemplate jdTemplate =<br>                (JdbcTemplate) applicationContext.getBean(“jdbcTemplate”);<br>        // 使用execute()方法执行SQL语句，创建用户账户管理表account<br>        jdTemplate.execute(“create table account(“ +<br>                “id int primary key auto_increment,” +<br>                “username varchar(50),” +<br>                “balance double)”);<br>        System.out.println(“账户表account创建成功！”);<br>    }</p>
 <p>//    @Test<br>    @org.junit.Test<br>    public void addAccountTest() {<br>        // 加载配置文件<br>        ApplicationContext applicationContext =<br>                new ClassPathXmlApplicationContext(“applicationContext.xml”);<br>        // 获取AccountDao实例<br>        AccountDao accountDao =<br>                (AccountDao) applicationContext.getBean(“accountDao”);<br>        // 创建Account对象，并向Account对象中添加数据<br>        Account account = new Account();<br>        account.setId(1);<br>        account.setUsername(“tom”);<br>        account.setBalance(1000.00);<br>        // 执行addAccount()方法，并获取返回结果<br>        int num = accountDao.addAccount(account);<br>        if (num &gt; 0) {<br>            System.out.println(“成功插入了” + num + “条数据！”);<br>        } else {<br>            System.out.println(“插入操作执行失败！”);<br>        }<br>    }</p>
 <p>//    @Test<br>        @org.junit.Test<br>    public void updateAccountTest() {<br>        // 加载配置文件<br>        ApplicationContext applicationContext =<br>                new ClassPathXmlApplicationContext(“applicationContext.xml”);<br>        // 获取AccountDao实例<br>        AccountDao accountDao =<br>                (AccountDao) applicationContext.getBean(“accountDao”);<br>        // 创建Account对象，并向Account对象中添加数据<br>        Account account = new Account();<br>        account.setId(2);<br>        account.setUsername(“tom”);<br>        account.setBalance(2000.00);<br>        // 执行updateAccount()方法，并获取返回结果<br>        int num = accountDao.updateAccount(account);<br>        if (num &gt; 0) {<br>            System.out.println(“成功修改了” + num + “条数据！”);<br>        } else {<br>            System.out.println(“修改操作执行失败！”);<br>        }<br>    }</p>
 <p>//    @Test<br>    @org.junit.Test<br>    public void deleteAccountTest() {<br>        // 加载配置文件<br>        ApplicationContext applicationContext =<br>                new ClassPathXmlApplicationContext(“applicationContext.xml”);<br>        // 获取AccountDao实例<br>        AccountDao accountDao =<br>                (AccountDao) applicationContext.getBean(“accountDao”);<br>        // 执行deleteAccount()方法，并获取返回结果<br>        int num = accountDao.deleteAccount(1);<br>        if (num &gt; 0) {<br>            System.out.println(“成功删除了” + num + “条数据！”);<br>        } else {<br>            System.out.println(“删除操作执行失败！”);<br>        }<br>    }</p>
@@ -294,7 +295,33 @@ public List&lt;Account&gt; findAllAccount();</code></pre><p>在实现类中加�
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">Sping</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">JUNIT</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Spring//" class="article-tag-list-link color2">Spring</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -357,6 +384,15 @@ public List&lt;Account&gt; findAllAccount();</code></pre><p>在实现类中加�
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/11/11/Spring-%E7%9A%84%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Spring 的事务管理
+        
+      </div>
+    </a>
   
   
     <a href="/2019/11/10/myfirst-0-0/" id="article-nav-older" class="article-nav-link-wrap">
@@ -484,6 +520,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">Sping</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">JUNIT</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
