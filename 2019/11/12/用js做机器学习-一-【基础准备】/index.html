@@ -6,15 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/11 | Hfly(汇飞工作室技术分享博客)</title>
+  <title>用js做机器学习(一)【基础准备】 | Hfly(汇飞工作室技术分享博客)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="one todays is worth two tomorrows">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hfly(汇飞工作室技术分享博客)">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;11&#x2F;index.html">
+  <meta name="description" content="还是很想用JS实现数据预处理来跑机器学习算法开始之前首先要对JS的一些基础知识有了解 比如Js的数据类型、正则表达式、类型转换等（此文将不断扩充）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用js做机器学习(一)【基础准备】">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;12&#x2F;%E7%94%A8js%E5%81%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E4%B8%80-%E3%80%90%E5%9F%BA%E7%A1%80%E5%87%86%E5%A4%87%E3%80%91&#x2F;index.html">
 <meta property="og:site_name" content="Hfly(汇飞工作室技术分享博客)">
-<meta property="og:description" content="one todays is worth two tomorrows">
+<meta property="og:description" content="还是很想用JS实现数据预处理来跑机器学习算法开始之前首先要对JS的一些基础知识有了解 比如Js的数据类型、正则表达式、类型转换等（此文将不断扩充）">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-11-12T01:11:24.976Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hfly(汇飞工作室技术分享博客)" type="application/atom+xml">
@@ -167,156 +168,224 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-用js做机器学习-一-【基础准备】" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      用js做机器学习(一)【基础准备】
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/12/%E7%94%A8js%E5%81%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E4%B8%80-%E3%80%90%E5%9F%BA%E7%A1%80%E5%87%86%E5%A4%87%E3%80%91/" class="archive-article-date">
+
+        
+        <a href="/2019/11/12/%E7%94%A8js%E5%81%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E4%B8%80-%E3%80%90%E5%9F%BA%E7%A1%80%E5%87%86%E5%A4%87%E3%80%91/" class="archive-article-date">
   	<time datetime="2019-11-12T00:43:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-12</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/12/%E7%94%A8js%E5%81%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E4%B8%80-%E3%80%90%E5%9F%BA%E7%A1%80%E5%87%86%E5%A4%87%E3%80%91/">用js做机器学习(一)【基础准备】</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>还是很想用JS实现数据预处理来跑机器学习算法<br>开始之前首先要对JS的一些基础知识有了解 比如Js的数据类型、正则表达式、类型转换等（此文将不断扩充）</p>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
-          
+<h2 id="一、Js数据类型"><a href="#一、Js数据类型" class="headerlink" title="一、Js数据类型"></a>一、Js数据类型</h2><p>字符串值，数值，布尔值，数组，对象。</p>
+<p>JavaScript 变量能够保存多种数据类型：数值、字符串值、数组、对象等等：</p>
+<p>数据类型的概念<br>在编程过程中，数据类型是重要的概念。</p>
+<p>为了能够操作变量，了解数据类型是很重要的。</p>
+<p>如果没有数据类型，计算机就无法安全地解决这道题：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var x = &quot;XiaoMi&quot;+6;</span><br></pre></td></tr></table></figure>
+<p>x的结果为：XiaoMi6</p>
+<p>JavaScript 从左向右计算表达式。不同的次序会产生不同的结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var x = &quot;XiaoMi&quot;+6+&quot;plus&quot;;</span><br></pre></td></tr></table></figure>
 
+<p>x的结果为：XiaoMi6plus</p>
+<h5 id="JavaScript-拥有动态类型"><a href="#JavaScript-拥有动态类型" class="headerlink" title="JavaScript 拥有动态类型"></a>JavaScript 拥有动态类型</h5><p>JavaScript 拥有动态类型。这意味着相同变量可用作不同类型：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var x;               // 现在 x 是 undefined</span><br><span class="line">var x = 6;           // 现在 x 是数值</span><br><span class="line">var x = &quot;Jamin&quot;;</span><br></pre></td></tr></table></figure>
+
+<h5 id="可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配："><a href="#可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配：" class="headerlink" title="可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配："></a>可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var answer = &quot;It&apos;s nice&quot;;             // 双引号内的单引号</span><br><span class="line">var answer = &quot;He is called &apos;Jamin&apos;&quot;;    // 双引号内的单引号</span><br><span class="line">var answer = &apos;He is called &quot;Jamin&quot;&apos;;    // 单引号内的双引号</span><br></pre></td></tr></table></figure>
+
+<h5 id="JavaScript-数值"><a href="#JavaScript-数值" class="headerlink" title="JavaScript 数值"></a>JavaScript 数值</h5><p>JavaScript 只有一种数值类型。</p>
+<p>写数值时用不用小数点均可</p>
+<p>超大或超小的数值可以用科学计数法来写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var x1 = 34.00;     // 带小数点</span><br><span class="line">var x2 = 34;        // 不带小数点</span><br><span class="line">var y = 123e5;      // 12300000</span><br><span class="line">var z = 123e-5;     // 0.00123</span><br></pre></td></tr></table></figure>
+
+<h5 id="JavaScript-对象"><a href="#JavaScript-对象" class="headerlink" title="JavaScript 对象"></a>JavaScript 对象</h5><p>JavaScript 对象用花括号来书写。</p>
+<p>对象属性是 name:value 对，由逗号分隔。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var person = &#123;firstName:&quot;Bill&quot;, lastName:&quot;Gates&quot;, age:62, eyeColor:&quot;blue&quot;&#125;;</span><br></pre></td></tr></table></figure>
+
+<h5 id="typeof-运算符"><a href="#typeof-运算符" class="headerlink" title="typeof 运算符"></a>typeof 运算符</h5><p>可使用 JavaScript 的 typeof 来确定 JavaScript 变量的类型：</p>
+<p>typeof 运算符返回变量或表达式的类型：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">typeof &quot;&quot;                  // 返回 &quot;string&quot;</span><br><span class="line">typeof &quot;Bill&quot;              // 返回 &quot;string&quot;</span><br><span class="line">typeof &quot;Bill Gates&quot;          // 返回 &quot;string&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>typeof 运算符对数组返回 “object”，因为在 JavaScript 中数组属于对象。</strong></p>
+<p><strong><em>任何变量均可通过设置值为 undefined 进行清空。其类型也将是 undefined。</em></strong></p>
+<p><strong>空值与 undefined 不是一回事。</strong></p>
+<p><strong>空的字符串变量既有值也有类型。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var car = &quot;&quot;;                // 值是 &quot;&quot;，类型是 &quot;string&quot;</span><br></pre></td></tr></table></figure>
+
+<h5 id="Null"><a href="#Null" class="headerlink" title="Null"></a>Null</h5><p>在 JavaScript 中，null 是 “nothing”。它被看做不存在的事物。</p>
+<p>不幸的是，在 JavaScript 中，null 的数据类型是对象。</p>
+<p>您可以把 null 在 JavaScript 中是对象理解为一个 bug。它本应是 null。</p>
+<p>您可以通过设置值为 null 清空对象</p>
+<p>您也可以通过设置值为 undefined 清空对象：</p>
+<p><strong>Undefined 与 Null 的区别</strong></p>
+<p>Undefined 与 null 的值相等，但类型不相等：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">typeof undefined              // undefined</span><br><span class="line">typeof null                   // object</span><br><span class="line">null === undefined            // false</span><br><span class="line">null == undefined             // true</span><br></pre></td></tr></table></figure>
+
+<h5 id="原始数据"><a href="#原始数据" class="headerlink" title="原始数据"></a>原始数据</h5><p>原始数据值是一种没有额外属性和方法的单一简单数据值。</p>
+<p>typeof 运算符可返回以下原始类型之一：</p>
+<p>string<br>number<br>boolean<br>undefined</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">typeof &quot;Bill&quot;              // 返回 &quot;string&quot;</span><br><span class="line">typeof 3.14                // 返回 &quot;number&quot;</span><br><span class="line">typeof true                // 返回 &quot;boolean&quot;</span><br><span class="line">typeof false               // 返回 &quot;boolean&quot;</span><br><span class="line">typeof x                   // 返回 &quot;undefined&quot; (假如 x 没有值)</span><br></pre></td></tr></table></figure>
+<h5 id="复杂数据"><a href="#复杂数据" class="headerlink" title="复杂数据"></a>复杂数据</h5><p>typeof 运算符可返回以下两种类型之一：</p>
+<p>function<br>object</p>
+<p><strong>typeof 运算符把对象、数组或 null 返回 object。</strong></p>
+<p>typeof 运算符不会把函数返回 object。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">typeof &#123;name:&apos;Bill&apos;, age:62&#125; // 返回 &quot;object&quot;</span><br><span class="line">typeof [1,2,3,4]             // 返回 &quot;object&quot; (并非 &quot;array&quot;，参见下面的注释)</span><br><span class="line">typeof null                  // 返回 &quot;object&quot;</span><br><span class="line">typeof function myFunc()&#123;&#125;   // 返回 &quot;function&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>typeof 运算符把数组返回为 “object”，因为在 JavaScript 中数组即对象。</strong></p>
+<h2 id="二、JavaScript-正则表达式（未完-）"><a href="#二、JavaScript-正则表达式（未完-）" class="headerlink" title="二、JavaScript 正则表达式（未完~）"></a>二、JavaScript 正则表达式（未完~）</h2><p>正则表达式是构成搜索模式的字符序列。</p>
+<p>该搜索模式可用于文本搜索和文本替换操作。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zfb.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wxpay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/12/%E7%94%A8js%E5%81%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E4%B8%80-%E3%80%90%E5%9F%BA%E7%A1%80%E5%87%86%E5%A4%87%E3%80%91/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/11/Spring-%E7%9A%84%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/" class="archive-article-date">
-  	<time datetime="2019-11-11T03:19:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-11</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/11/Spring-%E7%9A%84%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spring 的事务管理</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/11/Spring-%E7%9A%84%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/">Spring 的事务管理</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/11/JavaEE-Spring-JDBC-JUnit-%E8%BF%9E%E6%8E%A5MySql%EF%BC%88Java%E4%BB%A3%E7%A0%81idea%E5%AE%9E%E7%8E%B0%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2019-11-11T02:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/11/JavaEE-Spring-JDBC-JUnit-%E8%BF%9E%E6%8E%A5MySql%EF%BC%88Java%E4%BB%A3%E7%A0%81idea%E5%AE%9E%E7%8E%B0%EF%BC%89/">JavaEE-Spring JDBC&amp;JUnit 连接MySql（Java代码idea实现）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">Sping</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">JUNIT</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Spring//" class="article-tag-list-link color2">Spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/10/myfirst-0-0/" class="archive-article-date">
-  	<time datetime="2019-11-10T14:51:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-10</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/10/myfirst-0-0/">myfirst 0.0</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -339,8 +408,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
