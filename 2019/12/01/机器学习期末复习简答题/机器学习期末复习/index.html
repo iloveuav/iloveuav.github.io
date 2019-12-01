@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Hfly(汇飞工作室技术分享博客)">
 <meta property="og:description" content="简答题就是期末可能会考的简答题汇总，答案偏个人+网上找的~">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-01T11:41:24.486Z">
+<meta property="og:updated_time" content="2019-12-01T23:52:53.524Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hfly(汇飞工作室技术分享博客)" type="application/atom+xml">
@@ -282,7 +282,17 @@
 
 <h5 id="核函数的选择对支持向量机的性能有什么影响？"><a href="#核函数的选择对支持向量机的性能有什么影响？" class="headerlink" title="核函数的选择对支持向量机的性能有什么影响？"></a>核函数的选择对支持向量机的性能有什么影响？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">特征数量多的时候适合线性核函数，因为运算速度快</span><br><span class="line"></span><br><span class="line">当多项式阶数高时复杂度会很高，正交归一化后的数据，优先使用多项式核函数。</span><br><span class="line"></span><br><span class="line">大多数情况下径向基核函数（高斯核函数）都有比较好的性能，不确定用哪种就用它。</span><br></pre></td></tr></table></figure>
 
+<h5 id="数据降维有哪些常用的方法？"><a href="#数据降维有哪些常用的方法？" class="headerlink" title="数据降维有哪些常用的方法？"></a>数据降维有哪些常用的方法？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：主成分分析 (PCA)，奇异值分解，线性判别分析，局部线性嵌入，拉普拉斯特征映射，</span><br></pre></td></tr></table></figure>
 
+<h5 id="PCA的基本思想"><a href="#PCA的基本思想" class="headerlink" title="PCA的基本思想"></a>PCA的基本思想</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：通过某种线性投影,将高伟的数据映射到低纬的空间中，并期望在所投影的维度上数据的方差最大，以此使用较少的维度，同时保留较多原数据的维度。</span><br></pre></td></tr></table></figure>
+<h5 id="常用特征的选择方式。列举其方法。"><a href="#常用特征的选择方式。列举其方法。" class="headerlink" title="常用特征的选择方式。列举其方法。"></a>常用特征的选择方式。列举其方法。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：特征选择的目的主要是降维，从特征集合中挑选一组最具统计意义的特征子集来代表整体样本的特点。常见的有pearson相关系数，基尼指标，信息增益等。最简单的办法是琼剧所有特征子集，找到错误率最低的子集。特征选择可分为过滤方法，封装器方法和嵌入方法。</span><br></pre></td></tr></table></figure>
+<h5 id="什么是过拟合问题，如何判断过拟合？"><a href="#什么是过拟合问题，如何判断过拟合？" class="headerlink" title="什么是过拟合问题，如何判断过拟合？"></a>什么是过拟合问题，如何判断过拟合？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：通常对于分类算法可能产生两种类型的误差，分别是训练误差与泛化误差。训练误差代表此分类方法，对于现有训练样本级的拟合程度，泛化误差代表此方法的泛化能力，即对于新的样本数据的分类能力如何。模型的训练误差低，但是泛化误差比较高，则称分类模型过拟合。即过度拟合训练数据，导致模型的泛化能力，反而随着模型与训练数据的拟合程度增高而下降。随着分类模型对于样本的拟合程度逐渐增加，当决策数深度达到一定值，即使训练误差仍在下降，泛化误差却不断升高，产生过拟合现象。（书上的</span><br><span class="line">全摘录了自己总结吧）</span><br></pre></td></tr></table></figure>
+
+<h5 id="k均值算法的原理是什么？步骤？"><a href="#k均值算法的原理是什么？步骤？" class="headerlink" title="k均值算法的原理是什么？步骤？"></a>k均值算法的原理是什么？步骤？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：K均值距离是基于划分的距离算法。计算样本点与类簇质心的距离，与类簇质心相近的样本点划分为同一类簇。K均值中，样本间的相似度由他们之间的距离决定。距离越近说明相似度越高，反之越低。</span><br></pre></td></tr></table></figure>
+
+<h5 id="讨论初始的k个假设聚类中心位置对k均值算法的影响。"><a href="#讨论初始的k个假设聚类中心位置对k均值算法的影响。" class="headerlink" title="讨论初始的k个假设聚类中心位置对k均值算法的影响。"></a>讨论初始的k个假设聚类中心位置对k均值算法的影响。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：K均值算法中初始聚类中心的选取对算法结果影响很大。不同的初始中心可能会导致不同的聚类结果。选择一个新样本点加入聚类中心点集合中，其距离dx越大，被选中的可能性越高。</span><br></pre></td></tr></table></figure>
+<h5 id="如何评价聚类方法的好坏？"><a href="#如何评价聚类方法的好坏？" class="headerlink" title="如何评价聚类方法的好坏？"></a>如何评价聚类方法的好坏？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：在数据质量高的情况下，一个好的聚类结果表明了数据中相对稳定的某种“模式 or 分布”，这个模式不会因为个别数据点的增删改而改变，且能够将数据尽可能分开。</span><br></pre></td></tr></table></figure>
+<h5 id="DBSCAN算法的原理-步骤。"><a href="#DBSCAN算法的原理-步骤。" class="headerlink" title="DBSCAN算法的原理?步骤。"></a>DBSCAN算法的原理?步骤。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">答：DBSCAN是一种基于密度的聚类算法，这类密度聚类算法一般假定类别可以通过样本分布的紧密程度决定。同一类别的样本，他们之间的紧密相连的，也就是说，在该类别任意样本周围不远处一定有同类别的样本存在。通过将紧密相连的样本划为一类，这样就得到了一个聚类类别。通过将所有各组紧密相连的样本划为各个不同的类别，则我们就得到了最终的所有聚类类别结果。（原理 完整）</span><br><span class="line">原理：该算法利用基于密度的聚类的思想，即要求聚类空间中的一定区域内所包含对象的数目不小于某一给定的阈值。</span><br><span class="line">（原理 总结）</span><br><span class="line">DBSCAN 算法的步骤如下：</span><br><span class="line">1）从任一数据点 p 开始，对 p 点根据和 MinPts 进行判定。如果 p 是核心数据点，则建立新簇 S，并将 p 临域内的所有点归入 S；否则将 p 点标记为边界点或噪声点。</span><br><span class="line">2）对于 S 中除 p 点以外的点继续实施过程 1），继续扩充 S，直到所有的点都被判定处理。</span><br></pre></td></tr></table></figure>
       
 
       
@@ -551,11 +561,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">机器学习基础算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">机器学习习题</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">Spring事物管理</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -571,7 +577,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">Spring事物管理</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">机器学习基础算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">机器学习习题</a>
               </li>
             
             <div class="clearfix"></div>
