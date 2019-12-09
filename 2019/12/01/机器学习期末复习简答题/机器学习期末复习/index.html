@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Hfly(汇飞工作室技术分享博客)">
 <meta property="og:description" content="简答题就是期末可能会考的简答题汇总，答案偏个人+网上找的~">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-02T11:41:23.250Z">
+<meta property="og:updated_time" content="2019-12-02T12:47:48.965Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hfly(汇飞工作室技术分享博客)" type="application/atom+xml">
@@ -287,7 +287,7 @@
 
 <h5 id="PCA的基本思想-1"><a href="#PCA的基本思想-1" class="headerlink" title="PCA的基本思想"></a>PCA的基本思想</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：通过某种线性投影,将高伟的数据映射到低纬的空间中，并期望在所投影的维度上数据的方差最大，以此使用较少的维度，同时保留较多原数据的维度。</span><br></pre></td></tr></table></figure>
 <h5 id="常用特征的选择方式。列举其方法。"><a href="#常用特征的选择方式。列举其方法。" class="headerlink" title="常用特征的选择方式。列举其方法。"></a>常用特征的选择方式。列举其方法。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：特征选择的目的主要是降维，从特征集合中挑选一组最具统计意义的特征子集来代表整体样本的特点。常见的有pearson相关系数，基尼指标，信息增益等。最简单的办法是琼剧所有特征子集，找到错误率最低的子集。特征选择可分为过滤方法，封装器方法和嵌入方法。</span><br></pre></td></tr></table></figure>
-<h5 id="什么是过拟合问题，如何判断过拟合？"><a href="#什么是过拟合问题，如何判断过拟合？" class="headerlink" title="什么是过拟合问题，如何判断过拟合？"></a>什么是过拟合问题，如何判断过拟合？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：通常对于分类算法可能产生两种类型的误差，分别是训练误差与泛化误差。训练误差代表此分类方法，对于现有训练样本级的拟合程度，泛化误差代表此方法的泛化能力，即对于新的样本数据的分类能力如何。模型的训练误差低，但是泛化误差比较高，则称分类模型过拟合。即过度拟合训练数据，导致模型的泛化能力，反而随着模型与训练数据的拟合程度增高而下降。随着分类模型对于样本的拟合程度逐渐增加，当决策数深度达到一定值，即使训练误差仍在下降，泛化误差却不断升高，产生过拟合现象。（书上的</span><br><span class="line">全摘录了自己总结吧）</span><br></pre></td></tr></table></figure>
+<h5 id="什么是过拟合问题，如何判断过拟合？"><a href="#什么是过拟合问题，如何判断过拟合？" class="headerlink" title="什么是过拟合问题，如何判断过拟合？"></a>什么是过拟合问题，如何判断过拟合？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">答：下面的话有点太官方了  什么是过拟合？大白话就是 泛化能力低 再白话一点就是测试误差高。 如何判断？看看测试误差是不是很高就行了</span><br><span class="line"></span><br><span class="line">通常对于分类算法可能产生两种类型的误差，分别是训练误差与泛化误差。训练误差代表此分类方法，对于现有训练样本级的拟合程度，泛化误差代表此方法的泛化能力，即对于新的样本数据的分类能力如何。模型的训练误差低，但是泛化误差比较高，则称分类模型过拟合。即过度拟合训练数据，导致模型的泛化能力，反而随着模型与训练数据的拟合程度增高而下降。随着分类模型对于样本的拟合程度逐渐增加，当决策数深度达到一定值，即使训练误差仍在下降，泛化误差却不断升高，产生过拟合现象。（书上的</span><br><span class="line">全摘录了自己总结吧）</span><br></pre></td></tr></table></figure>
 
 <h5 id="k均值算法的原理是什么？步骤？"><a href="#k均值算法的原理是什么？步骤？" class="headerlink" title="k均值算法的原理是什么？步骤？"></a>k均值算法的原理是什么？步骤？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：K均值距离是基于划分的距离算法。计算样本点与类簇质心的距离，与类簇质心相近的样本点划分为同一类簇。K均值中，样本间的相似度由他们之间的距离决定。距离越近说明相似度越高，反之越低。</span><br></pre></td></tr></table></figure>
 
@@ -570,15 +570,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">Spring事物管理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">Spring</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">Spring事物管理</a>
               </li>
             
             <div class="clearfix"></div>
