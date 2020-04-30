@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="目前共整理了三章">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机组成原理测试习题整理【一】（含答案解析）">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;12&#x2F;%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E4%B9%A0%E9%A2%98%E8%AE%AD%E7%BB%83%EF%BC%88%E5%90%AB%E7%AD%94%E6%A1%88%E8%A7%A3%E6%9E%90%EF%BC%89&#x2F;%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E4%B9%A0%E9%A2%98%E8%AE%AD%E7%BB%83%EF%BC%88%E5%90%AB%E7%AD%94%E6%A1%88%E8%A7%A3%E6%9E%90%EF%BC%89&#x2F;index.html">
+<meta property="og:site_name" content="Hfly(汇飞工作室技术分享博客)">
+<meta property="og:description" content="目前共整理了三章">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-11-14T01:30:05.144Z">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/11/12/计算机组成原理第一次测试习题训练（含答案解析）/计算机组成原理第一次测试习题训练（含答案解析）/"/>
+
+
+
+
+
+  <title>计算机组成原理测试习题整理【一】（含答案解析） | Hfly(汇飞工作室技术分享博客)</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hfly(汇飞工作室技术分享博客)</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">我还是太菜了</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E4%B9%A0%E9%A2%98%E8%AE%AD%E7%BB%83%EF%BC%88%E5%90%AB%E7%AD%94%E6%A1%88%E8%A7%A3%E6%9E%90%EF%BC%89/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E4%B9%A0%E9%A2%98%E8%AE%AD%E7%BB%83%EF%BC%88%E5%90%AB%E7%AD%94%E6%A1%88%E8%A7%A3%E6%9E%90%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jamin Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hfly(汇飞工作室技术分享博客)">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">计算机组成原理测试习题整理【一】（含答案解析）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-12T20:08:12+08:00">
+                2019-11-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>目前共整理了三章</p>
+<a id="more"></a>
+
+
+<h3 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">计算机问世至今，新型机器不断推陈出新，不管怎样更新，依然保有“存储程序”的概念，最早提出这种概念的是______。</span><br><span class="line"></span><br><span class="line">A冯. 诺依曼</span><br><span class="line">B巴贝奇</span><br><span class="line">C贝尔</span><br><span class="line">D帕斯卡</span><br><span class="line"></span><br><span class="line">A</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">1.邮局把信件进行自动分拣，使用的计算机技术是______。</span><br><span class="line"></span><br><span class="line">A</span><br><span class="line"> 机器证明</span><br><span class="line">B</span><br><span class="line">自然语言理解</span><br><span class="line">C</span><br><span class="line">计算机辅助设计</span><br><span class="line">D</span><br><span class="line">机器翻译</span><br><span class="line">E</span><br><span class="line">模式识别</span><br><span class="line">F</span><br><span class="line">自动控制</span><br><span class="line"></span><br><span class="line">E</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2. 计算机科技文献中，英文缩写CAI代表______。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">A</span><br><span class="line">计算机辅助管理</span><br><span class="line">B</span><br><span class="line">计算机辅助设计</span><br><span class="line">C</span><br><span class="line">计算机辅助加工</span><br><span class="line">D</span><br><span class="line">计算机辅助制造</span><br><span class="line">E</span><br><span class="line">计算机辅助教学</span><br><span class="line">F</span><br><span class="line">计算机辅助学习</span><br><span class="line"></span><br><span class="line">E</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">微型计算机的发展以______技术为指标。</span><br><span class="line"></span><br><span class="line">微处理器</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">计算机中常以主频来评价机器的性能。以下为主频单位的是______。</span><br><span class="line"></span><br><span class="line">MHz</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">计算机运算速度的单位是______。</span><br><span class="line"></span><br><span class="line">MIPS</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1946年研制成功的第一台电子数字计算机称为______，1949年研制成功的第一台程序内存的计算机称为______。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ENIAC， EDVAC</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">计算机与日常使用的袖珍计算器的本质区别在于______。</span><br><span class="line"></span><br><span class="line">自动化程度的高低</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">下列______属于应用软件。</span><br><span class="line"></span><br><span class="line">文本处理</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">操作系统最现出现在_______。</span><br><span class="line">第3代计算机</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">至今为止，计算机中的所有信息仍以二进制方式表示的理由是______。</span><br><span class="line"></span><br><span class="line">###物理器件性能所至</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CPU主要包括______。</span><br><span class="line">控制器、运算器</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">完整的计算机应包括______。</span><br><span class="line"></span><br><span class="line">配套的硬件设备和软件系统</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">目前我们所说的个人台式商用机属于_______。</span><br><span class="line">###微型机</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ENIAC属于晶体管计算机</span><br><span class="line">F</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">编译方式是使用编译程序把源程序编译成机器代码的目标程序</span><br><span class="line">T</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">计算机唯一能够直接执行的语言是机器语言</span><br><span class="line">T</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">用高级语言编写的程序称为目标程序</span><br><span class="line"></span><br><span class="line">F</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">冯诺依曼计算机体系结构的特点是什么？</span><br><span class="line">1、处理的数据和指令一律二进制</span><br><span class="line">2、顺序执行程序</span><br><span class="line">3、采用存储程序的方式</span><br><span class="line">4、计算机硬件由 运算器 、控制器、存储器、输入、输出设备五大部分组成</span><br><span class="line">5、用总线控制</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">计算机的主要性能指标有哪些？它们的具体含义是什么？</span><br><span class="line"> 运算速度、字长、内存储器的容量、外存储器的容量、主频</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">计算机的硬件由哪些部件组成？</span><br><span class="line"> 控制器、存储器、输入设备、输出设备、运算器</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">简要说明计算机系统的层次结构</span><br><span class="line"> 1、硬联逻辑级</span><br><span class="line">2、微程序级</span><br><span class="line">3、传统机器级</span><br><span class="line">4、操作系统</span><br><span class="line">5、汇编语言级</span><br><span class="line">6、高级语言级</span><br><span class="line">7、应用语言级</span><br></pre></td></tr></table></figure>
+
+<h3 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h3><h2 id><a href="#" class="headerlink" title="?"></a>?</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">通常把表示信息的数字符号称为什么？</span><br><span class="line"></span><br><span class="line">数码</span><br><span class="line"></span><br><span class="line">以下叙述错误的是______。</span><br><span class="line">A</span><br><span class="line">表示信息的数字符号称为代码</span><br><span class="line">B</span><br><span class="line">任何进制的数据都有基数和各位的”位权”</span><br><span class="line">C</span><br><span class="line">二进制数据的加减运算规则与逻辑加运算规则相同</span><br><span class="line">D</span><br><span class="line"> 8进制数据逢八进一 </span><br><span class="line"> </span><br><span class="line"> 正确答案：C ?????</span><br><span class="line"> (加法运算,其运算等价于两个数字的十进制数相加后转换成二进制,而逻辑运算是按位计算)</span><br></pre></td></tr></table></figure>
+
+<h3 id="zy★"><a href="#zy★" class="headerlink" title="zy★"></a>zy★</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">一种BCD码，其中0－9的编码为0000，0001，0010，0011，0100，0101，0110，0111，1110，1111，则各位的权值为______。</span><br><span class="line"></span><br><span class="line">2421</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在小型或微型计算机里，普遍采用的字符编码是______。</span><br><span class="line"></span><br><span class="line"> ASCⅡ码</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">根据国标规定，每个汉字在计算机内占用______存储。</span><br><span class="line">二个字节</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">十进制分数27/64的十六进制数表示为______。</span><br><span class="line">0.6CH</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">假定下列字符码中有奇偶校验位，但没有数据错误，采用偶校校验的字符码是______。</span><br><span class="line">11001001</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">假定下列字符码中有奇偶校验位，但没有数据错误，采用偶校校验的字符码是______。</span><br><span class="line"></span><br><span class="line">11001001</span><br></pre></td></tr></table></figure>
+<h3 id="ct★"><a href="#ct★" class="headerlink" title="ct★"></a>ct★</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">若浮点数的机器表示中，尾数用补码表示，则判断该浮点数是否为规格化的方法是尾数的最高数值位______。 </span><br><span class="line"></span><br><span class="line">与尾符相反 </span><br><span class="line">【数符为0，这个数就是正数，正数补码就是其本身，其最高有效位(阶码使用标准移码的话规格化后尾数最高有效位就是小数点后第一位)必定为1，数符0和最高有效位的1相异。</span><br><span class="line"></span><br><span class="line">数符为1，这个数就是个负数，求负数的补码有一步叫按位取反(一般来说浮点数可以存储的有效位不会小于6位)，原本最高有效位的1变成了0，所以数符1和最高有效位的0相异。）】</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在机器数______中，零的表示形式是唯一的。</span><br><span class="line"></span><br><span class="line">补码和移码</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">指令和数据都以十进制形式存放，（2000）10化成十六进制数是______。</span><br><span class="line"></span><br><span class="line">（7D0）16  </span><br><span class="line">【二进制转十六进制的时候要右移左边补0】</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">下列数中最小的数是______。</span><br><span class="line"></span><br><span class="line">A</span><br><span class="line">（100010）BCD </span><br><span class="line">B</span><br><span class="line">（100101）2     </span><br><span class="line">C</span><br><span class="line">（50）8      </span><br><span class="line">D</span><br><span class="line">（625）16</span><br><span class="line"></span><br><span class="line">A</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> 在定点二进制运算器中，减法运算一般通过______来实现。</span><br><span class="line"></span><br><span class="line">补码运算的二进制加法器</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">下列数中最大的数为______。</span><br><span class="line"></span><br><span class="line">A</span><br><span class="line">（143）5</span><br><span class="line">B</span><br><span class="line">（76）8 </span><br><span class="line">C</span><br><span class="line">（10010101）2    </span><br><span class="line">D</span><br><span class="line">（227）8  </span><br><span class="line"></span><br><span class="line">D</span><br><span class="line">[143 -&gt; 1*5^2+4*5^1+3*5^0=(48)10进制 -》110000二进制]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">下列叙述正确的是______。</span><br><span class="line"></span><br><span class="line">A</span><br><span class="line"> 定点数表示的是整数</span><br><span class="line">B</span><br><span class="line">对一个数据的原码的各位取反而且在末位再加1就可以得到这个数据的补码</span><br><span class="line">C</span><br><span class="line">原码是表示无符号数的编码方法</span><br><span class="line">D</span><br><span class="line">二进制数据表示在计算机中容易实现</span><br><span class="line"></span><br><span class="line">D</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">在余3码表示的二-十进制数中，代码0011代表十进制数的______。</span><br><span class="line"></span><br><span class="line">0</span><br><span class="line">[余3码 :余3码是8421 BCD码的每个码组加3(0011)形成的。常用于BCD码的运算电路中。 ]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">设X= —0.1011，则[X]补为______。</span><br><span class="line"></span><br><span class="line">1.0101</span><br></pre></td></tr></table></figure>
+
+<h2 id="ct★-1"><a href="#ct★-1" class="headerlink" title="ct★"></a>ct★</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">______表示法主要用于表示浮点数中的阶码</span><br><span class="line"></span><br><span class="line">移码</span><br><span class="line">【移码（又叫增码）是符号位取反的补码，一般用指数的移码减去1来做浮点数的阶码，引入的目的是为了保证浮点数的机器零为全0。】</span><br><span class="line"></span><br><span class="line">【原码：1001101，反码，补码，移码各是多少？</span><br><span class="line"></span><br><span class="line">解：首位数字表示正负不做变（1为负数，0为正数）</span><br><span class="line"></span><br><span class="line">反码：1110010（正数反码等于原数，题中为负数，则除首位数对应取反）</span><br><span class="line"></span><br><span class="line">补码：1110011（得出反码数基础上末位加一）</span><br><span class="line"></span><br><span class="line">移码：0110011（补码符号位第一位数字取反）</span><br><span class="line">】</span><br></pre></td></tr></table></figure>
+<h2 id="zy★-1"><a href="#zy★-1" class="headerlink" title="zy★"></a>zy★</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">一个8位的二进制整数，若采用补码表示，且由3个“1”和5个“0”组成，则最小值为______。</span><br><span class="line"></span><br><span class="line"> -125</span><br><span class="line"> 【首先反推补码应该是：10000011</span><br><span class="line">  源码则为11111101 即-125</span><br><span class="line"> 】</span><br></pre></td></tr></table></figure>
+<p>##到23题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">在小型机运算器中，通过移位器对一个通用寄存器中存放的一个正定点数进行乘2操作（假定乘2后不会溢出），其方法是将该寄存器中的数据送入ALU，经移位器______。</span><br><span class="line"></span><br><span class="line">A左移1位</span><br><span class="line">B右移1位</span><br><span class="line">C左移2位</span><br><span class="line">D右移2位</span><br><span class="line"></span><br><span class="line">A</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">若存储器的容量为128KX8位，求：(1)访问该芯片需要多少位地址？(2)假定该芯片在存储器中首地址为A0000H，则末地址应为多少？</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/12/%E7%94%A8js%E5%81%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E4%B8%80-%E3%80%90%E5%9F%BA%E7%A1%80%E5%87%86%E5%A4%87%E3%80%91/%E7%94%A8js%E5%81%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E4%B8%80-%E3%80%90%E5%9F%BA%E7%A1%80%E5%87%86%E5%A4%87%E3%80%91/" rel="next" title="用js做机器学习(一)【基础准备】">
+                <i class="fa fa-chevron-left"></i> 用js做机器学习(一)【基础准备】
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/13/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/" rel="prev" title="成功解决java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver">
+                成功解决java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">jamin Yang</p>
+              <p class="site-description motion-element" itemprop="description">one todays is worth two tomorrows</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一章"><span class="nav-number">1.</span> <span class="nav-text">第一章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二章"><span class="nav-number">2.</span> <span class="nav-text">第二章</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number"></span> <span class="nav-text">?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#zy★"><span class="nav-number">1.</span> <span class="nav-text">zy★</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ct★"><span class="nav-number">2.</span> <span class="nav-text">ct★</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ct★-1"><span class="nav-number"></span> <span class="nav-text">ct★</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zy★-1"><span class="nav-number"></span> <span class="nav-text">zy★</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jamin Yang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>

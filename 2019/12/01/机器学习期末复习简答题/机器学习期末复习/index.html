@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="机器学习基础算法,机器学习习题," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="简答题就是期末可能会考的简答题汇总，答案偏个人+网上找的~">
+<meta name="keywords" content="机器学习基础算法,机器学习习题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习期末复习简答题">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;01&#x2F;%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E7%AE%80%E7%AD%94%E9%A2%98&#x2F;%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0&#x2F;index.html">
+<meta property="og:site_name" content="Hfly(汇飞工作室技术分享博客)">
+<meta property="og:description" content="简答题就是期末可能会考的简答题汇总，答案偏个人+网上找的~">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-12-02T12:47:48.965Z">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/12/01/机器学习期末复习简答题/机器学习期末复习/"/>
+
+
+
+
+
+  <title>机器学习期末复习简答题 | Hfly(汇飞工作室技术分享博客)</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hfly(汇飞工作室技术分享博客)</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">我还是太菜了</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E7%AE%80%E7%AD%94%E9%A2%98/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jamin Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hfly(汇飞工作室技术分享博客)">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">机器学习期末复习简答题</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-01T11:45:00+08:00">
+                2019-12-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="简答题"><a href="#简答题" class="headerlink" title="简答题"></a>简答题</h3><p>就是期末可能会考的简答题汇总，答案偏个人+网上找的~</p>
+<a id="more"></a>
+
+<h5 id="机器学习与人工智能的关系"><a href="#机器学习与人工智能的关系" class="headerlink" title="机器学习与人工智能的关系"></a>机器学习与人工智能的关系</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">机器学习是人工智能的子集也是人工智能的基础，</span><br><span class="line">人工智能除了机器学习还要知识表示、自动推理、知识获取等。</span><br></pre></td></tr></table></figure>
+
+<h5 id="机器学习与数据挖掘的关系"><a href="#机器学习与数据挖掘的关系" class="headerlink" title="机器学习与数据挖掘的关系"></a>机器学习与数据挖掘的关系</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">数据挖掘可以认为是数据库技术与机器学习的交叉，它利用数据库技术来管理海量的数据，并利用机器学习和统计分析来进行数据分析。</span><br><span class="line"></span><br><span class="line">机器学习：广泛的定义为 “利用经验来改善计算机系统的自身性能。”，事实上，由于“经验”在计算机系统中主要是以数据的形式存在的,因此机器学习需要设法对数据进行分析,这就使得它逐渐成为智能数据分析技术的创新源之一,并且为此而受到越来越多的关注。</span><br><span class="line"></span><br><span class="line">数据挖掘：一种解释是“识别出巨量数据中有效的、新颖的、潜在有用的、最终可理解的模式的非平凡过程”，顾名思义，数据挖掘就是试图从海量数据中找出有用的知识。</span><br></pre></td></tr></table></figure>
+
+<h5 id="举例说明机器学习的基本过程，并举例说明各步骤使用的方法"><a href="#举例说明机器学习的基本过程，并举例说明各步骤使用的方法" class="headerlink" title="举例说明机器学习的基本过程，并举例说明各步骤使用的方法"></a>举例说明机器学习的基本过程，并举例说明各步骤使用的方法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">1、明确目标和要解决的问题</span><br><span class="line">（方法：对定性问题用分类算法，对定量分析可用回归方法，或者理解为预测问题用回归，分类问题用分类算法）</span><br><span class="line"></span><br><span class="line">2、收集数据</span><br><span class="line">（方法：选取有代表性的数据，分类问题避免出现样本数据不平衡，内存过大 考虑使用降维或改进算法）</span><br><span class="line"></span><br><span class="line">3、根据数据判断用supervised还是unsupervised机器学习模型</span><br><span class="line">（一般数据如果没有我们想要的标签，就考虑用聚类进行分类）</span><br><span class="line"></span><br><span class="line">4、数据预处理</span><br><span class="line">（方法：先进行探索，了解大致结构、数据噪声，分布等，可使用数据可视化方法或数据质量评价对数据质量进行评估，根据实际情况选择使用归一化，离散化、缺失值处理、去除共线性等）</span><br><span class="line"></span><br><span class="line">5、数据建模</span><br><span class="line">（方法：选取合适的特征，特征选择方法：相关系数、卡方检验、平均互信息、条件熵、后验概率和逻辑回归权重等方法。</span><br><span class="line">再把数据分为训练集和测试集）</span><br><span class="line"></span><br><span class="line">6、模型训练</span><br><span class="line">（方法：对模型超参进行调优）</span><br><span class="line"></span><br><span class="line">7、模型评估</span><br><span class="line">（方法：构建模型后，使用测试数据对模型进行测试和评估）</span><br><span class="line"></span><br><span class="line">8、模型应用</span><br><span class="line">（方法：用就完事了，再看看性能、稳定性啥的）</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="什么是标准差、方差和协方差？它们反映了数据的什么内容？"><a href="#什么是标准差、方差和协方差？它们反映了数据的什么内容？" class="headerlink" title="什么是标准差、方差和协方差？它们反映了数据的什么内容？"></a>什么是标准差、方差和协方差？它们反映了数据的什么内容？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">方差（Variance）：用来度量随机变量和其数学期望（即均值）之间的偏离程度。</span><br><span class="line"></span><br><span class="line">标准差：方差开根号。</span><br><span class="line"></span><br><span class="line">协方差：E[(X-E[X])(Y-E[Y])]=E[XY]-E[X]E[Y]衡量两个变量之间的变化方向关系。</span><br><span class="line"></span><br><span class="line">标准差描述是样本集合的各个样本点到均值的距离分布，描述的是样本集的分散程度</span><br><span class="line"></span><br><span class="line">在机器学习中的方差就是估计值与其期望值的统计方差。如果进行多次重复验证的过程，就会发现模型在训练集上的表现并不固定，会出现波动，这些波动越大，它的方差就越大</span><br><span class="line"></span><br><span class="line">协方差主要用来度量两个随机变量关系，如果结果为正值，则说明两者是正相关的；结果为负值，说明两者是负相关的；如果为0，就是统计上的“相互独立”</span><br><span class="line"></span><br><span class="line">   标准差: 描述样本的分散程度。</span><br><span class="line">    方差：标准差的平方，模型预测稳定性。 </span><br><span class="line">   协方差:</span><br><span class="line">        结果为正值：两者正相关；</span><br><span class="line">        结果为负值：两者负相关；</span><br><span class="line">        如果为0：“相互独立”；</span><br></pre></td></tr></table></figure>
+
+<h5 id="如何利用平均值和标准差判断数据的异常值？"><a href="#如何利用平均值和标准差判断数据的异常值？" class="headerlink" title="如何利用平均值和标准差判断数据的异常值？"></a>如何利用平均值和标准差判断数据的异常值？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">数据原值在均值±标准差*3范围外的都作为异常值剔除</span><br><span class="line"></span><br><span class="line">标准差可用于识别符合高斯或类高斯分布的数据中的异常值</span><br></pre></td></tr></table></figure>
+<h5 id="何为正则化？其功能是什么？"><a href="#何为正则化？其功能是什么？" class="headerlink" title="何为正则化？其功能是什么？"></a>何为正则化？其功能是什么？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在训练数据不够多时，或者overtraining时，常常会导致过拟合（overfitting）。正则化方法即为在此时向原始模型引入额外信息，以便防止过拟合和提高模型泛化性能的一类方法的统称。</span><br><span class="line"></span><br><span class="line">正则化是为了避免过拟合的手段。正则化为了结构风险最小化，在经验风险上加一个正则化项或惩罚项，正则化项一般是模型复杂度的单调递增函数，模型越复杂，正则化值就越大</span><br></pre></td></tr></table></figure>
+
+<h5 id="PCA的基本思想"><a href="#PCA的基本思想" class="headerlink" title="PCA的基本思想"></a>PCA的基本思想</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">通过某种线性投影，将高维度的数据映射到低维的空间中，并期望再所投影的维度上数据的方差最大，以此使用较少的维度，同时保留较多原数据的维度。</span><br></pre></td></tr></table></figure>
+<h5 id="如何理解L0、L1、L2正则化？"><a href="#如何理解L0、L1、L2正则化？" class="headerlink" title="如何理解L0、L1、L2正则化？"></a>如何理解L0、L1、L2正则化？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> L0：通过限制向量中非0的元素的个数实现模型优化；</span><br><span class="line"> L1：趋向于产生少量的特征，而其他的特征都是0；</span><br><span class="line"> L2：L2会选择更多的特征，这些特征都会接近于0。</span><br><span class="line"> </span><br><span class="line">（所有特征中只有少数特征起重要作用的情况下，选择L1更合适；</span><br><span class="line">所有特征中，大部分特征都能起作用，而且起的作用很平均，选择L2更合适；L1/L2范数让模型变得稀疏，增加模型的可解析性，可用于特征选择；L2范数让模型变得更简单，防止过拟合问题；</span><br><span class="line">）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">L0正则化是通过限制向量中非0的元素的个数实现模型优化，用L0来正则化一个参数矩阵 W，目标是使其更稀疏，即W中的大部分元素都是0。很明显，如果通过最小化L0范数作为罚项，就是寻找最优的稀疏特征项。</span><br><span class="line">L1正则化是通过对向量中各个元素绝对值之和进行限制，任何的规则化算子，如果在wi = 0的地方不可微，并且可以分解为多项式的形式，那么这个规则化算子就可以实现稀疏。</span><br><span class="line">L2正则化是指向量各元素求平方和然后求平方根，用模最小化来确保w的每个元素都很小，都接近于0。</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="什么是交叉校验？常用方法有哪些？"><a href="#什么是交叉校验？常用方法有哪些？" class="headerlink" title="什么是交叉校验？常用方法有哪些？"></a>什么是交叉校验？常用方法有哪些？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">交叉验证是机器学习中确定超参数的通用的方法。</span><br><span class="line">k折交叉验证 、留一法</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="LDA的基本思想是什么？举例说明"><a href="#LDA的基本思想是什么？举例说明" class="headerlink" title="LDA的基本思想是什么？举例说明"></a>LDA的基本思想是什么？举例说明</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">通过将训练样本投影到低维度上，使得同类别的投影点尽可能接近，异类别样本的投影点尽可能远离，（即同类点方差尽可能小，而类之间的方差尽可能大）；对新样本，将其投影到低维空间，根据投影点的位置来确定其类别；</span><br><span class="line">应用LDA对鸢尾花（Iris）的样本数据进行分析。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">LDA 线性判别式分析：和PCA一样都是常用的降维技术，PCA从特征的协方差角度找比较好的投影，LDA更多是考虑了标注，即希望投影后不同类别之间的数据点的距离更大，同一类别的数据点更紧凑。</span><br><span class="line"></span><br><span class="line">线性判别分析的原理是对于给定的训练集，设法将样本投影到一条直线上，使得同类的投影点尽可能接近，异类样本的投影点尽可能远离；在对新样本进行分类时，将其投影到这条直线上，再根据投影点的位置来确定新样本的类别</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="为什么考虑特征提取？"><a href="#为什么考虑特征提取？" class="headerlink" title="为什么考虑特征提取？"></a>为什么考虑特征提取？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">特征提取目的是自动地构建新的特征，将原始数据转换为一组具有明显统计意义的核心特征</span><br><span class="line"></span><br><span class="line">特征提取是利用原有的特征根据一定的算法提取出原始特征中包含的抽象特征</span><br><span class="line">通过降维，可以减少数据量大大减少计算量，再就是避免被不重要的噪声干扰</span><br></pre></td></tr></table></figure>
+
+<h5 id="线性回归的过程是什么？举例说明"><a href="#线性回归的过程是什么？举例说明" class="headerlink" title="线性回归的过程是什么？举例说明~"></a>线性回归的过程是什么？举例说明~</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">a)         确定输入变量与目标变量间的回归模型，即变量间相关关系的数学表达式</span><br><span class="line"></span><br><span class="line">b)        根据样本估计并检验回归模型及未知参数</span><br><span class="line"></span><br><span class="line">c)         从众多的输入变量中，判断哪些变量对目标变量的影响是显著的</span><br><span class="line"></span><br><span class="line">d)        根据输入变量的已知值来估计目标变量的平均值并给出预测精度</span><br><span class="line"></span><br><span class="line">线性回归是利用数理统计中回归分析，来确定两种或两种以上变量间相互依赖的定量关系的一种统计分析方法，运用十分广泛。</span><br><span class="line">比如预测房价，我们通过数据分析多个变量如地点附近医院个数、学校个数等分析与房价的关系，拟合出一个函数。来预测一个新的未知房价</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="逻辑回归为什么可以预测新样本的类别？举例说明其应用。"><a href="#逻辑回归为什么可以预测新样本的类别？举例说明其应用。" class="headerlink" title="逻辑回归为什么可以预测新样本的类别？举例说明其应用。"></a>逻辑回归为什么可以预测新样本的类别？举例说明其应用。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">逻辑回归是一种预测分析， 解释因变量与一个或多个自变量之间的关系，与线性回归不同之处就是它的目标变量有几种类别，所以逻辑回归主要用于解决分类问题，与线性回归相比，它是用概率的方式，预测出来属于某一分类的概率值。如果超过50%，则属于某一分类</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="分类解决什么问题？"><a href="#分类解决什么问题？" class="headerlink" title="分类解决什么问题？"></a>分类解决什么问题？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">将数据集中的样本划分到个各类中。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">找一个函数判断输入数据所属的类别，可以是二类别问题（是/不是），也可以是多类别问题（在多个类别中判断输入数据具体属于哪一个类别）。与回归问题（regression）相比，分类问题的输出不再是连续值，而是离散值，用来指定其属于哪个类别。</span><br><span class="line">比如垃圾邮件识别，手写数字识别，人脸识别，语音识别等。。</span><br></pre></td></tr></table></figure>
+
+<h5 id="常见的分类算法有哪些？举例说明"><a href="#常见的分类算法有哪些？举例说明" class="headerlink" title="常见的分类算法有哪些？举例说明"></a>常见的分类算法有哪些？举例说明</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">决策树 贝叶斯 人工神经网络 k-近邻 支持向量机 基于关联规则的分类 集成学习</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="简述决策树的生成过程"><a href="#简述决策树的生成过程" class="headerlink" title="简述决策树的生成过程"></a>简述决策树的生成过程</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">决策树的构建过程是按照属性的优先级或重要性来逐渐确定树的层次结构，使其叶子结点尽可能属于同一类别，一般采用局部最优的贪心策略来构建决策树。</span><br><span class="line"></span><br><span class="line">决策树是一种树形的结构，一般由根节点、父节点、子节点、叶子节点构成</span><br><span class="line"></span><br><span class="line">每一个分支代表着一个判断，每个叶子节点代表一种结果。</span><br><span class="line"></span><br><span class="line">最优的模型应该是：叶子节点中只包含一个类别的数据。</span><br><span class="line"></span><br><span class="line">从决策树根结点出发，自顶向下移动，在每个决策结点都会进行次划分，通过划分的结果将样本进行分类，导致不同的分支，最后到达个叶子结点，这个过程就是利用决策树进行分类的过程</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">步骤一：将所有的特征看成一个一个的节点，eg（拥有房产、婚姻状态、年收入这些特征，我们可以看成一个一个的节点。）</span><br><span class="line"></span><br><span class="line">步骤二：遍历当前特征的每一种分割方式，找到最好的分割点eg（婚姻状态这个特征，我们可以按照单身、已婚、离婚进行划分；也可以按照结过婚、没有结过婚进行划分）；将数据划分为不同的子节点，eg： N1、 N2….Nm；计算划分之后所有子节点的“纯度”信息</span><br><span class="line"></span><br><span class="line">步骤三：使用第二步遍历所有特征，选择出最优的特征，以及该特征的最优的划分方式，得出最终的子节点N1、 N2….Nm</span><br><span class="line"></span><br><span class="line">步骤四：对子节点N1、N2….Nm分别继续执行2-3步，直到每个最终的子节点都足够“纯”。</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="如何减少过拟合？"><a href="#如何减少过拟合？" class="headerlink" title="如何减少过拟合？"></a>如何减少过拟合？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">增加数据量，降低模型复杂度。通过正则化</span><br></pre></td></tr></table></figure>
+<h5 id="1-混淆矩阵"><a href="#1-混淆矩阵" class="headerlink" title="1. 混淆矩阵"></a>1. 混淆矩阵</h5><p>在介绍各个率之前，先来介绍一下混淆矩阵。如果我们用的是个二分类的模型，那么把预测情况与实际情况的所有结果两两混合，结果就会出现以下4种情况，就组成了混淆矩阵。</p>
+<p>P（Positive）：代表1</p>
+<p>N（Negative）：代表0</p>
+<p>T（True）：代表预测正确</p>
+<p>F（False）：代表错误</p>
+<p>TP：预测为1，预测正确，即实际1</p>
+<p>FP：预测为1，预测错误，即实际0</p>
+<p>FN：预测为0，预测错确，即实际1</p>
+<p>TN：预测为0，预测正确即，实际0</p>
+<h5 id="2-准确率"><a href="#2-准确率" class="headerlink" title="2. 准确率"></a>2. 准确率</h5><p>既然是个分类指标，我们可以很自然的想到准确率，准确率的定义是预测正确的结果占总样本的百分比，其公式如下：</p>
+<p>准确率=(TP+TN)/(TP+TN+FP+FN)</p>
+<h6 id="3-精准率"><a href="#3-精准率" class="headerlink" title="3. 精准率"></a>3. 精准率</h6><p>精准率（Precision）又叫查准率，它是针对****预测结果而言的，它的含义是在所有被预测为正的样本中实际为正的样本的概率，意思就是在预测为正样本的结果中，我们有多少把握可以预测正确，其公式如下：</p>
+<p>精准率=TP/(TP+FP)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">精准率和准确率看上去有些类似，但是完全不同的两个概念。精准率代表对正样本结果中的预测准确程度，而准确率则代表整体的预测准确程度，既包括正样本，也包括负样本。</span><br></pre></td></tr></table></figure>
+<h5 id="4-召回率"><a href="#4-召回率" class="headerlink" title="4. 召回率"></a>4. 召回率</h5><p>召回率（Recall）又叫查全率，它是针对原样本而言的，它的含义是在实际为正的样本中被预测为正样本的概率，其公式如下：</p>
+<p>精准率=TP/(TP+FN)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">召回率越高，代表实际坏用户被预测出来的概率越高，它的含义类似：宁可错杀一千，绝不放过一个。</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="AUC与ROC的关系是什么？"><a href="#AUC与ROC的关系是什么？" class="headerlink" title="AUC与ROC的关系是什么？"></a>AUC与ROC的关系是什么？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">ROC图下的面积为AUC，AUC值越大，表示分类模型的预测准确性越高。（ROC越光滑，一般表示过拟合现象越轻）</span><br><span class="line"></span><br><span class="line">AUC(Area Under ROC Curve)，从名字可以看出AUC是ROC曲线下方的面积。当两个分类器的ROC曲线交叉时，就可以通过AUC来判断分类器的好坏了。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">这两个指标的选择也正是ROC和AUC可以无视样本不平衡的原因。这两个指标分别是：灵敏度和（1-特异度），也叫做真正率（TPR）和假正率（FPR）</span><br><span class="line"></span><br><span class="line">灵敏度（Sensitivity） = TP/(TP+FN)</span><br><span class="line"></span><br><span class="line">特异度（Specificity） = TN/(FP+TN)</span><br><span class="line"></span><br><span class="line">ROC曲线有个很好的特性：当测试集中的正负样本的分布变化的时候，ROC曲线能够保持不变。在实际的数据集中经常会出现类不平衡（class imbalance）现象，即负样本比正样本多很多（或者相反），而且测试数据中的正负样本的分布也可能随着时间变化。</span><br><span class="line"></span><br><span class="line">ROC（Receiver Operating Characteristic）曲线，又称接受者操作特征曲线。该曲线最早应用于雷达信号检测领域，用于区分信号与噪声。后来人们将其用于评价模型的预测能力，ROC曲线是基于混淆矩阵得出的。</span><br><span class="line"></span><br><span class="line">ROC曲线也是通过遍历所有阈值来绘制整条曲线的。如果我们不断的遍历所有阈值，预测的正样本和负样本是在不断变化的，相应的在ROC曲线图中也会沿着曲线滑动。</span><br><span class="line"></span><br><span class="line">TPR越高，同时FPR越低（即ROC曲线越陡），那么模型的性能就越好。</span><br></pre></td></tr></table></figure>
+
+<h5 id="聚类分析的目的是什么？"><a href="#聚类分析的目的是什么？" class="headerlink" title="聚类分析的目的是什么？"></a>聚类分析的目的是什么？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">当我们的数据没有我们想要的特征的时候，通过聚类（按相似程度如距离远近等）划分类别 再打上标签，就能得到对我们有用的数据。</span><br></pre></td></tr></table></figure>
+
+<h5 id="聚类与分类的关系？"><a href="#聚类与分类的关系？" class="headerlink" title="聚类与分类的关系？"></a>聚类与分类的关系？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">聚类是非监督式学习，分类是有监督学习。</span><br><span class="line">如果想利用分类方法来对数据进行分类，训练模型用的样本必须是有标签的，这样模型才能不断地学习、优化最后达到良好的分类效果</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="常见有哪些聚类方法？这些方法分别试用于哪些场合？"><a href="#常见有哪些聚类方法？这些方法分别试用于哪些场合？" class="headerlink" title="常见有哪些聚类方法？这些方法分别试用于哪些场合？"></a>常见有哪些聚类方法？这些方法分别试用于哪些场合？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">划分方法【k-means 】：适用于对大规模的数据集进行分类，以及处理复杂形状的聚类。</span><br><span class="line"></span><br><span class="line">层次方法【Birch、cure】：可以根据需求指定层数，知道要分几类的情况</span><br><span class="line"></span><br><span class="line">基于密度的方法：球状数据集能正确划分，但是非球状无法正确聚类，容易受到噪声影响。</span><br><span class="line"></span><br><span class="line">基于网格的方法：处理大数据集时效率高</span><br><span class="line"></span><br><span class="line">基于模型的方法：数据集满足一定的分布模型</span><br></pre></td></tr></table></figure>
+
+<h5 id="聚类分析中，样本之间的距离常用的计算方法有哪些？"><a href="#聚类分析中，样本之间的距离常用的计算方法有哪些？" class="headerlink" title="聚类分析中，样本之间的距离常用的计算方法有哪些？"></a>聚类分析中，样本之间的距离常用的计算方法有哪些？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">最短距离法、最长距离法、中间距离法、可变距离法、重心法、类平均法等。</span><br></pre></td></tr></table></figure>
+
+<h5 id="k个假设聚类中心位置对k-均值算法的影响？"><a href="#k个假设聚类中心位置对k-均值算法的影响？" class="headerlink" title="k个假设聚类中心位置对k-均值算法的影响？"></a>k个假设聚类中心位置对k-均值算法的影响？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">影响比较大，不同的初始中心可能会导致不同的聚类结果。</span><br></pre></td></tr></table></figure>
+
+<h5 id="简要说明基于划分的聚类方法的基本原理。"><a href="#简要说明基于划分的聚类方法的基本原理。" class="headerlink" title="简要说明基于划分的聚类方法的基本原理。"></a>简要说明基于划分的聚类方法的基本原理。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">把包含n个样本的数据集，基于划分的方法将n个样本按照特定的度量划分为K个蔟，方法大多数是基于距离来划分。在每次划分过程中寻找最优解，然后基于最优解进行迭代计算。</span><br></pre></td></tr></table></figure>
+
+<h5 id="支持向量机的基本原理是什么？"><a href="#支持向量机的基本原理是什么？" class="headerlink" title="支持向量机的基本原理是什么？"></a>支持向量机的基本原理是什么？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">一个比较基于数学的算法，</span><br><span class="line">通过将样本的向量映射到高维空间中，寻找最优区分两类数据的超平面，使各分类的超平面的距离最大化，距离越大SVM的分类误差越小。</span><br></pre></td></tr></table></figure>
+
+<h5 id="支持向量机适合解决什么问题？"><a href="#支持向量机适合解决什么问题？" class="headerlink" title="支持向量机适合解决什么问题？"></a>支持向量机适合解决什么问题？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">支持向量机用于二元分类问题，对于多元分类可以将其分解为多个二元分类问题，再进行分类。</span><br><span class="line"></span><br><span class="line">支持向量机在小样本、非线性及高维模式识别中表现出许多特有的优势，并能够推广应用到函数拟合等其他机器学习问题中。</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="支持向量机常用的核函数有？"><a href="#支持向量机常用的核函数有？" class="headerlink" title="支持向量机常用的核函数有？"></a>支持向量机常用的核函数有？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">线性核函数、多项式核函数、径向基核函数、sigmoid Kernel</span><br></pre></td></tr></table></figure>
+
+<h5 id="核函数的选择对支持向量机的性能有什么影响？"><a href="#核函数的选择对支持向量机的性能有什么影响？" class="headerlink" title="核函数的选择对支持向量机的性能有什么影响？"></a>核函数的选择对支持向量机的性能有什么影响？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">只要一个对称函数所对应的核矩阵半正定，它就能作为核函数使用。事实上，对于一个半正定核矩阵，总能找到一个与之对应的映射。核函数的使用，不一定能够准确的划分，只能说使用哪个核函数，能够逼近真实的划分效果。因此特征空间的好坏对支持向量机的性能至关重要。在不知道特征映射的形式时，我们并不知道什么样的核函数是合适的，而核函数也仅是隐式定义了这个特征空间。于是，核函数的选择成为了支持向量机的最大变数。若核函数选择不合适，则意味着映射到一个不合适的特征空间，很可能导致性能不佳。</span><br><span class="line">（对预测精度有重要影响。）</span><br><span class="line"></span><br><span class="line">特征数量多的时候适合线性核函数，因为运算速度快</span><br><span class="line"></span><br><span class="line">当多项式阶数高时复杂度会很高，正交归一化后的数据，优先使用多项式核函数。</span><br><span class="line"></span><br><span class="line">大多数情况下径向基核函数（高斯核函数）都有比较好的性能，不确定用哪种就用它。</span><br></pre></td></tr></table></figure>
+
+<h5 id="数据降维有哪些常用的方法？"><a href="#数据降维有哪些常用的方法？" class="headerlink" title="数据降维有哪些常用的方法？"></a>数据降维有哪些常用的方法？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：主成分分析 (PCA)，奇异值分解，线性判别分析，局部线性嵌入，拉普拉斯特征映射，</span><br></pre></td></tr></table></figure>
+
+<h5 id="PCA的基本思想-1"><a href="#PCA的基本思想-1" class="headerlink" title="PCA的基本思想"></a>PCA的基本思想</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：通过某种线性投影,将高伟的数据映射到低纬的空间中，并期望在所投影的维度上数据的方差最大，以此使用较少的维度，同时保留较多原数据的维度。</span><br></pre></td></tr></table></figure>
+<h5 id="常用特征的选择方式。列举其方法。"><a href="#常用特征的选择方式。列举其方法。" class="headerlink" title="常用特征的选择方式。列举其方法。"></a>常用特征的选择方式。列举其方法。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：特征选择的目的主要是降维，从特征集合中挑选一组最具统计意义的特征子集来代表整体样本的特点。常见的有pearson相关系数，基尼指标，信息增益等。最简单的办法是琼剧所有特征子集，找到错误率最低的子集。特征选择可分为过滤方法，封装器方法和嵌入方法。</span><br></pre></td></tr></table></figure>
+<h5 id="什么是过拟合问题，如何判断过拟合？"><a href="#什么是过拟合问题，如何判断过拟合？" class="headerlink" title="什么是过拟合问题，如何判断过拟合？"></a>什么是过拟合问题，如何判断过拟合？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">答：下面的话有点太官方了  什么是过拟合？大白话就是 泛化能力低 再白话一点就是测试误差高。 如何判断？看看测试误差是不是很高就行了</span><br><span class="line"></span><br><span class="line">通常对于分类算法可能产生两种类型的误差，分别是训练误差与泛化误差。训练误差代表此分类方法，对于现有训练样本级的拟合程度，泛化误差代表此方法的泛化能力，即对于新的样本数据的分类能力如何。模型的训练误差低，但是泛化误差比较高，则称分类模型过拟合。即过度拟合训练数据，导致模型的泛化能力，反而随着模型与训练数据的拟合程度增高而下降。随着分类模型对于样本的拟合程度逐渐增加，当决策数深度达到一定值，即使训练误差仍在下降，泛化误差却不断升高，产生过拟合现象。（书上的</span><br><span class="line">全摘录了自己总结吧）</span><br></pre></td></tr></table></figure>
+
+<h5 id="k均值算法的原理是什么？步骤？"><a href="#k均值算法的原理是什么？步骤？" class="headerlink" title="k均值算法的原理是什么？步骤？"></a>k均值算法的原理是什么？步骤？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：K均值距离是基于划分的距离算法。计算样本点与类簇质心的距离，与类簇质心相近的样本点划分为同一类簇。K均值中，样本间的相似度由他们之间的距离决定。距离越近说明相似度越高，反之越低。</span><br></pre></td></tr></table></figure>
+
+<h5 id="讨论初始的k个假设聚类中心位置对k均值算法的影响。"><a href="#讨论初始的k个假设聚类中心位置对k均值算法的影响。" class="headerlink" title="讨论初始的k个假设聚类中心位置对k均值算法的影响。"></a>讨论初始的k个假设聚类中心位置对k均值算法的影响。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：K均值算法中初始聚类中心的选取对算法结果影响很大。不同的初始中心可能会导致不同的聚类结果。选择一个新样本点加入聚类中心点集合中，其距离dx越大，被选中的可能性越高。</span><br></pre></td></tr></table></figure>
+<h5 id="如何评价聚类方法的好坏？"><a href="#如何评价聚类方法的好坏？" class="headerlink" title="如何评价聚类方法的好坏？"></a>如何评价聚类方法的好坏？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：在数据质量高的情况下，一个好的聚类结果表明了数据中相对稳定的某种“模式 or 分布”，这个模式不会因为个别数据点的增删改而改变，且能够将数据尽可能分开。</span><br></pre></td></tr></table></figure>
+<h5 id="DBSCAN算法的原理-步骤。"><a href="#DBSCAN算法的原理-步骤。" class="headerlink" title="DBSCAN算法的原理?步骤。"></a>DBSCAN算法的原理?步骤。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">答：DBSCAN是一种基于密度的聚类算法，这类密度聚类算法一般假定类别可以通过样本分布的紧密程度决定。同一类别的样本，他们之间的紧密相连的，也就是说，在该类别任意样本周围不远处一定有同类别的样本存在。通过将紧密相连的样本划为一类，这样就得到了一个聚类类别。通过将所有各组紧密相连的样本划为各个不同的类别，则我们就得到了最终的所有聚类类别结果。（原理 完整）</span><br><span class="line">原理：该算法利用基于密度的聚类的思想，即要求聚类空间中的一定区域内所包含对象的数目不小于某一给定的阈值。</span><br><span class="line">（原理 总结）</span><br><span class="line">DBSCAN 算法的步骤如下：</span><br><span class="line">1）从任一数据点 p 开始，对 p 点根据和 MinPts 进行判定。如果 p 是核心数据点，则建立新簇 S，并将 p 临域内的所有点归入 S；否则将 p 点标记为边界点或噪声点。</span><br><span class="line">2）对于 S 中除 p 点以外的点继续实施过程 1），继续扩充 S，直到所有的点都被判定处理。</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" rel="tag"># 机器学习基础算法</a>
+          
+            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%A0%E9%A2%98/" rel="tag"># 机器学习习题</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/13/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/" rel="next" title="成功解决java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver">
+                <i class="fa fa-chevron-left"></i> 成功解决java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">jamin Yang</p>
+              <p class="site-description motion-element" itemprop="description">one todays is worth two tomorrows</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简答题"><span class="nav-number">1.</span> <span class="nav-text">简答题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#机器学习与人工智能的关系"><span class="nav-number">1.0.1.</span> <span class="nav-text">机器学习与人工智能的关系</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#机器学习与数据挖掘的关系"><span class="nav-number">1.0.2.</span> <span class="nav-text">机器学习与数据挖掘的关系</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#举例说明机器学习的基本过程，并举例说明各步骤使用的方法"><span class="nav-number">1.0.3.</span> <span class="nav-text">举例说明机器学习的基本过程，并举例说明各步骤使用的方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#什么是标准差、方差和协方差？它们反映了数据的什么内容？"><span class="nav-number">1.0.4.</span> <span class="nav-text">什么是标准差、方差和协方差？它们反映了数据的什么内容？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如何利用平均值和标准差判断数据的异常值？"><span class="nav-number">1.0.5.</span> <span class="nav-text">如何利用平均值和标准差判断数据的异常值？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#何为正则化？其功能是什么？"><span class="nav-number">1.0.6.</span> <span class="nav-text">何为正则化？其功能是什么？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#PCA的基本思想"><span class="nav-number">1.0.7.</span> <span class="nav-text">PCA的基本思想</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如何理解L0、L1、L2正则化？"><span class="nav-number">1.0.8.</span> <span class="nav-text">如何理解L0、L1、L2正则化？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#什么是交叉校验？常用方法有哪些？"><span class="nav-number">1.0.9.</span> <span class="nav-text">什么是交叉校验？常用方法有哪些？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#LDA的基本思想是什么？举例说明"><span class="nav-number">1.0.10.</span> <span class="nav-text">LDA的基本思想是什么？举例说明</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#为什么考虑特征提取？"><span class="nav-number">1.0.11.</span> <span class="nav-text">为什么考虑特征提取？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#线性回归的过程是什么？举例说明"><span class="nav-number">1.0.12.</span> <span class="nav-text">线性回归的过程是什么？举例说明~</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#逻辑回归为什么可以预测新样本的类别？举例说明其应用。"><span class="nav-number">1.0.13.</span> <span class="nav-text">逻辑回归为什么可以预测新样本的类别？举例说明其应用。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分类解决什么问题？"><span class="nav-number">1.0.14.</span> <span class="nav-text">分类解决什么问题？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#常见的分类算法有哪些？举例说明"><span class="nav-number">1.0.15.</span> <span class="nav-text">常见的分类算法有哪些？举例说明</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#简述决策树的生成过程"><span class="nav-number">1.0.16.</span> <span class="nav-text">简述决策树的生成过程</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如何减少过拟合？"><span class="nav-number">1.0.17.</span> <span class="nav-text">如何减少过拟合？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-混淆矩阵"><span class="nav-number">1.0.18.</span> <span class="nav-text">1. 混淆矩阵</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-准确率"><span class="nav-number">1.0.19.</span> <span class="nav-text">2. 准确率</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#3-精准率"><span class="nav-number">1.0.19.1.</span> <span class="nav-text">3. 精准率</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-召回率"><span class="nav-number">1.0.20.</span> <span class="nav-text">4. 召回率</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#AUC与ROC的关系是什么？"><span class="nav-number">1.0.21.</span> <span class="nav-text">AUC与ROC的关系是什么？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#聚类分析的目的是什么？"><span class="nav-number">1.0.22.</span> <span class="nav-text">聚类分析的目的是什么？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#聚类与分类的关系？"><span class="nav-number">1.0.23.</span> <span class="nav-text">聚类与分类的关系？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#常见有哪些聚类方法？这些方法分别试用于哪些场合？"><span class="nav-number">1.0.24.</span> <span class="nav-text">常见有哪些聚类方法？这些方法分别试用于哪些场合？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#聚类分析中，样本之间的距离常用的计算方法有哪些？"><span class="nav-number">1.0.25.</span> <span class="nav-text">聚类分析中，样本之间的距离常用的计算方法有哪些？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#k个假设聚类中心位置对k-均值算法的影响？"><span class="nav-number">1.0.26.</span> <span class="nav-text">k个假设聚类中心位置对k-均值算法的影响？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#简要说明基于划分的聚类方法的基本原理。"><span class="nav-number">1.0.27.</span> <span class="nav-text">简要说明基于划分的聚类方法的基本原理。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#支持向量机的基本原理是什么？"><span class="nav-number">1.0.28.</span> <span class="nav-text">支持向量机的基本原理是什么？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#支持向量机适合解决什么问题？"><span class="nav-number">1.0.29.</span> <span class="nav-text">支持向量机适合解决什么问题？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#支持向量机常用的核函数有？"><span class="nav-number">1.0.30.</span> <span class="nav-text">支持向量机常用的核函数有？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#核函数的选择对支持向量机的性能有什么影响？"><span class="nav-number">1.0.31.</span> <span class="nav-text">核函数的选择对支持向量机的性能有什么影响？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数据降维有哪些常用的方法？"><span class="nav-number">1.0.32.</span> <span class="nav-text">数据降维有哪些常用的方法？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#PCA的基本思想-1"><span class="nav-number">1.0.33.</span> <span class="nav-text">PCA的基本思想</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#常用特征的选择方式。列举其方法。"><span class="nav-number">1.0.34.</span> <span class="nav-text">常用特征的选择方式。列举其方法。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#什么是过拟合问题，如何判断过拟合？"><span class="nav-number">1.0.35.</span> <span class="nav-text">什么是过拟合问题，如何判断过拟合？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#k均值算法的原理是什么？步骤？"><span class="nav-number">1.0.36.</span> <span class="nav-text">k均值算法的原理是什么？步骤？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#讨论初始的k个假设聚类中心位置对k均值算法的影响。"><span class="nav-number">1.0.37.</span> <span class="nav-text">讨论初始的k个假设聚类中心位置对k均值算法的影响。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如何评价聚类方法的好坏？"><span class="nav-number">1.0.38.</span> <span class="nav-text">如何评价聚类方法的好坏？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#DBSCAN算法的原理-步骤。"><span class="nav-number">1.0.39.</span> <span class="nav-text">DBSCAN算法的原理?步骤。</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jamin Yang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>
