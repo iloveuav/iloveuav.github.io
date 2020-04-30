@@ -273,6 +273,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/11/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E4%B9%A0%E9%A2%98%E8%AE%AD%E7%BB%83%EF%BC%88%E5%90%AB%E7%AD%94%E6%A1%88%E8%A7%A3%E6%9E%90%EF%BC%89/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E4%B9%A0%E9%A2%98%E8%AE%AD%E7%BB%83%EF%BC%88%E5%90%AB%E7%AD%94%E6%A1%88%E8%A7%A3%E6%9E%90%EF%BC%89/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/11/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E4%B9%A0%E9%A2%98%E8%AE%AD%E7%BB%83%EF%BC%88%E5%90%AB%E7%AD%94%E6%A1%88%E8%A7%A3%E6%9E%90%EF%BC%89/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E4%B9%A0%E9%A2%98%E8%AE%AD%E7%BB%83%EF%BC%88%E5%90%AB%E7%AD%94%E6%A1%88%E8%A7%A3%E6%9E%90%EF%BC%89/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -451,6 +461,9 @@
 
           
 
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -735,6 +748,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'WddqzdpjPB5RxzmHjllb02RU-gzGzoHsz# your leancloud application appid',
+        appKey: 'OSum14O3yP32h4TUxJwTXYbU# your leancloud application appkey',
+        placeholder: 'why not to say something',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
