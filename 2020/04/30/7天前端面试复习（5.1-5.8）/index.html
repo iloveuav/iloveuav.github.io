@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="匆匆忙忙在4.25开始投简历，5.9号将进行线上面试，于是就有了这一个博客，不管成与败，对于我来说都是一个Opportunities to get to know yourself better Day1（Git&#x2F;前后端分离技术）由于才疏学浅大部分本博客大部分都是引用其他大佬的博客主要是为了方便复习和理解~">
+<meta property="og:type" content="article">
+<meta property="og:title" content="7天前端面试复习（5.1-5.8）">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;04&#x2F;30&#x2F;7%E5%A4%A9%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0%EF%BC%885.1-5.8%EF%BC%89&#x2F;index.html">
+<meta property="og:site_name" content="Hfly(汇飞工作室技术分享博客)">
+<meta property="og:description" content="匆匆忙忙在4.25开始投简历，5.9号将进行线上面试，于是就有了这一个博客，不管成与败，对于我来说都是一个Opportunities to get to know yourself better Day1（Git&#x2F;前后端分离技术）由于才疏学浅大部分本博客大部分都是引用其他大佬的博客主要是为了方便复习和理解~">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;04&#x2F;30&#x2F;7%E5%A4%A9%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0%EF%BC%885.1-5.8%EF%BC%89&#x2F;%5Cimages%5Cpasted-6.png%5C">
+<meta property="og:updated_time" content="2020-05-01T18:14:14.457Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;04&#x2F;30&#x2F;7%E5%A4%A9%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0%EF%BC%885.1-5.8%EF%BC%89&#x2F;%5Cimages%5Cpasted-6.png%5C">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/04/30/7天前端面试复习（5.1-5.8）/"/>
+
+
+
+
+
+  <title>7天前端面试复习（5.1-5.8） | Hfly(汇飞工作室技术分享博客)</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hfly(汇飞工作室技术分享博客)</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">我还是太菜了</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/30/7%E5%A4%A9%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0%EF%BC%885.1-5.8%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jamin Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hfly(汇飞工作室技术分享博客)">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">7天前端面试复习（5.1-5.8）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-30T15:07:26+08:00">
+                2020-04-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/04/30/7%E5%A4%A9%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0%EF%BC%885.1-5.8%EF%BC%89/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/30/7%E5%A4%A9%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0%EF%BC%885.1-5.8%EF%BC%89/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>匆匆忙忙在4.25开始投简历，5.9号将进行线上面试，于是就有了这一个博客，不管成与败，对于我来说都是一个Opportunities to get to know yourself better</p>
+<h2 id="Day1（Git-前后端分离技术）"><a href="#Day1（Git-前后端分离技术）" class="headerlink" title="Day1（Git/前后端分离技术）"></a>Day1（Git/前后端分离技术）</h2><p>由于才疏学浅大部分本博客大部分都是引用其他大佬的博客<br>主要是为了方便复习和理解~</p>
+<a id="more"></a>
+<h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p>git部分参考自廖雪峰的官方网站 <a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/896043488029600</a></p>
+<h5 id="创建版本库（又名仓库-repository）"><a href="#创建版本库（又名仓库-repository）" class="headerlink" title="创建版本库（又名仓库 repository）"></a>创建版本库（又名仓库 repository）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">可以简单理解成一个目录，这个目录里面的所有文件都可以被Git管理起来，每个文件的修改、删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以“还原”。</span><br><span class="line"></span><br><span class="line">$ mkdir learngit</span><br><span class="line">$ cd learngit</span><br><span class="line">$ pwd</span><br><span class="line">/Users/michael/learngit</span><br></pre></td></tr></table></figure>
+<p><strong><em>如果你使用Windows系统，为了避免遇到各种莫名其妙的问题，请确保目录名（包括父目录）不包含中文。</em></strong></p>
+<h5 id="基本命令速览："><a href="#基本命令速览：" class="headerlink" title="基本命令速览："></a>基本命令速览：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">通过git init命令把这个目录变成Git可以管理的仓库：</span><br><span class="line">用命令git add告诉Git，把文件添加到仓库：</span><br><span class="line">用命令git commit告诉Git，把文件提交到仓库：</span><br><span class="line">$ git commit -m &quot;wrote a readme file&quot;</span><br><span class="line">-m后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">为什么Git添加文件需要add，commit一共两步呢？因为commit可以一次提交很多文件，所以你可以多次add不同的文件，比如：</span><br><span class="line">$ git add file1.txt</span><br><span class="line">$ git add file2.txt file3.txt</span><br><span class="line">$ git commit -m &quot;add 3 files.&quot;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status命令可以让我们时刻掌握仓库当前的状态</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git diff顾名思义就是查看difference，显示的格式正是Unix通用的diff格式</span><br><span class="line">如：$ git diff readme.txt</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">在Git中，我们用git log命令查看历史记录，显示从最近到最远的提交日志</span><br><span class="line">类似1094adb7b9b3807259d8cb349e7df1d4d6477073 的是commit id（版本号）</span><br><span class="line"></span><br><span class="line">为什么commit id需要用这么一大串数字表示呢？因为Git是分布式的版本控制系统，后面我们还要研究多人在同一个版本库里工作，如果大家都用1，2，3……作为版本号，那肯定就冲突了。</span><br></pre></td></tr></table></figure>
+<p>回退到上一个版本：<br>首先，Git必须知道当前版本是哪个版本，在Git中，用HEAD表示当前版本，上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。</p>
+<p>使用git reset命令：<br>                                       git status检测更改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard HEAD^</span><br><span class="line">$ git reset --hard 1094a</span><br><span class="line">要撤销提交但保留更改：git reset  +当前文件</span><br><span class="line">要修改提交中的更改：git reset --hard +当前文件名</span><br><span class="line"></span><br><span class="line">你使用了 --hard，所以你的文件将重置到提交 B 时的状态。</span><br></pre></td></tr></table></figure>
+<p>可退可进，只要上面的命令行窗口还没有被关掉，你就可以顺着往上找啊找啊，找到那个append GPL的commit id是1094adb…，于是就可以指定回到未来的某个版本</p>
+<p>假如你关了电脑 不知道id没办法穿越怎么办，Git提供了一个命令git reflog用来记录你的每一次命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reflog</span><br></pre></td></tr></table></figure>
+<p>现在，你又可以乘坐时光机回到未来了。</p>
+<h6 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h6><p>Git会告诉你，git checkout – file可以丢弃工作区的修改：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -- readme.txt</span><br><span class="line">命令git checkout -- readme.txt意思就是，把readme.txt文件在工作区的修改全部撤销，这里有两种情况：</span><br><span class="line">一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；</span><br><span class="line">一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。</span><br><span class="line"></span><br><span class="line">总之，就是让这个文件回到最近一次git commit或git add时的状态。</span><br></pre></td></tr></table></figure>
+
+<p>用命令git reset HEAD <file>可以把暂存区的修改撤销掉（unstage），重新放回工作区</file></p>
+<p>  修改相关小总结：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout -- file。</span><br><span class="line"></span><br><span class="line">场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD &lt;file&gt;，就回到了场景1，第二步按场景1操作。</span><br><span class="line"></span><br><span class="line">场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。</span><br><span class="line"></span><br><span class="line">git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。</span><br></pre></td></tr></table></figure></p>
+<h6 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h6><p>GitHub告诉我们，可以从这个仓库克隆出新的仓库，也可以把一个已有的本地仓库与之关联，然后，把本地仓库的内容推送到GitHub仓库。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">要关联一个远程库，使用命令：</span><br><span class="line">$git remote add origin git@server-name:path/repo-name.git；</span><br><span class="line">$ git remote add origin github邮箱：用户名/仓库名.git</span><br><span class="line"></span><br><span class="line">关联后，使用命令git push -u origin master第一次推送master分支的所有内容；</span><br><span class="line">此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2020/04/30/7%E5%A4%A9%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0%EF%BC%885.1-5.8%EF%BC%89/%5Cimages%5Cpasted-6.png%5C" alt="upload successful"></p>
+<p>要克隆一个仓库，首先必须知道仓库的地址，然后使用git clone命令克隆。<br>Git支持多种协议，包括https，但ssh协议速度最快。</p>
+<h6 id="创建与合并分支"><a href="#创建与合并分支" class="headerlink" title="创建与合并分支"></a>创建与合并分支</h6><p>创建dev分支，然后切换到dev分支：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b dev</span><br><span class="line">Switched to a new branch &apos;dev&apos;</span><br></pre></td></tr></table></figure>
+<p>git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git branch dev</span><br><span class="line">$ git checkout dev</span><br><span class="line">Switched to branch &apos;dev&apos;</span><br></pre></td></tr></table></figure>
+
+<p>用git branch命令查看当前分支：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* dev</span><br><span class="line">  master</span><br></pre></td></tr></table></figure>
+<p>  git branch命令会列出所有分支，当前分支前面会标一个*号。</p>
+<p>  dev分支的工作完成，我们就可以切换回master分支：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout master</span><br><span class="line">Switched to branch &apos;master&apos;</span><br></pre></td></tr></table></figure>
+
+<p>把dev分支的工作成果合并到master分支上：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git merge dev</span><br></pre></td></tr></table></figure>
+<p>git merge命令用于合并指定分支到当前分支。</p>
+<p>合并完成后，就可以放心地删除dev分支了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d dev</span><br><span class="line">Deleted branch dev (was b17d20e).</span><br></pre></td></tr></table></figure>
+<p>switch<br>我们注意到切换分支使用git checkout <branch>，而前面讲过的撤销修改则是git checkout – <file>，同一个命令，有两种作用，确实有点令人迷惑。</file></branch></p>
+<p>实际上，切换分支这个动作，用switch更科学。因此，最新版本的Git提供了新的git switch命令来切换分支：</p>
+<p>创建并切换到新的dev分支，可以使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git switch -c dev</span><br></pre></td></tr></table></figure>
+<p>直接切换到已有的master分支，可以使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git switch master</span><br></pre></td></tr></table></figure>
+<p>Git鼓励大量使用分支：</p>
+<p>查看分支：git branch</p>
+<p>创建分支：git branch <name></name></p>
+<p>切换分支：git checkout <name>或者git switch <name></name></name></p>
+<p>创建+切换分支：git checkout -b <name>或者git switch -c <name></name></name></p>
+<p>合并某分支到当前分支：git merge <name></name></p>
+<p>删除分支：git branch -d <name></name></p>
+<h6 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h6><p>  当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。</p>
+<p>解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交。</p>
+<p>用git log –graph命令可以看到分支合并图。</p>
+<h6 id="分支策略"><a href="#分支策略" class="headerlink" title="分支策略"></a>分支策略</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">在实际开发中，我们应该按照几个基本原则进行分支管理：</span><br><span class="line"></span><br><span class="line">首先，master分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；</span><br><span class="line"></span><br><span class="line">那在哪干活呢？干活都在dev分支上，也就是说，dev分支是不稳定的，到某个时候，比如1.0版本发布时，再把dev分支合并到master上，在master分支发布1.0版本；</span><br><span class="line"></span><br><span class="line">你和你的小伙伴们每个人都在dev分支上干活，每个人都有自己的分支，时不时地往dev分支上合并就可以了。</span><br></pre></td></tr></table></figure>
+
+<p>Bug分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；</span><br><span class="line"></span><br><span class="line">当手头工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场；</span><br><span class="line"></span><br><span class="line">在master分支上修复的bug，想要合并到当前dev分支，可以用git cherry-pick &lt;commit&gt;命令，把bug提交的修改“复制”到当前分支，避免重复劳动。</span><br></pre></td></tr></table></figure>
+<p>Feature分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">开发一个新feature，最好新建一个分支；</span><br><span class="line"></span><br><span class="line">如果要丢弃一个没有被合并过的分支，可以通过git branch -D &lt;name&gt;强行删除。</span><br></pre></td></tr></table></figure>
+<p>多人协作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">查看远程库信息，使用git remote -v；</span><br><span class="line"></span><br><span class="line">本地新建的分支如果不推送到远程，对其他人就是不可见的；</span><br><span class="line"></span><br><span class="line">从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交；</span><br><span class="line"></span><br><span class="line">在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；</span><br><span class="line"></span><br><span class="line">建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；</span><br><span class="line"></span><br><span class="line">从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。</span><br></pre></td></tr></table></figure>
+<p>Rebase</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rebase操作可以把本地未push的分叉提交历史整理成直线；</span><br><span class="line"></span><br><span class="line">rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。</span><br></pre></td></tr></table></figure>
+<h3 id="Git前端面试题"><a href="#Git前端面试题" class="headerlink" title="Git前端面试题"></a>Git前端面试题</h3><p><a href="https://blog.csdn.net/nobody_1/article/details/88956315" target="_blank" rel="noopener">https://blog.csdn.net/nobody_1/article/details/88956315</a></p>
+<h3 id="前后端分离技术"><a href="#前后端分离技术" class="headerlink" title="前后端分离技术"></a>前后端分离技术</h3><h6 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">简单介绍下Ajax ：https://blog.csdn.net/persistencegoing/article/details/88641992</span><br></pre></td></tr></table></figure>
+<p>传统网站在网速慢、表单内容提交不合格、页面跳转资源加载浪费下会各种影响用户体验。<br>Ajax可以实现页面无刷新更新数据（异步局部更新），提高用户体验。</p>
+<p>应用场景：（不刷新页面情况下请求服务器资源）<br>1、页面上拉加载更多<br>2、列表数据无刷新分页<br>3、表单项离开焦点数据验证<br>4、搜索框提示文字下拉列表</p>
+<p>运行环境：在网站环境中才能生效 如：Express （基于Node.js 平台的Web应用开发框架）</p>
+<p>AJAX = 异步 JavaScript和 XML。</p>
+<p>AJAX 是一种用于创建快速动态网页的技术。</p>
+<p>XMLHttpRequest 是 AJAX 的基础。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">XMLHttpRequest对象：用于在后台与服务器交换数据。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</span><br></pre></td></tr></table></figure>
+
+<p>创建 XMLHttpRequest 对象的语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">variable=new XMLHttpRequest();</span><br></pre></td></tr></table></figure>
+<p>老版本的 Internet Explorer （IE5 和 IE6）使用 ActiveX 对象：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">variable=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</span><br></pre></td></tr></table></figure>
+<p>实例：<br><a href="https://www.w3school.com.cn/xml/xml_http.asp" target="_blank" rel="noopener">https://www.w3school.com.cn/xml/xml_http.asp</a></p>
+<p>onreadystatechange 是一个事件句柄（指事件发生时要进行的操作。）。它的值 (state_Change) 是一个函数的名称，当 XMLHttpRequest 对象的状态发生改变时，会触发此函数。状态从 0 (uninitialized) 到 4 (complete) 进行变化。仅在状态为 4 时，我们才执行代码。</p>
+<p><strong><em>为什么使用 Async=true ？</em></strong></p>
+<p>我们的实例在 open() 的第三个参数中使用了 “true”。<br>该参数规定请求是否异步处理。<br>True 表示脚本会在 send() 方法之后继续执行，而不等待来自服务器的响应。<br>onreadystatechange 事件使代码复杂化了。但是这是在没有得到服务器响应的情况下，防止代码停止的最安全的方法。</p>
+<p>通过把该参数设置为 “false”，可以省去额外的 onreadystatechange 代码。如果在请求失败时是否执行其余的代码无关紧要，那么可以使用这个参数。</p>
+<h6 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">***what***:https://www.cnblogs.com/bzsheng/p/12527357.html</span><br><span class="line"></span><br><span class="line">***how***:</span><br><span class="line"></span><br><span class="line">JSONP跨域:https://blog.csdn.net/DFF1993/article/details/79925874</span><br><span class="line"></span><br><span class="line">Nodejs代理：https://www.cnblogs.com/Aoobruce/p/8195933.html</span><br><span class="line"></span><br><span class="line">Nginx跨域：https://jingyan.baidu.com/article/4d58d541f87a78ddd4e9c0c8.html</span><br><span class="line"></span><br><span class="line">CORS跨域：https://www.jianshu.com/p/98d4bc7565b2</span><br></pre></td></tr></table></figure>
+
+<h6 id="前端路由"><a href="#前端路由" class="headerlink" title="前端路由"></a>前端路由</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">***what？***：https://www.zhihu.com/question/53064386</span><br><span class="line"></span><br><span class="line">*** how?*** : https://segmentfault.com/a/1190000006740604?utm_source=tag-newest</span><br></pre></td></tr></table></figure>
+<h6 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">***what?***: https://www.cnblogs.com/qcloud1001/p/10101067.html</span><br><span class="line"></span><br><span class="line">***How?***:</span><br><span class="line">https://blog.csdn.net/zhang070514/article/details/74018769</span><br></pre></td></tr></table></figure>
+
+<h6 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">***what?***: https://www.cnblogs.com/qcloud1001/p/10101067.html</span><br><span class="line"></span><br><span class="line">***How?***:</span><br><span class="line">https://blog.csdn.net/zhang070514/article/details/74018769</span><br></pre></td></tr></table></figure>
+
+<p>cookie，session和 localstorage 的区别:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">session&amp;cookie:https://www.dazhuanlan.com/2019/12/30/5e09a58fee920/</span><br><span class="line">cookie&amp;session&amp;localstoragehttps://blog.csdn.net/lizhengxv/article/details/81541977</span><br></pre></td></tr></table></figure>
+<h3 id="第二天（JS相关）"><a href="#第二天（JS相关）" class="headerlink" title="第二天（JS相关）"></a>第二天（JS相关）</h3><h6 id="关于-：-在JS中本身只是一个符号而已，但在JS应用库JQUERY的作者将之做为一个自定义函数名了，这个函数是获取指定网页元素的函数，使用非常之频繁，我自己在不用JQUERY的情况，一般自己也会自定义一个-函数。"><a href="#关于-：-在JS中本身只是一个符号而已，但在JS应用库JQUERY的作者将之做为一个自定义函数名了，这个函数是获取指定网页元素的函数，使用非常之频繁，我自己在不用JQUERY的情况，一般自己也会自定义一个-函数。" class="headerlink" title="关于$：$在JS中本身只是一个符号而已，但在JS应用库JQUERY的作者将之做为一个自定义函数名了，这个函数是获取指定网页元素的函数，使用非常之频繁，我自己在不用JQUERY的情况，一般自己也会自定义一个$函数。"></a>关于$：$在JS中本身只是一个符号而已，但在JS应用库JQUERY的作者将之做为一个自定义函数名了，这个函数是获取指定网页元素的函数，使用非常之频繁，我自己在不用JQUERY的情况，一般自己也会自定义一个$函数。</h6><p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function $(Eid)&#123;</span><br><span class="line"> return document.getElementById(Eid);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">标签选择器$(&apos;p&apos;)、类选择器$(&apos;.myClass&apos;)、id选择器$(&apos;#myId&apos;)相对简单，不多说。不过有一点——$(&apos;div&gt;ul&apos;)和$(&apos;div ul&apos;)是有区别的， $(&apos;div&gt;ul&apos;)是&lt;div&gt;的直接后代里找&lt;ul&gt;；而$(&apos;div ul&apos;)是在&lt;div&gt;的***所有后代***里找&lt;ul&gt;。 </span><br><span class="line">所以，$(&apos;#sId&gt;li&apos;)所选择的是id为&quot;sId&quot;的所有&lt;li&gt;孩子节点，即使这个&lt;li&gt;的后代还有&lt;li&gt;也不是它所找的范围（所找到的DOM对象，只是它本级的DOM对象。）。而$(&apos;#sId li:not(.horizontal)&apos;)，就是指类名&quot;sId&quot;里面的所有li的子孙中没有horizontal类的所有元素。——这里的not()是一个negation pseudo class. </span><br><span class="line">这里返回的是一个jQurey对象，一个数组对象，这个jQuery对象的长度可用.length()得到。</span><br></pre></td></tr></table></figure>
+
+<h6 id="e-preventDefault-与e-stopPropagation-的区别"><a href="#e-preventDefault-与e-stopPropagation-的区别" class="headerlink" title="e.preventDefault()与e.stopPropagation()的区别"></a>e.preventDefault()与e.stopPropagation()的区别</h6>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E7%AE%80%E7%AD%94%E9%A2%98/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" rel="next" title="机器学习期末复习简答题">
+                <i class="fa fa-chevron-left"></i> 机器学习期末复习简答题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">jamin Yang</p>
+              <p class="site-description motion-element" itemprop="description">one todays is worth two tomorrows</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Day1（Git-前后端分离技术）"><span class="nav-number">1.</span> <span class="nav-text">Day1（Git/前后端分离技术）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git"><span class="nav-number">1.1.</span> <span class="nav-text">Git</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建版本库（又名仓库-repository）"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">创建版本库（又名仓库 repository）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#基本命令速览："><span class="nav-number">1.1.0.2.</span> <span class="nav-text">基本命令速览：</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#撤销修改"><span class="nav-number">1.1.0.2.1.</span> <span class="nav-text">撤销修改</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#添加远程仓库"><span class="nav-number">1.1.0.2.2.</span> <span class="nav-text">添加远程仓库</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#创建与合并分支"><span class="nav-number">1.1.0.2.3.</span> <span class="nav-text">创建与合并分支</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#解决冲突"><span class="nav-number">1.1.0.2.4.</span> <span class="nav-text">解决冲突</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#分支策略"><span class="nav-number">1.1.0.2.5.</span> <span class="nav-text">分支策略</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git前端面试题"><span class="nav-number">1.2.</span> <span class="nav-text">Git前端面试题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前后端分离技术"><span class="nav-number">1.3.</span> <span class="nav-text">前后端分离技术</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Ajax"><span class="nav-number">1.3.0.0.1.</span> <span class="nav-text">Ajax</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#跨域"><span class="nav-number">1.3.0.0.2.</span> <span class="nav-text">跨域</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#前端路由"><span class="nav-number">1.3.0.0.3.</span> <span class="nav-text">前端路由</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Cookie"><span class="nav-number">1.3.0.0.4.</span> <span class="nav-text">Cookie</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Session"><span class="nav-number">1.3.0.0.5.</span> <span class="nav-text">Session</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二天（JS相关）"><span class="nav-number">1.4.</span> <span class="nav-text">第二天（JS相关）</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#关于-：-在JS中本身只是一个符号而已，但在JS应用库JQUERY的作者将之做为一个自定义函数名了，这个函数是获取指定网页元素的函数，使用非常之频繁，我自己在不用JQUERY的情况，一般自己也会自定义一个-函数。"><span class="nav-number">1.4.0.0.1.</span> <span class="nav-text">关于$：$在JS中本身只是一个符号而已，但在JS应用库JQUERY的作者将之做为一个自定义函数名了，这个函数是获取指定网页元素的函数，使用非常之频繁，我自己在不用JQUERY的情况，一般自己也会自定义一个$函数。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#e-preventDefault-与e-stopPropagation-的区别"><span class="nav-number">1.4.0.0.2.</span> <span class="nav-text">e.preventDefault()与e.stopPropagation()的区别</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jamin Yang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  //<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  //<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+  <script src="../js/src/av-min.js"></script>
+  <script src="../js/src/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'WddqzdpjPB5RxzmHjllb02RU-gzGzoHsz',
+        appKey: 'OSum14O3yP32h4TUxJwTXYbU',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>
