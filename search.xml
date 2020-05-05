@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>page</title>
+    <url>/2020/05/02/page/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>[踩坑玄学]隐身&amp;nbsp</title>
+    <url>/2020/05/05/%E5%9D%91%E7%8E%84%E5%AD%A6-%E9%9A%90%E8%BA%AB-nbsp/</url>
+    <content><![CDATA[<video src="http://q9uen5wtx.bkt.clouddn.com/%E7%8E%84%E5%AD%A6%EF%BC%9F.mp4" controls="controls" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;">
+your browser does not support the video tag
+</video>]]></content>
+      <categories>
+        <category>VSCode</category>
+      </categories>
+      <tags>
+        <tag>踩坑</tag>
+        <tag>空格占位</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>7天前端面试复习（5.1-5.8）</title>
     <url>/2020/04/30/7%E5%A4%A9%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0%EF%BC%885.1-5.8%EF%BC%89/</url>
     <content><![CDATA[<p>匆匆忙忙在4.25开始投简历，5.9号将进行线上面试，于是就有了这一个博客，不管成与败，对于我来说都是一个Opportunities to get to know yourself better</p>
@@ -187,9 +206,39 @@
       </tags>
   </entry>
   <entry>
-    <title>page</title>
-    <url>/2020/05/02/page/</url>
-    <content><![CDATA[]]></content>
+    <title>成功解决java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver</title>
+    <url>/2019/11/13/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/</url>
+    <content><![CDATA[<p>用Spring 通过applicationContext连接mySql</p>
+<p>发现报错  于是改回传统方式尝试连接 代码如下</p>
+<a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@org.junit.Test</span><br><span class="line">	public void mainTest() &#123;</span><br><span class="line">//		// 加载配置文件</span><br><span class="line">//		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);</span><br><span class="line">//		// 获取JdbcTemplate实例</span><br><span class="line">//		JdbcTemplate jdTemplate = (JdbcTemplate) applicationContext.getBean(&quot;jdbcTemplate&quot;);</span><br><span class="line">//		// 使用execute()方法执行SQL语句，创建用户账户管理表account</span><br><span class="line">//		jdTemplate.execute(&quot;create table account(&quot; + &quot;id int primary key auto_increment,&quot; + &quot;username varchar(50),&quot;</span><br><span class="line">//				+ &quot;balance double)&quot;);</span><br><span class="line">//		System.out.println(&quot;账户表account创建成功！&quot;);</span><br><span class="line"></span><br><span class="line">		Connection conn=null;</span><br><span class="line">		try</span><br><span class="line">		&#123;</span><br><span class="line">			Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);// 加载驱动程序，此次无需更改</span><br><span class="line">			System.out.println(&quot;registered success!&quot;);//输出registered success表示驱动加载成功</span><br><span class="line">			//创建对象连接，连接数据库，此例中employeedbms为数据库名，root为用户名，123456位密码，该三项均需根据实际情况进行修改，其它代码无需变动。注：确保数据库名、用户名和密码的准确性。</span><br><span class="line">//			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/spring?useSSL=false&amp;serverTimezone=UTC&quot;,&quot;root&quot;,&quot;123456&quot;);</span><br><span class="line">			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://127.0.0.1:3306/spring?useSSL=true&amp;serverTimezone=GMT&quot;, &quot;root&quot;, &quot;123456&quot;);</span><br><span class="line">			System.out.println(&quot;connection success!&quot;);//输出connection success表示数据库已成功连接</span><br><span class="line">			conn.close();</span><br><span class="line">		&#125;</span><br><span class="line">		catch(Exception e)</span><br><span class="line">		&#123;</span><br><span class="line">			System.out.println(e);</span><br><span class="line">		&#125;</span><br><span class="line">		finally&#123;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    ``` </span><br><span class="line"> 出现错误提示</span><br></pre></td></tr></table></figure>
+<p> java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">由于我用的是mySQL 8.0.18</span><br></pre></td></tr></table></figure><br> //下面这个命令可以查你的mysql版本<br> mysql -uroot -p<br> //打开MySQL也可以看到<br> //利用navicat连接mysql的客户端工具可以查看<br> //连接之后右键——详细信息<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">数据库连接要和5.x的版本不一样驱动也是不一样</span><br><span class="line"></span><br><span class="line">https://mvnrepository.com/</span><br><span class="line"></span><br><span class="line">到上面这个网站搜索 mysql-connector-java-8.0.18.jar</span><br><span class="line">下载后导入到项目中  不要只是拖进去 还需要去建立依赖 否则没法用</span><br><span class="line"></span><br><span class="line">比如idea，要在Project Structure 里面的Modules 对应下的项目中点+号导入驱动。</span><br><span class="line">再次运行传统的连接数据库代码 发现成功</span><br></pre></td></tr></table></figure><br>registered success!<br>connection success!</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">注释掉用用以下xml配置连接数据库，也是成功</span><br></pre></td></tr></table></figure>
+<?xml version="1.0" encoding="UTF-8"?>
+<p><beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans-4.3.xsd"><br>    <!-- 1配置数据源 --><br>    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"><br>        <!--数据库驱动 --><br>        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property></bean></beans></p>
+<!--        //com.mysql.jdbc.Driver-->
+<pre><code>    &lt;!--连接数据库的url --&gt;
+    &lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://localhost:3306/spring?serverTimezone=GMT&quot; /&gt;
+    &lt;!--连接数据库的用户名 --&gt;
+    &lt;property name=&quot;username&quot; value=&quot;root&quot; /&gt;
+    &lt;!--连接数据库的密码 --&gt;
+    &lt;property name=&quot;password&quot; value=&quot;123456&quot; /&gt;
+&lt;/bean&gt;
+
+&lt;/bean&gt;</code></pre>
+```
+
+<p>end</p>
+]]></content>
+      <categories>
+        <category>踩坑</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+        <tag>Spring</tag>
+      </tags>
   </entry>
   <entry>
     <title>Spring 的事务管理</title>
@@ -231,41 +280,6 @@
       </categories>
       <tags>
         <tag>Spring事物管理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>成功解决java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver</title>
-    <url>/2019/11/13/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/</url>
-    <content><![CDATA[<p>用Spring 通过applicationContext连接mySql</p>
-<p>发现报错  于是改回传统方式尝试连接 代码如下</p>
-<a id="more"></a>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@org.junit.Test</span><br><span class="line">	public void mainTest() &#123;</span><br><span class="line">//		// 加载配置文件</span><br><span class="line">//		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);</span><br><span class="line">//		// 获取JdbcTemplate实例</span><br><span class="line">//		JdbcTemplate jdTemplate = (JdbcTemplate) applicationContext.getBean(&quot;jdbcTemplate&quot;);</span><br><span class="line">//		// 使用execute()方法执行SQL语句，创建用户账户管理表account</span><br><span class="line">//		jdTemplate.execute(&quot;create table account(&quot; + &quot;id int primary key auto_increment,&quot; + &quot;username varchar(50),&quot;</span><br><span class="line">//				+ &quot;balance double)&quot;);</span><br><span class="line">//		System.out.println(&quot;账户表account创建成功！&quot;);</span><br><span class="line"></span><br><span class="line">		Connection conn=null;</span><br><span class="line">		try</span><br><span class="line">		&#123;</span><br><span class="line">			Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);// 加载驱动程序，此次无需更改</span><br><span class="line">			System.out.println(&quot;registered success!&quot;);//输出registered success表示驱动加载成功</span><br><span class="line">			//创建对象连接，连接数据库，此例中employeedbms为数据库名，root为用户名，123456位密码，该三项均需根据实际情况进行修改，其它代码无需变动。注：确保数据库名、用户名和密码的准确性。</span><br><span class="line">//			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/spring?useSSL=false&amp;serverTimezone=UTC&quot;,&quot;root&quot;,&quot;123456&quot;);</span><br><span class="line">			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://127.0.0.1:3306/spring?useSSL=true&amp;serverTimezone=GMT&quot;, &quot;root&quot;, &quot;123456&quot;);</span><br><span class="line">			System.out.println(&quot;connection success!&quot;);//输出connection success表示数据库已成功连接</span><br><span class="line">			conn.close();</span><br><span class="line">		&#125;</span><br><span class="line">		catch(Exception e)</span><br><span class="line">		&#123;</span><br><span class="line">			System.out.println(e);</span><br><span class="line">		&#125;</span><br><span class="line">		finally&#123;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    ``` </span><br><span class="line"> 出现错误提示</span><br></pre></td></tr></table></figure>
-<p> java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">由于我用的是mySQL 8.0.18</span><br></pre></td></tr></table></figure><br> //下面这个命令可以查你的mysql版本<br> mysql -uroot -p<br> //打开MySQL也可以看到<br> //利用navicat连接mysql的客户端工具可以查看<br> //连接之后右键——详细信息<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">数据库连接要和5.x的版本不一样驱动也是不一样</span><br><span class="line"></span><br><span class="line">https://mvnrepository.com/</span><br><span class="line"></span><br><span class="line">到上面这个网站搜索 mysql-connector-java-8.0.18.jar</span><br><span class="line">下载后导入到项目中  不要只是拖进去 还需要去建立依赖 否则没法用</span><br><span class="line"></span><br><span class="line">比如idea，要在Project Structure 里面的Modules 对应下的项目中点+号导入驱动。</span><br><span class="line">再次运行传统的连接数据库代码 发现成功</span><br></pre></td></tr></table></figure><br>registered success!<br>connection success!</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">注释掉用用以下xml配置连接数据库，也是成功</span><br></pre></td></tr></table></figure>
-<?xml version="1.0" encoding="UTF-8"?>
-<p><beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.springframework.org/schema/beans 
-     http://www.springframework.org/schema/beans/spring-beans-4.3.xsd"><br>    <!-- 1配置数据源 --><br>    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"><br>        <!--数据库驱动 --><br>        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property></bean></beans></p>
-<!--        //com.mysql.jdbc.Driver-->
-<pre><code>    &lt;!--连接数据库的url --&gt;
-    &lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://localhost:3306/spring?serverTimezone=GMT&quot; /&gt;
-    &lt;!--连接数据库的用户名 --&gt;
-    &lt;property name=&quot;username&quot; value=&quot;root&quot; /&gt;
-    &lt;!--连接数据库的密码 --&gt;
-    &lt;property name=&quot;password&quot; value=&quot;123456&quot; /&gt;
-&lt;/bean&gt;
-
-&lt;/bean&gt;</code></pre>
-```
-
-<p>end</p>
-]]></content>
-      <categories>
-        <category>踩坑</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -534,21 +548,5 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在小型机运算器中，通过移位器对一个通用寄存器中存放的一个正定点数进行乘2操作（假定乘2后不会溢出），其方法是将该寄存器中的数据送入ALU，经移位器______。</span><br><span class="line"></span><br><span class="line">A左移1位</span><br><span class="line">B右移1位</span><br><span class="line">C左移2位</span><br><span class="line">D右移2位</span><br><span class="line"></span><br><span class="line">A</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">若存储器的容量为128KX8位，求：(1)访问该芯片需要多少位地址？(2)假定该芯片在存储器中首地址为A0000H，则末地址应为多少？</span><br></pre></td></tr></table></figure>]]></content>
-  </entry>
-  <entry>
-    <title>[踩坑玄学]隐身&amp;nbsp</title>
-    <url>/2020/05/05/%E8%B8%A9%E5%9D%91%E7%8E%84%E5%AD%A6-%E9%9A%90%E8%BA%AB-nbsp/</url>
-    <content><![CDATA[<video src="https://www.bilibili.com/video/BV1bJ41187zA?from=search&seid=9359668186195464368" controls="controls" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;">
-your browser does not support the video tag
-</video>
-
-]]></content>
-      <categories>
-        <category>VSCode</category>
-      </categories>
-      <tags>
-        <tag>踩坑</tag>
-        <tag>空格占位</tag>
-      </tags>
   </entry>
 </search>
