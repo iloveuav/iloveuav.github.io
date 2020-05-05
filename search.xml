@@ -1,28 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>page</title>
-    <url>/2020/05/02/page/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>[踩坑玄学]隐身&amp;nbsp</title>
-    <url>/2020/05/05/%E5%9D%91%E7%8E%84%E5%AD%A6-%E9%9A%90%E8%BA%AB-nbsp/</url>
-    <content><![CDATA[<video src="http://q9uen5wtx.bkt.clouddn.com/%E7%8E%84%E5%AD%A6%EF%BC%9F.mp4" controls="controls" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;">
-your browser does not support the video tag
-</video>]]></content>
-      <categories>
-        <category>VSCode</category>
-      </categories>
-      <tags>
-        <tag>踩坑</tag>
-        <tag>空格占位</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>7天前端面试复习（5.1-5.8）</title>
     <url>/2020/04/30/7%E5%A4%A9%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0%EF%BC%885.1-5.8%EF%BC%89/</url>
-    <content><![CDATA[<p>匆匆忙忙在4.25开始投简历，5.9号将进行线上面试，于是就有了这一个博客，不管成与败，对于我来说都是一个Opportunities to get to know yourself better</p>
+    <content><![CDATA[<p>It’s an opportunity to better discover your own shortcomings</p>
 <a id="more"></a>
 <h2 id="Day1（Git-前后端分离技术）"><a href="#Day1（Git-前后端分离技术）" class="headerlink" title="Day1（Git/前后端分离技术）"></a>Day1（Git/前后端分离技术）</h2><p>由于才疏学浅本博客大部分内容都是引用其他大佬的博客<br>主要是为了方便复习和理解~</p>
 <h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p>git部分参考自廖雪峰的官方网站 <a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/896043488029600</a></p>
@@ -206,38 +187,27 @@ your browser does not support the video tag
       </tags>
   </entry>
   <entry>
-    <title>成功解决java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver</title>
-    <url>/2019/11/13/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/</url>
-    <content><![CDATA[<p>用Spring 通过applicationContext连接mySql</p>
-<p>发现报错  于是改回传统方式尝试连接 代码如下</p>
-<a id="more"></a>
+    <title>page</title>
+    <url>/2020/05/02/page/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>[踩坑玄学]隐身&amp;nbsp</title>
+    <url>/2020/05/05/%E5%9D%91%E7%8E%84%E5%AD%A6-%E9%9A%90%E8%BA%AB-nbsp/</url>
+    <content><![CDATA[<p>具体如下</p>
+<video src="http://q9uen5wtx.bkt.clouddn.com/%E7%8E%84%E5%AD%A6%EF%BC%9F.mp4" controls="controls" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;">
+your browser does not support the video tag
+</video>
 
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@org.junit.Test</span><br><span class="line">	public void mainTest() &#123;</span><br><span class="line">//		// 加载配置文件</span><br><span class="line">//		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);</span><br><span class="line">//		// 获取JdbcTemplate实例</span><br><span class="line">//		JdbcTemplate jdTemplate = (JdbcTemplate) applicationContext.getBean(&quot;jdbcTemplate&quot;);</span><br><span class="line">//		// 使用execute()方法执行SQL语句，创建用户账户管理表account</span><br><span class="line">//		jdTemplate.execute(&quot;create table account(&quot; + &quot;id int primary key auto_increment,&quot; + &quot;username varchar(50),&quot;</span><br><span class="line">//				+ &quot;balance double)&quot;);</span><br><span class="line">//		System.out.println(&quot;账户表account创建成功！&quot;);</span><br><span class="line"></span><br><span class="line">		Connection conn=null;</span><br><span class="line">		try</span><br><span class="line">		&#123;</span><br><span class="line">			Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);// 加载驱动程序，此次无需更改</span><br><span class="line">			System.out.println(&quot;registered success!&quot;);//输出registered success表示驱动加载成功</span><br><span class="line">			//创建对象连接，连接数据库，此例中employeedbms为数据库名，root为用户名，123456位密码，该三项均需根据实际情况进行修改，其它代码无需变动。注：确保数据库名、用户名和密码的准确性。</span><br><span class="line">//			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/spring?useSSL=false&amp;serverTimezone=UTC&quot;,&quot;root&quot;,&quot;123456&quot;);</span><br><span class="line">			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://127.0.0.1:3306/spring?useSSL=true&amp;serverTimezone=GMT&quot;, &quot;root&quot;, &quot;123456&quot;);</span><br><span class="line">			System.out.println(&quot;connection success!&quot;);//输出connection success表示数据库已成功连接</span><br><span class="line">			conn.close();</span><br><span class="line">		&#125;</span><br><span class="line">		catch(Exception e)</span><br><span class="line">		&#123;</span><br><span class="line">			System.out.println(e);</span><br><span class="line">		&#125;</span><br><span class="line">		finally&#123;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    ``` </span><br><span class="line"> 出现错误提示</span><br></pre></td></tr></table></figure>
-<p> java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">由于我用的是mySQL 8.0.18</span><br></pre></td></tr></table></figure><br> //下面这个命令可以查你的mysql版本<br> mysql -uroot -p<br> //打开MySQL也可以看到<br> //利用navicat连接mysql的客户端工具可以查看<br> //连接之后右键——详细信息<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">数据库连接要和5.x的版本不一样驱动也是不一样</span><br><span class="line"></span><br><span class="line">https://mvnrepository.com/</span><br><span class="line"></span><br><span class="line">到上面这个网站搜索 mysql-connector-java-8.0.18.jar</span><br><span class="line">下载后导入到项目中  不要只是拖进去 还需要去建立依赖 否则没法用</span><br><span class="line"></span><br><span class="line">比如idea，要在Project Structure 里面的Modules 对应下的项目中点+号导入驱动。</span><br><span class="line">再次运行传统的连接数据库代码 发现成功</span><br></pre></td></tr></table></figure><br>registered success!<br>connection success!</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">注释掉用用以下xml配置连接数据库，也是成功</span><br></pre></td></tr></table></figure>
-<?xml version="1.0" encoding="UTF-8"?>
-<p><beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.springframework.org/schema/beans 
-     http://www.springframework.org/schema/beans/spring-beans-4.3.xsd"><br>    <!-- 1配置数据源 --><br>    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"><br>        <!--数据库驱动 --><br>        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property></bean></beans></p>
-<!--        //com.mysql.jdbc.Driver-->
-<pre><code>    &lt;!--连接数据库的url --&gt;
-    &lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://localhost:3306/spring?serverTimezone=GMT&quot; /&gt;
-    &lt;!--连接数据库的用户名 --&gt;
-    &lt;property name=&quot;username&quot; value=&quot;root&quot; /&gt;
-    &lt;!--连接数据库的密码 --&gt;
-    &lt;property name=&quot;password&quot; value=&quot;123456&quot; /&gt;
-&lt;/bean&gt;
-
-&lt;/bean&gt;</code></pre>
-```
-
-<p>end</p>
+<p>空格把left div顶到下一行了。</p>
+<p>我删掉left div前面的空格就好了  之后就算再空格也不会影响，可能是极少数情况下编译器存在隐身的&amp;nbsp?  left div  左边少了一根线可能就是有个隐身的&amp;nbsp[捂脸哭]</p>
 ]]></content>
       <categories>
-        <category>踩坑</category>
+        <category>VSCode</category>
       </categories>
       <tags>
-        <tag>数据库</tag>
-        <tag>Spring</tag>
+        <tag>踩坑</tag>
+        <tag>空格占位</tag>
       </tags>
   </entry>
   <entry>
@@ -280,6 +250,41 @@ your browser does not support the video tag
       </categories>
       <tags>
         <tag>Spring事物管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>成功解决java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver</title>
+    <url>/2019/11/13/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/</url>
+    <content><![CDATA[<p>用Spring 通过applicationContext连接mySql</p>
+<p>发现报错  于是改回传统方式尝试连接 代码如下</p>
+<a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@org.junit.Test</span><br><span class="line">	public void mainTest() &#123;</span><br><span class="line">//		// 加载配置文件</span><br><span class="line">//		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);</span><br><span class="line">//		// 获取JdbcTemplate实例</span><br><span class="line">//		JdbcTemplate jdTemplate = (JdbcTemplate) applicationContext.getBean(&quot;jdbcTemplate&quot;);</span><br><span class="line">//		// 使用execute()方法执行SQL语句，创建用户账户管理表account</span><br><span class="line">//		jdTemplate.execute(&quot;create table account(&quot; + &quot;id int primary key auto_increment,&quot; + &quot;username varchar(50),&quot;</span><br><span class="line">//				+ &quot;balance double)&quot;);</span><br><span class="line">//		System.out.println(&quot;账户表account创建成功！&quot;);</span><br><span class="line"></span><br><span class="line">		Connection conn=null;</span><br><span class="line">		try</span><br><span class="line">		&#123;</span><br><span class="line">			Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);// 加载驱动程序，此次无需更改</span><br><span class="line">			System.out.println(&quot;registered success!&quot;);//输出registered success表示驱动加载成功</span><br><span class="line">			//创建对象连接，连接数据库，此例中employeedbms为数据库名，root为用户名，123456位密码，该三项均需根据实际情况进行修改，其它代码无需变动。注：确保数据库名、用户名和密码的准确性。</span><br><span class="line">//			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/spring?useSSL=false&amp;serverTimezone=UTC&quot;,&quot;root&quot;,&quot;123456&quot;);</span><br><span class="line">			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://127.0.0.1:3306/spring?useSSL=true&amp;serverTimezone=GMT&quot;, &quot;root&quot;, &quot;123456&quot;);</span><br><span class="line">			System.out.println(&quot;connection success!&quot;);//输出connection success表示数据库已成功连接</span><br><span class="line">			conn.close();</span><br><span class="line">		&#125;</span><br><span class="line">		catch(Exception e)</span><br><span class="line">		&#123;</span><br><span class="line">			System.out.println(e);</span><br><span class="line">		&#125;</span><br><span class="line">		finally&#123;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    ``` </span><br><span class="line"> 出现错误提示</span><br></pre></td></tr></table></figure>
+<p> java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">由于我用的是mySQL 8.0.18</span><br></pre></td></tr></table></figure><br> //下面这个命令可以查你的mysql版本<br> mysql -uroot -p<br> //打开MySQL也可以看到<br> //利用navicat连接mysql的客户端工具可以查看<br> //连接之后右键——详细信息<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">数据库连接要和5.x的版本不一样驱动也是不一样</span><br><span class="line"></span><br><span class="line">https://mvnrepository.com/</span><br><span class="line"></span><br><span class="line">到上面这个网站搜索 mysql-connector-java-8.0.18.jar</span><br><span class="line">下载后导入到项目中  不要只是拖进去 还需要去建立依赖 否则没法用</span><br><span class="line"></span><br><span class="line">比如idea，要在Project Structure 里面的Modules 对应下的项目中点+号导入驱动。</span><br><span class="line">再次运行传统的连接数据库代码 发现成功</span><br></pre></td></tr></table></figure><br>registered success!<br>connection success!</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">注释掉用用以下xml配置连接数据库，也是成功</span><br></pre></td></tr></table></figure>
+<?xml version="1.0" encoding="UTF-8"?>
+<p><beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans-4.3.xsd"><br>    <!-- 1配置数据源 --><br>    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"><br>        <!--数据库驱动 --><br>        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property></bean></beans></p>
+<!--        //com.mysql.jdbc.Driver-->
+<pre><code>    &lt;!--连接数据库的url --&gt;
+    &lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://localhost:3306/spring?serverTimezone=GMT&quot; /&gt;
+    &lt;!--连接数据库的用户名 --&gt;
+    &lt;property name=&quot;username&quot; value=&quot;root&quot; /&gt;
+    &lt;!--连接数据库的密码 --&gt;
+    &lt;property name=&quot;password&quot; value=&quot;123456&quot; /&gt;
+&lt;/bean&gt;
+
+&lt;/bean&gt;</code></pre>
+```
+
+<p>end</p>
+]]></content>
+      <categories>
+        <category>踩坑</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -392,70 +397,6 @@ your browser does not support the video tag
       </tags>
   </entry>
   <entry>
-    <title>用js做机器学习(一)【基础准备】</title>
-    <url>/2019/11/12/%E7%94%A8js%E5%81%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E4%B8%80-%E3%80%90%E5%9F%BA%E7%A1%80%E5%87%86%E5%A4%87%E3%80%91/%E7%94%A8js%E5%81%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E4%B8%80-%E3%80%90%E5%9F%BA%E7%A1%80%E5%87%86%E5%A4%87%E3%80%91/</url>
-    <content><![CDATA[<p>还是很想用JS实现数据预处理来跑机器学习算法<br>开始之前首先要对JS的一些基础知识有了解 比如Js的数据类型、正则表达式、类型转换等（此文将不断扩充）</p>
-<a id="more"></a>
-
-<h2 id="一、Js数据类型"><a href="#一、Js数据类型" class="headerlink" title="一、Js数据类型"></a>一、Js数据类型</h2><p>字符串值，数值，布尔值，数组，对象。</p>
-<p>JavaScript 变量能够保存多种数据类型：数值、字符串值、数组、对象等等：</p>
-<p>数据类型的概念<br>在编程过程中，数据类型是重要的概念。</p>
-<p>为了能够操作变量，了解数据类型是很重要的。</p>
-<p>如果没有数据类型，计算机就无法安全地解决这道题：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var x = &quot;XiaoMi&quot;+6;</span><br></pre></td></tr></table></figure>
-<p>x的结果为：XiaoMi6</p>
-<p>JavaScript 从左向右计算表达式。不同的次序会产生不同的结果：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var x = &quot;XiaoMi&quot;+6+&quot;plus&quot;;</span><br></pre></td></tr></table></figure>
-
-<p>x的结果为：XiaoMi6plus</p>
-<h5 id="JavaScript-拥有动态类型"><a href="#JavaScript-拥有动态类型" class="headerlink" title="JavaScript 拥有动态类型"></a>JavaScript 拥有动态类型</h5><p>JavaScript 拥有动态类型。这意味着相同变量可用作不同类型：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var x;               // 现在 x 是 undefined</span><br><span class="line">var x = 6;           // 现在 x 是数值</span><br><span class="line">var x = &quot;Jamin&quot;;</span><br></pre></td></tr></table></figure>
-
-<h5 id="可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配："><a href="#可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配：" class="headerlink" title="可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配："></a>可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">var answer = &quot;It&apos;s nice&quot;;             // 双引号内的单引号</span><br><span class="line">var answer = &quot;He is called &apos;Jamin&apos;&quot;;    // 双引号内的单引号</span><br><span class="line">var answer = &apos;He is called &quot;Jamin&quot;&apos;;    // 单引号内的双引号</span><br></pre></td></tr></table></figure>
-
-<h5 id="JavaScript-数值"><a href="#JavaScript-数值" class="headerlink" title="JavaScript 数值"></a>JavaScript 数值</h5><p>JavaScript 只有一种数值类型。</p>
-<p>写数值时用不用小数点均可</p>
-<p>超大或超小的数值可以用科学计数法来写：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var x1 = 34.00;     // 带小数点</span><br><span class="line">var x2 = 34;        // 不带小数点</span><br><span class="line">var y = 123e5;      // 12300000</span><br><span class="line">var z = 123e-5;     // 0.00123</span><br></pre></td></tr></table></figure>
-
-<h5 id="JavaScript-对象"><a href="#JavaScript-对象" class="headerlink" title="JavaScript 对象"></a>JavaScript 对象</h5><p>JavaScript 对象用花括号来书写。</p>
-<p>对象属性是 name:value 对，由逗号分隔。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var person = &#123;firstName:&quot;Bill&quot;, lastName:&quot;Gates&quot;, age:62, eyeColor:&quot;blue&quot;&#125;;</span><br></pre></td></tr></table></figure>
-
-<h5 id="typeof-运算符"><a href="#typeof-运算符" class="headerlink" title="typeof 运算符"></a>typeof 运算符</h5><p>可使用 JavaScript 的 typeof 来确定 JavaScript 变量的类型：</p>
-<p>typeof 运算符返回变量或表达式的类型：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">typeof &quot;&quot;                  // 返回 &quot;string&quot;</span><br><span class="line">typeof &quot;Bill&quot;              // 返回 &quot;string&quot;</span><br><span class="line">typeof &quot;Bill Gates&quot;          // 返回 &quot;string&quot;</span><br></pre></td></tr></table></figure>
-
-<p><strong>typeof 运算符对数组返回 “object”，因为在 JavaScript 中数组属于对象。</strong></p>
-<p><strong><em>任何变量均可通过设置值为 undefined 进行清空。其类型也将是 undefined。</em></strong></p>
-<p><strong>空值与 undefined 不是一回事。</strong></p>
-<p><strong>空的字符串变量既有值也有类型。</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var car = &quot;&quot;;                // 值是 &quot;&quot;，类型是 &quot;string&quot;</span><br></pre></td></tr></table></figure>
-
-<h5 id="Null"><a href="#Null" class="headerlink" title="Null"></a>Null</h5><p>在 JavaScript 中，null 是 “nothing”。它被看做不存在的事物。</p>
-<p>不幸的是，在 JavaScript 中，null 的数据类型是对象。</p>
-<p>您可以把 null 在 JavaScript 中是对象理解为一个 bug。它本应是 null。</p>
-<p>您可以通过设置值为 null 清空对象</p>
-<p>您也可以通过设置值为 undefined 清空对象：</p>
-<p><strong>Undefined 与 Null 的区别</strong></p>
-<p>Undefined 与 null 的值相等，但类型不相等：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">typeof undefined              // undefined</span><br><span class="line">typeof null                   // object</span><br><span class="line">null === undefined            // false</span><br><span class="line">null == undefined             // true</span><br></pre></td></tr></table></figure>
-
-<h5 id="原始数据"><a href="#原始数据" class="headerlink" title="原始数据"></a>原始数据</h5><p>原始数据值是一种没有额外属性和方法的单一简单数据值。</p>
-<p>typeof 运算符可返回以下原始类型之一：</p>
-<p>string<br>number<br>boolean<br>undefined</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">typeof &quot;Bill&quot;              // 返回 &quot;string&quot;</span><br><span class="line">typeof 3.14                // 返回 &quot;number&quot;</span><br><span class="line">typeof true                // 返回 &quot;boolean&quot;</span><br><span class="line">typeof false               // 返回 &quot;boolean&quot;</span><br><span class="line">typeof x                   // 返回 &quot;undefined&quot; (假如 x 没有值)</span><br></pre></td></tr></table></figure>
-<h5 id="复杂数据"><a href="#复杂数据" class="headerlink" title="复杂数据"></a>复杂数据</h5><p>typeof 运算符可返回以下两种类型之一：</p>
-<p>function<br>object</p>
-<p><strong>typeof 运算符把对象、数组或 null 返回 object。</strong></p>
-<p>typeof 运算符不会把函数返回 object。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">typeof &#123;name:&apos;Bill&apos;, age:62&#125; // 返回 &quot;object&quot;</span><br><span class="line">typeof [1,2,3,4]             // 返回 &quot;object&quot; (并非 &quot;array&quot;，参见下面的注释)</span><br><span class="line">typeof null                  // 返回 &quot;object&quot;</span><br><span class="line">typeof function myFunc()&#123;&#125;   // 返回 &quot;function&quot;</span><br></pre></td></tr></table></figure>
-<p><strong>typeof 运算符把数组返回为 “object”，因为在 JavaScript 中数组即对象。</strong></p>
-<h2 id="二、JavaScript-正则表达式（未完-）"><a href="#二、JavaScript-正则表达式（未完-）" class="headerlink" title="二、JavaScript 正则表达式（未完~）"></a>二、JavaScript 正则表达式（未完~）</h2><p>正则表达式是构成搜索模式的字符序列。</p>
-<p>该搜索模式可用于文本搜索和文本替换操作。</p>
-]]></content>
-  </entry>
-  <entry>
     <title>计算机组成原理测试习题整理【一】（含答案解析）</title>
     <url>/2019/11/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E4%B9%A0%E9%A2%98%E8%AE%AD%E7%BB%83%EF%BC%88%E5%90%AB%E7%AD%94%E6%A1%88%E8%A7%A3%E6%9E%90%EF%BC%89/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E4%B9%A0%E9%A2%98%E8%AE%AD%E7%BB%83%EF%BC%88%E5%90%AB%E7%AD%94%E6%A1%88%E8%A7%A3%E6%9E%90%EF%BC%89/</url>
     <content><![CDATA[<p>目前共整理了三章</p>
@@ -548,5 +489,69 @@ your browser does not support the video tag
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在小型机运算器中，通过移位器对一个通用寄存器中存放的一个正定点数进行乘2操作（假定乘2后不会溢出），其方法是将该寄存器中的数据送入ALU，经移位器______。</span><br><span class="line"></span><br><span class="line">A左移1位</span><br><span class="line">B右移1位</span><br><span class="line">C左移2位</span><br><span class="line">D右移2位</span><br><span class="line"></span><br><span class="line">A</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">若存储器的容量为128KX8位，求：(1)访问该芯片需要多少位地址？(2)假定该芯片在存储器中首地址为A0000H，则末地址应为多少？</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>用js做机器学习(一)【基础准备】</title>
+    <url>/2019/11/12/%E7%94%A8js%E5%81%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E4%B8%80-%E3%80%90%E5%9F%BA%E7%A1%80%E5%87%86%E5%A4%87%E3%80%91/%E7%94%A8js%E5%81%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E4%B8%80-%E3%80%90%E5%9F%BA%E7%A1%80%E5%87%86%E5%A4%87%E3%80%91/</url>
+    <content><![CDATA[<p>还是很想用JS实现数据预处理来跑机器学习算法<br>开始之前首先要对JS的一些基础知识有了解 比如Js的数据类型、正则表达式、类型转换等（此文将不断扩充）</p>
+<a id="more"></a>
+
+<h2 id="一、Js数据类型"><a href="#一、Js数据类型" class="headerlink" title="一、Js数据类型"></a>一、Js数据类型</h2><p>字符串值，数值，布尔值，数组，对象。</p>
+<p>JavaScript 变量能够保存多种数据类型：数值、字符串值、数组、对象等等：</p>
+<p>数据类型的概念<br>在编程过程中，数据类型是重要的概念。</p>
+<p>为了能够操作变量，了解数据类型是很重要的。</p>
+<p>如果没有数据类型，计算机就无法安全地解决这道题：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var x = &quot;XiaoMi&quot;+6;</span><br></pre></td></tr></table></figure>
+<p>x的结果为：XiaoMi6</p>
+<p>JavaScript 从左向右计算表达式。不同的次序会产生不同的结果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var x = &quot;XiaoMi&quot;+6+&quot;plus&quot;;</span><br></pre></td></tr></table></figure>
+
+<p>x的结果为：XiaoMi6plus</p>
+<h5 id="JavaScript-拥有动态类型"><a href="#JavaScript-拥有动态类型" class="headerlink" title="JavaScript 拥有动态类型"></a>JavaScript 拥有动态类型</h5><p>JavaScript 拥有动态类型。这意味着相同变量可用作不同类型：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var x;               // 现在 x 是 undefined</span><br><span class="line">var x = 6;           // 现在 x 是数值</span><br><span class="line">var x = &quot;Jamin&quot;;</span><br></pre></td></tr></table></figure>
+
+<h5 id="可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配："><a href="#可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配：" class="headerlink" title="可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配："></a>可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">var answer = &quot;It&apos;s nice&quot;;             // 双引号内的单引号</span><br><span class="line">var answer = &quot;He is called &apos;Jamin&apos;&quot;;    // 双引号内的单引号</span><br><span class="line">var answer = &apos;He is called &quot;Jamin&quot;&apos;;    // 单引号内的双引号</span><br></pre></td></tr></table></figure>
+
+<h5 id="JavaScript-数值"><a href="#JavaScript-数值" class="headerlink" title="JavaScript 数值"></a>JavaScript 数值</h5><p>JavaScript 只有一种数值类型。</p>
+<p>写数值时用不用小数点均可</p>
+<p>超大或超小的数值可以用科学计数法来写：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var x1 = 34.00;     // 带小数点</span><br><span class="line">var x2 = 34;        // 不带小数点</span><br><span class="line">var y = 123e5;      // 12300000</span><br><span class="line">var z = 123e-5;     // 0.00123</span><br></pre></td></tr></table></figure>
+
+<h5 id="JavaScript-对象"><a href="#JavaScript-对象" class="headerlink" title="JavaScript 对象"></a>JavaScript 对象</h5><p>JavaScript 对象用花括号来书写。</p>
+<p>对象属性是 name:value 对，由逗号分隔。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var person = &#123;firstName:&quot;Bill&quot;, lastName:&quot;Gates&quot;, age:62, eyeColor:&quot;blue&quot;&#125;;</span><br></pre></td></tr></table></figure>
+
+<h5 id="typeof-运算符"><a href="#typeof-运算符" class="headerlink" title="typeof 运算符"></a>typeof 运算符</h5><p>可使用 JavaScript 的 typeof 来确定 JavaScript 变量的类型：</p>
+<p>typeof 运算符返回变量或表达式的类型：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">typeof &quot;&quot;                  // 返回 &quot;string&quot;</span><br><span class="line">typeof &quot;Bill&quot;              // 返回 &quot;string&quot;</span><br><span class="line">typeof &quot;Bill Gates&quot;          // 返回 &quot;string&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>typeof 运算符对数组返回 “object”，因为在 JavaScript 中数组属于对象。</strong></p>
+<p><strong><em>任何变量均可通过设置值为 undefined 进行清空。其类型也将是 undefined。</em></strong></p>
+<p><strong>空值与 undefined 不是一回事。</strong></p>
+<p><strong>空的字符串变量既有值也有类型。</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var car = &quot;&quot;;                // 值是 &quot;&quot;，类型是 &quot;string&quot;</span><br></pre></td></tr></table></figure>
+
+<h5 id="Null"><a href="#Null" class="headerlink" title="Null"></a>Null</h5><p>在 JavaScript 中，null 是 “nothing”。它被看做不存在的事物。</p>
+<p>不幸的是，在 JavaScript 中，null 的数据类型是对象。</p>
+<p>您可以把 null 在 JavaScript 中是对象理解为一个 bug。它本应是 null。</p>
+<p>您可以通过设置值为 null 清空对象</p>
+<p>您也可以通过设置值为 undefined 清空对象：</p>
+<p><strong>Undefined 与 Null 的区别</strong></p>
+<p>Undefined 与 null 的值相等，但类型不相等：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">typeof undefined              // undefined</span><br><span class="line">typeof null                   // object</span><br><span class="line">null === undefined            // false</span><br><span class="line">null == undefined             // true</span><br></pre></td></tr></table></figure>
+
+<h5 id="原始数据"><a href="#原始数据" class="headerlink" title="原始数据"></a>原始数据</h5><p>原始数据值是一种没有额外属性和方法的单一简单数据值。</p>
+<p>typeof 运算符可返回以下原始类型之一：</p>
+<p>string<br>number<br>boolean<br>undefined</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">typeof &quot;Bill&quot;              // 返回 &quot;string&quot;</span><br><span class="line">typeof 3.14                // 返回 &quot;number&quot;</span><br><span class="line">typeof true                // 返回 &quot;boolean&quot;</span><br><span class="line">typeof false               // 返回 &quot;boolean&quot;</span><br><span class="line">typeof x                   // 返回 &quot;undefined&quot; (假如 x 没有值)</span><br></pre></td></tr></table></figure>
+<h5 id="复杂数据"><a href="#复杂数据" class="headerlink" title="复杂数据"></a>复杂数据</h5><p>typeof 运算符可返回以下两种类型之一：</p>
+<p>function<br>object</p>
+<p><strong>typeof 运算符把对象、数组或 null 返回 object。</strong></p>
+<p>typeof 运算符不会把函数返回 object。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">typeof &#123;name:&apos;Bill&apos;, age:62&#125; // 返回 &quot;object&quot;</span><br><span class="line">typeof [1,2,3,4]             // 返回 &quot;object&quot; (并非 &quot;array&quot;，参见下面的注释)</span><br><span class="line">typeof null                  // 返回 &quot;object&quot;</span><br><span class="line">typeof function myFunc()&#123;&#125;   // 返回 &quot;function&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>typeof 运算符把数组返回为 “object”，因为在 JavaScript 中数组即对象。</strong></p>
+<h2 id="二、JavaScript-正则表达式（未完-）"><a href="#二、JavaScript-正则表达式（未完-）" class="headerlink" title="二、JavaScript 正则表达式（未完~）"></a>二、JavaScript 正则表达式（未完~）</h2><p>正则表达式是构成搜索模式的字符序列。</p>
+<p>该搜索模式可用于文本搜索和文本替换操作。</p>
+]]></content>
   </entry>
 </search>
