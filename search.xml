@@ -76,7 +76,8 @@
 <p>Rebase</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rebase操作可以把本地未push的分叉提交历史整理成直线；</span><br><span class="line"></span><br><span class="line">rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。</span><br></pre></td></tr></table></figure>
 <h3 id="Git前端面试题"><a href="#Git前端面试题" class="headerlink" title="Git前端面试题"></a>Git前端面试题</h3><p><a href="https://blog.csdn.net/nobody_1/article/details/88956315" target="_blank" rel="noopener">https://blog.csdn.net/nobody_1/article/details/88956315</a></p>
-<h3 id="前后端分离技术"><a href="#前后端分离技术" class="headerlink" title="前后端分离技术"></a>前后端分离技术</h3><h6 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">简单介绍下Ajax ：https://blog.csdn.net/persistencegoing/article/details/88641992</span><br></pre></td></tr></table></figure>
+<h3 id="前后端分离技术"><a href="#前后端分离技术" class="headerlink" title="前后端分离技术"></a>前后端分离技术</h3><h6 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h6><p><a href="https://blog.csdn.net/persistencegoing/article/details/88641992" target="_blank" rel="noopener">简单介绍下Ajax</a></p>
+<p><a href="https://www.bilibili.com/video/BV1ZK411L7Mg?from=search&seid=3199266144308194209" target="_blank" rel="noopener">javascript面试技巧之ajax请求与同源策略</a></p>
 <p>传统网站在网速慢、表单内容提交不合格、页面跳转资源加载浪费下会各种影响用户体验。<br>Ajax可以实现页面无刷新更新数据（异步局部更新），提高用户体验。</p>
 <p>应用场景：（不刷新页面情况下请求服务器资源）<br>1、页面上拉加载更多<br>2、列表数据无刷新分页<br>3、表单项离开焦点数据验证<br>4、搜索框提示文字下拉列表</p>
 <p>运行环境：在网站环境中才能生效 如：Express （基于Node.js 平台的Web应用开发框架）</p>
@@ -143,8 +144,10 @@
 <p><a href="https://www.bilibili.com/video/BV17J411x7Mo" target="_blank" rel="noopener">CSS圣杯布局和双飞翼布局</a></p>
 <p><a href="https://www.bilibili.com/video/BV167411y7m5" target="_blank" rel="noopener">CSS垂直居中 </a></p>
 <h6 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h6><p>前端面试题整理—ES6篇:<a href="https://www.cnblogs.com/theblogs/p/10575845.html" target="_blank" rel="noopener">前端面试题整理—ES6篇</a></p>
+<p><a href="http://blog.zhencai.xyz/archives/20200428" target="_blank" rel="noopener">甄菜—前端面试基础-ES6</a></p>
 <p>ES6析构赋值:[ES6析构赋值]:(<a href="https://www.cnblogs.com/xiaohuochai/p/7243166.html" target="_blank" rel="noopener">https://www.cnblogs.com/xiaohuochai/p/7243166.html</a>)</p>
 <h2 id="Day3（JS相关-amp-LeedCode）"><a href="#Day3（JS相关-amp-LeedCode）" class="headerlink" title="Day3（JS相关&amp;LeedCode）"></a>Day3（JS相关&amp;LeedCode）</h2><h3 id="JS相关"><a href="#JS相关" class="headerlink" title="JS相关"></a>JS相关</h3><p>MDN:[javascript]（<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript）" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript）</a></p>
+<p><a href="https://www.cnblogs.com/cosiray/p/4512969.html" target="_blank" rel="noopener">javascript中apply、call和bind的区别</a></p>
 <h5 id="关于-："><a href="#关于-：" class="headerlink" title="关于$："></a>关于$：</h5><p>$在JS中本身只是一个符号而已，但在JS应用库JQUERY的作者将之做为一个自定义函数名了，这个函数是获取指定网页元素的函数，使用非常之频繁，我自己在不用JQUERY的情况，一般自己也会自定义一个$函数。<br>例如：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function $(Eid)&#123;</span><br><span class="line"> return document.getElementById(Eid);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -168,11 +171,12 @@
 <p><a href="https://www.jianshu.com/p/af0b398602bc" target="_blank" rel="noopener">VDom</a></p>
 <p><a href="https://blog.csdn.net/yczz/article/details/51516526" target="_blank" rel="noopener">VDom实现</a></p>
 <h3 id="Leecode"><a href="#Leecode" class="headerlink" title="Leecode"></a>Leecode</h3><p><a href="https://space.bilibili.com/327247876/channel/detail?cid=104442" target="_blank" rel="noopener">技术蛋老师de视频</a></p>
-<h2 id="Day4（防抖节流-amp-Eventloop-amp-vue、react原理）"><a href="#Day4（防抖节流-amp-Eventloop-amp-vue、react原理）" class="headerlink" title="Day4（防抖节流&amp;Eventloop&amp;vue、react原理）"></a>Day4（防抖节流&amp;Eventloop&amp;vue、react原理）</h2><h3 id="防抖节流"><a href="#防抖节流" class="headerlink" title="防抖节流"></a>防抖节流</h3><p><a href="http://blog.zhencai.xyz/archives/20200501" target="_blank" rel="noopener">好兄弟整理的防抖节流</a></p>
+<h2 id="Day4（防抖节流-amp-Eventloop-amp-Vue、React原理）"><a href="#Day4（防抖节流-amp-Eventloop-amp-Vue、React原理）" class="headerlink" title="Day4（防抖节流&amp;Eventloop&amp;Vue、React原理）"></a>Day4（防抖节流&amp;Eventloop&amp;Vue、React原理）</h2><h3 id="防抖节流"><a href="#防抖节流" class="headerlink" title="防抖节流"></a>防抖节流</h3><p><a href="http://blog.zhencai.xyz/archives/20200501" target="_blank" rel="noopener">好兄弟整理的防抖节流</a></p>
 <p><a href="https://zhuanlan.zhihu.com/p/55511602" target="_blank" rel="noopener">Eventloop</a></p>
 <p><a href="https://segmentfault.com/a/1190000016344599" target="_blank" rel="noopener">Vue相关</a></p>
+<p><a href="https://blog.csdn.net/u014628388/article/details/81085605" target="_blank" rel="noopener">vue中通过watch监听数据变化，带来的性能优化</a></p>
 <p><a href="https://segmentfault.com/a/1190000016885832?utm_source=tag-newest" target="_blank" rel="noopener">Reeact相关</a></p>
-<h2 id="Day5（Node-js-amp-数据可视化）"><a href="#Day5（Node-js-amp-数据可视化）" class="headerlink" title="Day5（Node.js&amp;数据可视化）"></a>Day5（Node.js&amp;数据可视化）</h2><p><a href="http://nodejs.cn/api/assert.html" target="_blank" rel="noopener">Node.js文档</a></p>
+<h2 id="Day5（Node-js-amp-Ts-amp-数据可视化）"><a href="#Day5（Node-js-amp-Ts-amp-数据可视化）" class="headerlink" title="Day5（Node.js&amp;Ts&amp;数据可视化）"></a>Day5（Node.js&amp;Ts&amp;数据可视化）</h2><p><a href="http://nodejs.cn/api/assert.html" target="_blank" rel="noopener">Node.js文档</a></p>
 <p><a href="https://www.bilibili.com/video/BV1bJ41187zA?from=search&seid=9359668186195464368" target="_blank" rel="noopener">node.js及项目工程化讲解</a></p>
 <p><a href="https://www.cnblogs.com/haore147/p/3860840.html" target="_blank" rel="noopener">十大可视化工具</a></p>
 <p><a href="https://www.cnblogs.com/st-leslie/p/5771241.html" target="_blank" rel="noopener">Echarts.js</a></p>
@@ -185,11 +189,6 @@
         <tag>面试</tag>
         <tag>笔试</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>page</title>
-    <url>/2020/05/02/page/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>[踩坑玄学]隐身&amp;nbsp</title>
@@ -283,8 +282,8 @@ your browser does not support the video tag
         <category>踩坑</category>
       </categories>
       <tags>
-        <tag>Spring</tag>
         <tag>数据库</tag>
+        <tag>Spring</tag>
       </tags>
   </entry>
   <entry>
