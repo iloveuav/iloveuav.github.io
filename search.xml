@@ -77,9 +77,19 @@
 <p>Rebase</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rebase操作可以把本地未push的分叉提交历史整理成直线；</span><br><span class="line"></span><br><span class="line">rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。</span><br></pre></td></tr></table></figure>
 <h3 id="Git前端面试题"><a href="#Git前端面试题" class="headerlink" title="Git前端面试题"></a>Git前端面试题</h3><p><a href="https://blog.csdn.net/nobody_1/article/details/88956315" target="_blank" rel="noopener">https://blog.csdn.net/nobody_1/article/details/88956315</a></p>
-<h3 id="前后端分离技术"><a href="#前后端分离技术" class="headerlink" title="前后端分离技术"></a>前后端分离技术</h3><h4 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h4><p><a href="https://blog.csdn.net/persistencegoing/article/details/88641992" target="_blank" rel="noopener">简单介绍下Ajax</a></p>
+<h3 id="前后端分离技术"><a href="#前后端分离技术" class="headerlink" title="前后端分离技术"></a>前后端分离技术</h3><h4 id="浏览器如何和服务器交互"><a href="#浏览器如何和服务器交互" class="headerlink" title="浏览器如何和服务器交互"></a>浏览器如何和服务器交互</h4><p><img src="http://q9uen5wtx.bkt.clouddn.com/%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AE%BF%E9%97%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A.png" alt="浏览器请求流程"></p>
+<p><img src="http://q9uen5wtx.bkt.clouddn.com/%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AE%BF%E9%97%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B.png" alt="浏览器请求流程2"></p>
+<h4 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h4><p><img src="http://q9uen5wtx.bkt.clouddn.com/%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5%E7%9A%84%E5%8C%BA%E5%88%AB.png" alt="同步异步的区别.png"></p>
+<ul>
+<li>同步异步的区别.png </li>
+</ul>
+<p><a href="https://blog.csdn.net/persistencegoing/article/details/88641992" target="_blank" rel="noopener">简单介绍下Ajax</a></p>
 <p><a href="https://www.bilibili.com/video/BV1ZK411L7Mg?from=search&seid=3199266144308194209" target="_blank" rel="noopener">javascript面试技巧之ajax请求与同源策略</a></p>
 <p>传统网站在网速慢、表单内容提交不合格、页面跳转资源加载浪费下会各种影响用户体验。<br>Ajax可以实现页面无刷新更新数据（异步局部更新），提高用户体验。</p>
+<p><img src="http://q9uen5wtx.bkt.clouddn.com/ajax%E5%8E%9F%E7%94%9Fapi%E5%8F%8A%E6%A0%B8%E5%BF%83%E5%B1%9E%E6%80%A7.png" alt="ajax原生api及核心属性.png"></p>
+<ul>
+<li>ajax原生api及核心属性.png </li>
+</ul>
 <p>应用场景：（不刷新页面情况下请求服务器资源）<br>1、页面上拉加载更多<br>2、列表数据无刷新分页<br>3、表单项离开焦点数据验证<br>4、搜索框提示文字下拉列表</p>
 <p>运行环境：在网站环境中才能生效 如：Express （基于Node.js 平台的Web应用开发框架）</p>
 <p>AJAX = 异步 JavaScript和 XML。</p>
@@ -96,10 +106,17 @@
 <p><strong><em>为什么使用 Async=true ？</em></strong></p>
 <p>我们的实例在 open() 的第三个参数中使用了 “true”。<br>该参数规定请求是否异步处理。<br>True 表示脚本会在 send() 方法之后继续执行，而不等待来自服务器的响应。<br>onreadystatechange 事件使代码复杂化了。但是这是在没有得到服务器响应的情况下，防止代码停止的最安全的方法。</p>
 <p>通过把该参数设置为 “false”，可以省去额外的 onreadystatechange 代码。如果在请求失败时是否执行其余的代码无关紧要，那么可以使用这个参数。</p>
+<p><img src="http://q9uen5wtx.bkt.clouddn.com/Ajax%E4%BC%98%E7%BC%BA%E7%82%B9.png" alt="Ajax优缺点.png"></p>
+<ul>
+<li>Ajax优缺点.png</li>
+</ul>
 <h4 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h4><p><strong><em>what</em></strong>:</p>
 <ul>
 <li><a href="https://www.cnblogs.com/bzsheng/p/12527357.html" target="_blank" rel="noopener">https://www.cnblogs.com/bzsheng/p/12527357.html</a></li>
 </ul>
+<p>跨域是指浏览器允许向服务器发送跨域请求，从而克服Ajax只能同源使用的限制。</p>
+<p>​    常见的跨域场景：</p>
+<p>同一域名，不同文件或路径、不同端口、不同协议<br>域名和域名对应相同ip、主域相同但子域不同<br>不同域名</p>
 <p><strong><em>how</em></strong>:</p>
 <ul>
 <li><p>Jsonp跨域:<a href="https://blog.csdn.net/DFF1993/article/details/79925874" target="_blank" rel="noopener">https://blog.csdn.net/DFF1993/article/details/79925874</a></p>
@@ -118,9 +135,26 @@
 <ul>
 <li><a href="https://www.jianshu.com/p/98d4bc7565b2" target="_blank" rel="noopener">https://www.jianshu.com/p/98d4bc7565b2</a></li>
 </ul>
+<h4 id="如何解决跨域问题"><a href="#如何解决跨域问题" class="headerlink" title="如何解决跨域问题"></a>如何解决跨域问题</h4><p><img src="http://q9uen5wtx.bkt.clouddn.com/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98.png" alt="如何解决跨域问题.png"></p>
+<p><img src="http://q9uen5wtx.bkt.clouddn.com/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%982.png" alt="如何解决跨域问题.png"></p>
+<ul>
+<li>如何解决跨域问题.png</li>
+</ul>
 <h4 id="前端路由"><a href="#前端路由" class="headerlink" title="前端路由"></a>前端路由</h4><p><strong><em>what？</em></strong>：<a href="https://www.zhihu.com/question/53064386" target="_blank" rel="noopener">https://www.zhihu.com/question/53064386</a></p>
+<p>1.浏览器发出请求2.服务器监听到80端口（或443）有请求过来，并解析url路径3.根据服务器的路由配置，返回相应信息（可以是 html 字串，也可以是 json 数据，图片等）4.浏览器根据数据包的<code>Content-Type</code>来决定如何解析数据</p>
+<p>简单来说路由就是用来跟后端服务器进行交互的一种方式，通过不同的路径，来请求不同的资源，请求不同的页面是路由的其中一种功能。</p>
+<h5 id="从-vue-router-来看前端路由实现原理"><a href="#从-vue-router-来看前端路由实现原理" class="headerlink" title="从 vue-router 来看前端路由实现原理"></a>从 vue-router 来看前端路由实现原理</h5><ul>
+<li>本质上就是检测 url 的变化，截获 url 地址，然后解析来匹配路由规则。</li>
+</ul>
+<p>在 2014 年之前，大家是通过 hash 来实现路由，url hash 就是类似于</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https://segmentfault.com/a/1190000011956628#articleHeader2</span><br></pre></td></tr></table></figure>
+<p>检测到 hash 的变化后，就可以通过替换 DOM 的方式来实现页面的更换。</p>
+<p>14年后，因为HTML5标准发布。多了两个 API，<code>pushState</code> 和 <code>replaceState</code>，通过这两个 API 可以改变 url 地址且不会发送请求。同时还有 <code>onpopstate</code> 事件。通过这些就能用另一种方式来实现前端路由了，但原理都是跟 hash 实现相同的。用了 HTML5 的实现，单页路由的 url 就不会多出一个<code>#</code>，变得更加美观。但因为没有 <code>#</code> 号，所以当用户刷新页面之类的操作时，浏览器还是会给服务器发送请求。为了避免出现这种情况，所以这个实现需要服务器的支持，需要把所有路由都重定向到根页面。具体可以见：<a href="https://router.vuejs.org/zh/guide/essentials/history-mode.html" target="_blank" rel="noopener">HTML5 histroy 模式</a></p>
+<p>异步交互的最高级体验是什么？</p>
+<p><a href="https://www.jianshu.com/p/098af61bbe04" target="_blank" rel="noopener">PWA</a>，让前端页面可以做到离线操作（是不是越来越像原生 app 了？）</p>
 <p><strong>* how?*</strong> : <a href="https://segmentfault.com/a/1190000006740604?utm_source=tag-newest" target="_blank" rel="noopener">https://segmentfault.com/a/1190000006740604?utm_source=tag-newest</a></p>
-<h4 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h4><p><strong><em>what?</em></strong>: <a href="https://www.cnblogs.com/qcloud1001/p/10101067.html" target="_blank" rel="noopener">https://www.cnblogs.com/qcloud1001/p/10101067.html</a></p>
+<h4 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h4><p><strong><em>what?</em></strong>: </p>
+<p><a href="https://www.cnblogs.com/qcloud1001/p/10101067.html" target="_blank" rel="noopener">cookie是什么</a></p>
 <p><strong><em>How?</em></strong>:<br><a href="https://blog.csdn.net/zhang070514/article/details/74018769" target="_blank" rel="noopener">https://blog.csdn.net/zhang070514/article/details/74018769</a></p>
 <h4 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h4><p><strong><em>what?</em></strong>: <a href="https://www.cnblogs.com/qcloud1001/p/10101067.html" target="_blank" rel="noopener">https://www.cnblogs.com/qcloud1001/p/10101067.html</a></p>
 <p><strong><em>How?</em></strong>:<br><a href="https://blog.csdn.net/zhang070514/article/details/74018769" target="_blank" rel="noopener">https://blog.csdn.net/zhang070514/article/details/74018769</a></p>
@@ -149,6 +183,8 @@
 <p>ES6析构赋值:[ES6析构赋值]:(<a href="https://www.cnblogs.com/xiaohuochai/p/7243166.html" target="_blank" rel="noopener">https://www.cnblogs.com/xiaohuochai/p/7243166.html</a>)</p>
 <h2 id="Day3（JS相关-amp-LeedCode）"><a href="#Day3（JS相关-amp-LeedCode）" class="headerlink" title="Day3（JS相关&amp;LeedCode）"></a>Day3（JS相关&amp;LeedCode）</h2><h3 id="JS相关"><a href="#JS相关" class="headerlink" title="JS相关"></a>JS相关</h3><p>MDN:[javascript]（<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript）" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript）</a></p>
 <p><a href="https://www.cnblogs.com/cosiray/p/4512969.html" target="_blank" rel="noopener">javascript中apply、call和bind的区别</a></p>
+<p><a href="https://www.bilibili.com/video/BV1iE411q7Qd?from=search&seid=663896737256113208" target="_blank" rel="noopener">闭包</a></p>
+<p>闭包就是可以在作用域外部访问作用域内部的变量</p>
 <h3 id="关于-："><a href="#关于-：" class="headerlink" title="关于$："></a>关于$：</h3><p>$在JS中本身只是一个符号而已，但在JS应用库JQUERY的作者将之做为一个自定义函数名了，这个函数是获取指定网页元素的函数，使用非常之频繁，我自己在不用JQUERY的情况，一般自己也会自定义一个$函数。<br>例如：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function $(Eid)&#123;</span><br><span class="line"> return document.getElementById(Eid);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -168,13 +204,85 @@
 <p>拓展原型链的方法</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function foo()&#123;&#125;</span><br><span class="line">foo.prototype = &#123;</span><br><span class="line">  foo_prop: &quot;foo val&quot;</span><br><span class="line">&#125;;</span><br><span class="line">function bar()&#123;&#125;</span><br><span class="line">var proto = new foo;</span><br><span class="line">proto.bar_prop = &quot;bar val&quot;;</span><br><span class="line">bar.prototype = proto;</span><br><span class="line">var inst = new bar;</span><br><span class="line">console.log(inst.foo_prop);</span><br><span class="line">console.log(inst.bar_prop);</span><br><span class="line">支持目前以及所有可想象到的浏览器(IE5.5都可以使用). 这种方法非常快，非常符合标准，并且充分利用JIST优化。</span><br></pre></td></tr></table></figure>
 <h3 id="原生Dom操作"><a href="#原生Dom操作" class="headerlink" title="原生Dom操作"></a>原生Dom操作</h3><p><a href="https://www.cnblogs.com/zhuzhenwei918/p/7463329.html" target="_blank" rel="noopener">原生JavaScript的DOM操作方法总结</a></p>
+<p>Dom👉文档对象模型 (Document Object Model)</p>
+<p>👇</p>
+<blockquote>
+<p>将web页面和脚本或程序语言连接起来</p>
+</blockquote>
+<h4 id="DOM-创建"><a href="#DOM-创建" class="headerlink" title="DOM 创建"></a>DOM 创建</h4><p>基本创建方式如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var el1 = document.createElement(&apos;div&apos;);</span><br><span class="line">var el2 = document.createElement(&apos;input&apos;);</span><br><span class="line">var node = document.createTextNode(&apos;hello world!&apos;);</span><br></pre></td></tr></table></figure>
+<p>我们可以通过元素的nodetype属性来判断这个节点的类型</p>
+<h3 id="DOM-查询"><a href="#DOM-查询" class="headerlink" title="DOM 查询"></a>DOM 查询</h3><p>　　元素查询的API返回的结果是DOM节点或者是DOM节点的列表，document提供了下面几种查询方法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">// 返回当前文档中第一个类名为 &quot;myclass&quot; 的元素</span><br><span class="line">var el = document.querySelector(&quot;.myclass&quot;);</span><br><span class="line"></span><br><span class="line">// 返回一个文档中所有的class为&quot;note&quot;或者 &quot;alert&quot;的div元素</span><br><span class="line">var els = document.querySelectorAll(&quot;div.note, div.alert&quot;);</span><br><span class="line"></span><br><span class="line">// 获取元素</span><br><span class="line">var el = document.getElementById(&apos;xxx&apos;);</span><br><span class="line">var els = document.getElementsByClassName(&apos;highlight&apos;);</span><br><span class="line">var els = document.getElementsByTagName(&apos;td&apos;);</span><br></pre></td></tr></table></figure>
+<p>另外，Element也提供了很多相对于元素的DOM导航方法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">// 获取父元素、父节点</span><br><span class="line">var parent = ele.parentElement;</span><br><span class="line">var parent = ele.parentNode;</span><br><span class="line"></span><br><span class="line">// 获取子节点，子节点可以是任何一种节点，可以通过nodeType来判断</span><br><span class="line">var nodes = ele.children;    </span><br><span class="line"></span><br><span class="line">// 查询子元素</span><br><span class="line">var els = ele.getElementsByTagName(&apos;td&apos;);</span><br><span class="line">var els = ele.getElementsByClassName(&apos;highlight&apos;);</span><br><span class="line"></span><br><span class="line">eg：👇</span><br><span class="line">&lt;div class=&quot;test&quot; id=&quot;test&quot;&gt;</span><br><span class="line">　　&lt;p&gt;1&lt;/p&gt;</span><br><span class="line">　　&lt;p&gt;3&lt;/p&gt;</span><br><span class="line">　　&lt;p&gt;5&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">　　var a = document.getElementById(&quot;test&quot;);</span><br><span class="line">　　var b = a.childNodes;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">大家猜猜console.log(b)打印什么 一开始我以为就3个元素</span><br><span class="line">但是其实是【text,p,text,p,text,p，text】7个元素</span><br><span class="line">因为根据dom的标准，标签之间的回车空格等特殊字符属于文本节点，上面的div中输入了4个回车，因此会多出四个text节点：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 当前元素的第一个/最后一个子元素节点</span><br><span class="line">var el = ele.firstChild;</span><br><span class="line">var el = ele.firstElementChild;</span><br><span class="line"></span><br><span class="line">var el = ele.lastChild;</span><br><span class="line">var el = ele.lastElementChild;</span><br><span class="line"></span><br><span class="line">// 下一个/上一个兄弟元素节点</span><br><span class="line">var el = ele.nextSibling;</span><br><span class="line">var el = ele.nextElementSibling;</span><br><span class="line"></span><br><span class="line">var el = ele.previousSibling;</span><br><span class="line">var el = ele.previousElementSibling;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="DOM-更改"><a href="#DOM-更改" class="headerlink" title="DOM 更改"></a>DOM 更改</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">// 添加、删除子元素</span><br><span class="line">ele.appendChild(el);</span><br><span class="line">ele.removeChild(el);</span><br><span class="line"></span><br><span class="line">// 替换子元素</span><br><span class="line">ele.replaceChild(el1, el2);</span><br><span class="line"></span><br><span class="line">// 插入子元素</span><br><span class="line">parentElement.insertBefore(newElement, referenceElement);</span><br></pre></td></tr></table></figure>
+
+<h3 id="属性操作"><a href="#属性操作" class="headerlink" title="属性操作"></a>属性操作</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">// 获取一个&#123;name, value&#125;的数组</span><br><span class="line">var attrs = el.attributes;</span><br><span class="line"></span><br><span class="line">// 获取、设置属性</span><br><span class="line">var c = el.getAttribute(&apos;class&apos;);</span><br><span class="line">el.setAttribute(&apos;class&apos;, &apos;highlight&apos;);</span><br><span class="line"></span><br><span class="line">// 判断、移除属性</span><br><span class="line">el.hasAttribute(&apos;class&apos;);</span><br><span class="line">el.removeAttribute(&apos;class&apos;);</span><br><span class="line"></span><br><span class="line">// 是否有属性设置</span><br><span class="line">el.hasAttributes();</span><br></pre></td></tr></table></figure>
+
+<h3 id="常见的面试问题"><a href="#常见的面试问题" class="headerlink" title="常见的面试问题"></a>常见的面试问题</h3><p>innerHTML与outerHTML的区别？</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">innerHTML输出结果：</span><br><span class="line"> </span><br><span class="line">&lt;h5&gt;就是喜欢你&lt;/h5&gt;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">outerHTML输出结果：</span><br><span class="line"></span><br><span class="line">&lt;div id=&quot;test&quot;&gt;&lt;h5&gt;就是喜欢你&lt;/h5&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>1.innerHTML 设置或获取位于对象起始和结束标签内的HTML<br>2.outerHTML设置或获取对象及其内容的HTML形式</p>
 <p><a href="https://www.cnblogs.com/Nutrient-rich/p/7010317.html" target="_blank" rel="noopener">BomAPI</a></p>
-<p><a href="https://www.jianshu.com/p/af0b398602bc" target="_blank" rel="noopener">VDom</a></p>
+<blockquote>
+<ol>
+<li>DOM 是 W3C 的标准； [所有浏览器公共遵守的标准]</li>
+<li>BOM 是 各个浏览器厂商根据 DOM<br> 在各自浏览器上的实现;[表现为不同浏览器定义有差别,实现方式不同] </li>
+<li>window 是 BOM 对象，而非 js 对象；</li>
+</ol>
+</blockquote>
+<p><a href="https://www.jianshu.com/p/af0b398602bc" target="_blank" rel="noopener">vue核心之虚拟DOM(vdom)</a></p>
+<p> 1-1 传统模板引擎<br>传统模板引擎编译生成HTML字符串。<br>通常在后台脚本语言中将模板和数据合并成html字符串输出到前端<br>或者后台输出数据，前端使用模板引擎组合数据和模板生成界面</p>
+<p> 当数据发生变化的时候，最简单的就是模板重新渲染，或者模板引擎局部界面重新渲染。</p>
+<p>当页面包含的数据很多的时候，这种代码操作中包含很多DOM操作，编码复杂不便维护。而且重新渲染导致性能问题</p>
+<p>1-2 vdom<br>虚拟dom则将这个过程分为两步</p>
+<p>第一步编译模板生成vdom的渲染函数render<br>在需要的渲染的时候调用渲染函数render组成的树状vdom</p>
+<p>在mvvm数据绑定的结构中，将视图部分的渲染组织为vdom的渲染函数。可以优化编码结构与渲染效率</p>
 <p><a href="https://blog.csdn.net/yczz/article/details/51516526" target="_blank" rel="noopener">VDom实现</a></p>
+<p>👆看了之后您是否和我一样发生了如下化学反应</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">模板语法???  不熟悉</span><br><span class="line">模板编译???  不懂  </span><br><span class="line">词法分析???  一脸懵逼  </span><br><span class="line">AST???  二脸懵逼</span><br><span class="line">使用js的正则表达式引擎实现词法分析?  三脸懵逼</span><br><span class="line">递归下降分析???  完全懵逼</span><br></pre></td></tr></table></figure>
+
+
+
+
+
 <h3 id="Leecode"><a href="#Leecode" class="headerlink" title="Leecode"></a>Leecode</h3><p><a href="https://space.bilibili.com/327247876/channel/detail?cid=104442" target="_blank" rel="noopener">技术蛋老师de视频</a></p>
 <h2 id="Day4（防抖节流-amp-Eventloop-amp-Vue、React原理-amp-Angular）"><a href="#Day4（防抖节流-amp-Eventloop-amp-Vue、React原理-amp-Angular）" class="headerlink" title="Day4（防抖节流&amp;Eventloop&amp;Vue、React原理&amp;Angular）"></a>Day4（防抖节流&amp;Eventloop&amp;Vue、React原理&amp;Angular）</h2><h3 id="防抖节流"><a href="#防抖节流" class="headerlink" title="防抖节流"></a>防抖节流</h3><p><a href="http://blog.zhencai.xyz/archives/20200501" target="_blank" rel="noopener">好兄弟整理的防抖节流</a></p>
 <p><a href="https://zhuanlan.zhihu.com/p/55511602" target="_blank" rel="noopener">Eventloop</a></p>
 <h3 id="Vue和React原理"><a href="#Vue和React原理" class="headerlink" title="Vue和React原理"></a>Vue和React原理</h3><p><a href="https://www.bilibili.com/video/BV1ut4y1271C?t=411&p=6" target="_blank" rel="noopener">Vue和React原理</a></p>
+<p>为什么要使用组件？</p>
+<h4 id="组件化"><a href="#组件化" class="headerlink" title="组件化"></a>组件化</h4><p>将一个具备完整功能的项目的一部分进行多处使用</p>
+<p>加快项目的进度</p>
+<p>可以进行项目的复用</p>
+<p>2、要想实现组件化，我们使用的这一部分必须是完整的，这个完整的整体称之为组件</p>
+<p>vue将html、css、js、img等聚合体放在一起组成的文件称之为单文件组件，后缀名为vue（xxx.vue）</p>
+<h4 id="Vue怎么监听数据变化的"><a href="#Vue怎么监听数据变化的" class="headerlink" title="Vue怎么监听数据变化的"></a>Vue怎么监听数据变化的</h4><h5 id="利用keyup事件来实现"><a href="#利用keyup事件来实现" class="headerlink" title="利用keyup事件来实现"></a>利用keyup事件来实现</h5><p>在input标签里绑定keyup事件<br>定义一个函数getFullname：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; v-model=&quot;firstname&quot; @keyup=&quot;getFullname&quot;&gt; +</span><br><span class="line">   &lt;input type=&quot;text&quot; v-model=&quot;lastname&quot; @keyup=&quot;getFullname&quot;&gt; =</span><br><span class="line">   &lt;input type=&quot;text&quot; v-model=&quot;fullname&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在vm中定义方法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var vm = new Vue(&#123;</span><br><span class="line">     el: &apos;#app&apos;,</span><br><span class="line">     data: &#123;</span><br><span class="line">         firstname: &apos;&apos;,</span><br><span class="line">         lastname: &apos;&apos;,</span><br><span class="line">         fullname: &apos;&apos;</span><br><span class="line">     &#125;,</span><br><span class="line">     methods: &#123;</span><br><span class="line">         getFullname() &#123;</span><br><span class="line">             this.fullname = this.firstname + &apos;-&apos; + this.lastname</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="使用watch"><a href="#使用watch" class="headerlink" title="使用watch"></a>使用watch</h5><p>watch和methods平级</p>
+<p>** watch监听数据变化 **</p>
+<p>使用这个 属性，可以监视 data 中指定数据的变化，然后触发这个 watch 中对应的 function 处理函数<br>该方法可以不用绑定事件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">      &lt;input type=&quot;text&quot; v-model=&quot;firstname&quot;&gt;+</span><br><span class="line">      &lt;input type=&quot;text&quot; v-model=&quot;lastname&quot;&gt;=</span><br><span class="line">      &lt;input type=&quot;text&quot; v-model=&quot;fullname&quot;&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    // 创建 Vue 实例，得到 ViewModel</span><br><span class="line">    var vm = new Vue(&#123;</span><br><span class="line">      el: &apos;#app&apos;,</span><br><span class="line">      data: &#123;</span><br><span class="line">          firstname: &apos;&apos;,</span><br><span class="line">          lastname: &apos;&apos;,</span><br><span class="line">          fullname: &apos;&apos;</span><br><span class="line">      &#125;,</span><br><span class="line">      methods: &#123;&#125;,</span><br><span class="line">      watch: &#123;</span><br><span class="line">          &apos;firstname&apos;: function(newVal)&#123;</span><br><span class="line">              this.fullname = newVal + &apos;-&apos; + this.lastname</span><br><span class="line">          &#125;,</span><br><span class="line">          &apos;lastname&apos;: function(newVal)&#123;</span><br><span class="line">              this.fullname = this.firstname + &apos;-&apos; + newVal</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">watch函数有两个变量，只是在该函数中有一个没有用上，写上也没有关系</span><br></pre></td></tr></table></figure>
+
+<h5 id="computed计算属性的使用"><a href="#computed计算属性的使用" class="headerlink" title="computed计算属性的使用"></a>computed计算属性的使用</h5><p>在 computed 中，可以定义一些 属性，这些属性，叫做 【计算属性】， 计算属性的本质，就是 一个方法，只不过我们在使用 这些计算属性的时候，是把它们的名称直接当作属性来使用的；并不会把 计算属性当作方法去调用；<br>computed和methods平级</p>
+<p>注意1： 计算属性，在引用的时候，一定不要加 () 去调用，直接把它当作普通 属性去使用就好了；</p>
+<p>注意2： 只要 计算属性，这个 function 内部，所用到的 任何 data 中的数据发送了变化，就会立即重新计算 这个 计算属性的值</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">      &lt;input type=&quot;text&quot; v-model=&quot;firstname&quot;&gt;+</span><br><span class="line">      &lt;input type=&quot;text&quot; v-model=&quot;lastname&quot;&gt;=</span><br><span class="line">      &lt;input type=&quot;text&quot; v-model=&quot;fullname&quot;&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    // 创建 Vue 实例，得到 ViewModel</span><br><span class="line">    var vm = new Vue(&#123;</span><br><span class="line">      el: &apos;#app&apos;,</span><br><span class="line">      data: &#123;</span><br><span class="line">          firstname: &apos;&apos;,</span><br><span class="line">          lastname: &apos;&apos;,</span><br><span class="line">      &#125;,</span><br><span class="line">      methods: &#123;&#125;,</span><br><span class="line">      watch: &#123;&#125;,</span><br><span class="line">      computed: &#123;</span><br><span class="line">          &apos;fullname&apos;: function()&#123;</span><br><span class="line">              return this.firstname + &apos;-&apos; + this.lastname</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+
+<p>注意：<br>1.fullname没有在data中定义<br>2.在compute定义fullname后直接return出去就好</p>
+<p>注意3： 计算属性的求值结果，会被缓存起来，方便下次直接使用； 如果 计算属性方法中，所有的任何数据，都没有发生过变化，则不会重新对计算属性求值；</p>
+<p>例：我们在fullname函数中定义输出一个ok，并且在主页中调用输出fullname</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">      &lt;input type=&quot;text&quot; v-model=&quot;firstname&quot;&gt;+</span><br><span class="line">      &lt;input type=&quot;text&quot; v-model=&quot;lastname&quot;&gt;=</span><br><span class="line">      &lt;input type=&quot;text&quot; v-model=&quot;fullname&quot;&gt;</span><br><span class="line"></span><br><span class="line">      &lt;p&gt;&#123;&#123; fullname &#125;&#125;&lt;/p&gt;</span><br><span class="line">      &lt;p&gt;&#123;&#123; fullname &#125;&#125;&lt;/p&gt;</span><br><span class="line">      &lt;p&gt;&#123;&#123; fullname &#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    // 创建 Vue 实例，得到 ViewModel</span><br><span class="line">    var vm = new Vue(&#123;</span><br><span class="line">      el: &apos;#app&apos;,</span><br><span class="line">      data: &#123;</span><br><span class="line">          firstname: &apos;&apos;,</span><br><span class="line">          lastname: &apos;&apos;,</span><br><span class="line">      &#125;,</span><br><span class="line">      methods: &#123;&#125;,</span><br><span class="line">      watch: &#123;&#125;,</span><br><span class="line">      computed: &#123;</span><br><span class="line">          &apos;fullname&apos;: function()&#123;</span><br><span class="line">              console.log(&apos;ok&apos;)</span><br><span class="line">              return this.firstname + &apos;-&apos; + this.lastname</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>* 也就是说，不会因为页面中调用几次函数去执行几次，只会根据函数执行来调用函数 *</strong></p>
+<ul>
+<li>引入vue.js文件之后，会向全局暴露一个Vue构造器函数<br>Vue.extend()是 vue 用来扩展 vue 功能（组件）的<br>Vue.extend()实例化与new Vue()是一样的，几乎没有区别，所以借鉴react，vue决定组件要以标签的形式呈现<br>为了符合html/html5的规则，所有组件的标签化使用必须先注册（即创建）<br>说明白点注册就是将标签化的组件解析为html能识别的标签，因为自己创建的标签需要符合html规则，让html正确解析该组件标签<br>组件必须先注册再使用，使用是在实例范围内使用<br>组件名称可以小写加-命名 如：header-title<br>大驼峰 如：GabrielLi 使用的时候写gabriel-li （注册的时候写的是大写，使用的时候写小写加-，因为浏览器会自动将大写解析成小写）<br>一个单词大写，注意不要和原生的h5标签重名，比如 header footer</li>
+</ul>
 <p><a href="https://segmentfault.com/a/1190000016344599" target="_blank" rel="noopener">Vue相关</a></p>
 <p><a href="https://blog.csdn.net/li123128/article/details/102678464" target="_blank" rel="noopener">Object.defineProperty的缺陷</a></p>
 <p><a href="https://www.cnblogs.com/wangxi01/p/11225555.html" target="_blank" rel="noopener">Object.defineProperty的缺陷</a></p>
@@ -264,41 +372,6 @@ your browser does not support the video tag
       </categories>
       <tags>
         <tag>Spring事物管理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>成功解决java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver</title>
-    <url>/2019/11/13/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/</url>
-    <content><![CDATA[<p>用Spring 通过applicationContext连接mySql</p>
-<p>发现报错  于是改回传统方式尝试连接 代码如下</p>
-<a id="more"></a>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@org.junit.Test</span><br><span class="line">	public void mainTest() &#123;</span><br><span class="line">//		// 加载配置文件</span><br><span class="line">//		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);</span><br><span class="line">//		// 获取JdbcTemplate实例</span><br><span class="line">//		JdbcTemplate jdTemplate = (JdbcTemplate) applicationContext.getBean(&quot;jdbcTemplate&quot;);</span><br><span class="line">//		// 使用execute()方法执行SQL语句，创建用户账户管理表account</span><br><span class="line">//		jdTemplate.execute(&quot;create table account(&quot; + &quot;id int primary key auto_increment,&quot; + &quot;username varchar(50),&quot;</span><br><span class="line">//				+ &quot;balance double)&quot;);</span><br><span class="line">//		System.out.println(&quot;账户表account创建成功！&quot;);</span><br><span class="line"></span><br><span class="line">		Connection conn=null;</span><br><span class="line">		try</span><br><span class="line">		&#123;</span><br><span class="line">			Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);// 加载驱动程序，此次无需更改</span><br><span class="line">			System.out.println(&quot;registered success!&quot;);//输出registered success表示驱动加载成功</span><br><span class="line">			//创建对象连接，连接数据库，此例中employeedbms为数据库名，root为用户名，123456位密码，该三项均需根据实际情况进行修改，其它代码无需变动。注：确保数据库名、用户名和密码的准确性。</span><br><span class="line">//			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/spring?useSSL=false&amp;serverTimezone=UTC&quot;,&quot;root&quot;,&quot;123456&quot;);</span><br><span class="line">			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://127.0.0.1:3306/spring?useSSL=true&amp;serverTimezone=GMT&quot;, &quot;root&quot;, &quot;123456&quot;);</span><br><span class="line">			System.out.println(&quot;connection success!&quot;);//输出connection success表示数据库已成功连接</span><br><span class="line">			conn.close();</span><br><span class="line">		&#125;</span><br><span class="line">		catch(Exception e)</span><br><span class="line">		&#123;</span><br><span class="line">			System.out.println(e);</span><br><span class="line">		&#125;</span><br><span class="line">		finally&#123;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    ``` </span><br><span class="line"> 出现错误提示</span><br></pre></td></tr></table></figure>
-<p> java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">由于我用的是mySQL 8.0.18</span><br></pre></td></tr></table></figure><br> //下面这个命令可以查你的mysql版本<br> mysql -uroot -p<br> //打开MySQL也可以看到<br> //利用navicat连接mysql的客户端工具可以查看<br> //连接之后右键——详细信息<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">数据库连接要和5.x的版本不一样驱动也是不一样</span><br><span class="line"></span><br><span class="line">https://mvnrepository.com/</span><br><span class="line"></span><br><span class="line">到上面这个网站搜索 mysql-connector-java-8.0.18.jar</span><br><span class="line">下载后导入到项目中  不要只是拖进去 还需要去建立依赖 否则没法用</span><br><span class="line"></span><br><span class="line">比如idea，要在Project Structure 里面的Modules 对应下的项目中点+号导入驱动。</span><br><span class="line">再次运行传统的连接数据库代码 发现成功</span><br></pre></td></tr></table></figure><br>registered success!<br>connection success!</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">注释掉用用以下xml配置连接数据库，也是成功</span><br></pre></td></tr></table></figure>
-<?xml version="1.0" encoding="UTF-8"?>
-<p><beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.springframework.org/schema/beans 
-     http://www.springframework.org/schema/beans/spring-beans-4.3.xsd"><br>    <!-- 1配置数据源 --><br>    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"><br>        <!--数据库驱动 --><br>        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property></bean></beans></p>
-<!--        //com.mysql.jdbc.Driver-->
-<pre><code>    &lt;!--连接数据库的url --&gt;
-    &lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://localhost:3306/spring?serverTimezone=GMT&quot; /&gt;
-    &lt;!--连接数据库的用户名 --&gt;
-    &lt;property name=&quot;username&quot; value=&quot;root&quot; /&gt;
-    &lt;!--连接数据库的密码 --&gt;
-    &lt;property name=&quot;password&quot; value=&quot;123456&quot; /&gt;
-&lt;/bean&gt;
-
-&lt;/bean&gt;</code></pre>
-```
-
-<p>end</p>
-]]></content>
-      <categories>
-        <category>踩坑</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -473,6 +546,41 @@ your browser does not support the video tag
 <h2 id="二、JavaScript-正则表达式（未完-）"><a href="#二、JavaScript-正则表达式（未完-）" class="headerlink" title="二、JavaScript 正则表达式（未完~）"></a>二、JavaScript 正则表达式（未完~）</h2><p>正则表达式是构成搜索模式的字符序列。</p>
 <p>该搜索模式可用于文本搜索和文本替换操作。</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>成功解决java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver</title>
+    <url>/2019/11/13/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/</url>
+    <content><![CDATA[<p>用Spring 通过applicationContext连接mySql</p>
+<p>发现报错  于是改回传统方式尝试连接 代码如下</p>
+<a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@org.junit.Test</span><br><span class="line">	public void mainTest() &#123;</span><br><span class="line">//		// 加载配置文件</span><br><span class="line">//		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);</span><br><span class="line">//		// 获取JdbcTemplate实例</span><br><span class="line">//		JdbcTemplate jdTemplate = (JdbcTemplate) applicationContext.getBean(&quot;jdbcTemplate&quot;);</span><br><span class="line">//		// 使用execute()方法执行SQL语句，创建用户账户管理表account</span><br><span class="line">//		jdTemplate.execute(&quot;create table account(&quot; + &quot;id int primary key auto_increment,&quot; + &quot;username varchar(50),&quot;</span><br><span class="line">//				+ &quot;balance double)&quot;);</span><br><span class="line">//		System.out.println(&quot;账户表account创建成功！&quot;);</span><br><span class="line"></span><br><span class="line">		Connection conn=null;</span><br><span class="line">		try</span><br><span class="line">		&#123;</span><br><span class="line">			Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);// 加载驱动程序，此次无需更改</span><br><span class="line">			System.out.println(&quot;registered success!&quot;);//输出registered success表示驱动加载成功</span><br><span class="line">			//创建对象连接，连接数据库，此例中employeedbms为数据库名，root为用户名，123456位密码，该三项均需根据实际情况进行修改，其它代码无需变动。注：确保数据库名、用户名和密码的准确性。</span><br><span class="line">//			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/spring?useSSL=false&amp;serverTimezone=UTC&quot;,&quot;root&quot;,&quot;123456&quot;);</span><br><span class="line">			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://127.0.0.1:3306/spring?useSSL=true&amp;serverTimezone=GMT&quot;, &quot;root&quot;, &quot;123456&quot;);</span><br><span class="line">			System.out.println(&quot;connection success!&quot;);//输出connection success表示数据库已成功连接</span><br><span class="line">			conn.close();</span><br><span class="line">		&#125;</span><br><span class="line">		catch(Exception e)</span><br><span class="line">		&#123;</span><br><span class="line">			System.out.println(e);</span><br><span class="line">		&#125;</span><br><span class="line">		finally&#123;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    ``` </span><br><span class="line"> 出现错误提示</span><br></pre></td></tr></table></figure>
+<p> java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">由于我用的是mySQL 8.0.18</span><br></pre></td></tr></table></figure><br> //下面这个命令可以查你的mysql版本<br> mysql -uroot -p<br> //打开MySQL也可以看到<br> //利用navicat连接mysql的客户端工具可以查看<br> //连接之后右键——详细信息<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">数据库连接要和5.x的版本不一样驱动也是不一样</span><br><span class="line"></span><br><span class="line">https://mvnrepository.com/</span><br><span class="line"></span><br><span class="line">到上面这个网站搜索 mysql-connector-java-8.0.18.jar</span><br><span class="line">下载后导入到项目中  不要只是拖进去 还需要去建立依赖 否则没法用</span><br><span class="line"></span><br><span class="line">比如idea，要在Project Structure 里面的Modules 对应下的项目中点+号导入驱动。</span><br><span class="line">再次运行传统的连接数据库代码 发现成功</span><br></pre></td></tr></table></figure><br>registered success!<br>connection success!</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">注释掉用用以下xml配置连接数据库，也是成功</span><br></pre></td></tr></table></figure>
+<?xml version="1.0" encoding="UTF-8"?>
+<p><beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans-4.3.xsd"><br>    <!-- 1配置数据源 --><br>    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"><br>        <!--数据库驱动 --><br>        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property></bean></beans></p>
+<!--        //com.mysql.jdbc.Driver-->
+<pre><code>    &lt;!--连接数据库的url --&gt;
+    &lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://localhost:3306/spring?serverTimezone=GMT&quot; /&gt;
+    &lt;!--连接数据库的用户名 --&gt;
+    &lt;property name=&quot;username&quot; value=&quot;root&quot; /&gt;
+    &lt;!--连接数据库的密码 --&gt;
+    &lt;property name=&quot;password&quot; value=&quot;123456&quot; /&gt;
+&lt;/bean&gt;
+
+&lt;/bean&gt;</code></pre>
+```
+
+<p>end</p>
+]]></content>
+      <categories>
+        <category>踩坑</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+        <tag>数据库</tag>
+      </tags>
   </entry>
   <entry>
     <title>计算机组成原理测试习题整理【一】（含答案解析）</title>
