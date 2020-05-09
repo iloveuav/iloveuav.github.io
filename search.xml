@@ -1,369 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>[踩坑玄学]隐身&amp;nbsp</title>
-    <url>/2020/05/05/%E5%9D%91%E7%8E%84%E5%AD%A6-%E9%9A%90%E8%BA%AB-nbsp/</url>
-    <content><![CDATA[<p>具体如下</p>
-<video src="http://q9uen5wtx.bkt.clouddn.com/%E7%8E%84%E5%AD%A6%EF%BC%9F.mp4" controls="controls" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;">
-your browser does not support the video tag
-</video>
-
-<p>空格把left div顶到下一行了。</p>
-<p>我删掉left div前面的空格就好了  之后就算再空格也不会影响，可能是极少数情况下编译器存在隐身的&amp;nbsp?  left div  左边少了一根线可能就是有个隐身的&amp;nbsp[捂脸哭]</p>
-]]></content>
-      <categories>
-        <category>VSCode</category>
-      </categories>
-      <tags>
-        <tag>踩坑</tag>
-        <tag>空格占位</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>机器学习期末复习简答题</title>
-    <url>/2019/12/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E7%AE%80%E7%AD%94%E9%A2%98/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</url>
-    <content><![CDATA[<h3 id="简答题"><a href="#简答题" class="headerlink" title="简答题"></a>简答题</h3><p>就是期末可能会考的简答题汇总，答案偏个人+网上找的~</p>
-<a id="more"></a>
-
-<h5 id="机器学习与人工智能的关系"><a href="#机器学习与人工智能的关系" class="headerlink" title="机器学习与人工智能的关系"></a>机器学习与人工智能的关系</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">机器学习是人工智能的子集也是人工智能的基础，</span><br><span class="line">人工智能除了机器学习还要知识表示、自动推理、知识获取等。</span><br></pre></td></tr></table></figure>
-
-<h5 id="机器学习与数据挖掘的关系"><a href="#机器学习与数据挖掘的关系" class="headerlink" title="机器学习与数据挖掘的关系"></a>机器学习与数据挖掘的关系</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">数据挖掘可以认为是数据库技术与机器学习的交叉，它利用数据库技术来管理海量的数据，并利用机器学习和统计分析来进行数据分析。</span><br><span class="line"></span><br><span class="line">机器学习：广泛的定义为 “利用经验来改善计算机系统的自身性能。”，事实上，由于“经验”在计算机系统中主要是以数据的形式存在的,因此机器学习需要设法对数据进行分析,这就使得它逐渐成为智能数据分析技术的创新源之一,并且为此而受到越来越多的关注。</span><br><span class="line"></span><br><span class="line">数据挖掘：一种解释是“识别出巨量数据中有效的、新颖的、潜在有用的、最终可理解的模式的非平凡过程”，顾名思义，数据挖掘就是试图从海量数据中找出有用的知识。</span><br></pre></td></tr></table></figure>
-
-<h5 id="举例说明机器学习的基本过程，并举例说明各步骤使用的方法"><a href="#举例说明机器学习的基本过程，并举例说明各步骤使用的方法" class="headerlink" title="举例说明机器学习的基本过程，并举例说明各步骤使用的方法"></a>举例说明机器学习的基本过程，并举例说明各步骤使用的方法</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、明确目标和要解决的问题</span><br><span class="line">（方法：对定性问题用分类算法，对定量分析可用回归方法，或者理解为预测问题用回归，分类问题用分类算法）</span><br><span class="line"></span><br><span class="line">2、收集数据</span><br><span class="line">（方法：选取有代表性的数据，分类问题避免出现样本数据不平衡，内存过大 考虑使用降维或改进算法）</span><br><span class="line"></span><br><span class="line">3、根据数据判断用supervised还是unsupervised机器学习模型</span><br><span class="line">（一般数据如果没有我们想要的标签，就考虑用聚类进行分类）</span><br><span class="line"></span><br><span class="line">4、数据预处理</span><br><span class="line">（方法：先进行探索，了解大致结构、数据噪声，分布等，可使用数据可视化方法或数据质量评价对数据质量进行评估，根据实际情况选择使用归一化，离散化、缺失值处理、去除共线性等）</span><br><span class="line"></span><br><span class="line">5、数据建模</span><br><span class="line">（方法：选取合适的特征，特征选择方法：相关系数、卡方检验、平均互信息、条件熵、后验概率和逻辑回归权重等方法。</span><br><span class="line">再把数据分为训练集和测试集）</span><br><span class="line"></span><br><span class="line">6、模型训练</span><br><span class="line">（方法：对模型超参进行调优）</span><br><span class="line"></span><br><span class="line">7、模型评估</span><br><span class="line">（方法：构建模型后，使用测试数据对模型进行测试和评估）</span><br><span class="line"></span><br><span class="line">8、模型应用</span><br><span class="line">（方法：用就完事了，再看看性能、稳定性啥的）</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="什么是标准差、方差和协方差？它们反映了数据的什么内容？"><a href="#什么是标准差、方差和协方差？它们反映了数据的什么内容？" class="headerlink" title="什么是标准差、方差和协方差？它们反映了数据的什么内容？"></a>什么是标准差、方差和协方差？它们反映了数据的什么内容？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">方差（Variance）：用来度量随机变量和其数学期望（即均值）之间的偏离程度。</span><br><span class="line"></span><br><span class="line">标准差：方差开根号。</span><br><span class="line"></span><br><span class="line">协方差：E[(X-E[X])(Y-E[Y])]=E[XY]-E[X]E[Y]衡量两个变量之间的变化方向关系。</span><br><span class="line"></span><br><span class="line">标准差描述是样本集合的各个样本点到均值的距离分布，描述的是样本集的分散程度</span><br><span class="line"></span><br><span class="line">在机器学习中的方差就是估计值与其期望值的统计方差。如果进行多次重复验证的过程，就会发现模型在训练集上的表现并不固定，会出现波动，这些波动越大，它的方差就越大</span><br><span class="line"></span><br><span class="line">协方差主要用来度量两个随机变量关系，如果结果为正值，则说明两者是正相关的；结果为负值，说明两者是负相关的；如果为0，就是统计上的“相互独立”</span><br><span class="line"></span><br><span class="line">   标准差: 描述样本的分散程度。</span><br><span class="line">    方差：标准差的平方，模型预测稳定性。 </span><br><span class="line">   协方差:</span><br><span class="line">        结果为正值：两者正相关；</span><br><span class="line">        结果为负值：两者负相关；</span><br><span class="line">        如果为0：“相互独立”；</span><br></pre></td></tr></table></figure>
-
-<h5 id="如何利用平均值和标准差判断数据的异常值？"><a href="#如何利用平均值和标准差判断数据的异常值？" class="headerlink" title="如何利用平均值和标准差判断数据的异常值？"></a>如何利用平均值和标准差判断数据的异常值？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">数据原值在均值±标准差*3范围外的都作为异常值剔除</span><br><span class="line"></span><br><span class="line">标准差可用于识别符合高斯或类高斯分布的数据中的异常值</span><br></pre></td></tr></table></figure>
-<h5 id="何为正则化？其功能是什么？"><a href="#何为正则化？其功能是什么？" class="headerlink" title="何为正则化？其功能是什么？"></a>何为正则化？其功能是什么？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在训练数据不够多时，或者overtraining时，常常会导致过拟合（overfitting）。正则化方法即为在此时向原始模型引入额外信息，以便防止过拟合和提高模型泛化性能的一类方法的统称。</span><br><span class="line"></span><br><span class="line">正则化是为了避免过拟合的手段。正则化为了结构风险最小化，在经验风险上加一个正则化项或惩罚项，正则化项一般是模型复杂度的单调递增函数，模型越复杂，正则化值就越大</span><br></pre></td></tr></table></figure>
-
-<h5 id="PCA的基本思想"><a href="#PCA的基本思想" class="headerlink" title="PCA的基本思想"></a>PCA的基本思想</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">通过某种线性投影，将高维度的数据映射到低维的空间中，并期望再所投影的维度上数据的方差最大，以此使用较少的维度，同时保留较多原数据的维度。</span><br></pre></td></tr></table></figure>
-<h5 id="如何理解L0、L1、L2正则化？"><a href="#如何理解L0、L1、L2正则化？" class="headerlink" title="如何理解L0、L1、L2正则化？"></a>如何理解L0、L1、L2正则化？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> L0：通过限制向量中非0的元素的个数实现模型优化；</span><br><span class="line"> L1：趋向于产生少量的特征，而其他的特征都是0；</span><br><span class="line"> L2：L2会选择更多的特征，这些特征都会接近于0。</span><br><span class="line"> </span><br><span class="line">（所有特征中只有少数特征起重要作用的情况下，选择L1更合适；</span><br><span class="line">所有特征中，大部分特征都能起作用，而且起的作用很平均，选择L2更合适；L1/L2范数让模型变得稀疏，增加模型的可解析性，可用于特征选择；L2范数让模型变得更简单，防止过拟合问题；</span><br><span class="line">）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">L0正则化是通过限制向量中非0的元素的个数实现模型优化，用L0来正则化一个参数矩阵 W，目标是使其更稀疏，即W中的大部分元素都是0。很明显，如果通过最小化L0范数作为罚项，就是寻找最优的稀疏特征项。</span><br><span class="line">L1正则化是通过对向量中各个元素绝对值之和进行限制，任何的规则化算子，如果在wi = 0的地方不可微，并且可以分解为多项式的形式，那么这个规则化算子就可以实现稀疏。</span><br><span class="line">L2正则化是指向量各元素求平方和然后求平方根，用模最小化来确保w的每个元素都很小，都接近于0。</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="什么是交叉校验？常用方法有哪些？"><a href="#什么是交叉校验？常用方法有哪些？" class="headerlink" title="什么是交叉校验？常用方法有哪些？"></a>什么是交叉校验？常用方法有哪些？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">交叉验证是机器学习中确定超参数的通用的方法。</span><br><span class="line">k折交叉验证 、留一法</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="LDA的基本思想是什么？举例说明"><a href="#LDA的基本思想是什么？举例说明" class="headerlink" title="LDA的基本思想是什么？举例说明"></a>LDA的基本思想是什么？举例说明</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">通过将训练样本投影到低维度上，使得同类别的投影点尽可能接近，异类别样本的投影点尽可能远离，（即同类点方差尽可能小，而类之间的方差尽可能大）；对新样本，将其投影到低维空间，根据投影点的位置来确定其类别；</span><br><span class="line">应用LDA对鸢尾花（Iris）的样本数据进行分析。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">LDA 线性判别式分析：和PCA一样都是常用的降维技术，PCA从特征的协方差角度找比较好的投影，LDA更多是考虑了标注，即希望投影后不同类别之间的数据点的距离更大，同一类别的数据点更紧凑。</span><br><span class="line"></span><br><span class="line">线性判别分析的原理是对于给定的训练集，设法将样本投影到一条直线上，使得同类的投影点尽可能接近，异类样本的投影点尽可能远离；在对新样本进行分类时，将其投影到这条直线上，再根据投影点的位置来确定新样本的类别</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="为什么考虑特征提取？"><a href="#为什么考虑特征提取？" class="headerlink" title="为什么考虑特征提取？"></a>为什么考虑特征提取？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">特征提取目的是自动地构建新的特征，将原始数据转换为一组具有明显统计意义的核心特征</span><br><span class="line"></span><br><span class="line">特征提取是利用原有的特征根据一定的算法提取出原始特征中包含的抽象特征</span><br><span class="line">通过降维，可以减少数据量大大减少计算量，再就是避免被不重要的噪声干扰</span><br></pre></td></tr></table></figure>
-
-<h5 id="线性回归的过程是什么？举例说明"><a href="#线性回归的过程是什么？举例说明" class="headerlink" title="线性回归的过程是什么？举例说明~"></a>线性回归的过程是什么？举例说明~</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">a)         确定输入变量与目标变量间的回归模型，即变量间相关关系的数学表达式</span><br><span class="line"></span><br><span class="line">b)        根据样本估计并检验回归模型及未知参数</span><br><span class="line"></span><br><span class="line">c)         从众多的输入变量中，判断哪些变量对目标变量的影响是显著的</span><br><span class="line"></span><br><span class="line">d)        根据输入变量的已知值来估计目标变量的平均值并给出预测精度</span><br><span class="line"></span><br><span class="line">线性回归是利用数理统计中回归分析，来确定两种或两种以上变量间相互依赖的定量关系的一种统计分析方法，运用十分广泛。</span><br><span class="line">比如预测房价，我们通过数据分析多个变量如地点附近医院个数、学校个数等分析与房价的关系，拟合出一个函数。来预测一个新的未知房价</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="逻辑回归为什么可以预测新样本的类别？举例说明其应用。"><a href="#逻辑回归为什么可以预测新样本的类别？举例说明其应用。" class="headerlink" title="逻辑回归为什么可以预测新样本的类别？举例说明其应用。"></a>逻辑回归为什么可以预测新样本的类别？举例说明其应用。</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">逻辑回归是一种预测分析， 解释因变量与一个或多个自变量之间的关系，与线性回归不同之处就是它的目标变量有几种类别，所以逻辑回归主要用于解决分类问题，与线性回归相比，它是用概率的方式，预测出来属于某一分类的概率值。如果超过50%，则属于某一分类</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="分类解决什么问题？"><a href="#分类解决什么问题？" class="headerlink" title="分类解决什么问题？"></a>分类解决什么问题？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">将数据集中的样本划分到个各类中。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">找一个函数判断输入数据所属的类别，可以是二类别问题（是/不是），也可以是多类别问题（在多个类别中判断输入数据具体属于哪一个类别）。与回归问题（regression）相比，分类问题的输出不再是连续值，而是离散值，用来指定其属于哪个类别。</span><br><span class="line">比如垃圾邮件识别，手写数字识别，人脸识别，语音识别等。。</span><br></pre></td></tr></table></figure>
-
-<h5 id="常见的分类算法有哪些？举例说明"><a href="#常见的分类算法有哪些？举例说明" class="headerlink" title="常见的分类算法有哪些？举例说明"></a>常见的分类算法有哪些？举例说明</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">决策树 贝叶斯 人工神经网络 k-近邻 支持向量机 基于关联规则的分类 集成学习</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="简述决策树的生成过程"><a href="#简述决策树的生成过程" class="headerlink" title="简述决策树的生成过程"></a>简述决策树的生成过程</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">决策树的构建过程是按照属性的优先级或重要性来逐渐确定树的层次结构，使其叶子结点尽可能属于同一类别，一般采用局部最优的贪心策略来构建决策树。</span><br><span class="line"></span><br><span class="line">决策树是一种树形的结构，一般由根节点、父节点、子节点、叶子节点构成</span><br><span class="line"></span><br><span class="line">每一个分支代表着一个判断，每个叶子节点代表一种结果。</span><br><span class="line"></span><br><span class="line">最优的模型应该是：叶子节点中只包含一个类别的数据。</span><br><span class="line"></span><br><span class="line">从决策树根结点出发，自顶向下移动，在每个决策结点都会进行次划分，通过划分的结果将样本进行分类，导致不同的分支，最后到达个叶子结点，这个过程就是利用决策树进行分类的过程</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">步骤一：将所有的特征看成一个一个的节点，eg（拥有房产、婚姻状态、年收入这些特征，我们可以看成一个一个的节点。）</span><br><span class="line"></span><br><span class="line">步骤二：遍历当前特征的每一种分割方式，找到最好的分割点eg（婚姻状态这个特征，我们可以按照单身、已婚、离婚进行划分；也可以按照结过婚、没有结过婚进行划分）；将数据划分为不同的子节点，eg： N1、 N2….Nm；计算划分之后所有子节点的“纯度”信息</span><br><span class="line"></span><br><span class="line">步骤三：使用第二步遍历所有特征，选择出最优的特征，以及该特征的最优的划分方式，得出最终的子节点N1、 N2….Nm</span><br><span class="line"></span><br><span class="line">步骤四：对子节点N1、N2….Nm分别继续执行2-3步，直到每个最终的子节点都足够“纯”。</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="如何减少过拟合？"><a href="#如何减少过拟合？" class="headerlink" title="如何减少过拟合？"></a>如何减少过拟合？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">增加数据量，降低模型复杂度。通过正则化</span><br></pre></td></tr></table></figure>
-<h5 id="1-混淆矩阵"><a href="#1-混淆矩阵" class="headerlink" title="1. 混淆矩阵"></a>1. 混淆矩阵</h5><p>在介绍各个率之前，先来介绍一下混淆矩阵。如果我们用的是个二分类的模型，那么把预测情况与实际情况的所有结果两两混合，结果就会出现以下4种情况，就组成了混淆矩阵。</p>
-<p>P（Positive）：代表1</p>
-<p>N（Negative）：代表0</p>
-<p>T（True）：代表预测正确</p>
-<p>F（False）：代表错误</p>
-<p>TP：预测为1，预测正确，即实际1</p>
-<p>FP：预测为1，预测错误，即实际0</p>
-<p>FN：预测为0，预测错确，即实际1</p>
-<p>TN：预测为0，预测正确即，实际0</p>
-<h5 id="2-准确率"><a href="#2-准确率" class="headerlink" title="2. 准确率"></a>2. 准确率</h5><p>既然是个分类指标，我们可以很自然的想到准确率，准确率的定义是预测正确的结果占总样本的百分比，其公式如下：</p>
-<p>准确率=(TP+TN)/(TP+TN+FP+FN)</p>
-<h6 id="3-精准率"><a href="#3-精准率" class="headerlink" title="3. 精准率"></a>3. 精准率</h6><p>精准率（Precision）又叫查准率，它是针对****预测结果而言的，它的含义是在所有被预测为正的样本中实际为正的样本的概率，意思就是在预测为正样本的结果中，我们有多少把握可以预测正确，其公式如下：</p>
-<p>精准率=TP/(TP+FP)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">精准率和准确率看上去有些类似，但是完全不同的两个概念。精准率代表对正样本结果中的预测准确程度，而准确率则代表整体的预测准确程度，既包括正样本，也包括负样本。</span><br></pre></td></tr></table></figure>
-<h5 id="4-召回率"><a href="#4-召回率" class="headerlink" title="4. 召回率"></a>4. 召回率</h5><p>召回率（Recall）又叫查全率，它是针对原样本而言的，它的含义是在实际为正的样本中被预测为正样本的概率，其公式如下：</p>
-<p>精准率=TP/(TP+FN)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">召回率越高，代表实际坏用户被预测出来的概率越高，它的含义类似：宁可错杀一千，绝不放过一个。</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="AUC与ROC的关系是什么？"><a href="#AUC与ROC的关系是什么？" class="headerlink" title="AUC与ROC的关系是什么？"></a>AUC与ROC的关系是什么？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">ROC图下的面积为AUC，AUC值越大，表示分类模型的预测准确性越高。（ROC越光滑，一般表示过拟合现象越轻）</span><br><span class="line"></span><br><span class="line">AUC(Area Under ROC Curve)，从名字可以看出AUC是ROC曲线下方的面积。当两个分类器的ROC曲线交叉时，就可以通过AUC来判断分类器的好坏了。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">这两个指标的选择也正是ROC和AUC可以无视样本不平衡的原因。这两个指标分别是：灵敏度和（1-特异度），也叫做真正率（TPR）和假正率（FPR）</span><br><span class="line"></span><br><span class="line">灵敏度（Sensitivity） = TP/(TP+FN)</span><br><span class="line"></span><br><span class="line">特异度（Specificity） = TN/(FP+TN)</span><br><span class="line"></span><br><span class="line">ROC曲线有个很好的特性：当测试集中的正负样本的分布变化的时候，ROC曲线能够保持不变。在实际的数据集中经常会出现类不平衡（class imbalance）现象，即负样本比正样本多很多（或者相反），而且测试数据中的正负样本的分布也可能随着时间变化。</span><br><span class="line"></span><br><span class="line">ROC（Receiver Operating Characteristic）曲线，又称接受者操作特征曲线。该曲线最早应用于雷达信号检测领域，用于区分信号与噪声。后来人们将其用于评价模型的预测能力，ROC曲线是基于混淆矩阵得出的。</span><br><span class="line"></span><br><span class="line">ROC曲线也是通过遍历所有阈值来绘制整条曲线的。如果我们不断的遍历所有阈值，预测的正样本和负样本是在不断变化的，相应的在ROC曲线图中也会沿着曲线滑动。</span><br><span class="line"></span><br><span class="line">TPR越高，同时FPR越低（即ROC曲线越陡），那么模型的性能就越好。</span><br></pre></td></tr></table></figure>
-
-<h5 id="聚类分析的目的是什么？"><a href="#聚类分析的目的是什么？" class="headerlink" title="聚类分析的目的是什么？"></a>聚类分析的目的是什么？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">当我们的数据没有我们想要的特征的时候，通过聚类（按相似程度如距离远近等）划分类别 再打上标签，就能得到对我们有用的数据。</span><br></pre></td></tr></table></figure>
-
-<h5 id="聚类与分类的关系？"><a href="#聚类与分类的关系？" class="headerlink" title="聚类与分类的关系？"></a>聚类与分类的关系？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">聚类是非监督式学习，分类是有监督学习。</span><br><span class="line">如果想利用分类方法来对数据进行分类，训练模型用的样本必须是有标签的，这样模型才能不断地学习、优化最后达到良好的分类效果</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="常见有哪些聚类方法？这些方法分别试用于哪些场合？"><a href="#常见有哪些聚类方法？这些方法分别试用于哪些场合？" class="headerlink" title="常见有哪些聚类方法？这些方法分别试用于哪些场合？"></a>常见有哪些聚类方法？这些方法分别试用于哪些场合？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">划分方法【k-means 】：适用于对大规模的数据集进行分类，以及处理复杂形状的聚类。</span><br><span class="line"></span><br><span class="line">层次方法【Birch、cure】：可以根据需求指定层数，知道要分几类的情况</span><br><span class="line"></span><br><span class="line">基于密度的方法：球状数据集能正确划分，但是非球状无法正确聚类，容易受到噪声影响。</span><br><span class="line"></span><br><span class="line">基于网格的方法：处理大数据集时效率高</span><br><span class="line"></span><br><span class="line">基于模型的方法：数据集满足一定的分布模型</span><br></pre></td></tr></table></figure>
-
-<h5 id="聚类分析中，样本之间的距离常用的计算方法有哪些？"><a href="#聚类分析中，样本之间的距离常用的计算方法有哪些？" class="headerlink" title="聚类分析中，样本之间的距离常用的计算方法有哪些？"></a>聚类分析中，样本之间的距离常用的计算方法有哪些？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">最短距离法、最长距离法、中间距离法、可变距离法、重心法、类平均法等。</span><br></pre></td></tr></table></figure>
-
-<h5 id="k个假设聚类中心位置对k-均值算法的影响？"><a href="#k个假设聚类中心位置对k-均值算法的影响？" class="headerlink" title="k个假设聚类中心位置对k-均值算法的影响？"></a>k个假设聚类中心位置对k-均值算法的影响？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">影响比较大，不同的初始中心可能会导致不同的聚类结果。</span><br></pre></td></tr></table></figure>
-
-<h5 id="简要说明基于划分的聚类方法的基本原理。"><a href="#简要说明基于划分的聚类方法的基本原理。" class="headerlink" title="简要说明基于划分的聚类方法的基本原理。"></a>简要说明基于划分的聚类方法的基本原理。</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">把包含n个样本的数据集，基于划分的方法将n个样本按照特定的度量划分为K个蔟，方法大多数是基于距离来划分。在每次划分过程中寻找最优解，然后基于最优解进行迭代计算。</span><br></pre></td></tr></table></figure>
-
-<h5 id="支持向量机的基本原理是什么？"><a href="#支持向量机的基本原理是什么？" class="headerlink" title="支持向量机的基本原理是什么？"></a>支持向量机的基本原理是什么？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">一个比较基于数学的算法，</span><br><span class="line">通过将样本的向量映射到高维空间中，寻找最优区分两类数据的超平面，使各分类的超平面的距离最大化，距离越大SVM的分类误差越小。</span><br></pre></td></tr></table></figure>
-
-<h5 id="支持向量机适合解决什么问题？"><a href="#支持向量机适合解决什么问题？" class="headerlink" title="支持向量机适合解决什么问题？"></a>支持向量机适合解决什么问题？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">支持向量机用于二元分类问题，对于多元分类可以将其分解为多个二元分类问题，再进行分类。</span><br><span class="line"></span><br><span class="line">支持向量机在小样本、非线性及高维模式识别中表现出许多特有的优势，并能够推广应用到函数拟合等其他机器学习问题中。</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="支持向量机常用的核函数有？"><a href="#支持向量机常用的核函数有？" class="headerlink" title="支持向量机常用的核函数有？"></a>支持向量机常用的核函数有？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">线性核函数、多项式核函数、径向基核函数、sigmoid Kernel</span><br></pre></td></tr></table></figure>
-
-<h5 id="核函数的选择对支持向量机的性能有什么影响？"><a href="#核函数的选择对支持向量机的性能有什么影响？" class="headerlink" title="核函数的选择对支持向量机的性能有什么影响？"></a>核函数的选择对支持向量机的性能有什么影响？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">只要一个对称函数所对应的核矩阵半正定，它就能作为核函数使用。事实上，对于一个半正定核矩阵，总能找到一个与之对应的映射。核函数的使用，不一定能够准确的划分，只能说使用哪个核函数，能够逼近真实的划分效果。因此特征空间的好坏对支持向量机的性能至关重要。在不知道特征映射的形式时，我们并不知道什么样的核函数是合适的，而核函数也仅是隐式定义了这个特征空间。于是，核函数的选择成为了支持向量机的最大变数。若核函数选择不合适，则意味着映射到一个不合适的特征空间，很可能导致性能不佳。</span><br><span class="line">（对预测精度有重要影响。）</span><br><span class="line"></span><br><span class="line">特征数量多的时候适合线性核函数，因为运算速度快</span><br><span class="line"></span><br><span class="line">当多项式阶数高时复杂度会很高，正交归一化后的数据，优先使用多项式核函数。</span><br><span class="line"></span><br><span class="line">大多数情况下径向基核函数（高斯核函数）都有比较好的性能，不确定用哪种就用它。</span><br></pre></td></tr></table></figure>
-
-<h5 id="数据降维有哪些常用的方法？"><a href="#数据降维有哪些常用的方法？" class="headerlink" title="数据降维有哪些常用的方法？"></a>数据降维有哪些常用的方法？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">答：主成分分析 (PCA)，奇异值分解，线性判别分析，局部线性嵌入，拉普拉斯特征映射，</span><br></pre></td></tr></table></figure>
-
-<h5 id="PCA的基本思想-1"><a href="#PCA的基本思想-1" class="headerlink" title="PCA的基本思想"></a>PCA的基本思想</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">答：通过某种线性投影,将高伟的数据映射到低纬的空间中，并期望在所投影的维度上数据的方差最大，以此使用较少的维度，同时保留较多原数据的维度。</span><br></pre></td></tr></table></figure>
-<h5 id="常用特征的选择方式。列举其方法。"><a href="#常用特征的选择方式。列举其方法。" class="headerlink" title="常用特征的选择方式。列举其方法。"></a>常用特征的选择方式。列举其方法。</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">答：特征选择的目的主要是降维，从特征集合中挑选一组最具统计意义的特征子集来代表整体样本的特点。常见的有pearson相关系数，基尼指标，信息增益等。最简单的办法是琼剧所有特征子集，找到错误率最低的子集。特征选择可分为过滤方法，封装器方法和嵌入方法。</span><br></pre></td></tr></table></figure>
-<h5 id="什么是过拟合问题，如何判断过拟合？"><a href="#什么是过拟合问题，如何判断过拟合？" class="headerlink" title="什么是过拟合问题，如何判断过拟合？"></a>什么是过拟合问题，如何判断过拟合？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">答：下面的话有点太官方了  什么是过拟合？大白话就是 泛化能力低 再白话一点就是测试误差高。 如何判断？看看测试误差是不是很高就行了</span><br><span class="line"></span><br><span class="line">通常对于分类算法可能产生两种类型的误差，分别是训练误差与泛化误差。训练误差代表此分类方法，对于现有训练样本级的拟合程度，泛化误差代表此方法的泛化能力，即对于新的样本数据的分类能力如何。模型的训练误差低，但是泛化误差比较高，则称分类模型过拟合。即过度拟合训练数据，导致模型的泛化能力，反而随着模型与训练数据的拟合程度增高而下降。随着分类模型对于样本的拟合程度逐渐增加，当决策数深度达到一定值，即使训练误差仍在下降，泛化误差却不断升高，产生过拟合现象。（书上的</span><br><span class="line">全摘录了自己总结吧）</span><br></pre></td></tr></table></figure>
-
-<h5 id="k均值算法的原理是什么？步骤？"><a href="#k均值算法的原理是什么？步骤？" class="headerlink" title="k均值算法的原理是什么？步骤？"></a>k均值算法的原理是什么？步骤？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">答：K均值距离是基于划分的距离算法。计算样本点与类簇质心的距离，与类簇质心相近的样本点划分为同一类簇。K均值中，样本间的相似度由他们之间的距离决定。距离越近说明相似度越高，反之越低。</span><br></pre></td></tr></table></figure>
-
-<h5 id="讨论初始的k个假设聚类中心位置对k均值算法的影响。"><a href="#讨论初始的k个假设聚类中心位置对k均值算法的影响。" class="headerlink" title="讨论初始的k个假设聚类中心位置对k均值算法的影响。"></a>讨论初始的k个假设聚类中心位置对k均值算法的影响。</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">答：K均值算法中初始聚类中心的选取对算法结果影响很大。不同的初始中心可能会导致不同的聚类结果。选择一个新样本点加入聚类中心点集合中，其距离dx越大，被选中的可能性越高。</span><br></pre></td></tr></table></figure>
-<h5 id="如何评价聚类方法的好坏？"><a href="#如何评价聚类方法的好坏？" class="headerlink" title="如何评价聚类方法的好坏？"></a>如何评价聚类方法的好坏？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">答：在数据质量高的情况下，一个好的聚类结果表明了数据中相对稳定的某种“模式 or 分布”，这个模式不会因为个别数据点的增删改而改变，且能够将数据尽可能分开。</span><br></pre></td></tr></table></figure>
-<h5 id="DBSCAN算法的原理-步骤。"><a href="#DBSCAN算法的原理-步骤。" class="headerlink" title="DBSCAN算法的原理?步骤。"></a>DBSCAN算法的原理?步骤。</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">答：DBSCAN是一种基于密度的聚类算法，这类密度聚类算法一般假定类别可以通过样本分布的紧密程度决定。同一类别的样本，他们之间的紧密相连的，也就是说，在该类别任意样本周围不远处一定有同类别的样本存在。通过将紧密相连的样本划为一类，这样就得到了一个聚类类别。通过将所有各组紧密相连的样本划为各个不同的类别，则我们就得到了最终的所有聚类类别结果。（原理 完整）</span><br><span class="line">原理：该算法利用基于密度的聚类的思想，即要求聚类空间中的一定区域内所包含对象的数目不小于某一给定的阈值。</span><br><span class="line">（原理 总结）</span><br><span class="line">DBSCAN 算法的步骤如下：</span><br><span class="line">1）从任一数据点 p 开始，对 p 点根据和 MinPts 进行判定。如果 p 是核心数据点，则建立新簇 S，并将 p 临域内的所有点归入 S；否则将 p 点标记为边界点或噪声点。</span><br><span class="line">2）对于 S 中除 p 点以外的点继续实施过程 1），继续扩充 S，直到所有的点都被判定处理。</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>机器学习基础算法</tag>
-        <tag>机器学习习题</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>成功解决java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver</title>
-    <url>/2019/11/13/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/</url>
-    <content><![CDATA[<p>用Spring 通过applicationContext连接mySql</p>
-<p>发现报错  于是改回传统方式尝试连接 代码如下</p>
-<a id="more"></a>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@org.junit.Test</span><br><span class="line">	public void mainTest() &#123;</span><br><span class="line">//		// 加载配置文件</span><br><span class="line">//		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);</span><br><span class="line">//		// 获取JdbcTemplate实例</span><br><span class="line">//		JdbcTemplate jdTemplate = (JdbcTemplate) applicationContext.getBean(&quot;jdbcTemplate&quot;);</span><br><span class="line">//		// 使用execute()方法执行SQL语句，创建用户账户管理表account</span><br><span class="line">//		jdTemplate.execute(&quot;create table account(&quot; + &quot;id int primary key auto_increment,&quot; + &quot;username varchar(50),&quot;</span><br><span class="line">//				+ &quot;balance double)&quot;);</span><br><span class="line">//		System.out.println(&quot;账户表account创建成功！&quot;);</span><br><span class="line"></span><br><span class="line">		Connection conn=null;</span><br><span class="line">		try</span><br><span class="line">		&#123;</span><br><span class="line">			Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);// 加载驱动程序，此次无需更改</span><br><span class="line">			System.out.println(&quot;registered success!&quot;);//输出registered success表示驱动加载成功</span><br><span class="line">			//创建对象连接，连接数据库，此例中employeedbms为数据库名，root为用户名，123456位密码，该三项均需根据实际情况进行修改，其它代码无需变动。注：确保数据库名、用户名和密码的准确性。</span><br><span class="line">//			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/spring?useSSL=false&amp;serverTimezone=UTC&quot;,&quot;root&quot;,&quot;123456&quot;);</span><br><span class="line">			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://127.0.0.1:3306/spring?useSSL=true&amp;serverTimezone=GMT&quot;, &quot;root&quot;, &quot;123456&quot;);</span><br><span class="line">			System.out.println(&quot;connection success!&quot;);//输出connection success表示数据库已成功连接</span><br><span class="line">			conn.close();</span><br><span class="line">		&#125;</span><br><span class="line">		catch(Exception e)</span><br><span class="line">		&#123;</span><br><span class="line">			System.out.println(e);</span><br><span class="line">		&#125;</span><br><span class="line">		finally&#123;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    ``` </span><br><span class="line"> 出现错误提示</span><br></pre></td></tr></table></figure>
-<p> java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">由于我用的是mySQL 8.0.18</span><br></pre></td></tr></table></figure><br> //下面这个命令可以查你的mysql版本<br> mysql -uroot -p<br> //打开MySQL也可以看到<br> //利用navicat连接mysql的客户端工具可以查看<br> //连接之后右键——详细信息<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">数据库连接要和5.x的版本不一样驱动也是不一样</span><br><span class="line"></span><br><span class="line">https://mvnrepository.com/</span><br><span class="line"></span><br><span class="line">到上面这个网站搜索 mysql-connector-java-8.0.18.jar</span><br><span class="line">下载后导入到项目中  不要只是拖进去 还需要去建立依赖 否则没法用</span><br><span class="line"></span><br><span class="line">比如idea，要在Project Structure 里面的Modules 对应下的项目中点+号导入驱动。</span><br><span class="line">再次运行传统的连接数据库代码 发现成功</span><br></pre></td></tr></table></figure><br>registered success!<br>connection success!</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">注释掉用用以下xml配置连接数据库，也是成功</span><br></pre></td></tr></table></figure>
-<?xml version="1.0" encoding="UTF-8"?>
-<p><beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.springframework.org/schema/beans 
-     http://www.springframework.org/schema/beans/spring-beans-4.3.xsd"><br>    <!-- 1配置数据源 --><br>    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"><br>        <!--数据库驱动 --><br>        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property></bean></beans></p>
-<!--        //com.mysql.jdbc.Driver-->
-<pre><code>    &lt;!--连接数据库的url --&gt;
-    &lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://localhost:3306/spring?serverTimezone=GMT&quot; /&gt;
-    &lt;!--连接数据库的用户名 --&gt;
-    &lt;property name=&quot;username&quot; value=&quot;root&quot; /&gt;
-    &lt;!--连接数据库的密码 --&gt;
-    &lt;property name=&quot;password&quot; value=&quot;123456&quot; /&gt;
-&lt;/bean&gt;
-
-&lt;/bean&gt;</code></pre>
-```
-
-<p>end</p>
-]]></content>
-      <categories>
-        <category>踩坑</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-        <tag>Spring</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>用js做机器学习(一)【基础准备】</title>
-    <url>/2019/11/12/%E7%94%A8js%E5%81%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E4%B8%80-%E3%80%90%E5%9F%BA%E7%A1%80%E5%87%86%E5%A4%87%E3%80%91/%E7%94%A8js%E5%81%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E4%B8%80-%E3%80%90%E5%9F%BA%E7%A1%80%E5%87%86%E5%A4%87%E3%80%91/</url>
-    <content><![CDATA[<p>还是很想用JS实现数据预处理来跑机器学习算法<br>开始之前首先要对JS的一些基础知识有了解 比如Js的数据类型、正则表达式、类型转换等（此文将不断扩充）</p>
-<a id="more"></a>
-
-<h2 id="一、Js数据类型"><a href="#一、Js数据类型" class="headerlink" title="一、Js数据类型"></a>一、Js数据类型</h2><p>字符串值，数值，布尔值，数组，对象。</p>
-<p>JavaScript 变量能够保存多种数据类型：数值、字符串值、数组、对象等等：</p>
-<p>数据类型的概念<br>在编程过程中，数据类型是重要的概念。</p>
-<p>为了能够操作变量，了解数据类型是很重要的。</p>
-<p>如果没有数据类型，计算机就无法安全地解决这道题：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var x = &quot;XiaoMi&quot;+6;</span><br></pre></td></tr></table></figure>
-<p>x的结果为：XiaoMi6</p>
-<p>JavaScript 从左向右计算表达式。不同的次序会产生不同的结果：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var x = &quot;XiaoMi&quot;+6+&quot;plus&quot;;</span><br></pre></td></tr></table></figure>
-
-<p>x的结果为：XiaoMi6plus</p>
-<h5 id="JavaScript-拥有动态类型"><a href="#JavaScript-拥有动态类型" class="headerlink" title="JavaScript 拥有动态类型"></a>JavaScript 拥有动态类型</h5><p>JavaScript 拥有动态类型。这意味着相同变量可用作不同类型：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var x;               // 现在 x 是 undefined</span><br><span class="line">var x = 6;           // 现在 x 是数值</span><br><span class="line">var x = &quot;Jamin&quot;;</span><br></pre></td></tr></table></figure>
-
-<h5 id="可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配："><a href="#可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配：" class="headerlink" title="可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配："></a>可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">var answer = &quot;It&apos;s nice&quot;;             // 双引号内的单引号</span><br><span class="line">var answer = &quot;He is called &apos;Jamin&apos;&quot;;    // 双引号内的单引号</span><br><span class="line">var answer = &apos;He is called &quot;Jamin&quot;&apos;;    // 单引号内的双引号</span><br></pre></td></tr></table></figure>
-
-<h5 id="JavaScript-数值"><a href="#JavaScript-数值" class="headerlink" title="JavaScript 数值"></a>JavaScript 数值</h5><p>JavaScript 只有一种数值类型。</p>
-<p>写数值时用不用小数点均可</p>
-<p>超大或超小的数值可以用科学计数法来写：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var x1 = 34.00;     // 带小数点</span><br><span class="line">var x2 = 34;        // 不带小数点</span><br><span class="line">var y = 123e5;      // 12300000</span><br><span class="line">var z = 123e-5;     // 0.00123</span><br></pre></td></tr></table></figure>
-
-<h5 id="JavaScript-对象"><a href="#JavaScript-对象" class="headerlink" title="JavaScript 对象"></a>JavaScript 对象</h5><p>JavaScript 对象用花括号来书写。</p>
-<p>对象属性是 name:value 对，由逗号分隔。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var person = &#123;firstName:&quot;Bill&quot;, lastName:&quot;Gates&quot;, age:62, eyeColor:&quot;blue&quot;&#125;;</span><br></pre></td></tr></table></figure>
-
-<h5 id="typeof-运算符"><a href="#typeof-运算符" class="headerlink" title="typeof 运算符"></a>typeof 运算符</h5><p>可使用 JavaScript 的 typeof 来确定 JavaScript 变量的类型：</p>
-<p>typeof 运算符返回变量或表达式的类型：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">typeof &quot;&quot;                  // 返回 &quot;string&quot;</span><br><span class="line">typeof &quot;Bill&quot;              // 返回 &quot;string&quot;</span><br><span class="line">typeof &quot;Bill Gates&quot;          // 返回 &quot;string&quot;</span><br></pre></td></tr></table></figure>
-
-<p><strong>typeof 运算符对数组返回 “object”，因为在 JavaScript 中数组属于对象。</strong></p>
-<p><strong><em>任何变量均可通过设置值为 undefined 进行清空。其类型也将是 undefined。</em></strong></p>
-<p><strong>空值与 undefined 不是一回事。</strong></p>
-<p><strong>空的字符串变量既有值也有类型。</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var car = &quot;&quot;;                // 值是 &quot;&quot;，类型是 &quot;string&quot;</span><br></pre></td></tr></table></figure>
-
-<h5 id="Null"><a href="#Null" class="headerlink" title="Null"></a>Null</h5><p>在 JavaScript 中，null 是 “nothing”。它被看做不存在的事物。</p>
-<p>不幸的是，在 JavaScript 中，null 的数据类型是对象。</p>
-<p>您可以把 null 在 JavaScript 中是对象理解为一个 bug。它本应是 null。</p>
-<p>您可以通过设置值为 null 清空对象</p>
-<p>您也可以通过设置值为 undefined 清空对象：</p>
-<p><strong>Undefined 与 Null 的区别</strong></p>
-<p>Undefined 与 null 的值相等，但类型不相等：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">typeof undefined              // undefined</span><br><span class="line">typeof null                   // object</span><br><span class="line">null === undefined            // false</span><br><span class="line">null == undefined             // true</span><br></pre></td></tr></table></figure>
-
-<h5 id="原始数据"><a href="#原始数据" class="headerlink" title="原始数据"></a>原始数据</h5><p>原始数据值是一种没有额外属性和方法的单一简单数据值。</p>
-<p>typeof 运算符可返回以下原始类型之一：</p>
-<p>string<br>number<br>boolean<br>undefined</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">typeof &quot;Bill&quot;              // 返回 &quot;string&quot;</span><br><span class="line">typeof 3.14                // 返回 &quot;number&quot;</span><br><span class="line">typeof true                // 返回 &quot;boolean&quot;</span><br><span class="line">typeof false               // 返回 &quot;boolean&quot;</span><br><span class="line">typeof x                   // 返回 &quot;undefined&quot; (假如 x 没有值)</span><br></pre></td></tr></table></figure>
-<h5 id="复杂数据"><a href="#复杂数据" class="headerlink" title="复杂数据"></a>复杂数据</h5><p>typeof 运算符可返回以下两种类型之一：</p>
-<p>function<br>object</p>
-<p><strong>typeof 运算符把对象、数组或 null 返回 object。</strong></p>
-<p>typeof 运算符不会把函数返回 object。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">typeof &#123;name:&apos;Bill&apos;, age:62&#125; // 返回 &quot;object&quot;</span><br><span class="line">typeof [1,2,3,4]             // 返回 &quot;object&quot; (并非 &quot;array&quot;，参见下面的注释)</span><br><span class="line">typeof null                  // 返回 &quot;object&quot;</span><br><span class="line">typeof function myFunc()&#123;&#125;   // 返回 &quot;function&quot;</span><br></pre></td></tr></table></figure>
-<p><strong>typeof 运算符把数组返回为 “object”，因为在 JavaScript 中数组即对象。</strong></p>
-<h2 id="二、JavaScript-正则表达式（未完-）"><a href="#二、JavaScript-正则表达式（未完-）" class="headerlink" title="二、JavaScript 正则表达式（未完~）"></a>二、JavaScript 正则表达式（未完~）</h2><p>正则表达式是构成搜索模式的字符序列。</p>
-<p>该搜索模式可用于文本搜索和文本替换操作。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>计算机组成原理测试习题整理【一】（含答案解析）</title>
-    <url>/2019/11/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E4%B9%A0%E9%A2%98%E8%AE%AD%E7%BB%83%EF%BC%88%E5%90%AB%E7%AD%94%E6%A1%88%E8%A7%A3%E6%9E%90%EF%BC%89/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E4%B9%A0%E9%A2%98%E8%AE%AD%E7%BB%83%EF%BC%88%E5%90%AB%E7%AD%94%E6%A1%88%E8%A7%A3%E6%9E%90%EF%BC%89/</url>
-    <content><![CDATA[<p>目前共整理了三章</p>
-<a id="more"></a>
-
-
-<h3 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机问世至今，新型机器不断推陈出新，不管怎样更新，依然保有“存储程序”的概念，最早提出这种概念的是______。</span><br><span class="line"></span><br><span class="line">A冯. 诺依曼</span><br><span class="line">B巴贝奇</span><br><span class="line">C贝尔</span><br><span class="line">D帕斯卡</span><br><span class="line"></span><br><span class="line">A</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.邮局把信件进行自动分拣，使用的计算机技术是______。</span><br><span class="line"></span><br><span class="line">A</span><br><span class="line"> 机器证明</span><br><span class="line">B</span><br><span class="line">自然语言理解</span><br><span class="line">C</span><br><span class="line">计算机辅助设计</span><br><span class="line">D</span><br><span class="line">机器翻译</span><br><span class="line">E</span><br><span class="line">模式识别</span><br><span class="line">F</span><br><span class="line">自动控制</span><br><span class="line"></span><br><span class="line">E</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">2. 计算机科技文献中，英文缩写CAI代表______。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">A</span><br><span class="line">计算机辅助管理</span><br><span class="line">B</span><br><span class="line">计算机辅助设计</span><br><span class="line">C</span><br><span class="line">计算机辅助加工</span><br><span class="line">D</span><br><span class="line">计算机辅助制造</span><br><span class="line">E</span><br><span class="line">计算机辅助教学</span><br><span class="line">F</span><br><span class="line">计算机辅助学习</span><br><span class="line"></span><br><span class="line">E</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">微型计算机的发展以______技术为指标。</span><br><span class="line"></span><br><span class="line">微处理器</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机中常以主频来评价机器的性能。以下为主频单位的是______。</span><br><span class="line"></span><br><span class="line">MHz</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机运算速度的单位是______。</span><br><span class="line"></span><br><span class="line">MIPS</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1946年研制成功的第一台电子数字计算机称为______，1949年研制成功的第一台程序内存的计算机称为______。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ENIAC， EDVAC</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机与日常使用的袖珍计算器的本质区别在于______。</span><br><span class="line"></span><br><span class="line">自动化程度的高低</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">下列______属于应用软件。</span><br><span class="line"></span><br><span class="line">文本处理</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">操作系统最现出现在_______。</span><br><span class="line">第3代计算机</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">至今为止，计算机中的所有信息仍以二进制方式表示的理由是______。</span><br><span class="line"></span><br><span class="line">###物理器件性能所至</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CPU主要包括______。</span><br><span class="line">控制器、运算器</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">完整的计算机应包括______。</span><br><span class="line"></span><br><span class="line">配套的硬件设备和软件系统</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">目前我们所说的个人台式商用机属于_______。</span><br><span class="line">###微型机</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ENIAC属于晶体管计算机</span><br><span class="line">F</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">编译方式是使用编译程序把源程序编译成机器代码的目标程序</span><br><span class="line">T</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机唯一能够直接执行的语言是机器语言</span><br><span class="line">T</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">用高级语言编写的程序称为目标程序</span><br><span class="line"></span><br><span class="line">F</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">冯诺依曼计算机体系结构的特点是什么？</span><br><span class="line">1、处理的数据和指令一律二进制</span><br><span class="line">2、顺序执行程序</span><br><span class="line">3、采用存储程序的方式</span><br><span class="line">4、计算机硬件由 运算器 、控制器、存储器、输入、输出设备五大部分组成</span><br><span class="line">5、用总线控制</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机的主要性能指标有哪些？它们的具体含义是什么？</span><br><span class="line"> 运算速度、字长、内存储器的容量、外存储器的容量、主频</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机的硬件由哪些部件组成？</span><br><span class="line"> 控制器、存储器、输入设备、输出设备、运算器</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">简要说明计算机系统的层次结构</span><br><span class="line"> 1、硬联逻辑级</span><br><span class="line">2、微程序级</span><br><span class="line">3、传统机器级</span><br><span class="line">4、操作系统</span><br><span class="line">5、汇编语言级</span><br><span class="line">6、高级语言级</span><br><span class="line">7、应用语言级</span><br></pre></td></tr></table></figure>
-
-<h3 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h3><h2 id><a href="#" class="headerlink" title="?"></a>?</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">通常把表示信息的数字符号称为什么？</span><br><span class="line"></span><br><span class="line">数码</span><br><span class="line"></span><br><span class="line">以下叙述错误的是______。</span><br><span class="line">A</span><br><span class="line">表示信息的数字符号称为代码</span><br><span class="line">B</span><br><span class="line">任何进制的数据都有基数和各位的”位权”</span><br><span class="line">C</span><br><span class="line">二进制数据的加减运算规则与逻辑加运算规则相同</span><br><span class="line">D</span><br><span class="line"> 8进制数据逢八进一 </span><br><span class="line"> </span><br><span class="line"> 正确答案：C ?????</span><br><span class="line"> (加法运算,其运算等价于两个数字的十进制数相加后转换成二进制,而逻辑运算是按位计算)</span><br></pre></td></tr></table></figure>
-
-<h3 id="zy★"><a href="#zy★" class="headerlink" title="zy★"></a>zy★</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">一种BCD码，其中0－9的编码为0000，0001，0010，0011，0100，0101，0110，0111，1110，1111，则各位的权值为______。</span><br><span class="line"></span><br><span class="line">2421</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在小型或微型计算机里，普遍采用的字符编码是______。</span><br><span class="line"></span><br><span class="line"> ASCⅡ码</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">根据国标规定，每个汉字在计算机内占用______存储。</span><br><span class="line">二个字节</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">十进制分数27/64的十六进制数表示为______。</span><br><span class="line">0.6CH</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">假定下列字符码中有奇偶校验位，但没有数据错误，采用偶校校验的字符码是______。</span><br><span class="line">11001001</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">假定下列字符码中有奇偶校验位，但没有数据错误，采用偶校校验的字符码是______。</span><br><span class="line"></span><br><span class="line">11001001</span><br></pre></td></tr></table></figure>
-<h3 id="ct★"><a href="#ct★" class="headerlink" title="ct★"></a>ct★</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">若浮点数的机器表示中，尾数用补码表示，则判断该浮点数是否为规格化的方法是尾数的最高数值位______。 </span><br><span class="line"></span><br><span class="line">与尾符相反 </span><br><span class="line">【数符为0，这个数就是正数，正数补码就是其本身，其最高有效位(阶码使用标准移码的话规格化后尾数最高有效位就是小数点后第一位)必定为1，数符0和最高有效位的1相异。</span><br><span class="line"></span><br><span class="line">数符为1，这个数就是个负数，求负数的补码有一步叫按位取反(一般来说浮点数可以存储的有效位不会小于6位)，原本最高有效位的1变成了0，所以数符1和最高有效位的0相异。）】</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在机器数______中，零的表示形式是唯一的。</span><br><span class="line"></span><br><span class="line">补码和移码</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">指令和数据都以十进制形式存放，（2000）10化成十六进制数是______。</span><br><span class="line"></span><br><span class="line">（7D0）16  </span><br><span class="line">【二进制转十六进制的时候要右移左边补0】</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">下列数中最小的数是______。</span><br><span class="line"></span><br><span class="line">A</span><br><span class="line">（100010）BCD </span><br><span class="line">B</span><br><span class="line">（100101）2     </span><br><span class="line">C</span><br><span class="line">（50）8      </span><br><span class="line">D</span><br><span class="line">（625）16</span><br><span class="line"></span><br><span class="line">A</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> 在定点二进制运算器中，减法运算一般通过______来实现。</span><br><span class="line"></span><br><span class="line">补码运算的二进制加法器</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">下列数中最大的数为______。</span><br><span class="line"></span><br><span class="line">A</span><br><span class="line">（143）5</span><br><span class="line">B</span><br><span class="line">（76）8 </span><br><span class="line">C</span><br><span class="line">（10010101）2    </span><br><span class="line">D</span><br><span class="line">（227）8  </span><br><span class="line"></span><br><span class="line">D</span><br><span class="line">[143 -&gt; 1*5^2+4*5^1+3*5^0=(48)10进制 -》110000二进制]</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">下列叙述正确的是______。</span><br><span class="line"></span><br><span class="line">A</span><br><span class="line"> 定点数表示的是整数</span><br><span class="line">B</span><br><span class="line">对一个数据的原码的各位取反而且在末位再加1就可以得到这个数据的补码</span><br><span class="line">C</span><br><span class="line">原码是表示无符号数的编码方法</span><br><span class="line">D</span><br><span class="line">二进制数据表示在计算机中容易实现</span><br><span class="line"></span><br><span class="line">D</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在余3码表示的二-十进制数中，代码0011代表十进制数的______。</span><br><span class="line"></span><br><span class="line">0</span><br><span class="line">[余3码 :余3码是8421 BCD码的每个码组加3(0011)形成的。常用于BCD码的运算电路中。 ]</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">设X= —0.1011，则[X]补为______。</span><br><span class="line"></span><br><span class="line">1.0101</span><br></pre></td></tr></table></figure>
-
-<h2 id="ct★-1"><a href="#ct★-1" class="headerlink" title="ct★"></a>ct★</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">______表示法主要用于表示浮点数中的阶码</span><br><span class="line"></span><br><span class="line">移码</span><br><span class="line">【移码（又叫增码）是符号位取反的补码，一般用指数的移码减去1来做浮点数的阶码，引入的目的是为了保证浮点数的机器零为全0。】</span><br><span class="line"></span><br><span class="line">【原码：1001101，反码，补码，移码各是多少？</span><br><span class="line"></span><br><span class="line">解：首位数字表示正负不做变（1为负数，0为正数）</span><br><span class="line"></span><br><span class="line">反码：1110010（正数反码等于原数，题中为负数，则除首位数对应取反）</span><br><span class="line"></span><br><span class="line">补码：1110011（得出反码数基础上末位加一）</span><br><span class="line"></span><br><span class="line">移码：0110011（补码符号位第一位数字取反）</span><br><span class="line">】</span><br></pre></td></tr></table></figure>
-<h2 id="zy★-1"><a href="#zy★-1" class="headerlink" title="zy★"></a>zy★</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">一个8位的二进制整数，若采用补码表示，且由3个“1”和5个“0”组成，则最小值为______。</span><br><span class="line"></span><br><span class="line"> -125</span><br><span class="line"> 【首先反推补码应该是：10000011</span><br><span class="line">  源码则为11111101 即-125</span><br><span class="line"> 】</span><br></pre></td></tr></table></figure>
-<p>##到23题</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在小型机运算器中，通过移位器对一个通用寄存器中存放的一个正定点数进行乘2操作（假定乘2后不会溢出），其方法是将该寄存器中的数据送入ALU，经移位器______。</span><br><span class="line"></span><br><span class="line">A左移1位</span><br><span class="line">B右移1位</span><br><span class="line">C左移2位</span><br><span class="line">D右移2位</span><br><span class="line"></span><br><span class="line">A</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">若存储器的容量为128KX8位，求：(1)访问该芯片需要多少位地址？(2)假定该芯片在存储器中首地址为A0000H，则末地址应为多少？</span><br></pre></td></tr></table></figure>]]></content>
-  </entry>
-  <entry>
-    <title>Spring 的事务管理</title>
-    <url>/2019/11/11/Spring-%E7%9A%84%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/Spring-%E7%9A%84%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<p>实际开发中，操作数据库时还会涉及事物管理问题，为此Spring提供了专门用于事务处理的API。</p>
-<p>In the actural development,it involves things management when operating a database,for this purpose Spring provides apis specifically for transaction processing.</p>
-<a id="more"></a>
-
-<p>依赖包：spring-tx-4.3.6.RELEASE的JAR包<br>3个接口文件PlatformTransactionManger、TransactionDefinition、TransactionStatus</p>
-<h6 id="1、PlatformTransactionManger：Spring-提供的平台事物管理器，主要用于管理事物。其中包含了三个事物操作的方法"><a href="#1、PlatformTransactionManger：Spring-提供的平台事物管理器，主要用于管理事物。其中包含了三个事物操作的方法" class="headerlink" title="1、PlatformTransactionManger：Spring 提供的平台事物管理器，主要用于管理事物。其中包含了三个事物操作的方法"></a>1、PlatformTransactionManger：Spring 提供的平台事物管理器，主要用于管理事物。其中包含了三个事物操作的方法</h6><p>1）TransactionStatus getTransaction (TransactionDefinition definition):</p>
-<p><strong>use to get Transaction Status</strong></p>
-<p>2) void commit(TransactionStatus status):** use to commit Transaction **</p>
-<p>3）void rollback(TransactionStatus status):** use to roll back the Transaction(回滚事务) **</p>
-<p>TransactionStatus 对象就表示一个事物</p>
-<h6 id="2、TransactionDefinition-：事物定义（描述）的对象-，定义了事物的规则，并且提供获取事物相关信息的方法"><a href="#2、TransactionDefinition-：事物定义（描述）的对象-，定义了事物的规则，并且提供获取事物相关信息的方法" class="headerlink" title="2、TransactionDefinition()：事物定义（描述）的对象 ，定义了事物的规则，并且提供获取事物相关信息的方法"></a>2、TransactionDefinition()：事物定义（描述）的对象 ，定义了事物的规则，并且提供获取事物相关信息的方法</h6><p>getName方法  getsolationLevel获取隔离级别  getPropagationBehavior获取事物传播行为  getTImeout获取事物超时时间  </p>
-<h6 id="3、TransactionStatus-事物的状态-描述了某一时间点上事物的状态信息。"><a href="#3、TransactionStatus-事物的状态-描述了某一时间点上事物的状态信息。" class="headerlink" title="3、TransactionStatus:事物的状态 描述了某一时间点上事物的状态信息。"></a>3、TransactionStatus:事物的状态 描述了某一时间点上事物的状态信息。</h6><p>flush方法：刷新事物</p>
-<p>hasSavepoint():是否存在保存点</p>
-<p>isCompleted():获取是否完成</p>
-<p>isNewTransaction():获取是否是新事物</p>
-<p>isRollbackOnly():获取是否回滚</p>
-<p>setRollbackOnly():设置事物回滚</p>
-<h3 id="事物管理方式"><a href="#事物管理方式" class="headerlink" title="事物管理方式"></a>事物管理方式</h3><p>1）传统的编程式事物管理</p>
-<p>基于XML的声明式事物 <a href="tx:advice" target="_blank" rel="noopener">tx:advice</a>配置事物的通知（增强处理）<br>需要指定id 和 transaction-manager属性（指定事物管理器） 还需要配置 一个<a href="tx:attributes" target="_blank" rel="noopener">tx:attributes</a>，该子元素中可以配置多个<a href="tr:method" target="_blank" rel="noopener">tr:method</a>子元素来配置事物的细节。<br>** 配置<a href="tr:advice" target="_blank" rel="noopener">tr:advice</a>重点是配置<a href="tx:method" target="_blank" rel="noopener">tx:method</a>子元素 **</p>
-<p>2）声明式事物管理</p>
-<p>案例</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">// 转账</span><br><span class="line">	package com.itheima.jdbc;</span><br><span class="line"></span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">public interface AccountDao &#123;</span><br><span class="line">	// 添加</span><br><span class="line">	public int addAccount(Account account);</span><br><span class="line">	// 更新</span><br><span class="line">	public int updateAccount(Account account);</span><br><span class="line">	// 删除</span><br><span class="line">	public int deleteAccount(int id);</span><br><span class="line">	</span><br><span class="line">	// 通过id查询</span><br><span class="line">	public Account findAccountById(int id);</span><br><span class="line">	// 查询所有账户</span><br><span class="line">	public List&lt;Account&gt; findAllAccount();</span><br><span class="line">	</span><br><span class="line">	// 转账</span><br><span class="line">	public void transfer(String outUser,String inUser,Double money);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.itheima.jdbc;</span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">import org.springframework.jdbc.core.BeanPropertyRowMapper;</span><br><span class="line">import org.springframework.jdbc.core.JdbcTemplate;</span><br><span class="line">import org.springframework.jdbc.core.RowMapper;</span><br><span class="line">public class AccountDaoImpl implements AccountDao &#123;</span><br><span class="line">	// 声明JdbcTemplate属性及其setter方法</span><br><span class="line">	private JdbcTemplate jdbcTemplate;</span><br><span class="line">	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) &#123;</span><br><span class="line">		this.jdbcTemplate = jdbcTemplate;</span><br><span class="line">	&#125;</span><br><span class="line">    // 添加账户</span><br><span class="line">	public int addAccount(Account account) &#123;</span><br><span class="line">		// 定义SQL</span><br><span class="line">		String sql = &quot;insert into account(id,username,balance) value(?,?,?)&quot;;</span><br><span class="line">		// 定义数组来存放SQL语句中的参数</span><br><span class="line">		Object[] obj = new Object[] &#123;</span><br><span class="line">				           account.getId(),</span><br><span class="line">                           account.getUsername(), </span><br><span class="line">                           account.getBalance() </span><br><span class="line">         &#125;;</span><br><span class="line">		// 执行添加操作，返回的是受SQL语句影响的记录条数</span><br><span class="line">		int num = this.jdbcTemplate.update(sql, obj);</span><br><span class="line">		return num;</span><br><span class="line">	&#125;</span><br><span class="line">	// 更新账户</span><br><span class="line">	public int updateAccount(Account account) &#123;</span><br><span class="line">		// 定义SQL</span><br><span class="line">		String sql = &quot;update account set username=?,balance=? where id = ?&quot;;</span><br><span class="line">		// 定义数组来存放SQL语句中的参数</span><br><span class="line">		Object[] params = new Object[] &#123; </span><br><span class="line">                               account.getUsername(), </span><br><span class="line">                               account.getBalance(), </span><br><span class="line">                               account.getId() </span><br><span class="line">          &#125;;</span><br><span class="line">		// 执行添加操作，返回的是受SQL语句影响的记录条数</span><br><span class="line">		int num = this.jdbcTemplate.update(sql, params);</span><br><span class="line">		return num;</span><br><span class="line">	&#125;</span><br><span class="line">	// 删除账户</span><br><span class="line">	public int deleteAccount(int id) &#123;</span><br><span class="line">		// 定义SQL</span><br><span class="line">		String sql = &quot;delete  from account where id = ? &quot;;</span><br><span class="line">		// 执行添加操作，返回的是受SQL语句影响的记录条数</span><br><span class="line">		int num = this.jdbcTemplate.update(sql, id);</span><br><span class="line">		return num;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	// 通过id查询账户数据信息</span><br><span class="line">	public Account findAccountById(int id) &#123;</span><br><span class="line">	    //定义SQL语句</span><br><span class="line">	    String sql = &quot;select * from account where id = ?&quot;;</span><br><span class="line">	    // 创建一个新的BeanPropertyRowMapper对象</span><br><span class="line">	    RowMapper&lt;Account&gt; rowMapper = </span><br><span class="line">	new BeanPropertyRowMapper&lt;Account&gt;(Account.class);</span><br><span class="line">	    // 将id绑定到SQL语句中，并通过RowMapper返回一个Object类型的单行记录</span><br><span class="line">	    return this.jdbcTemplate.queryForObject(sql, rowMapper, id);</span><br><span class="line">	&#125;</span><br><span class="line">	// 查询所有账户信息</span><br><span class="line">	public List&lt;Account&gt; findAllAccount() &#123;</span><br><span class="line">	    // 定义SQL语句</span><br><span class="line">	    String sql = &quot;select * from account&quot;;</span><br><span class="line">	    // 创建一个新的BeanPropertyRowMapper对象</span><br><span class="line">	    RowMapper&lt;Account&gt; rowMapper = </span><br><span class="line">	new BeanPropertyRowMapper&lt;Account&gt;(Account.class);</span><br><span class="line">	    // 执行静态的SQL查询，并通过RowMapper返回结果</span><br><span class="line">	    return this.jdbcTemplate.query(sql, rowMapper);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>修改配置文件applicationContext.xml</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;</span><br><span class="line">    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; </span><br><span class="line">    xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;</span><br><span class="line">    xmlns:tx=&quot;http://www.springframework.org/schema/tx&quot; </span><br><span class="line">    xmlns:context=&quot;http://www.springframework.org/schema/context&quot;</span><br><span class="line">    xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans </span><br><span class="line">    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd</span><br><span class="line">    http://www.springframework.org/schema/tx </span><br><span class="line">    http://www.springframework.org/schema/tx/spring-tx-4.3.xsd</span><br><span class="line">    http://www.springframework.org/schema/context </span><br><span class="line">    http://www.springframework.org/schema/context/spring-context-4.3.xsd</span><br><span class="line">    http://www.springframework.org/schema/aop </span><br><span class="line">    http://www.springframework.org/schema/aop/spring-aop-4.3.xsd&quot;&gt;</span><br><span class="line">    &lt;!-- 1.配置数据源 --&gt;</span><br><span class="line">    &lt;bean id=&quot;dataSource&quot; </span><br><span class="line">    class=&quot;org.springframework.jdbc.datasource.DriverManagerDataSource&quot;&gt;</span><br><span class="line">		&lt;!--数据库驱动 --&gt;</span><br><span class="line">		&lt;property name=&quot;driverClassName&quot; value=&quot;com.mysql.jdbc.Driver&quot; /&gt;</span><br><span class="line">		&lt;!--连接数据库的url --&gt;</span><br><span class="line">		&lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://localhost/spring&quot; /&gt;</span><br><span class="line">		&lt;!--连接数据库的用户名 --&gt;</span><br><span class="line">		&lt;property name=&quot;username&quot; value=&quot;root&quot; /&gt;</span><br><span class="line">		&lt;!--连接数据库的密码 --&gt;</span><br><span class="line">		&lt;property name=&quot;password&quot; value=&quot;root&quot; /&gt;</span><br><span class="line">   &lt;/bean&gt;</span><br><span class="line">   &lt;!-- 2.配置JDBC模板 --&gt;</span><br><span class="line">   &lt;bean id=&quot;jdbcTemplate&quot; </span><br><span class="line">          class=&quot;org.springframework.jdbc.core.JdbcTemplate&quot;&gt;</span><br><span class="line">		 &lt;!-- 默认必须使用数据源 --&gt;</span><br><span class="line">		 &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt;</span><br><span class="line">   &lt;/bean&gt;</span><br><span class="line">   &lt;!--3.定义id为accountDao的Bean --&gt;</span><br><span class="line">   &lt;bean id=&quot;accountDao&quot; class=&quot;com.itheima.jdbc.AccountDaoImpl&quot;&gt;</span><br><span class="line">		 &lt;!-- 将jdbcTemplate注入到AccountDao实例中 --&gt;</span><br><span class="line">		 &lt;property name=&quot;jdbcTemplate&quot; ref=&quot;jdbcTemplate&quot; /&gt;</span><br><span class="line">   &lt;/bean&gt;	</span><br><span class="line">   &lt;!-- 4.事务管理器，依赖于数据源 --&gt;</span><br><span class="line">   &lt;bean id=&quot;transactionManager&quot; class=</span><br><span class="line">   &quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;&gt;</span><br><span class="line">		&lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt;</span><br><span class="line">   &lt;/bean&gt;	</span><br><span class="line">   &lt;!-- 5.编写通知：对事务进行增强(通知),需要编写对切入点和具体执行事务细节 --&gt;</span><br><span class="line">   &lt;tx:advice id=&quot;txAdvice&quot; transaction-manager=&quot;transactionManager&quot;&gt;</span><br><span class="line">		&lt;tx:attributes&gt;</span><br><span class="line">			&lt;!-- name：*表示任意方法名称 --&gt;</span><br><span class="line">			&lt;tx:method name=&quot;*&quot; propagation=&quot;REQUIRED&quot; </span><br><span class="line">                           isolation=&quot;DEFAULT&quot; read-only=&quot;false&quot; /&gt;</span><br><span class="line">		&lt;/tx:attributes&gt;</span><br><span class="line">	&lt;/tx:advice&gt;</span><br><span class="line">	&lt;!-- 6.编写aop，让spring自动对目标生成代理，需要使用AspectJ的表达式 --&gt;</span><br><span class="line">	&lt;aop:config&gt;</span><br><span class="line">		&lt;!-- 切入点 --&gt;</span><br><span class="line">		&lt;aop:pointcut expression=&quot;execution(* com.itheima.jdbc.*.*(..))&quot;</span><br><span class="line">			id=&quot;txPointCut&quot; /&gt;</span><br><span class="line">		&lt;!-- 切面：将切入点与通知整合 --&gt;</span><br><span class="line">		&lt;aop:advisor advice-ref=&quot;txAdvice&quot; pointcut-ref=&quot;txPointCut&quot; /&gt;</span><br><span class="line">	&lt;/aop:config&gt;</span><br><span class="line">&lt;/beans&gt;</span><br></pre></td></tr></table></figure>
-
-
-<h6 id="测试类"><a href="#测试类" class="headerlink" title="测试类"></a>测试类</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.itheima.jdbc;</span><br><span class="line">import org.junit.Test;</span><br><span class="line">import org.springframework.context.ApplicationContext;</span><br><span class="line">import </span><br><span class="line">org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line">//测试类</span><br><span class="line">public class TransactionTest &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	@Test</span><br><span class="line">	public void xmlTest()&#123;</span><br><span class="line">		ApplicationContext applicationContext = </span><br><span class="line">		   new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);</span><br><span class="line">		// 获取AccountDao实例</span><br><span class="line">		AccountDao accountDao = </span><br><span class="line">            (AccountDao)applicationContext.getBean(&quot;accountDao&quot;);</span><br><span class="line">		// 调用实例中的转账方法</span><br><span class="line">		accountDao.transfer(&quot;Jack&quot;, &quot;Rose&quot;, 100.0);</span><br><span class="line">	    // 输出提示信息</span><br><span class="line">	    System.out.println(&quot;转账成功！&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	@Test</span><br><span class="line">	public void annotationTest()&#123;</span><br><span class="line">	    ApplicationContext applicationContext = </span><br><span class="line">	new ClassPathXmlApplicationContext(&quot;applicationContext-annotation.xml&quot;);</span><br><span class="line">	    // 获取AccountDao实例</span><br><span class="line">	    AccountDao accountDao = </span><br><span class="line">	(AccountDao)applicationContext.getBean(&quot;accountDao&quot;);</span><br><span class="line">	    // 调用实例中的转账方法</span><br><span class="line">	    accountDao.transfer(&quot;Jack&quot;, &quot;Rose&quot;, 100.0);</span><br><span class="line">	    // 输出提示信息</span><br><span class="line">	    System.out.println(&quot;转账成功！&quot;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Spring</category>
-      </categories>
-      <tags>
-        <tag>Spring事物管理</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>7天前端面试复习（5.1-5.8）</title>
     <url>/2020/04/30/7%E5%A4%A9%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0%EF%BC%885.1-5.8%EF%BC%89/</url>
     <content><![CDATA[<p>It’s an opportunity to better discover your own shortcomings</p>
@@ -784,7 +421,8 @@ your browser does not support the video tag
   <entry>
     <title>vue</title>
     <url>/2020/05/02/page/</url>
-    <content><![CDATA[<h3 id="Vue-实现数据双向绑定的原理"><a href="#Vue-实现数据双向绑定的原理" class="headerlink" title="Vue 实现数据双向绑定的原理"></a>Vue 实现数据双向绑定的原理</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue实现数据双向绑定主要是：采用 数据劫持结合发布者-订阅者模式 的方式，通过 Object.defineProperty() 来劫持各个属性的setter，getter，在数据变动时发布消息给订阅者，触发相应监听回掉。当把一个普通 JavaScript 对象传给Vue 实例来作为它的 data 选项时，Vue 将遍历它的属性，用Object.defineProperty 将他们转为 getter/setter。用户看不到getter / setter ，但是在内部它们让vue追踪依赖，在属性被访问和修改时通知变化。</span><br><span class="line"></span><br><span class="line">vue的数据双向绑定 将MVVM作为数据绑定的入口，整合Observer，Complie 和 Watcher三者，通过Observer来监听自己的model的数据变化，通过Complie来解析编译模板指令(vue中是用来解析 &#123;&#123; &#125;&#125; ），最终利用watcher搭起observer和complie之间的通信桥梁，达到数据变化 ==》 视图更新，视图交互变化（input）==》 数据model变更双向绑定效果。</span><br><span class="line"></span><br><span class="line">js实现简单的双向绑定</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h3 id="Vue-实现数据双向绑定的原理"><a href="#Vue-实现数据双向绑定的原理" class="headerlink" title="Vue 实现数据双向绑定的原理"></a>Vue 实现数据双向绑定的原理</h3><a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue实现数据双向绑定主要是：采用 数据劫持结合发布者-订阅者模式 的方式，通过 Object.defineProperty() 来劫持各个属性的setter，getter，在数据变动时发布消息给订阅者，触发相应监听回掉。当把一个普通 JavaScript 对象传给Vue 实例来作为它的 data 选项时，Vue 将遍历它的属性，用Object.defineProperty 将他们转为 getter/setter。用户看不到getter / setter ，但是在内部它们让vue追踪依赖，在属性被访问和修改时通知变化。</span><br><span class="line"></span><br><span class="line">vue的数据双向绑定 将MVVM作为数据绑定的入口，整合Observer，Complie 和 Watcher三者，通过Observer来监听自己的model的数据变化，通过Complie来解析编译模板指令(vue中是用来解析 &#123;&#123; &#125;&#125; ），最终利用watcher搭起observer和complie之间的通信桥梁，达到数据变化 ==》 视图更新，视图交互变化（input）==》 数据model变更双向绑定效果。</span><br><span class="line"></span><br><span class="line">js实现简单的双向绑定</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; id=&quot;txt&quot;&gt;</span><br><span class="line">        &lt;p id=&quot;show&quot;&gt;&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    var obj = &#123;&#125;;</span><br><span class="line">    Object.defineProperty(obj, &apos;txt&apos;, &#123;</span><br><span class="line">        get: function () &#123;</span><br><span class="line">            return obj</span><br><span class="line">        &#125;,</span><br><span class="line">        set: function (newValue) &#123;</span><br><span class="line">            document.getElementById(&apos;txt&apos;).value = newValue;</span><br><span class="line">            document.getElementById(&apos;show&apos;).innerHTML = newValue;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    document.addEventListener(&apos;keyup&apos;, function (ev) &#123;</span><br><span class="line">        obj.txt = ev.target.value;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
@@ -853,5 +491,368 @@ your browser does not support the video tag
 <p>从此。双向绑定完成。通过 watcher.evaluate() 将自身实例赋值给 Dep.target<br>调用 dep.depend() 将dep实例将 watcher 实例 push 到 dep.subs中<br>通过数据劫持，在调用被劫持的对象的 set 方法时，调用 dep.subs 中所有的 watcher.update()<br>从此。双向绑定完成。</p>
 <p>Vuex的注入代码比较简单，调用了一下applyMixin方法，现在的版本其实就是调用了Vue.mixin，在所有组件的 beforeCreate生命周期注入了设置 this.$store这样一个对象。</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>[踩坑玄学]隐身&amp;nbsp</title>
+    <url>/2020/05/05/%E5%9D%91%E7%8E%84%E5%AD%A6-%E9%9A%90%E8%BA%AB-nbsp/</url>
+    <content><![CDATA[<p>具体如下</p>
+<video src="http://q9uen5wtx.bkt.clouddn.com/%E7%8E%84%E5%AD%A6%EF%BC%9F.mp4" controls="controls" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;">
+your browser does not support the video tag
+</video>
+
+<p>空格把left div顶到下一行了。</p>
+<p>我删掉left div前面的空格就好了  之后就算再空格也不会影响，可能是极少数情况下编译器存在隐身的&amp;nbsp?  left div  左边少了一根线可能就是有个隐身的&amp;nbsp[捂脸哭]</p>
+]]></content>
+      <categories>
+        <category>VSCode</category>
+      </categories>
+      <tags>
+        <tag>踩坑</tag>
+        <tag>空格占位</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>成功解决java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver</title>
+    <url>/2019/11/13/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/</url>
+    <content><![CDATA[<p>用Spring 通过applicationContext连接mySql</p>
+<p>发现报错  于是改回传统方式尝试连接 代码如下</p>
+<a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@org.junit.Test</span><br><span class="line">	public void mainTest() &#123;</span><br><span class="line">//		// 加载配置文件</span><br><span class="line">//		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);</span><br><span class="line">//		// 获取JdbcTemplate实例</span><br><span class="line">//		JdbcTemplate jdTemplate = (JdbcTemplate) applicationContext.getBean(&quot;jdbcTemplate&quot;);</span><br><span class="line">//		// 使用execute()方法执行SQL语句，创建用户账户管理表account</span><br><span class="line">//		jdTemplate.execute(&quot;create table account(&quot; + &quot;id int primary key auto_increment,&quot; + &quot;username varchar(50),&quot;</span><br><span class="line">//				+ &quot;balance double)&quot;);</span><br><span class="line">//		System.out.println(&quot;账户表account创建成功！&quot;);</span><br><span class="line"></span><br><span class="line">		Connection conn=null;</span><br><span class="line">		try</span><br><span class="line">		&#123;</span><br><span class="line">			Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);// 加载驱动程序，此次无需更改</span><br><span class="line">			System.out.println(&quot;registered success!&quot;);//输出registered success表示驱动加载成功</span><br><span class="line">			//创建对象连接，连接数据库，此例中employeedbms为数据库名，root为用户名，123456位密码，该三项均需根据实际情况进行修改，其它代码无需变动。注：确保数据库名、用户名和密码的准确性。</span><br><span class="line">//			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/spring?useSSL=false&amp;serverTimezone=UTC&quot;,&quot;root&quot;,&quot;123456&quot;);</span><br><span class="line">			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://127.0.0.1:3306/spring?useSSL=true&amp;serverTimezone=GMT&quot;, &quot;root&quot;, &quot;123456&quot;);</span><br><span class="line">			System.out.println(&quot;connection success!&quot;);//输出connection success表示数据库已成功连接</span><br><span class="line">			conn.close();</span><br><span class="line">		&#125;</span><br><span class="line">		catch(Exception e)</span><br><span class="line">		&#123;</span><br><span class="line">			System.out.println(e);</span><br><span class="line">		&#125;</span><br><span class="line">		finally&#123;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    ``` </span><br><span class="line"> 出现错误提示</span><br></pre></td></tr></table></figure>
+<p> java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">由于我用的是mySQL 8.0.18</span><br></pre></td></tr></table></figure><br> //下面这个命令可以查你的mysql版本<br> mysql -uroot -p<br> //打开MySQL也可以看到<br> //利用navicat连接mysql的客户端工具可以查看<br> //连接之后右键——详细信息<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">数据库连接要和5.x的版本不一样驱动也是不一样</span><br><span class="line"></span><br><span class="line">https://mvnrepository.com/</span><br><span class="line"></span><br><span class="line">到上面这个网站搜索 mysql-connector-java-8.0.18.jar</span><br><span class="line">下载后导入到项目中  不要只是拖进去 还需要去建立依赖 否则没法用</span><br><span class="line"></span><br><span class="line">比如idea，要在Project Structure 里面的Modules 对应下的项目中点+号导入驱动。</span><br><span class="line">再次运行传统的连接数据库代码 发现成功</span><br></pre></td></tr></table></figure><br>registered success!<br>connection success!</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">注释掉用用以下xml配置连接数据库，也是成功</span><br></pre></td></tr></table></figure>
+<?xml version="1.0" encoding="UTF-8"?>
+<p><beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans-4.3.xsd"><br>    <!-- 1配置数据源 --><br>    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"><br>        <!--数据库驱动 --><br>        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property></bean></beans></p>
+<!--        //com.mysql.jdbc.Driver-->
+<pre><code>    &lt;!--连接数据库的url --&gt;
+    &lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://localhost:3306/spring?serverTimezone=GMT&quot; /&gt;
+    &lt;!--连接数据库的用户名 --&gt;
+    &lt;property name=&quot;username&quot; value=&quot;root&quot; /&gt;
+    &lt;!--连接数据库的密码 --&gt;
+    &lt;property name=&quot;password&quot; value=&quot;123456&quot; /&gt;
+&lt;/bean&gt;
+
+&lt;/bean&gt;</code></pre>
+```
+
+<p>end</p>
+]]></content>
+      <categories>
+        <category>踩坑</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+        <tag>数据库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习期末复习简答题</title>
+    <url>/2019/12/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E7%AE%80%E7%AD%94%E9%A2%98/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</url>
+    <content><![CDATA[<h3 id="简答题"><a href="#简答题" class="headerlink" title="简答题"></a>简答题</h3><p>就是期末可能会考的简答题汇总，答案偏个人+网上找的~</p>
+<a id="more"></a>
+
+<h5 id="机器学习与人工智能的关系"><a href="#机器学习与人工智能的关系" class="headerlink" title="机器学习与人工智能的关系"></a>机器学习与人工智能的关系</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">机器学习是人工智能的子集也是人工智能的基础，</span><br><span class="line">人工智能除了机器学习还要知识表示、自动推理、知识获取等。</span><br></pre></td></tr></table></figure>
+
+<h5 id="机器学习与数据挖掘的关系"><a href="#机器学习与数据挖掘的关系" class="headerlink" title="机器学习与数据挖掘的关系"></a>机器学习与数据挖掘的关系</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">数据挖掘可以认为是数据库技术与机器学习的交叉，它利用数据库技术来管理海量的数据，并利用机器学习和统计分析来进行数据分析。</span><br><span class="line"></span><br><span class="line">机器学习：广泛的定义为 “利用经验来改善计算机系统的自身性能。”，事实上，由于“经验”在计算机系统中主要是以数据的形式存在的,因此机器学习需要设法对数据进行分析,这就使得它逐渐成为智能数据分析技术的创新源之一,并且为此而受到越来越多的关注。</span><br><span class="line"></span><br><span class="line">数据挖掘：一种解释是“识别出巨量数据中有效的、新颖的、潜在有用的、最终可理解的模式的非平凡过程”，顾名思义，数据挖掘就是试图从海量数据中找出有用的知识。</span><br></pre></td></tr></table></figure>
+
+<h5 id="举例说明机器学习的基本过程，并举例说明各步骤使用的方法"><a href="#举例说明机器学习的基本过程，并举例说明各步骤使用的方法" class="headerlink" title="举例说明机器学习的基本过程，并举例说明各步骤使用的方法"></a>举例说明机器学习的基本过程，并举例说明各步骤使用的方法</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、明确目标和要解决的问题</span><br><span class="line">（方法：对定性问题用分类算法，对定量分析可用回归方法，或者理解为预测问题用回归，分类问题用分类算法）</span><br><span class="line"></span><br><span class="line">2、收集数据</span><br><span class="line">（方法：选取有代表性的数据，分类问题避免出现样本数据不平衡，内存过大 考虑使用降维或改进算法）</span><br><span class="line"></span><br><span class="line">3、根据数据判断用supervised还是unsupervised机器学习模型</span><br><span class="line">（一般数据如果没有我们想要的标签，就考虑用聚类进行分类）</span><br><span class="line"></span><br><span class="line">4、数据预处理</span><br><span class="line">（方法：先进行探索，了解大致结构、数据噪声，分布等，可使用数据可视化方法或数据质量评价对数据质量进行评估，根据实际情况选择使用归一化，离散化、缺失值处理、去除共线性等）</span><br><span class="line"></span><br><span class="line">5、数据建模</span><br><span class="line">（方法：选取合适的特征，特征选择方法：相关系数、卡方检验、平均互信息、条件熵、后验概率和逻辑回归权重等方法。</span><br><span class="line">再把数据分为训练集和测试集）</span><br><span class="line"></span><br><span class="line">6、模型训练</span><br><span class="line">（方法：对模型超参进行调优）</span><br><span class="line"></span><br><span class="line">7、模型评估</span><br><span class="line">（方法：构建模型后，使用测试数据对模型进行测试和评估）</span><br><span class="line"></span><br><span class="line">8、模型应用</span><br><span class="line">（方法：用就完事了，再看看性能、稳定性啥的）</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="什么是标准差、方差和协方差？它们反映了数据的什么内容？"><a href="#什么是标准差、方差和协方差？它们反映了数据的什么内容？" class="headerlink" title="什么是标准差、方差和协方差？它们反映了数据的什么内容？"></a>什么是标准差、方差和协方差？它们反映了数据的什么内容？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">方差（Variance）：用来度量随机变量和其数学期望（即均值）之间的偏离程度。</span><br><span class="line"></span><br><span class="line">标准差：方差开根号。</span><br><span class="line"></span><br><span class="line">协方差：E[(X-E[X])(Y-E[Y])]=E[XY]-E[X]E[Y]衡量两个变量之间的变化方向关系。</span><br><span class="line"></span><br><span class="line">标准差描述是样本集合的各个样本点到均值的距离分布，描述的是样本集的分散程度</span><br><span class="line"></span><br><span class="line">在机器学习中的方差就是估计值与其期望值的统计方差。如果进行多次重复验证的过程，就会发现模型在训练集上的表现并不固定，会出现波动，这些波动越大，它的方差就越大</span><br><span class="line"></span><br><span class="line">协方差主要用来度量两个随机变量关系，如果结果为正值，则说明两者是正相关的；结果为负值，说明两者是负相关的；如果为0，就是统计上的“相互独立”</span><br><span class="line"></span><br><span class="line">   标准差: 描述样本的分散程度。</span><br><span class="line">    方差：标准差的平方，模型预测稳定性。 </span><br><span class="line">   协方差:</span><br><span class="line">        结果为正值：两者正相关；</span><br><span class="line">        结果为负值：两者负相关；</span><br><span class="line">        如果为0：“相互独立”；</span><br></pre></td></tr></table></figure>
+
+<h5 id="如何利用平均值和标准差判断数据的异常值？"><a href="#如何利用平均值和标准差判断数据的异常值？" class="headerlink" title="如何利用平均值和标准差判断数据的异常值？"></a>如何利用平均值和标准差判断数据的异常值？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">数据原值在均值±标准差*3范围外的都作为异常值剔除</span><br><span class="line"></span><br><span class="line">标准差可用于识别符合高斯或类高斯分布的数据中的异常值</span><br></pre></td></tr></table></figure>
+<h5 id="何为正则化？其功能是什么？"><a href="#何为正则化？其功能是什么？" class="headerlink" title="何为正则化？其功能是什么？"></a>何为正则化？其功能是什么？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在训练数据不够多时，或者overtraining时，常常会导致过拟合（overfitting）。正则化方法即为在此时向原始模型引入额外信息，以便防止过拟合和提高模型泛化性能的一类方法的统称。</span><br><span class="line"></span><br><span class="line">正则化是为了避免过拟合的手段。正则化为了结构风险最小化，在经验风险上加一个正则化项或惩罚项，正则化项一般是模型复杂度的单调递增函数，模型越复杂，正则化值就越大</span><br></pre></td></tr></table></figure>
+
+<h5 id="PCA的基本思想"><a href="#PCA的基本思想" class="headerlink" title="PCA的基本思想"></a>PCA的基本思想</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">通过某种线性投影，将高维度的数据映射到低维的空间中，并期望再所投影的维度上数据的方差最大，以此使用较少的维度，同时保留较多原数据的维度。</span><br></pre></td></tr></table></figure>
+<h5 id="如何理解L0、L1、L2正则化？"><a href="#如何理解L0、L1、L2正则化？" class="headerlink" title="如何理解L0、L1、L2正则化？"></a>如何理解L0、L1、L2正则化？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> L0：通过限制向量中非0的元素的个数实现模型优化；</span><br><span class="line"> L1：趋向于产生少量的特征，而其他的特征都是0；</span><br><span class="line"> L2：L2会选择更多的特征，这些特征都会接近于0。</span><br><span class="line"> </span><br><span class="line">（所有特征中只有少数特征起重要作用的情况下，选择L1更合适；</span><br><span class="line">所有特征中，大部分特征都能起作用，而且起的作用很平均，选择L2更合适；L1/L2范数让模型变得稀疏，增加模型的可解析性，可用于特征选择；L2范数让模型变得更简单，防止过拟合问题；</span><br><span class="line">）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">L0正则化是通过限制向量中非0的元素的个数实现模型优化，用L0来正则化一个参数矩阵 W，目标是使其更稀疏，即W中的大部分元素都是0。很明显，如果通过最小化L0范数作为罚项，就是寻找最优的稀疏特征项。</span><br><span class="line">L1正则化是通过对向量中各个元素绝对值之和进行限制，任何的规则化算子，如果在wi = 0的地方不可微，并且可以分解为多项式的形式，那么这个规则化算子就可以实现稀疏。</span><br><span class="line">L2正则化是指向量各元素求平方和然后求平方根，用模最小化来确保w的每个元素都很小，都接近于0。</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="什么是交叉校验？常用方法有哪些？"><a href="#什么是交叉校验？常用方法有哪些？" class="headerlink" title="什么是交叉校验？常用方法有哪些？"></a>什么是交叉校验？常用方法有哪些？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">交叉验证是机器学习中确定超参数的通用的方法。</span><br><span class="line">k折交叉验证 、留一法</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="LDA的基本思想是什么？举例说明"><a href="#LDA的基本思想是什么？举例说明" class="headerlink" title="LDA的基本思想是什么？举例说明"></a>LDA的基本思想是什么？举例说明</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">通过将训练样本投影到低维度上，使得同类别的投影点尽可能接近，异类别样本的投影点尽可能远离，（即同类点方差尽可能小，而类之间的方差尽可能大）；对新样本，将其投影到低维空间，根据投影点的位置来确定其类别；</span><br><span class="line">应用LDA对鸢尾花（Iris）的样本数据进行分析。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">LDA 线性判别式分析：和PCA一样都是常用的降维技术，PCA从特征的协方差角度找比较好的投影，LDA更多是考虑了标注，即希望投影后不同类别之间的数据点的距离更大，同一类别的数据点更紧凑。</span><br><span class="line"></span><br><span class="line">线性判别分析的原理是对于给定的训练集，设法将样本投影到一条直线上，使得同类的投影点尽可能接近，异类样本的投影点尽可能远离；在对新样本进行分类时，将其投影到这条直线上，再根据投影点的位置来确定新样本的类别</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="为什么考虑特征提取？"><a href="#为什么考虑特征提取？" class="headerlink" title="为什么考虑特征提取？"></a>为什么考虑特征提取？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">特征提取目的是自动地构建新的特征，将原始数据转换为一组具有明显统计意义的核心特征</span><br><span class="line"></span><br><span class="line">特征提取是利用原有的特征根据一定的算法提取出原始特征中包含的抽象特征</span><br><span class="line">通过降维，可以减少数据量大大减少计算量，再就是避免被不重要的噪声干扰</span><br></pre></td></tr></table></figure>
+
+<h5 id="线性回归的过程是什么？举例说明"><a href="#线性回归的过程是什么？举例说明" class="headerlink" title="线性回归的过程是什么？举例说明~"></a>线性回归的过程是什么？举例说明~</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">a)         确定输入变量与目标变量间的回归模型，即变量间相关关系的数学表达式</span><br><span class="line"></span><br><span class="line">b)        根据样本估计并检验回归模型及未知参数</span><br><span class="line"></span><br><span class="line">c)         从众多的输入变量中，判断哪些变量对目标变量的影响是显著的</span><br><span class="line"></span><br><span class="line">d)        根据输入变量的已知值来估计目标变量的平均值并给出预测精度</span><br><span class="line"></span><br><span class="line">线性回归是利用数理统计中回归分析，来确定两种或两种以上变量间相互依赖的定量关系的一种统计分析方法，运用十分广泛。</span><br><span class="line">比如预测房价，我们通过数据分析多个变量如地点附近医院个数、学校个数等分析与房价的关系，拟合出一个函数。来预测一个新的未知房价</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="逻辑回归为什么可以预测新样本的类别？举例说明其应用。"><a href="#逻辑回归为什么可以预测新样本的类别？举例说明其应用。" class="headerlink" title="逻辑回归为什么可以预测新样本的类别？举例说明其应用。"></a>逻辑回归为什么可以预测新样本的类别？举例说明其应用。</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">逻辑回归是一种预测分析， 解释因变量与一个或多个自变量之间的关系，与线性回归不同之处就是它的目标变量有几种类别，所以逻辑回归主要用于解决分类问题，与线性回归相比，它是用概率的方式，预测出来属于某一分类的概率值。如果超过50%，则属于某一分类</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="分类解决什么问题？"><a href="#分类解决什么问题？" class="headerlink" title="分类解决什么问题？"></a>分类解决什么问题？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">将数据集中的样本划分到个各类中。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">找一个函数判断输入数据所属的类别，可以是二类别问题（是/不是），也可以是多类别问题（在多个类别中判断输入数据具体属于哪一个类别）。与回归问题（regression）相比，分类问题的输出不再是连续值，而是离散值，用来指定其属于哪个类别。</span><br><span class="line">比如垃圾邮件识别，手写数字识别，人脸识别，语音识别等。。</span><br></pre></td></tr></table></figure>
+
+<h5 id="常见的分类算法有哪些？举例说明"><a href="#常见的分类算法有哪些？举例说明" class="headerlink" title="常见的分类算法有哪些？举例说明"></a>常见的分类算法有哪些？举例说明</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">决策树 贝叶斯 人工神经网络 k-近邻 支持向量机 基于关联规则的分类 集成学习</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="简述决策树的生成过程"><a href="#简述决策树的生成过程" class="headerlink" title="简述决策树的生成过程"></a>简述决策树的生成过程</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">决策树的构建过程是按照属性的优先级或重要性来逐渐确定树的层次结构，使其叶子结点尽可能属于同一类别，一般采用局部最优的贪心策略来构建决策树。</span><br><span class="line"></span><br><span class="line">决策树是一种树形的结构，一般由根节点、父节点、子节点、叶子节点构成</span><br><span class="line"></span><br><span class="line">每一个分支代表着一个判断，每个叶子节点代表一种结果。</span><br><span class="line"></span><br><span class="line">最优的模型应该是：叶子节点中只包含一个类别的数据。</span><br><span class="line"></span><br><span class="line">从决策树根结点出发，自顶向下移动，在每个决策结点都会进行次划分，通过划分的结果将样本进行分类，导致不同的分支，最后到达个叶子结点，这个过程就是利用决策树进行分类的过程</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">步骤一：将所有的特征看成一个一个的节点，eg（拥有房产、婚姻状态、年收入这些特征，我们可以看成一个一个的节点。）</span><br><span class="line"></span><br><span class="line">步骤二：遍历当前特征的每一种分割方式，找到最好的分割点eg（婚姻状态这个特征，我们可以按照单身、已婚、离婚进行划分；也可以按照结过婚、没有结过婚进行划分）；将数据划分为不同的子节点，eg： N1、 N2….Nm；计算划分之后所有子节点的“纯度”信息</span><br><span class="line"></span><br><span class="line">步骤三：使用第二步遍历所有特征，选择出最优的特征，以及该特征的最优的划分方式，得出最终的子节点N1、 N2….Nm</span><br><span class="line"></span><br><span class="line">步骤四：对子节点N1、N2….Nm分别继续执行2-3步，直到每个最终的子节点都足够“纯”。</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="如何减少过拟合？"><a href="#如何减少过拟合？" class="headerlink" title="如何减少过拟合？"></a>如何减少过拟合？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">增加数据量，降低模型复杂度。通过正则化</span><br></pre></td></tr></table></figure>
+<h5 id="1-混淆矩阵"><a href="#1-混淆矩阵" class="headerlink" title="1. 混淆矩阵"></a>1. 混淆矩阵</h5><p>在介绍各个率之前，先来介绍一下混淆矩阵。如果我们用的是个二分类的模型，那么把预测情况与实际情况的所有结果两两混合，结果就会出现以下4种情况，就组成了混淆矩阵。</p>
+<p>P（Positive）：代表1</p>
+<p>N（Negative）：代表0</p>
+<p>T（True）：代表预测正确</p>
+<p>F（False）：代表错误</p>
+<p>TP：预测为1，预测正确，即实际1</p>
+<p>FP：预测为1，预测错误，即实际0</p>
+<p>FN：预测为0，预测错确，即实际1</p>
+<p>TN：预测为0，预测正确即，实际0</p>
+<h5 id="2-准确率"><a href="#2-准确率" class="headerlink" title="2. 准确率"></a>2. 准确率</h5><p>既然是个分类指标，我们可以很自然的想到准确率，准确率的定义是预测正确的结果占总样本的百分比，其公式如下：</p>
+<p>准确率=(TP+TN)/(TP+TN+FP+FN)</p>
+<h6 id="3-精准率"><a href="#3-精准率" class="headerlink" title="3. 精准率"></a>3. 精准率</h6><p>精准率（Precision）又叫查准率，它是针对****预测结果而言的，它的含义是在所有被预测为正的样本中实际为正的样本的概率，意思就是在预测为正样本的结果中，我们有多少把握可以预测正确，其公式如下：</p>
+<p>精准率=TP/(TP+FP)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">精准率和准确率看上去有些类似，但是完全不同的两个概念。精准率代表对正样本结果中的预测准确程度，而准确率则代表整体的预测准确程度，既包括正样本，也包括负样本。</span><br></pre></td></tr></table></figure>
+<h5 id="4-召回率"><a href="#4-召回率" class="headerlink" title="4. 召回率"></a>4. 召回率</h5><p>召回率（Recall）又叫查全率，它是针对原样本而言的，它的含义是在实际为正的样本中被预测为正样本的概率，其公式如下：</p>
+<p>精准率=TP/(TP+FN)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">召回率越高，代表实际坏用户被预测出来的概率越高，它的含义类似：宁可错杀一千，绝不放过一个。</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="AUC与ROC的关系是什么？"><a href="#AUC与ROC的关系是什么？" class="headerlink" title="AUC与ROC的关系是什么？"></a>AUC与ROC的关系是什么？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">ROC图下的面积为AUC，AUC值越大，表示分类模型的预测准确性越高。（ROC越光滑，一般表示过拟合现象越轻）</span><br><span class="line"></span><br><span class="line">AUC(Area Under ROC Curve)，从名字可以看出AUC是ROC曲线下方的面积。当两个分类器的ROC曲线交叉时，就可以通过AUC来判断分类器的好坏了。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">这两个指标的选择也正是ROC和AUC可以无视样本不平衡的原因。这两个指标分别是：灵敏度和（1-特异度），也叫做真正率（TPR）和假正率（FPR）</span><br><span class="line"></span><br><span class="line">灵敏度（Sensitivity） = TP/(TP+FN)</span><br><span class="line"></span><br><span class="line">特异度（Specificity） = TN/(FP+TN)</span><br><span class="line"></span><br><span class="line">ROC曲线有个很好的特性：当测试集中的正负样本的分布变化的时候，ROC曲线能够保持不变。在实际的数据集中经常会出现类不平衡（class imbalance）现象，即负样本比正样本多很多（或者相反），而且测试数据中的正负样本的分布也可能随着时间变化。</span><br><span class="line"></span><br><span class="line">ROC（Receiver Operating Characteristic）曲线，又称接受者操作特征曲线。该曲线最早应用于雷达信号检测领域，用于区分信号与噪声。后来人们将其用于评价模型的预测能力，ROC曲线是基于混淆矩阵得出的。</span><br><span class="line"></span><br><span class="line">ROC曲线也是通过遍历所有阈值来绘制整条曲线的。如果我们不断的遍历所有阈值，预测的正样本和负样本是在不断变化的，相应的在ROC曲线图中也会沿着曲线滑动。</span><br><span class="line"></span><br><span class="line">TPR越高，同时FPR越低（即ROC曲线越陡），那么模型的性能就越好。</span><br></pre></td></tr></table></figure>
+
+<h5 id="聚类分析的目的是什么？"><a href="#聚类分析的目的是什么？" class="headerlink" title="聚类分析的目的是什么？"></a>聚类分析的目的是什么？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">当我们的数据没有我们想要的特征的时候，通过聚类（按相似程度如距离远近等）划分类别 再打上标签，就能得到对我们有用的数据。</span><br></pre></td></tr></table></figure>
+
+<h5 id="聚类与分类的关系？"><a href="#聚类与分类的关系？" class="headerlink" title="聚类与分类的关系？"></a>聚类与分类的关系？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">聚类是非监督式学习，分类是有监督学习。</span><br><span class="line">如果想利用分类方法来对数据进行分类，训练模型用的样本必须是有标签的，这样模型才能不断地学习、优化最后达到良好的分类效果</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="常见有哪些聚类方法？这些方法分别试用于哪些场合？"><a href="#常见有哪些聚类方法？这些方法分别试用于哪些场合？" class="headerlink" title="常见有哪些聚类方法？这些方法分别试用于哪些场合？"></a>常见有哪些聚类方法？这些方法分别试用于哪些场合？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">划分方法【k-means 】：适用于对大规模的数据集进行分类，以及处理复杂形状的聚类。</span><br><span class="line"></span><br><span class="line">层次方法【Birch、cure】：可以根据需求指定层数，知道要分几类的情况</span><br><span class="line"></span><br><span class="line">基于密度的方法：球状数据集能正确划分，但是非球状无法正确聚类，容易受到噪声影响。</span><br><span class="line"></span><br><span class="line">基于网格的方法：处理大数据集时效率高</span><br><span class="line"></span><br><span class="line">基于模型的方法：数据集满足一定的分布模型</span><br></pre></td></tr></table></figure>
+
+<h5 id="聚类分析中，样本之间的距离常用的计算方法有哪些？"><a href="#聚类分析中，样本之间的距离常用的计算方法有哪些？" class="headerlink" title="聚类分析中，样本之间的距离常用的计算方法有哪些？"></a>聚类分析中，样本之间的距离常用的计算方法有哪些？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">最短距离法、最长距离法、中间距离法、可变距离法、重心法、类平均法等。</span><br></pre></td></tr></table></figure>
+
+<h5 id="k个假设聚类中心位置对k-均值算法的影响？"><a href="#k个假设聚类中心位置对k-均值算法的影响？" class="headerlink" title="k个假设聚类中心位置对k-均值算法的影响？"></a>k个假设聚类中心位置对k-均值算法的影响？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">影响比较大，不同的初始中心可能会导致不同的聚类结果。</span><br></pre></td></tr></table></figure>
+
+<h5 id="简要说明基于划分的聚类方法的基本原理。"><a href="#简要说明基于划分的聚类方法的基本原理。" class="headerlink" title="简要说明基于划分的聚类方法的基本原理。"></a>简要说明基于划分的聚类方法的基本原理。</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">把包含n个样本的数据集，基于划分的方法将n个样本按照特定的度量划分为K个蔟，方法大多数是基于距离来划分。在每次划分过程中寻找最优解，然后基于最优解进行迭代计算。</span><br></pre></td></tr></table></figure>
+
+<h5 id="支持向量机的基本原理是什么？"><a href="#支持向量机的基本原理是什么？" class="headerlink" title="支持向量机的基本原理是什么？"></a>支持向量机的基本原理是什么？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">一个比较基于数学的算法，</span><br><span class="line">通过将样本的向量映射到高维空间中，寻找最优区分两类数据的超平面，使各分类的超平面的距离最大化，距离越大SVM的分类误差越小。</span><br></pre></td></tr></table></figure>
+
+<h5 id="支持向量机适合解决什么问题？"><a href="#支持向量机适合解决什么问题？" class="headerlink" title="支持向量机适合解决什么问题？"></a>支持向量机适合解决什么问题？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">支持向量机用于二元分类问题，对于多元分类可以将其分解为多个二元分类问题，再进行分类。</span><br><span class="line"></span><br><span class="line">支持向量机在小样本、非线性及高维模式识别中表现出许多特有的优势，并能够推广应用到函数拟合等其他机器学习问题中。</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="支持向量机常用的核函数有？"><a href="#支持向量机常用的核函数有？" class="headerlink" title="支持向量机常用的核函数有？"></a>支持向量机常用的核函数有？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">线性核函数、多项式核函数、径向基核函数、sigmoid Kernel</span><br></pre></td></tr></table></figure>
+
+<h5 id="核函数的选择对支持向量机的性能有什么影响？"><a href="#核函数的选择对支持向量机的性能有什么影响？" class="headerlink" title="核函数的选择对支持向量机的性能有什么影响？"></a>核函数的选择对支持向量机的性能有什么影响？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">只要一个对称函数所对应的核矩阵半正定，它就能作为核函数使用。事实上，对于一个半正定核矩阵，总能找到一个与之对应的映射。核函数的使用，不一定能够准确的划分，只能说使用哪个核函数，能够逼近真实的划分效果。因此特征空间的好坏对支持向量机的性能至关重要。在不知道特征映射的形式时，我们并不知道什么样的核函数是合适的，而核函数也仅是隐式定义了这个特征空间。于是，核函数的选择成为了支持向量机的最大变数。若核函数选择不合适，则意味着映射到一个不合适的特征空间，很可能导致性能不佳。</span><br><span class="line">（对预测精度有重要影响。）</span><br><span class="line"></span><br><span class="line">特征数量多的时候适合线性核函数，因为运算速度快</span><br><span class="line"></span><br><span class="line">当多项式阶数高时复杂度会很高，正交归一化后的数据，优先使用多项式核函数。</span><br><span class="line"></span><br><span class="line">大多数情况下径向基核函数（高斯核函数）都有比较好的性能，不确定用哪种就用它。</span><br></pre></td></tr></table></figure>
+
+<h5 id="数据降维有哪些常用的方法？"><a href="#数据降维有哪些常用的方法？" class="headerlink" title="数据降维有哪些常用的方法？"></a>数据降维有哪些常用的方法？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">答：主成分分析 (PCA)，奇异值分解，线性判别分析，局部线性嵌入，拉普拉斯特征映射，</span><br></pre></td></tr></table></figure>
+
+<h5 id="PCA的基本思想-1"><a href="#PCA的基本思想-1" class="headerlink" title="PCA的基本思想"></a>PCA的基本思想</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">答：通过某种线性投影,将高伟的数据映射到低纬的空间中，并期望在所投影的维度上数据的方差最大，以此使用较少的维度，同时保留较多原数据的维度。</span><br></pre></td></tr></table></figure>
+<h5 id="常用特征的选择方式。列举其方法。"><a href="#常用特征的选择方式。列举其方法。" class="headerlink" title="常用特征的选择方式。列举其方法。"></a>常用特征的选择方式。列举其方法。</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">答：特征选择的目的主要是降维，从特征集合中挑选一组最具统计意义的特征子集来代表整体样本的特点。常见的有pearson相关系数，基尼指标，信息增益等。最简单的办法是琼剧所有特征子集，找到错误率最低的子集。特征选择可分为过滤方法，封装器方法和嵌入方法。</span><br></pre></td></tr></table></figure>
+<h5 id="什么是过拟合问题，如何判断过拟合？"><a href="#什么是过拟合问题，如何判断过拟合？" class="headerlink" title="什么是过拟合问题，如何判断过拟合？"></a>什么是过拟合问题，如何判断过拟合？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">答：下面的话有点太官方了  什么是过拟合？大白话就是 泛化能力低 再白话一点就是测试误差高。 如何判断？看看测试误差是不是很高就行了</span><br><span class="line"></span><br><span class="line">通常对于分类算法可能产生两种类型的误差，分别是训练误差与泛化误差。训练误差代表此分类方法，对于现有训练样本级的拟合程度，泛化误差代表此方法的泛化能力，即对于新的样本数据的分类能力如何。模型的训练误差低，但是泛化误差比较高，则称分类模型过拟合。即过度拟合训练数据，导致模型的泛化能力，反而随着模型与训练数据的拟合程度增高而下降。随着分类模型对于样本的拟合程度逐渐增加，当决策数深度达到一定值，即使训练误差仍在下降，泛化误差却不断升高，产生过拟合现象。（书上的</span><br><span class="line">全摘录了自己总结吧）</span><br></pre></td></tr></table></figure>
+
+<h5 id="k均值算法的原理是什么？步骤？"><a href="#k均值算法的原理是什么？步骤？" class="headerlink" title="k均值算法的原理是什么？步骤？"></a>k均值算法的原理是什么？步骤？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">答：K均值距离是基于划分的距离算法。计算样本点与类簇质心的距离，与类簇质心相近的样本点划分为同一类簇。K均值中，样本间的相似度由他们之间的距离决定。距离越近说明相似度越高，反之越低。</span><br></pre></td></tr></table></figure>
+
+<h5 id="讨论初始的k个假设聚类中心位置对k均值算法的影响。"><a href="#讨论初始的k个假设聚类中心位置对k均值算法的影响。" class="headerlink" title="讨论初始的k个假设聚类中心位置对k均值算法的影响。"></a>讨论初始的k个假设聚类中心位置对k均值算法的影响。</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">答：K均值算法中初始聚类中心的选取对算法结果影响很大。不同的初始中心可能会导致不同的聚类结果。选择一个新样本点加入聚类中心点集合中，其距离dx越大，被选中的可能性越高。</span><br></pre></td></tr></table></figure>
+<h5 id="如何评价聚类方法的好坏？"><a href="#如何评价聚类方法的好坏？" class="headerlink" title="如何评价聚类方法的好坏？"></a>如何评价聚类方法的好坏？</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">答：在数据质量高的情况下，一个好的聚类结果表明了数据中相对稳定的某种“模式 or 分布”，这个模式不会因为个别数据点的增删改而改变，且能够将数据尽可能分开。</span><br></pre></td></tr></table></figure>
+<h5 id="DBSCAN算法的原理-步骤。"><a href="#DBSCAN算法的原理-步骤。" class="headerlink" title="DBSCAN算法的原理?步骤。"></a>DBSCAN算法的原理?步骤。</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">答：DBSCAN是一种基于密度的聚类算法，这类密度聚类算法一般假定类别可以通过样本分布的紧密程度决定。同一类别的样本，他们之间的紧密相连的，也就是说，在该类别任意样本周围不远处一定有同类别的样本存在。通过将紧密相连的样本划为一类，这样就得到了一个聚类类别。通过将所有各组紧密相连的样本划为各个不同的类别，则我们就得到了最终的所有聚类类别结果。（原理 完整）</span><br><span class="line">原理：该算法利用基于密度的聚类的思想，即要求聚类空间中的一定区域内所包含对象的数目不小于某一给定的阈值。</span><br><span class="line">（原理 总结）</span><br><span class="line">DBSCAN 算法的步骤如下：</span><br><span class="line">1）从任一数据点 p 开始，对 p 点根据和 MinPts 进行判定。如果 p 是核心数据点，则建立新簇 S，并将 p 临域内的所有点归入 S；否则将 p 点标记为边界点或噪声点。</span><br><span class="line">2）对于 S 中除 p 点以外的点继续实施过程 1），继续扩充 S，直到所有的点都被判定处理。</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习基础算法</tag>
+        <tag>机器学习习题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用js做机器学习(一)【基础准备】</title>
+    <url>/2019/11/12/%E7%94%A8js%E5%81%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E4%B8%80-%E3%80%90%E5%9F%BA%E7%A1%80%E5%87%86%E5%A4%87%E3%80%91/%E7%94%A8js%E5%81%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E4%B8%80-%E3%80%90%E5%9F%BA%E7%A1%80%E5%87%86%E5%A4%87%E3%80%91/</url>
+    <content><![CDATA[<p>还是很想用JS实现数据预处理来跑机器学习算法<br>开始之前首先要对JS的一些基础知识有了解 比如Js的数据类型、正则表达式、类型转换等（此文将不断扩充）</p>
+<a id="more"></a>
+
+<h2 id="一、Js数据类型"><a href="#一、Js数据类型" class="headerlink" title="一、Js数据类型"></a>一、Js数据类型</h2><p>字符串值，数值，布尔值，数组，对象。</p>
+<p>JavaScript 变量能够保存多种数据类型：数值、字符串值、数组、对象等等：</p>
+<p>数据类型的概念<br>在编程过程中，数据类型是重要的概念。</p>
+<p>为了能够操作变量，了解数据类型是很重要的。</p>
+<p>如果没有数据类型，计算机就无法安全地解决这道题：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var x = &quot;XiaoMi&quot;+6;</span><br></pre></td></tr></table></figure>
+<p>x的结果为：XiaoMi6</p>
+<p>JavaScript 从左向右计算表达式。不同的次序会产生不同的结果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var x = &quot;XiaoMi&quot;+6+&quot;plus&quot;;</span><br></pre></td></tr></table></figure>
+
+<p>x的结果为：XiaoMi6plus</p>
+<h5 id="JavaScript-拥有动态类型"><a href="#JavaScript-拥有动态类型" class="headerlink" title="JavaScript 拥有动态类型"></a>JavaScript 拥有动态类型</h5><p>JavaScript 拥有动态类型。这意味着相同变量可用作不同类型：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var x;               // 现在 x 是 undefined</span><br><span class="line">var x = 6;           // 现在 x 是数值</span><br><span class="line">var x = &quot;Jamin&quot;;</span><br></pre></td></tr></table></figure>
+
+<h5 id="可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配："><a href="#可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配：" class="headerlink" title="可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配："></a>可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">var answer = &quot;It&apos;s nice&quot;;             // 双引号内的单引号</span><br><span class="line">var answer = &quot;He is called &apos;Jamin&apos;&quot;;    // 双引号内的单引号</span><br><span class="line">var answer = &apos;He is called &quot;Jamin&quot;&apos;;    // 单引号内的双引号</span><br></pre></td></tr></table></figure>
+
+<h5 id="JavaScript-数值"><a href="#JavaScript-数值" class="headerlink" title="JavaScript 数值"></a>JavaScript 数值</h5><p>JavaScript 只有一种数值类型。</p>
+<p>写数值时用不用小数点均可</p>
+<p>超大或超小的数值可以用科学计数法来写：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var x1 = 34.00;     // 带小数点</span><br><span class="line">var x2 = 34;        // 不带小数点</span><br><span class="line">var y = 123e5;      // 12300000</span><br><span class="line">var z = 123e-5;     // 0.00123</span><br></pre></td></tr></table></figure>
+
+<h5 id="JavaScript-对象"><a href="#JavaScript-对象" class="headerlink" title="JavaScript 对象"></a>JavaScript 对象</h5><p>JavaScript 对象用花括号来书写。</p>
+<p>对象属性是 name:value 对，由逗号分隔。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var person = &#123;firstName:&quot;Bill&quot;, lastName:&quot;Gates&quot;, age:62, eyeColor:&quot;blue&quot;&#125;;</span><br></pre></td></tr></table></figure>
+
+<h5 id="typeof-运算符"><a href="#typeof-运算符" class="headerlink" title="typeof 运算符"></a>typeof 运算符</h5><p>可使用 JavaScript 的 typeof 来确定 JavaScript 变量的类型：</p>
+<p>typeof 运算符返回变量或表达式的类型：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">typeof &quot;&quot;                  // 返回 &quot;string&quot;</span><br><span class="line">typeof &quot;Bill&quot;              // 返回 &quot;string&quot;</span><br><span class="line">typeof &quot;Bill Gates&quot;          // 返回 &quot;string&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>typeof 运算符对数组返回 “object”，因为在 JavaScript 中数组属于对象。</strong></p>
+<p><strong><em>任何变量均可通过设置值为 undefined 进行清空。其类型也将是 undefined。</em></strong></p>
+<p><strong>空值与 undefined 不是一回事。</strong></p>
+<p><strong>空的字符串变量既有值也有类型。</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var car = &quot;&quot;;                // 值是 &quot;&quot;，类型是 &quot;string&quot;</span><br></pre></td></tr></table></figure>
+
+<h5 id="Null"><a href="#Null" class="headerlink" title="Null"></a>Null</h5><p>在 JavaScript 中，null 是 “nothing”。它被看做不存在的事物。</p>
+<p>不幸的是，在 JavaScript 中，null 的数据类型是对象。</p>
+<p>您可以把 null 在 JavaScript 中是对象理解为一个 bug。它本应是 null。</p>
+<p>您可以通过设置值为 null 清空对象</p>
+<p>您也可以通过设置值为 undefined 清空对象：</p>
+<p><strong>Undefined 与 Null 的区别</strong></p>
+<p>Undefined 与 null 的值相等，但类型不相等：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">typeof undefined              // undefined</span><br><span class="line">typeof null                   // object</span><br><span class="line">null === undefined            // false</span><br><span class="line">null == undefined             // true</span><br></pre></td></tr></table></figure>
+
+<h5 id="原始数据"><a href="#原始数据" class="headerlink" title="原始数据"></a>原始数据</h5><p>原始数据值是一种没有额外属性和方法的单一简单数据值。</p>
+<p>typeof 运算符可返回以下原始类型之一：</p>
+<p>string<br>number<br>boolean<br>undefined</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">typeof &quot;Bill&quot;              // 返回 &quot;string&quot;</span><br><span class="line">typeof 3.14                // 返回 &quot;number&quot;</span><br><span class="line">typeof true                // 返回 &quot;boolean&quot;</span><br><span class="line">typeof false               // 返回 &quot;boolean&quot;</span><br><span class="line">typeof x                   // 返回 &quot;undefined&quot; (假如 x 没有值)</span><br></pre></td></tr></table></figure>
+<h5 id="复杂数据"><a href="#复杂数据" class="headerlink" title="复杂数据"></a>复杂数据</h5><p>typeof 运算符可返回以下两种类型之一：</p>
+<p>function<br>object</p>
+<p><strong>typeof 运算符把对象、数组或 null 返回 object。</strong></p>
+<p>typeof 运算符不会把函数返回 object。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">typeof &#123;name:&apos;Bill&apos;, age:62&#125; // 返回 &quot;object&quot;</span><br><span class="line">typeof [1,2,3,4]             // 返回 &quot;object&quot; (并非 &quot;array&quot;，参见下面的注释)</span><br><span class="line">typeof null                  // 返回 &quot;object&quot;</span><br><span class="line">typeof function myFunc()&#123;&#125;   // 返回 &quot;function&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>typeof 运算符把数组返回为 “object”，因为在 JavaScript 中数组即对象。</strong></p>
+<h2 id="二、JavaScript-正则表达式（未完-）"><a href="#二、JavaScript-正则表达式（未完-）" class="headerlink" title="二、JavaScript 正则表达式（未完~）"></a>二、JavaScript 正则表达式（未完~）</h2><p>正则表达式是构成搜索模式的字符序列。</p>
+<p>该搜索模式可用于文本搜索和文本替换操作。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Spring 的事务管理</title>
+    <url>/2019/11/11/Spring-%E7%9A%84%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/Spring-%E7%9A%84%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<p>实际开发中，操作数据库时还会涉及事物管理问题，为此Spring提供了专门用于事务处理的API。</p>
+<p>In the actural development,it involves things management when operating a database,for this purpose Spring provides apis specifically for transaction processing.</p>
+<a id="more"></a>
+
+<p>依赖包：spring-tx-4.3.6.RELEASE的JAR包<br>3个接口文件PlatformTransactionManger、TransactionDefinition、TransactionStatus</p>
+<h6 id="1、PlatformTransactionManger：Spring-提供的平台事物管理器，主要用于管理事物。其中包含了三个事物操作的方法"><a href="#1、PlatformTransactionManger：Spring-提供的平台事物管理器，主要用于管理事物。其中包含了三个事物操作的方法" class="headerlink" title="1、PlatformTransactionManger：Spring 提供的平台事物管理器，主要用于管理事物。其中包含了三个事物操作的方法"></a>1、PlatformTransactionManger：Spring 提供的平台事物管理器，主要用于管理事物。其中包含了三个事物操作的方法</h6><p>1）TransactionStatus getTransaction (TransactionDefinition definition):</p>
+<p><strong>use to get Transaction Status</strong></p>
+<p>2) void commit(TransactionStatus status):** use to commit Transaction **</p>
+<p>3）void rollback(TransactionStatus status):** use to roll back the Transaction(回滚事务) **</p>
+<p>TransactionStatus 对象就表示一个事物</p>
+<h6 id="2、TransactionDefinition-：事物定义（描述）的对象-，定义了事物的规则，并且提供获取事物相关信息的方法"><a href="#2、TransactionDefinition-：事物定义（描述）的对象-，定义了事物的规则，并且提供获取事物相关信息的方法" class="headerlink" title="2、TransactionDefinition()：事物定义（描述）的对象 ，定义了事物的规则，并且提供获取事物相关信息的方法"></a>2、TransactionDefinition()：事物定义（描述）的对象 ，定义了事物的规则，并且提供获取事物相关信息的方法</h6><p>getName方法  getsolationLevel获取隔离级别  getPropagationBehavior获取事物传播行为  getTImeout获取事物超时时间  </p>
+<h6 id="3、TransactionStatus-事物的状态-描述了某一时间点上事物的状态信息。"><a href="#3、TransactionStatus-事物的状态-描述了某一时间点上事物的状态信息。" class="headerlink" title="3、TransactionStatus:事物的状态 描述了某一时间点上事物的状态信息。"></a>3、TransactionStatus:事物的状态 描述了某一时间点上事物的状态信息。</h6><p>flush方法：刷新事物</p>
+<p>hasSavepoint():是否存在保存点</p>
+<p>isCompleted():获取是否完成</p>
+<p>isNewTransaction():获取是否是新事物</p>
+<p>isRollbackOnly():获取是否回滚</p>
+<p>setRollbackOnly():设置事物回滚</p>
+<h3 id="事物管理方式"><a href="#事物管理方式" class="headerlink" title="事物管理方式"></a>事物管理方式</h3><p>1）传统的编程式事物管理</p>
+<p>基于XML的声明式事物 <a href="tx:advice" target="_blank" rel="noopener">tx:advice</a>配置事物的通知（增强处理）<br>需要指定id 和 transaction-manager属性（指定事物管理器） 还需要配置 一个<a href="tx:attributes" target="_blank" rel="noopener">tx:attributes</a>，该子元素中可以配置多个<a href="tr:method" target="_blank" rel="noopener">tr:method</a>子元素来配置事物的细节。<br>** 配置<a href="tr:advice" target="_blank" rel="noopener">tr:advice</a>重点是配置<a href="tx:method" target="_blank" rel="noopener">tx:method</a>子元素 **</p>
+<p>2）声明式事物管理</p>
+<p>案例</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">// 转账</span><br><span class="line">	package com.itheima.jdbc;</span><br><span class="line"></span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">public interface AccountDao &#123;</span><br><span class="line">	// 添加</span><br><span class="line">	public int addAccount(Account account);</span><br><span class="line">	// 更新</span><br><span class="line">	public int updateAccount(Account account);</span><br><span class="line">	// 删除</span><br><span class="line">	public int deleteAccount(int id);</span><br><span class="line">	</span><br><span class="line">	// 通过id查询</span><br><span class="line">	public Account findAccountById(int id);</span><br><span class="line">	// 查询所有账户</span><br><span class="line">	public List&lt;Account&gt; findAllAccount();</span><br><span class="line">	</span><br><span class="line">	// 转账</span><br><span class="line">	public void transfer(String outUser,String inUser,Double money);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.itheima.jdbc;</span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">import org.springframework.jdbc.core.BeanPropertyRowMapper;</span><br><span class="line">import org.springframework.jdbc.core.JdbcTemplate;</span><br><span class="line">import org.springframework.jdbc.core.RowMapper;</span><br><span class="line">public class AccountDaoImpl implements AccountDao &#123;</span><br><span class="line">	// 声明JdbcTemplate属性及其setter方法</span><br><span class="line">	private JdbcTemplate jdbcTemplate;</span><br><span class="line">	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) &#123;</span><br><span class="line">		this.jdbcTemplate = jdbcTemplate;</span><br><span class="line">	&#125;</span><br><span class="line">    // 添加账户</span><br><span class="line">	public int addAccount(Account account) &#123;</span><br><span class="line">		// 定义SQL</span><br><span class="line">		String sql = &quot;insert into account(id,username,balance) value(?,?,?)&quot;;</span><br><span class="line">		// 定义数组来存放SQL语句中的参数</span><br><span class="line">		Object[] obj = new Object[] &#123;</span><br><span class="line">				           account.getId(),</span><br><span class="line">                           account.getUsername(), </span><br><span class="line">                           account.getBalance() </span><br><span class="line">         &#125;;</span><br><span class="line">		// 执行添加操作，返回的是受SQL语句影响的记录条数</span><br><span class="line">		int num = this.jdbcTemplate.update(sql, obj);</span><br><span class="line">		return num;</span><br><span class="line">	&#125;</span><br><span class="line">	// 更新账户</span><br><span class="line">	public int updateAccount(Account account) &#123;</span><br><span class="line">		// 定义SQL</span><br><span class="line">		String sql = &quot;update account set username=?,balance=? where id = ?&quot;;</span><br><span class="line">		// 定义数组来存放SQL语句中的参数</span><br><span class="line">		Object[] params = new Object[] &#123; </span><br><span class="line">                               account.getUsername(), </span><br><span class="line">                               account.getBalance(), </span><br><span class="line">                               account.getId() </span><br><span class="line">          &#125;;</span><br><span class="line">		// 执行添加操作，返回的是受SQL语句影响的记录条数</span><br><span class="line">		int num = this.jdbcTemplate.update(sql, params);</span><br><span class="line">		return num;</span><br><span class="line">	&#125;</span><br><span class="line">	// 删除账户</span><br><span class="line">	public int deleteAccount(int id) &#123;</span><br><span class="line">		// 定义SQL</span><br><span class="line">		String sql = &quot;delete  from account where id = ? &quot;;</span><br><span class="line">		// 执行添加操作，返回的是受SQL语句影响的记录条数</span><br><span class="line">		int num = this.jdbcTemplate.update(sql, id);</span><br><span class="line">		return num;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	// 通过id查询账户数据信息</span><br><span class="line">	public Account findAccountById(int id) &#123;</span><br><span class="line">	    //定义SQL语句</span><br><span class="line">	    String sql = &quot;select * from account where id = ?&quot;;</span><br><span class="line">	    // 创建一个新的BeanPropertyRowMapper对象</span><br><span class="line">	    RowMapper&lt;Account&gt; rowMapper = </span><br><span class="line">	new BeanPropertyRowMapper&lt;Account&gt;(Account.class);</span><br><span class="line">	    // 将id绑定到SQL语句中，并通过RowMapper返回一个Object类型的单行记录</span><br><span class="line">	    return this.jdbcTemplate.queryForObject(sql, rowMapper, id);</span><br><span class="line">	&#125;</span><br><span class="line">	// 查询所有账户信息</span><br><span class="line">	public List&lt;Account&gt; findAllAccount() &#123;</span><br><span class="line">	    // 定义SQL语句</span><br><span class="line">	    String sql = &quot;select * from account&quot;;</span><br><span class="line">	    // 创建一个新的BeanPropertyRowMapper对象</span><br><span class="line">	    RowMapper&lt;Account&gt; rowMapper = </span><br><span class="line">	new BeanPropertyRowMapper&lt;Account&gt;(Account.class);</span><br><span class="line">	    // 执行静态的SQL查询，并通过RowMapper返回结果</span><br><span class="line">	    return this.jdbcTemplate.query(sql, rowMapper);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>修改配置文件applicationContext.xml</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;</span><br><span class="line">    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; </span><br><span class="line">    xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;</span><br><span class="line">    xmlns:tx=&quot;http://www.springframework.org/schema/tx&quot; </span><br><span class="line">    xmlns:context=&quot;http://www.springframework.org/schema/context&quot;</span><br><span class="line">    xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans </span><br><span class="line">    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd</span><br><span class="line">    http://www.springframework.org/schema/tx </span><br><span class="line">    http://www.springframework.org/schema/tx/spring-tx-4.3.xsd</span><br><span class="line">    http://www.springframework.org/schema/context </span><br><span class="line">    http://www.springframework.org/schema/context/spring-context-4.3.xsd</span><br><span class="line">    http://www.springframework.org/schema/aop </span><br><span class="line">    http://www.springframework.org/schema/aop/spring-aop-4.3.xsd&quot;&gt;</span><br><span class="line">    &lt;!-- 1.配置数据源 --&gt;</span><br><span class="line">    &lt;bean id=&quot;dataSource&quot; </span><br><span class="line">    class=&quot;org.springframework.jdbc.datasource.DriverManagerDataSource&quot;&gt;</span><br><span class="line">		&lt;!--数据库驱动 --&gt;</span><br><span class="line">		&lt;property name=&quot;driverClassName&quot; value=&quot;com.mysql.jdbc.Driver&quot; /&gt;</span><br><span class="line">		&lt;!--连接数据库的url --&gt;</span><br><span class="line">		&lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://localhost/spring&quot; /&gt;</span><br><span class="line">		&lt;!--连接数据库的用户名 --&gt;</span><br><span class="line">		&lt;property name=&quot;username&quot; value=&quot;root&quot; /&gt;</span><br><span class="line">		&lt;!--连接数据库的密码 --&gt;</span><br><span class="line">		&lt;property name=&quot;password&quot; value=&quot;root&quot; /&gt;</span><br><span class="line">   &lt;/bean&gt;</span><br><span class="line">   &lt;!-- 2.配置JDBC模板 --&gt;</span><br><span class="line">   &lt;bean id=&quot;jdbcTemplate&quot; </span><br><span class="line">          class=&quot;org.springframework.jdbc.core.JdbcTemplate&quot;&gt;</span><br><span class="line">		 &lt;!-- 默认必须使用数据源 --&gt;</span><br><span class="line">		 &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt;</span><br><span class="line">   &lt;/bean&gt;</span><br><span class="line">   &lt;!--3.定义id为accountDao的Bean --&gt;</span><br><span class="line">   &lt;bean id=&quot;accountDao&quot; class=&quot;com.itheima.jdbc.AccountDaoImpl&quot;&gt;</span><br><span class="line">		 &lt;!-- 将jdbcTemplate注入到AccountDao实例中 --&gt;</span><br><span class="line">		 &lt;property name=&quot;jdbcTemplate&quot; ref=&quot;jdbcTemplate&quot; /&gt;</span><br><span class="line">   &lt;/bean&gt;	</span><br><span class="line">   &lt;!-- 4.事务管理器，依赖于数据源 --&gt;</span><br><span class="line">   &lt;bean id=&quot;transactionManager&quot; class=</span><br><span class="line">   &quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;&gt;</span><br><span class="line">		&lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt;</span><br><span class="line">   &lt;/bean&gt;	</span><br><span class="line">   &lt;!-- 5.编写通知：对事务进行增强(通知),需要编写对切入点和具体执行事务细节 --&gt;</span><br><span class="line">   &lt;tx:advice id=&quot;txAdvice&quot; transaction-manager=&quot;transactionManager&quot;&gt;</span><br><span class="line">		&lt;tx:attributes&gt;</span><br><span class="line">			&lt;!-- name：*表示任意方法名称 --&gt;</span><br><span class="line">			&lt;tx:method name=&quot;*&quot; propagation=&quot;REQUIRED&quot; </span><br><span class="line">                           isolation=&quot;DEFAULT&quot; read-only=&quot;false&quot; /&gt;</span><br><span class="line">		&lt;/tx:attributes&gt;</span><br><span class="line">	&lt;/tx:advice&gt;</span><br><span class="line">	&lt;!-- 6.编写aop，让spring自动对目标生成代理，需要使用AspectJ的表达式 --&gt;</span><br><span class="line">	&lt;aop:config&gt;</span><br><span class="line">		&lt;!-- 切入点 --&gt;</span><br><span class="line">		&lt;aop:pointcut expression=&quot;execution(* com.itheima.jdbc.*.*(..))&quot;</span><br><span class="line">			id=&quot;txPointCut&quot; /&gt;</span><br><span class="line">		&lt;!-- 切面：将切入点与通知整合 --&gt;</span><br><span class="line">		&lt;aop:advisor advice-ref=&quot;txAdvice&quot; pointcut-ref=&quot;txPointCut&quot; /&gt;</span><br><span class="line">	&lt;/aop:config&gt;</span><br><span class="line">&lt;/beans&gt;</span><br></pre></td></tr></table></figure>
+
+
+<h6 id="测试类"><a href="#测试类" class="headerlink" title="测试类"></a>测试类</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.itheima.jdbc;</span><br><span class="line">import org.junit.Test;</span><br><span class="line">import org.springframework.context.ApplicationContext;</span><br><span class="line">import </span><br><span class="line">org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line">//测试类</span><br><span class="line">public class TransactionTest &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	@Test</span><br><span class="line">	public void xmlTest()&#123;</span><br><span class="line">		ApplicationContext applicationContext = </span><br><span class="line">		   new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);</span><br><span class="line">		// 获取AccountDao实例</span><br><span class="line">		AccountDao accountDao = </span><br><span class="line">            (AccountDao)applicationContext.getBean(&quot;accountDao&quot;);</span><br><span class="line">		// 调用实例中的转账方法</span><br><span class="line">		accountDao.transfer(&quot;Jack&quot;, &quot;Rose&quot;, 100.0);</span><br><span class="line">	    // 输出提示信息</span><br><span class="line">	    System.out.println(&quot;转账成功！&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	@Test</span><br><span class="line">	public void annotationTest()&#123;</span><br><span class="line">	    ApplicationContext applicationContext = </span><br><span class="line">	new ClassPathXmlApplicationContext(&quot;applicationContext-annotation.xml&quot;);</span><br><span class="line">	    // 获取AccountDao实例</span><br><span class="line">	    AccountDao accountDao = </span><br><span class="line">	(AccountDao)applicationContext.getBean(&quot;accountDao&quot;);</span><br><span class="line">	    // 调用实例中的转账方法</span><br><span class="line">	    accountDao.transfer(&quot;Jack&quot;, &quot;Rose&quot;, 100.0);</span><br><span class="line">	    // 输出提示信息</span><br><span class="line">	    System.out.println(&quot;转账成功！&quot;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Spring</category>
+      </categories>
+      <tags>
+        <tag>Spring事物管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机组成原理测试习题整理【一】（含答案解析）</title>
+    <url>/2019/11/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E4%B9%A0%E9%A2%98%E8%AE%AD%E7%BB%83%EF%BC%88%E5%90%AB%E7%AD%94%E6%A1%88%E8%A7%A3%E6%9E%90%EF%BC%89/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E4%B9%A0%E9%A2%98%E8%AE%AD%E7%BB%83%EF%BC%88%E5%90%AB%E7%AD%94%E6%A1%88%E8%A7%A3%E6%9E%90%EF%BC%89/</url>
+    <content><![CDATA[<p>目前共整理了三章</p>
+<a id="more"></a>
+
+
+<h3 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机问世至今，新型机器不断推陈出新，不管怎样更新，依然保有“存储程序”的概念，最早提出这种概念的是______。</span><br><span class="line"></span><br><span class="line">A冯. 诺依曼</span><br><span class="line">B巴贝奇</span><br><span class="line">C贝尔</span><br><span class="line">D帕斯卡</span><br><span class="line"></span><br><span class="line">A</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.邮局把信件进行自动分拣，使用的计算机技术是______。</span><br><span class="line"></span><br><span class="line">A</span><br><span class="line"> 机器证明</span><br><span class="line">B</span><br><span class="line">自然语言理解</span><br><span class="line">C</span><br><span class="line">计算机辅助设计</span><br><span class="line">D</span><br><span class="line">机器翻译</span><br><span class="line">E</span><br><span class="line">模式识别</span><br><span class="line">F</span><br><span class="line">自动控制</span><br><span class="line"></span><br><span class="line">E</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">2. 计算机科技文献中，英文缩写CAI代表______。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">A</span><br><span class="line">计算机辅助管理</span><br><span class="line">B</span><br><span class="line">计算机辅助设计</span><br><span class="line">C</span><br><span class="line">计算机辅助加工</span><br><span class="line">D</span><br><span class="line">计算机辅助制造</span><br><span class="line">E</span><br><span class="line">计算机辅助教学</span><br><span class="line">F</span><br><span class="line">计算机辅助学习</span><br><span class="line"></span><br><span class="line">E</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">微型计算机的发展以______技术为指标。</span><br><span class="line"></span><br><span class="line">微处理器</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机中常以主频来评价机器的性能。以下为主频单位的是______。</span><br><span class="line"></span><br><span class="line">MHz</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机运算速度的单位是______。</span><br><span class="line"></span><br><span class="line">MIPS</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1946年研制成功的第一台电子数字计算机称为______，1949年研制成功的第一台程序内存的计算机称为______。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ENIAC， EDVAC</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机与日常使用的袖珍计算器的本质区别在于______。</span><br><span class="line"></span><br><span class="line">自动化程度的高低</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">下列______属于应用软件。</span><br><span class="line"></span><br><span class="line">文本处理</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">操作系统最现出现在_______。</span><br><span class="line">第3代计算机</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">至今为止，计算机中的所有信息仍以二进制方式表示的理由是______。</span><br><span class="line"></span><br><span class="line">###物理器件性能所至</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CPU主要包括______。</span><br><span class="line">控制器、运算器</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">完整的计算机应包括______。</span><br><span class="line"></span><br><span class="line">配套的硬件设备和软件系统</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">目前我们所说的个人台式商用机属于_______。</span><br><span class="line">###微型机</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ENIAC属于晶体管计算机</span><br><span class="line">F</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">编译方式是使用编译程序把源程序编译成机器代码的目标程序</span><br><span class="line">T</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机唯一能够直接执行的语言是机器语言</span><br><span class="line">T</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">用高级语言编写的程序称为目标程序</span><br><span class="line"></span><br><span class="line">F</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">冯诺依曼计算机体系结构的特点是什么？</span><br><span class="line">1、处理的数据和指令一律二进制</span><br><span class="line">2、顺序执行程序</span><br><span class="line">3、采用存储程序的方式</span><br><span class="line">4、计算机硬件由 运算器 、控制器、存储器、输入、输出设备五大部分组成</span><br><span class="line">5、用总线控制</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机的主要性能指标有哪些？它们的具体含义是什么？</span><br><span class="line"> 运算速度、字长、内存储器的容量、外存储器的容量、主频</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机的硬件由哪些部件组成？</span><br><span class="line"> 控制器、存储器、输入设备、输出设备、运算器</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">简要说明计算机系统的层次结构</span><br><span class="line"> 1、硬联逻辑级</span><br><span class="line">2、微程序级</span><br><span class="line">3、传统机器级</span><br><span class="line">4、操作系统</span><br><span class="line">5、汇编语言级</span><br><span class="line">6、高级语言级</span><br><span class="line">7、应用语言级</span><br></pre></td></tr></table></figure>
+
+<h3 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h3><h2 id><a href="#" class="headerlink" title="?"></a>?</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">通常把表示信息的数字符号称为什么？</span><br><span class="line"></span><br><span class="line">数码</span><br><span class="line"></span><br><span class="line">以下叙述错误的是______。</span><br><span class="line">A</span><br><span class="line">表示信息的数字符号称为代码</span><br><span class="line">B</span><br><span class="line">任何进制的数据都有基数和各位的”位权”</span><br><span class="line">C</span><br><span class="line">二进制数据的加减运算规则与逻辑加运算规则相同</span><br><span class="line">D</span><br><span class="line"> 8进制数据逢八进一 </span><br><span class="line"> </span><br><span class="line"> 正确答案：C ?????</span><br><span class="line"> (加法运算,其运算等价于两个数字的十进制数相加后转换成二进制,而逻辑运算是按位计算)</span><br></pre></td></tr></table></figure>
+
+<h3 id="zy★"><a href="#zy★" class="headerlink" title="zy★"></a>zy★</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">一种BCD码，其中0－9的编码为0000，0001，0010，0011，0100，0101，0110，0111，1110，1111，则各位的权值为______。</span><br><span class="line"></span><br><span class="line">2421</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在小型或微型计算机里，普遍采用的字符编码是______。</span><br><span class="line"></span><br><span class="line"> ASCⅡ码</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">根据国标规定，每个汉字在计算机内占用______存储。</span><br><span class="line">二个字节</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">十进制分数27/64的十六进制数表示为______。</span><br><span class="line">0.6CH</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">假定下列字符码中有奇偶校验位，但没有数据错误，采用偶校校验的字符码是______。</span><br><span class="line">11001001</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">假定下列字符码中有奇偶校验位，但没有数据错误，采用偶校校验的字符码是______。</span><br><span class="line"></span><br><span class="line">11001001</span><br></pre></td></tr></table></figure>
+<h3 id="ct★"><a href="#ct★" class="headerlink" title="ct★"></a>ct★</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">若浮点数的机器表示中，尾数用补码表示，则判断该浮点数是否为规格化的方法是尾数的最高数值位______。 </span><br><span class="line"></span><br><span class="line">与尾符相反 </span><br><span class="line">【数符为0，这个数就是正数，正数补码就是其本身，其最高有效位(阶码使用标准移码的话规格化后尾数最高有效位就是小数点后第一位)必定为1，数符0和最高有效位的1相异。</span><br><span class="line"></span><br><span class="line">数符为1，这个数就是个负数，求负数的补码有一步叫按位取反(一般来说浮点数可以存储的有效位不会小于6位)，原本最高有效位的1变成了0，所以数符1和最高有效位的0相异。）】</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在机器数______中，零的表示形式是唯一的。</span><br><span class="line"></span><br><span class="line">补码和移码</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">指令和数据都以十进制形式存放，（2000）10化成十六进制数是______。</span><br><span class="line"></span><br><span class="line">（7D0）16  </span><br><span class="line">【二进制转十六进制的时候要右移左边补0】</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">下列数中最小的数是______。</span><br><span class="line"></span><br><span class="line">A</span><br><span class="line">（100010）BCD </span><br><span class="line">B</span><br><span class="line">（100101）2     </span><br><span class="line">C</span><br><span class="line">（50）8      </span><br><span class="line">D</span><br><span class="line">（625）16</span><br><span class="line"></span><br><span class="line">A</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> 在定点二进制运算器中，减法运算一般通过______来实现。</span><br><span class="line"></span><br><span class="line">补码运算的二进制加法器</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">下列数中最大的数为______。</span><br><span class="line"></span><br><span class="line">A</span><br><span class="line">（143）5</span><br><span class="line">B</span><br><span class="line">（76）8 </span><br><span class="line">C</span><br><span class="line">（10010101）2    </span><br><span class="line">D</span><br><span class="line">（227）8  </span><br><span class="line"></span><br><span class="line">D</span><br><span class="line">[143 -&gt; 1*5^2+4*5^1+3*5^0=(48)10进制 -》110000二进制]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">下列叙述正确的是______。</span><br><span class="line"></span><br><span class="line">A</span><br><span class="line"> 定点数表示的是整数</span><br><span class="line">B</span><br><span class="line">对一个数据的原码的各位取反而且在末位再加1就可以得到这个数据的补码</span><br><span class="line">C</span><br><span class="line">原码是表示无符号数的编码方法</span><br><span class="line">D</span><br><span class="line">二进制数据表示在计算机中容易实现</span><br><span class="line"></span><br><span class="line">D</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在余3码表示的二-十进制数中，代码0011代表十进制数的______。</span><br><span class="line"></span><br><span class="line">0</span><br><span class="line">[余3码 :余3码是8421 BCD码的每个码组加3(0011)形成的。常用于BCD码的运算电路中。 ]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">设X= —0.1011，则[X]补为______。</span><br><span class="line"></span><br><span class="line">1.0101</span><br></pre></td></tr></table></figure>
+
+<h2 id="ct★-1"><a href="#ct★-1" class="headerlink" title="ct★"></a>ct★</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">______表示法主要用于表示浮点数中的阶码</span><br><span class="line"></span><br><span class="line">移码</span><br><span class="line">【移码（又叫增码）是符号位取反的补码，一般用指数的移码减去1来做浮点数的阶码，引入的目的是为了保证浮点数的机器零为全0。】</span><br><span class="line"></span><br><span class="line">【原码：1001101，反码，补码，移码各是多少？</span><br><span class="line"></span><br><span class="line">解：首位数字表示正负不做变（1为负数，0为正数）</span><br><span class="line"></span><br><span class="line">反码：1110010（正数反码等于原数，题中为负数，则除首位数对应取反）</span><br><span class="line"></span><br><span class="line">补码：1110011（得出反码数基础上末位加一）</span><br><span class="line"></span><br><span class="line">移码：0110011（补码符号位第一位数字取反）</span><br><span class="line">】</span><br></pre></td></tr></table></figure>
+<h2 id="zy★-1"><a href="#zy★-1" class="headerlink" title="zy★"></a>zy★</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">一个8位的二进制整数，若采用补码表示，且由3个“1”和5个“0”组成，则最小值为______。</span><br><span class="line"></span><br><span class="line"> -125</span><br><span class="line"> 【首先反推补码应该是：10000011</span><br><span class="line">  源码则为11111101 即-125</span><br><span class="line"> 】</span><br></pre></td></tr></table></figure>
+<p>##到23题</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在小型机运算器中，通过移位器对一个通用寄存器中存放的一个正定点数进行乘2操作（假定乘2后不会溢出），其方法是将该寄存器中的数据送入ALU，经移位器______。</span><br><span class="line"></span><br><span class="line">A左移1位</span><br><span class="line">B右移1位</span><br><span class="line">C左移2位</span><br><span class="line">D右移2位</span><br><span class="line"></span><br><span class="line">A</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">若存储器的容量为128KX8位，求：(1)访问该芯片需要多少位地址？(2)假定该芯片在存储器中首地址为A0000H，则末地址应为多少？</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
 </search>
