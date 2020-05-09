@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="关注你能改变的 接受你改变不了的">
+<meta name="description" content="Vue 实现数据双向绑定的原理12345vue实现数据双向绑定主要是：采用 数据劫持结合发布者-订阅者模式 的方式，通过 Object.defineProperty() 来劫持各个属性的setter，getter，在数据变动时发布消息给订阅者，触发相应监听回掉。当把一个普通 JavaScript 对象传给Vue 实例来作为它的 data 选项时，Vue 将遍历它的属性，用Object.define">
 <meta property="og:type" content="article">
-<meta property="og:title" content="page">
+<meta property="og:title" content="vue">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;05&#x2F;02&#x2F;page&#x2F;index.html">
 <meta property="og:site_name" content="Hfly">
-<meta property="og:description" content="关注你能改变的 接受你改变不了的">
+<meta property="og:description" content="Vue 实现数据双向绑定的原理12345vue实现数据双向绑定主要是：采用 数据劫持结合发布者-订阅者模式 的方式，通过 Object.defineProperty() 来劫持各个属性的setter，getter，在数据变动时发布消息给订阅者，触发相应监听回掉。当把一个普通 JavaScript 对象传给Vue 实例来作为它的 data 选项时，Vue 将遍历它的属性，用Object.define">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-05-02T15:55:50.121Z">
+<meta property="og:updated_time" content="2020-05-09T06:49:58.433Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -123,7 +123,7 @@
 
 
 
-  <title>page | Hfly</title>
+  <title>vue | Hfly</title>
   
 
 
@@ -301,7 +301,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">page</h1>
+          <h1 class="post-title" itemprop="name headline">vue</h1>
         
 
         <div class="post-meta">
@@ -361,7 +361,75 @@
       
 
       
-        
+        <h3 id="Vue-实现数据双向绑定的原理"><a href="#Vue-实现数据双向绑定的原理" class="headerlink" title="Vue 实现数据双向绑定的原理"></a>Vue 实现数据双向绑定的原理</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vue实现数据双向绑定主要是：采用 数据劫持结合发布者-订阅者模式 的方式，通过 Object.defineProperty() 来劫持各个属性的setter，getter，在数据变动时发布消息给订阅者，触发相应监听回掉。当把一个普通 JavaScript 对象传给Vue 实例来作为它的 data 选项时，Vue 将遍历它的属性，用Object.defineProperty 将他们转为 getter/setter。用户看不到getter / setter ，但是在内部它们让vue追踪依赖，在属性被访问和修改时通知变化。</span><br><span class="line"></span><br><span class="line">vue的数据双向绑定 将MVVM作为数据绑定的入口，整合Observer，Complie 和 Watcher三者，通过Observer来监听自己的model的数据变化，通过Complie来解析编译模板指令(vue中是用来解析 &#123;&#123; &#125;&#125; ），最终利用watcher搭起observer和complie之间的通信桥梁，达到数据变化 ==》 视图更新，视图交互变化（input）==》 数据model变更双向绑定效果。</span><br><span class="line"></span><br><span class="line">js实现简单的双向绑定</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; id=&quot;txt&quot;&gt;</span><br><span class="line">        &lt;p id=&quot;show&quot;&gt;&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    var obj = &#123;&#125;;</span><br><span class="line">    Object.defineProperty(obj, &apos;txt&apos;, &#123;</span><br><span class="line">        get: function () &#123;</span><br><span class="line">            return obj</span><br><span class="line">        &#125;,</span><br><span class="line">        set: function (newValue) &#123;</span><br><span class="line">            document.getElementById(&apos;txt&apos;).value = newValue;</span><br><span class="line">            document.getElementById(&apos;show&apos;).innerHTML = newValue;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    document.addEventListener(&apos;keyup&apos;, function (ev) &#123;</span><br><span class="line">        obj.txt = ev.target.value;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
+<hr>
+<h3 id="Vue-组件间的参数传递"><a href="#Vue-组件间的参数传递" class="headerlink" title="Vue 组件间的参数传递"></a>Vue 组件间的参数传递</h3><p>1.父组件与子组件传值<br>父组件传给子组件： 子组件通过props方法接受数据；<br>子组件传给父组件：$emit方法传递参数;<br>2.非父子组件间的数据传递，兄弟组件传值<br>EventBus，就是创建一个事件中心，相当于中转站，可以用它来传递事件和接受事件，项目比较小时，用这个比较合适；<br>VueX，创建一个数据仓库，整个项目全局都可以往这个仓库存放数据和读取数据</p>
+<h3 id="Vue的路由实现：hash模式-和-history模式"><a href="#Vue的路由实现：hash模式-和-history模式" class="headerlink" title="Vue的路由实现：hash模式 和 history模式"></a>Vue的路由实现：hash模式 和 history模式</h3><p>hash模式： 在浏览器中符号 “#” 以及#后面的字符称之为hash，用window.location.hash读取；<br>特点：hash虽然在URL中，但不被包括在HTTP请求中，用来指导浏览器动作，对服务端安全无用，hash不会重新加载页面。</p>
+<p>history模式：history 采用HTML5的新特性；且提供了两个新方法：pushState（）、replaceState（）可以对浏览器历史纪录栈进行修改，以及popState事件监听到状态变更。</p>
+<h3 id="Vue与Angular以及React的区别？"><a href="#Vue与Angular以及React的区别？" class="headerlink" title="Vue与Angular以及React的区别？"></a>Vue与Angular以及React的区别？</h3><p>相同点：都支持指令，内置指令和自定义指令；都支持过滤器：内置过滤器和自定义过滤器；都支持双向数据绑定，都不支持低端浏览器；</p>
+<p>不同点：AngularJs的学习成本高，比如Dependency、Injecttion特性，而vue.js本身提供的API都比较简单、直观；在性能上，AngularJs依赖对数据做脏检查，所以watcher越多越慢；Vue.js使用基于依赖追踪的观察并且使用异步队列更新，所以的数据都是独立触发的。</p>
+<h3 id="与React的区别"><a href="#与React的区别" class="headerlink" title="与React的区别"></a>与React的区别</h3><p>相同点：<br>React采用独特的JSX语法，Vue.js 在组件开发中也推崇编写.vue特殊文件格式，对文件内容都有一些约定，两者都需要编译后使用;中心实现相同：一切都是组件，组件实例之间可以嵌套；都提供合理的钩子函数，可以让开发者定制化底去处理需求，都不内置列数Ajax，Route等功能到核心包，而是以插件的方式加载;在组件开发中都支持mixins的特性了；</p>
+<p>不同点：<br>React采用Virtual DOM会对渲染出来的结果做脏检查；Vue.js在模板中提供了指令，过滤器等，可以非常方便，快捷的操作Virtual DOM。</p>
+<h3 id="Vue路由的钩子函数"><a href="#Vue路由的钩子函数" class="headerlink" title="Vue路由的钩子函数"></a>Vue路由的钩子函数</h3><p>首页可以控制导航跳转，beforeEach，afterEach等。一般用于页面title的修改，一些需要登录才能调整页面重定向功能。<br>beforeEach 主要的3个参数to，from，next；<br>to : route即将进入的目标路由对象、<br>from： route当前导航正要离开的路由、<br>next： function一定要调用该方法resolve这个钩子。执行效果依赖next方法的调用参数。可以控制网页的跳转</p>
+<h3 id="Vuex是什么？怎么使用？那种功能场景使用它？"><a href="#Vuex是什么？怎么使用？那种功能场景使用它？" class="headerlink" title="Vuex是什么？怎么使用？那种功能场景使用它？"></a>Vuex是什么？怎么使用？那种功能场景使用它？</h3><p>只要来读取的状态集中放在store中；改变状态的方式就是提交mutations。这是个同步的实物；异步逻辑应该封装中action中。<br>在main.js引入store，注入。新建一个目录store，…export。<br>场景有： 单页面应用，组件之间的状态，音乐播放，登录状态，加入购物车</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">state</span><br><span class="line">Vuex 使用单一状态树，既每个应用将仅仅包含一个store实例，单单一状态树和模块化并不冲突。存放的数据状态，不可以直接修改里面的数据。</span><br><span class="line">mutations</span><br><span class="line">mutations定义的方法动态修改Vuex的store中的状态或数据。</span><br><span class="line">getters</span><br><span class="line">类似vue的计算属性，主要用来过滤一些数据。</span><br><span class="line">action</span><br><span class="line">action可以理解为通过mutations里面处理数据的方法变成可异步的处理数据的方法，简单的说就是异步操作数据。view层通过store.dispath来分配action。</span><br></pre></td></tr></table></figure>
+
+<h3 id="对Keep-Alive的了解？"><a href="#对Keep-Alive的了解？" class="headerlink" title="对Keep-Alive的了解？"></a>对Keep-Alive的了解？</h3><p>keep-alive 是Vue内置的一个组件，可以使被包含的组件保留状态，或避免重新渲染。<br>在vue 2.1.0的版本之后，keep-alive新加入了两个属性： include( 包含的组件缓存）与exclude(排除的组件不缓存，优先级大于include）<br>使用方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;keep-alive include=&quot;inclde_components&quot; exclude=&quot;exclude_components&quot;&gt;</span><br><span class="line">     &lt;component&gt;</span><br><span class="line">       &lt;!-- 该组件是否缓存取决与include 和 exclude 属性--&gt;</span><br><span class="line">     &lt;/component&gt;</span><br><span class="line"> &lt;/keep-alive&gt;</span><br></pre></td></tr></table></figure>
+<p>  参数解释<br>include – 字符串或者正则表达式，只要名称匹配的组件会被缓存<br>exclude – 字符串或者正则表达式，任何名称匹配的组件都不被缓存<br>include 和exclude 的属性允许组件有条件的缓存。而这都可以用 “ , “ 分割字符串、正则表达式、数组。单使用正则或者是数组是，要记得用 v-bind</p>
+<h3 id="vue如何自己实现v-model"><a href="#vue如何自己实现v-model" class="headerlink" title="vue如何自己实现v-model"></a>vue如何自己实现v-model</h3><p>v-bind只能实现单向绑定</p>
+<p>v-model（v-bind+触发的input事件）实现双向绑定</p>
+<p>自定义表单输入组件</p>
+<p>几个步骤：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">当有数据输入时触发了该组件的input事件</span><br><span class="line">手动触发父组件的input事件并将值传给父组件</span><br><span class="line">父组件的input事件被触发，将传来的值赋给父组件的变量price，实现输入框value到父元素的price的单向绑定</span><br><span class="line">父组件value的值绑定到price </span><br><span class="line">将父组件的value值通过props传递给子组件，实现了父组件的price到子组件value的单向绑定</span><br></pre></td></tr></table></figure>
+
+<h3 id="Vue-nextTick-的原理和用途"><a href="#Vue-nextTick-的原理和用途" class="headerlink" title="Vue.nextTick 的原理和用途"></a>Vue.nextTick 的原理和用途</h3><p><a href="https://www.jianshu.com/p/7f9495b1c8ab" target="_blank" rel="noopener">Vue.nextTick 的原理和用途</a></p>
+<p>原理：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1.异步说明</span><br><span class="line"></span><br><span class="line">Vue是异步渲染</span><br><span class="line"></span><br><span class="line">Vue 实现响应式并不是数据发生变化之后 DOM 立即变化，而是按一定的策略进行 DOM 的更新。</span><br><span class="line"></span><br><span class="line">2.事件循环说明</span><br><span class="line"></span><br><span class="line">简单来说，Vue在修改数据后，视图不会立刻更新，而是等同一事件循环中的所有数据变化完成之后，再统一进行视图更新。</span><br><span class="line"></span><br><span class="line">$nextTick会在DOM渲染之后触发，以获取新的Dom节点</span><br></pre></td></tr></table></figure>
+
+<h3 id="vue中的插槽————slot"><a href="#vue中的插槽————slot" class="headerlink" title="vue中的插槽————slot"></a>vue中的插槽————slot</h3><p>什么是插槽？<br>插槽（Slot）是Vue提出来的一个概念，正如名字一样，插槽用于决定将所携带的内容，插入到指定的某个位置，从而使模板分块，具有模块化的特质和更大的重用性。<br>插槽显不显示、怎样显示是由父组件来控制的，而插槽在哪里显示就由子组件来进行控制</p>
+<p><a href="https://www.cnblogs.com/loveyt/p/9946450.html" target="_blank" rel="noopener">怎么用slot</a></p>
+<h3 id="vue-router核心实现原理"><a href="#vue-router核心实现原理" class="headerlink" title="vue-router核心实现原理"></a>vue-router核心实现原理</h3><p>目标：<br>1.实现一个静态install方法，因为作为插件都必须有这个方法，给Vue.use()去调用；<br>2.可以监听路由变化；<br>3.解析配置的路由，即解析router的配置项routes，能根据路由匹配到对应组件；<br>4.实现两个全局组件router-link和router-view；（最终落地点）</p>
+<h3 id="Vue全家桶"><a href="#Vue全家桶" class="headerlink" title="Vue全家桶"></a>Vue全家桶</h3><h5 id="Vue-CLI"><a href="#Vue-CLI" class="headerlink" title="Vue CLI"></a>Vue CLI</h5><p>Vue CLI 是一个基于 Vue.js 进行快速开发的完整系统，提供：</p>
+<p>通过 @vue/cli 实现的交互式的项目脚手架。<br>通过 @vue/cli + @vue/cli-service-global 实现的零配置原型开发。<br>一个运行时依赖 (@vue/cli-service)，该依赖：<br>可升级；<br>基于 webpack 构建，并带有合理的默认配置；<br>可以通过项目内的配置文件进行配置；<br>可以通过插件进行扩展。<br>一个丰富的官方插件集合，集成了前端生态中最好的工具。<br>一套完全图形化的创建和管理 Vue.js 项目的用户界面。<br>Vue CLI 致力于将 Vue 生态中的工具基础标准化。它确保了各种构建工具能够基于智能的默认配置即可平稳衔接，这样你可以专注在撰写应用上，而不必花好几天去纠结配置的问题。与此同时，它也为每个工具提供了调整配置的灵活性，无需 eject。</p>
+<h4 id="Vuex"><a href="#Vuex" class="headerlink" title="Vuex"></a>Vuex</h4><p>Vuex是专门为Vue服务，用于管理页面的数据状态、提供统一数据操作的生态系统，相当于数据库mongoDB，MySQL等，任何组件都可以存取仓库中的数据。其中vuex类似的 还是有Redux,Redux大多用于React</p>
+<p><strong>* 概念理解性 *</strong></p>
+<p>Vuex采用MVC模式中的Model层，规定所有的数据必须通过action—&gt;mutaion—&gt;state这个流程进行来改变状态的。再结合Vue的数据视图双向绑定实现页面的更新。统一页面状态管理，可以让复杂的组件交互变的简单清晰，同时在调试时也可以通过DEVtools去查看状态。</p>
+<p>在当前前端的spa模块化项目中不可避免的是某些变量需要在全局范围内引用，此时父子组件的传值，子父组件间的传值，兄弟组件间的传值成了我们需要解决的问题。虽然vue中提供了props（父传子）commit（子传父）兄弟间也可以用localstorage和sessionstorage。但是这种方式在项目开发中带来的问题比他解决的问题（难管理，难维护，代码复杂，安全性低）更多。vuex的诞生也是为了解决这些问题，从而大大提高我们vue项目的开发效率。</p>
+<p><strong>* Vue双向绑定　*</strong></p>
+<p>要说 Vuex 的双向绑定那么必须先从 Vue 的双向绑定开始</p>
+<p>Vuex仅仅是Vue的一个插件。Vuex只能使用在vue上，因为其高度依赖于Vue的双向绑定和插件系统。</p>
+<p>从Vue的源码来看，Vue的双向绑定主要做了2件事</p>
+<p>数据劫持<br>添加观察者</p>
+<p>数据劫持实现：（源码精简）<br>// 老版本通过 Object.defineProperty 递归可以实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">// 老版本通过 Object.defineProperty 递归可以实现</span><br><span class="line"></span><br><span class="line">// src/core/observer/index.js</span><br><span class="line">Object.defineProperty(obj, key, &#123;</span><br><span class="line">  enumerable: true,</span><br><span class="line">  configurable: true,</span><br><span class="line">  get: function reactiveGetter () &#123;</span><br><span class="line">    const value = getter ? getter.call(obj) : val</span><br><span class="line">    if (Dep.target) &#123;</span><br><span class="line">      dep.depend()</span><br><span class="line">      if (childOb) &#123;</span><br><span class="line">        childOb.dep.depend()</span><br><span class="line">      &#125;</span><br><span class="line">      if (Array.isArray(value)) &#123;</span><br><span class="line">        dependArray(value)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return value</span><br><span class="line">  &#125;,</span><br><span class="line">  set: function reactiveSetter (newVal) &#123;</span><br><span class="line">    const value = getter ? getter.call(obj) : val</span><br><span class="line">    if (newVal === value || (newVal !== newVal &amp;&amp; value !== value)) &#123;</span><br><span class="line">      return</span><br><span class="line">    &#125;</span><br><span class="line">    if (setter) &#123;</span><br><span class="line">      setter.call(obj, newVal)</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      val = newVal</span><br><span class="line">    &#125;</span><br><span class="line">    childOb = !shallow &amp;&amp; observe(newVal)</span><br><span class="line">    dep.notify()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>这里无非就是劫持了对象的get和set方法。在所代理的属性的get方法中，当dep.Target存在的时候会调用 dep.depend()，</p>
+<p>划重点：2行代码</p>
+<p>Object.defineProperty<br>dep.depend()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 最新版可以通过 Proxy 实现</span><br><span class="line">Proxy(data, &#123;</span><br><span class="line">  get(target, key) &#123;</span><br><span class="line">    return target[key];</span><br><span class="line">  &#125;,</span><br><span class="line">  set(target, key, value) &#123;</span><br><span class="line">    let val = Reflect.set(target, key, value);</span><br><span class="line">      _that.$dep[key].forEach(item =&gt; item.update());</span><br><span class="line">    return val;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>劫持了对象的get和set方法。</p>
+<p>在数据劫持之外最重要的部分就是 Dep 和 Watcher,这其实是一个观察者模式。用最简单的代码实现以下 Vue 的观察者模式。</p>
+<p>观察者模式实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">// 观察者</span><br><span class="line">    class Dep &#123;</span><br><span class="line">        constructor() &#123;</span><br><span class="line">            this.subs = []</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        addSub(sub) &#123;</span><br><span class="line">            this.subs.push(sub)</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        depend() &#123;</span><br><span class="line">            if (Dep.target) &#123; </span><br><span class="line">                Dep.target.addDep(this);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        notify() &#123;</span><br><span class="line">            this.subs.forEach(sub =&gt; sub.update())</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    // 被观察者</span><br><span class="line">    class Watcher &#123;</span><br><span class="line">        constructor(vm, expOrFn) &#123;</span><br><span class="line">            this.vm = vm;</span><br><span class="line">            this.getter = expOrFn;</span><br><span class="line">            this.value;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        get() &#123;</span><br><span class="line">            Dep.target = this;</span><br><span class="line">            </span><br><span class="line">            var vm = this.vm;</span><br><span class="line">            var value = this.getter.call(vm, vm);</span><br><span class="line">            return value;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        evaluate() &#123;</span><br><span class="line">            this.value = this.get();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        addDep(dep) &#123;</span><br><span class="line">            dep.addSub(this);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        update() &#123;</span><br><span class="line">            console.log(&apos;更新, value:&apos;, this.value)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    // 观察者实例</span><br><span class="line">    var dep = new Dep();</span><br><span class="line">    </span><br><span class="line">    //  被观察者实例</span><br><span class="line">    var watcher = new Watcher(&#123;x: 1&#125;, (val) =&gt; val);</span><br><span class="line">    watcher.evaluate();</span><br><span class="line">    </span><br><span class="line">    // 观察者监听被观察对象</span><br><span class="line">    dep.depend()</span><br><span class="line">    </span><br><span class="line">    dep.notify()</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3件事</p>
+<p>1、通过 watcher.evaluate() 将自身实例赋值给 Dep.target</p>
+<p>2、调用 dep.depend() 将dep实例将 watcher 实例 push 到 dep.subs中</p>
+<p>3、通过数据劫持，在调用被劫持的对象的 set 方法时，调用 dep.subs 中所有的 watcher.update()</p>
+<p>从此。双向绑定完成。通过 watcher.evaluate() 将自身实例赋值给 Dep.target<br>调用 dep.depend() 将dep实例将 watcher 实例 push 到 dep.subs中<br>通过数据劫持，在调用被劫持的对象的 set 方法时，调用 dep.subs 中所有的 watcher.update()<br>从此。双向绑定完成。</p>
+<p>Vuex的注入代码比较简单，调用了一下applyMixin方法，现在的版本其实就是调用了Vue.mixin，在所有组件的 beforeCreate生命周期注入了设置 this.$store这样一个对象。</p>
+
       
     </div>
     
@@ -452,8 +520,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -548,6 +625,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-实现数据双向绑定的原理"><span class="nav-number">1.</span> <span class="nav-text">Vue 实现数据双向绑定的原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-组件间的参数传递"><span class="nav-number">2.</span> <span class="nav-text">Vue 组件间的参数传递</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue的路由实现：hash模式-和-history模式"><span class="nav-number">3.</span> <span class="nav-text">Vue的路由实现：hash模式 和 history模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue与Angular以及React的区别？"><span class="nav-number">4.</span> <span class="nav-text">Vue与Angular以及React的区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#与React的区别"><span class="nav-number">5.</span> <span class="nav-text">与React的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue路由的钩子函数"><span class="nav-number">6.</span> <span class="nav-text">Vue路由的钩子函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vuex是什么？怎么使用？那种功能场景使用它？"><span class="nav-number">7.</span> <span class="nav-text">Vuex是什么？怎么使用？那种功能场景使用它？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对Keep-Alive的了解？"><span class="nav-number">8.</span> <span class="nav-text">对Keep-Alive的了解？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vue如何自己实现v-model"><span class="nav-number">9.</span> <span class="nav-text">vue如何自己实现v-model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-nextTick-的原理和用途"><span class="nav-number">10.</span> <span class="nav-text">Vue.nextTick 的原理和用途</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vue中的插槽————slot"><span class="nav-number">11.</span> <span class="nav-text">vue中的插槽————slot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vue-router核心实现原理"><span class="nav-number">12.</span> <span class="nav-text">vue-router核心实现原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue全家桶"><span class="nav-number">13.</span> <span class="nav-text">Vue全家桶</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Vue-CLI"><span class="nav-number">13.0.1.</span> <span class="nav-text">Vue CLI</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vuex"><span class="nav-number">13.1.</span> <span class="nav-text">Vuex</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -566,21 +659,6 @@
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">jamin Yang</span>
-
-  
-</div>
-
-
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
-
 
 
 
