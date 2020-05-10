@@ -3,11 +3,10 @@
   <entry>
     <title>7天前端面试复习（5.1-5.8）</title>
     <url>/2020/04/30/7%E5%A4%A9%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0%EF%BC%885.1-5.8%EF%BC%89/</url>
-    <content><![CDATA[<p>It’s an opportunity to better discover your own shortcomings</p>
+    <content><![CDATA[<p>由于才疏学浅本博客大部分内容都是引用其他大佬的博客<br>主要是为了方便复习和理解~</p>
 <a id="more"></a>
 
-<h2 id="Day1（Git-前后端分离技术）"><a href="#Day1（Git-前后端分离技术）" class="headerlink" title="Day1（Git/前后端分离技术）"></a>Day1（Git/前后端分离技术）</h2><p>由于才疏学浅本博客大部分内容都是引用其他大佬的博客<br>主要是为了方便复习和理解~</p>
-<h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p>git部分参考自廖雪峰的官方网站 <a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/896043488029600</a></p>
+<h2 id="Day1（Git-前后端分离技术）"><a href="#Day1（Git-前后端分离技术）" class="headerlink" title="Day1（Git/前后端分离技术）"></a>Day1（Git/前后端分离技术）</h2><h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p>git部分参考自廖雪峰的官方网站 <a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/896043488029600</a></p>
 <h5 id="创建版本库（又名仓库-repository）"><a href="#创建版本库（又名仓库-repository）" class="headerlink" title="创建版本库（又名仓库 repository）"></a>创建版本库（又名仓库 repository）</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">可以简单理解成一个目录，这个目录里面的所有文件都可以被Git管理起来，每个文件的修改、删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以“还原”。</span><br><span class="line"></span><br><span class="line">$ mkdir learngit</span><br><span class="line">$ cd learngit</span><br><span class="line">$ pwd</span><br><span class="line">/Users/michael/learngit</span><br></pre></td></tr></table></figure>
 <p><strong><em>如果你使用Windows系统，为了避免遇到各种莫名其妙的问题，请确保目录名（包括父目录）不包含中文。</em></strong></p>
 <h5 id="基本命令速览："><a href="#基本命令速览：" class="headerlink" title="基本命令速览："></a>基本命令速览：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">通过git init命令把这个目录变成Git可以管理的仓库：</span><br><span class="line">用命令git add告诉Git，把文件添加到仓库：</span><br><span class="line">用命令git commit告诉Git，把文件提交到仓库：</span><br><span class="line">$ git commit -m &quot;wrote a readme file&quot;</span><br><span class="line">-m后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的</span><br></pre></td></tr></table></figure>
@@ -419,6 +418,25 @@
       </tags>
   </entry>
   <entry>
+    <title>[踩坑玄学]隐身&amp;nbsp</title>
+    <url>/2020/05/05/%E5%9D%91%E7%8E%84%E5%AD%A6-%E9%9A%90%E8%BA%AB-nbsp/</url>
+    <content><![CDATA[<p>具体如下</p>
+<video src="http://q9uen5wtx.bkt.clouddn.com/%E7%8E%84%E5%AD%A6%EF%BC%9F.mp4" controls="controls" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;">
+your browser does not support the video tag
+</video>
+
+<p>空格把left div顶到下一行了。</p>
+<p>我删掉left div前面的空格就好了  之后就算再空格也不会影响，可能是极少数情况下编译器存在隐身的&amp;nbsp?  left div  左边少了一根线可能就是有个隐身的&amp;nbsp[捂脸哭]</p>
+]]></content>
+      <categories>
+        <category>VSCode</category>
+      </categories>
+      <tags>
+        <tag>踩坑</tag>
+        <tag>空格占位</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vue</title>
     <url>/2020/05/02/page/</url>
     <content><![CDATA[<h3 id="Vue-实现数据双向绑定的原理"><a href="#Vue-实现数据双向绑定的原理" class="headerlink" title="Vue 实现数据双向绑定的原理"></a>Vue 实现数据双向绑定的原理</h3><a id="more"></a>
@@ -493,58 +511,140 @@
 ]]></content>
   </entry>
   <entry>
-    <title>[踩坑玄学]隐身&amp;nbsp</title>
-    <url>/2020/05/05/%E5%9D%91%E7%8E%84%E5%AD%A6-%E9%9A%90%E8%BA%AB-nbsp/</url>
-    <content><![CDATA[<p>具体如下</p>
-<video src="http://q9uen5wtx.bkt.clouddn.com/%E7%8E%84%E5%AD%A6%EF%BC%9F.mp4" controls="controls" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;">
-your browser does not support the video tag
-</video>
+    <title>Spring 的事务管理</title>
+    <url>/2019/11/11/Spring-%E7%9A%84%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/Spring-%E7%9A%84%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<p>实际开发中，操作数据库时还会涉及事物管理问题，为此Spring提供了专门用于事务处理的API。</p>
+<p>In the actural development,it involves things management when operating a database,for this purpose Spring provides apis specifically for transaction processing.</p>
+<a id="more"></a>
 
-<p>空格把left div顶到下一行了。</p>
-<p>我删掉left div前面的空格就好了  之后就算再空格也不会影响，可能是极少数情况下编译器存在隐身的&amp;nbsp?  left div  左边少了一根线可能就是有个隐身的&amp;nbsp[捂脸哭]</p>
-]]></content>
+<p>依赖包：spring-tx-4.3.6.RELEASE的JAR包<br>3个接口文件PlatformTransactionManger、TransactionDefinition、TransactionStatus</p>
+<h6 id="1、PlatformTransactionManger：Spring-提供的平台事物管理器，主要用于管理事物。其中包含了三个事物操作的方法"><a href="#1、PlatformTransactionManger：Spring-提供的平台事物管理器，主要用于管理事物。其中包含了三个事物操作的方法" class="headerlink" title="1、PlatformTransactionManger：Spring 提供的平台事物管理器，主要用于管理事物。其中包含了三个事物操作的方法"></a>1、PlatformTransactionManger：Spring 提供的平台事物管理器，主要用于管理事物。其中包含了三个事物操作的方法</h6><p>1）TransactionStatus getTransaction (TransactionDefinition definition):</p>
+<p><strong>use to get Transaction Status</strong></p>
+<p>2) void commit(TransactionStatus status):** use to commit Transaction **</p>
+<p>3）void rollback(TransactionStatus status):** use to roll back the Transaction(回滚事务) **</p>
+<p>TransactionStatus 对象就表示一个事物</p>
+<h6 id="2、TransactionDefinition-：事物定义（描述）的对象-，定义了事物的规则，并且提供获取事物相关信息的方法"><a href="#2、TransactionDefinition-：事物定义（描述）的对象-，定义了事物的规则，并且提供获取事物相关信息的方法" class="headerlink" title="2、TransactionDefinition()：事物定义（描述）的对象 ，定义了事物的规则，并且提供获取事物相关信息的方法"></a>2、TransactionDefinition()：事物定义（描述）的对象 ，定义了事物的规则，并且提供获取事物相关信息的方法</h6><p>getName方法  getsolationLevel获取隔离级别  getPropagationBehavior获取事物传播行为  getTImeout获取事物超时时间  </p>
+<h6 id="3、TransactionStatus-事物的状态-描述了某一时间点上事物的状态信息。"><a href="#3、TransactionStatus-事物的状态-描述了某一时间点上事物的状态信息。" class="headerlink" title="3、TransactionStatus:事物的状态 描述了某一时间点上事物的状态信息。"></a>3、TransactionStatus:事物的状态 描述了某一时间点上事物的状态信息。</h6><p>flush方法：刷新事物</p>
+<p>hasSavepoint():是否存在保存点</p>
+<p>isCompleted():获取是否完成</p>
+<p>isNewTransaction():获取是否是新事物</p>
+<p>isRollbackOnly():获取是否回滚</p>
+<p>setRollbackOnly():设置事物回滚</p>
+<h3 id="事物管理方式"><a href="#事物管理方式" class="headerlink" title="事物管理方式"></a>事物管理方式</h3><p>1）传统的编程式事物管理</p>
+<p>基于XML的声明式事物 <a href="tx:advice" target="_blank" rel="noopener">tx:advice</a>配置事物的通知（增强处理）<br>需要指定id 和 transaction-manager属性（指定事物管理器） 还需要配置 一个<a href="tx:attributes" target="_blank" rel="noopener">tx:attributes</a>，该子元素中可以配置多个<a href="tr:method" target="_blank" rel="noopener">tr:method</a>子元素来配置事物的细节。<br>** 配置<a href="tr:advice" target="_blank" rel="noopener">tr:advice</a>重点是配置<a href="tx:method" target="_blank" rel="noopener">tx:method</a>子元素 **</p>
+<p>2）声明式事物管理</p>
+<p>案例</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">// 转账</span><br><span class="line">	package com.itheima.jdbc;</span><br><span class="line"></span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">public interface AccountDao &#123;</span><br><span class="line">	// 添加</span><br><span class="line">	public int addAccount(Account account);</span><br><span class="line">	// 更新</span><br><span class="line">	public int updateAccount(Account account);</span><br><span class="line">	// 删除</span><br><span class="line">	public int deleteAccount(int id);</span><br><span class="line">	</span><br><span class="line">	// 通过id查询</span><br><span class="line">	public Account findAccountById(int id);</span><br><span class="line">	// 查询所有账户</span><br><span class="line">	public List&lt;Account&gt; findAllAccount();</span><br><span class="line">	</span><br><span class="line">	// 转账</span><br><span class="line">	public void transfer(String outUser,String inUser,Double money);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.itheima.jdbc;</span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">import org.springframework.jdbc.core.BeanPropertyRowMapper;</span><br><span class="line">import org.springframework.jdbc.core.JdbcTemplate;</span><br><span class="line">import org.springframework.jdbc.core.RowMapper;</span><br><span class="line">public class AccountDaoImpl implements AccountDao &#123;</span><br><span class="line">	// 声明JdbcTemplate属性及其setter方法</span><br><span class="line">	private JdbcTemplate jdbcTemplate;</span><br><span class="line">	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) &#123;</span><br><span class="line">		this.jdbcTemplate = jdbcTemplate;</span><br><span class="line">	&#125;</span><br><span class="line">    // 添加账户</span><br><span class="line">	public int addAccount(Account account) &#123;</span><br><span class="line">		// 定义SQL</span><br><span class="line">		String sql = &quot;insert into account(id,username,balance) value(?,?,?)&quot;;</span><br><span class="line">		// 定义数组来存放SQL语句中的参数</span><br><span class="line">		Object[] obj = new Object[] &#123;</span><br><span class="line">				           account.getId(),</span><br><span class="line">                           account.getUsername(), </span><br><span class="line">                           account.getBalance() </span><br><span class="line">         &#125;;</span><br><span class="line">		// 执行添加操作，返回的是受SQL语句影响的记录条数</span><br><span class="line">		int num = this.jdbcTemplate.update(sql, obj);</span><br><span class="line">		return num;</span><br><span class="line">	&#125;</span><br><span class="line">	// 更新账户</span><br><span class="line">	public int updateAccount(Account account) &#123;</span><br><span class="line">		// 定义SQL</span><br><span class="line">		String sql = &quot;update account set username=?,balance=? where id = ?&quot;;</span><br><span class="line">		// 定义数组来存放SQL语句中的参数</span><br><span class="line">		Object[] params = new Object[] &#123; </span><br><span class="line">                               account.getUsername(), </span><br><span class="line">                               account.getBalance(), </span><br><span class="line">                               account.getId() </span><br><span class="line">          &#125;;</span><br><span class="line">		// 执行添加操作，返回的是受SQL语句影响的记录条数</span><br><span class="line">		int num = this.jdbcTemplate.update(sql, params);</span><br><span class="line">		return num;</span><br><span class="line">	&#125;</span><br><span class="line">	// 删除账户</span><br><span class="line">	public int deleteAccount(int id) &#123;</span><br><span class="line">		// 定义SQL</span><br><span class="line">		String sql = &quot;delete  from account where id = ? &quot;;</span><br><span class="line">		// 执行添加操作，返回的是受SQL语句影响的记录条数</span><br><span class="line">		int num = this.jdbcTemplate.update(sql, id);</span><br><span class="line">		return num;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	// 通过id查询账户数据信息</span><br><span class="line">	public Account findAccountById(int id) &#123;</span><br><span class="line">	    //定义SQL语句</span><br><span class="line">	    String sql = &quot;select * from account where id = ?&quot;;</span><br><span class="line">	    // 创建一个新的BeanPropertyRowMapper对象</span><br><span class="line">	    RowMapper&lt;Account&gt; rowMapper = </span><br><span class="line">	new BeanPropertyRowMapper&lt;Account&gt;(Account.class);</span><br><span class="line">	    // 将id绑定到SQL语句中，并通过RowMapper返回一个Object类型的单行记录</span><br><span class="line">	    return this.jdbcTemplate.queryForObject(sql, rowMapper, id);</span><br><span class="line">	&#125;</span><br><span class="line">	// 查询所有账户信息</span><br><span class="line">	public List&lt;Account&gt; findAllAccount() &#123;</span><br><span class="line">	    // 定义SQL语句</span><br><span class="line">	    String sql = &quot;select * from account&quot;;</span><br><span class="line">	    // 创建一个新的BeanPropertyRowMapper对象</span><br><span class="line">	    RowMapper&lt;Account&gt; rowMapper = </span><br><span class="line">	new BeanPropertyRowMapper&lt;Account&gt;(Account.class);</span><br><span class="line">	    // 执行静态的SQL查询，并通过RowMapper返回结果</span><br><span class="line">	    return this.jdbcTemplate.query(sql, rowMapper);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>修改配置文件applicationContext.xml</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;</span><br><span class="line">    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; </span><br><span class="line">    xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;</span><br><span class="line">    xmlns:tx=&quot;http://www.springframework.org/schema/tx&quot; </span><br><span class="line">    xmlns:context=&quot;http://www.springframework.org/schema/context&quot;</span><br><span class="line">    xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans </span><br><span class="line">    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd</span><br><span class="line">    http://www.springframework.org/schema/tx </span><br><span class="line">    http://www.springframework.org/schema/tx/spring-tx-4.3.xsd</span><br><span class="line">    http://www.springframework.org/schema/context </span><br><span class="line">    http://www.springframework.org/schema/context/spring-context-4.3.xsd</span><br><span class="line">    http://www.springframework.org/schema/aop </span><br><span class="line">    http://www.springframework.org/schema/aop/spring-aop-4.3.xsd&quot;&gt;</span><br><span class="line">    &lt;!-- 1.配置数据源 --&gt;</span><br><span class="line">    &lt;bean id=&quot;dataSource&quot; </span><br><span class="line">    class=&quot;org.springframework.jdbc.datasource.DriverManagerDataSource&quot;&gt;</span><br><span class="line">		&lt;!--数据库驱动 --&gt;</span><br><span class="line">		&lt;property name=&quot;driverClassName&quot; value=&quot;com.mysql.jdbc.Driver&quot; /&gt;</span><br><span class="line">		&lt;!--连接数据库的url --&gt;</span><br><span class="line">		&lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://localhost/spring&quot; /&gt;</span><br><span class="line">		&lt;!--连接数据库的用户名 --&gt;</span><br><span class="line">		&lt;property name=&quot;username&quot; value=&quot;root&quot; /&gt;</span><br><span class="line">		&lt;!--连接数据库的密码 --&gt;</span><br><span class="line">		&lt;property name=&quot;password&quot; value=&quot;root&quot; /&gt;</span><br><span class="line">   &lt;/bean&gt;</span><br><span class="line">   &lt;!-- 2.配置JDBC模板 --&gt;</span><br><span class="line">   &lt;bean id=&quot;jdbcTemplate&quot; </span><br><span class="line">          class=&quot;org.springframework.jdbc.core.JdbcTemplate&quot;&gt;</span><br><span class="line">		 &lt;!-- 默认必须使用数据源 --&gt;</span><br><span class="line">		 &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt;</span><br><span class="line">   &lt;/bean&gt;</span><br><span class="line">   &lt;!--3.定义id为accountDao的Bean --&gt;</span><br><span class="line">   &lt;bean id=&quot;accountDao&quot; class=&quot;com.itheima.jdbc.AccountDaoImpl&quot;&gt;</span><br><span class="line">		 &lt;!-- 将jdbcTemplate注入到AccountDao实例中 --&gt;</span><br><span class="line">		 &lt;property name=&quot;jdbcTemplate&quot; ref=&quot;jdbcTemplate&quot; /&gt;</span><br><span class="line">   &lt;/bean&gt;	</span><br><span class="line">   &lt;!-- 4.事务管理器，依赖于数据源 --&gt;</span><br><span class="line">   &lt;bean id=&quot;transactionManager&quot; class=</span><br><span class="line">   &quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;&gt;</span><br><span class="line">		&lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt;</span><br><span class="line">   &lt;/bean&gt;	</span><br><span class="line">   &lt;!-- 5.编写通知：对事务进行增强(通知),需要编写对切入点和具体执行事务细节 --&gt;</span><br><span class="line">   &lt;tx:advice id=&quot;txAdvice&quot; transaction-manager=&quot;transactionManager&quot;&gt;</span><br><span class="line">		&lt;tx:attributes&gt;</span><br><span class="line">			&lt;!-- name：*表示任意方法名称 --&gt;</span><br><span class="line">			&lt;tx:method name=&quot;*&quot; propagation=&quot;REQUIRED&quot; </span><br><span class="line">                           isolation=&quot;DEFAULT&quot; read-only=&quot;false&quot; /&gt;</span><br><span class="line">		&lt;/tx:attributes&gt;</span><br><span class="line">	&lt;/tx:advice&gt;</span><br><span class="line">	&lt;!-- 6.编写aop，让spring自动对目标生成代理，需要使用AspectJ的表达式 --&gt;</span><br><span class="line">	&lt;aop:config&gt;</span><br><span class="line">		&lt;!-- 切入点 --&gt;</span><br><span class="line">		&lt;aop:pointcut expression=&quot;execution(* com.itheima.jdbc.*.*(..))&quot;</span><br><span class="line">			id=&quot;txPointCut&quot; /&gt;</span><br><span class="line">		&lt;!-- 切面：将切入点与通知整合 --&gt;</span><br><span class="line">		&lt;aop:advisor advice-ref=&quot;txAdvice&quot; pointcut-ref=&quot;txPointCut&quot; /&gt;</span><br><span class="line">	&lt;/aop:config&gt;</span><br><span class="line">&lt;/beans&gt;</span><br></pre></td></tr></table></figure>
+
+
+<h6 id="测试类"><a href="#测试类" class="headerlink" title="测试类"></a>测试类</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.itheima.jdbc;</span><br><span class="line">import org.junit.Test;</span><br><span class="line">import org.springframework.context.ApplicationContext;</span><br><span class="line">import </span><br><span class="line">org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line">//测试类</span><br><span class="line">public class TransactionTest &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	@Test</span><br><span class="line">	public void xmlTest()&#123;</span><br><span class="line">		ApplicationContext applicationContext = </span><br><span class="line">		   new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);</span><br><span class="line">		// 获取AccountDao实例</span><br><span class="line">		AccountDao accountDao = </span><br><span class="line">            (AccountDao)applicationContext.getBean(&quot;accountDao&quot;);</span><br><span class="line">		// 调用实例中的转账方法</span><br><span class="line">		accountDao.transfer(&quot;Jack&quot;, &quot;Rose&quot;, 100.0);</span><br><span class="line">	    // 输出提示信息</span><br><span class="line">	    System.out.println(&quot;转账成功！&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	@Test</span><br><span class="line">	public void annotationTest()&#123;</span><br><span class="line">	    ApplicationContext applicationContext = </span><br><span class="line">	new ClassPathXmlApplicationContext(&quot;applicationContext-annotation.xml&quot;);</span><br><span class="line">	    // 获取AccountDao实例</span><br><span class="line">	    AccountDao accountDao = </span><br><span class="line">	(AccountDao)applicationContext.getBean(&quot;accountDao&quot;);</span><br><span class="line">	    // 调用实例中的转账方法</span><br><span class="line">	    accountDao.transfer(&quot;Jack&quot;, &quot;Rose&quot;, 100.0);</span><br><span class="line">	    // 输出提示信息</span><br><span class="line">	    System.out.println(&quot;转账成功！&quot;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>VSCode</category>
+        <category>Spring</category>
       </categories>
       <tags>
-        <tag>踩坑</tag>
-        <tag>空格占位</tag>
+        <tag>Spring事物管理</tag>
       </tags>
   </entry>
   <entry>
-    <title>成功解决java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver</title>
-    <url>/2019/11/13/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/</url>
-    <content><![CDATA[<p>用Spring 通过applicationContext连接mySql</p>
-<p>发现报错  于是改回传统方式尝试连接 代码如下</p>
+    <title>计算机组成原理测试习题整理【一】（含答案解析）</title>
+    <url>/2019/11/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E4%B9%A0%E9%A2%98%E8%AE%AD%E7%BB%83%EF%BC%88%E5%90%AB%E7%AD%94%E6%A1%88%E8%A7%A3%E6%9E%90%EF%BC%89/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E4%B9%A0%E9%A2%98%E8%AE%AD%E7%BB%83%EF%BC%88%E5%90%AB%E7%AD%94%E6%A1%88%E8%A7%A3%E6%9E%90%EF%BC%89/</url>
+    <content><![CDATA[<p>目前共整理了三章</p>
 <a id="more"></a>
 
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@org.junit.Test</span><br><span class="line">	public void mainTest() &#123;</span><br><span class="line">//		// 加载配置文件</span><br><span class="line">//		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);</span><br><span class="line">//		// 获取JdbcTemplate实例</span><br><span class="line">//		JdbcTemplate jdTemplate = (JdbcTemplate) applicationContext.getBean(&quot;jdbcTemplate&quot;);</span><br><span class="line">//		// 使用execute()方法执行SQL语句，创建用户账户管理表account</span><br><span class="line">//		jdTemplate.execute(&quot;create table account(&quot; + &quot;id int primary key auto_increment,&quot; + &quot;username varchar(50),&quot;</span><br><span class="line">//				+ &quot;balance double)&quot;);</span><br><span class="line">//		System.out.println(&quot;账户表account创建成功！&quot;);</span><br><span class="line"></span><br><span class="line">		Connection conn=null;</span><br><span class="line">		try</span><br><span class="line">		&#123;</span><br><span class="line">			Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);// 加载驱动程序，此次无需更改</span><br><span class="line">			System.out.println(&quot;registered success!&quot;);//输出registered success表示驱动加载成功</span><br><span class="line">			//创建对象连接，连接数据库，此例中employeedbms为数据库名，root为用户名，123456位密码，该三项均需根据实际情况进行修改，其它代码无需变动。注：确保数据库名、用户名和密码的准确性。</span><br><span class="line">//			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/spring?useSSL=false&amp;serverTimezone=UTC&quot;,&quot;root&quot;,&quot;123456&quot;);</span><br><span class="line">			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://127.0.0.1:3306/spring?useSSL=true&amp;serverTimezone=GMT&quot;, &quot;root&quot;, &quot;123456&quot;);</span><br><span class="line">			System.out.println(&quot;connection success!&quot;);//输出connection success表示数据库已成功连接</span><br><span class="line">			conn.close();</span><br><span class="line">		&#125;</span><br><span class="line">		catch(Exception e)</span><br><span class="line">		&#123;</span><br><span class="line">			System.out.println(e);</span><br><span class="line">		&#125;</span><br><span class="line">		finally&#123;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    ``` </span><br><span class="line"> 出现错误提示</span><br></pre></td></tr></table></figure>
-<p> java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">由于我用的是mySQL 8.0.18</span><br></pre></td></tr></table></figure><br> //下面这个命令可以查你的mysql版本<br> mysql -uroot -p<br> //打开MySQL也可以看到<br> //利用navicat连接mysql的客户端工具可以查看<br> //连接之后右键——详细信息<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">数据库连接要和5.x的版本不一样驱动也是不一样</span><br><span class="line"></span><br><span class="line">https://mvnrepository.com/</span><br><span class="line"></span><br><span class="line">到上面这个网站搜索 mysql-connector-java-8.0.18.jar</span><br><span class="line">下载后导入到项目中  不要只是拖进去 还需要去建立依赖 否则没法用</span><br><span class="line"></span><br><span class="line">比如idea，要在Project Structure 里面的Modules 对应下的项目中点+号导入驱动。</span><br><span class="line">再次运行传统的连接数据库代码 发现成功</span><br></pre></td></tr></table></figure><br>registered success!<br>connection success!</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">注释掉用用以下xml配置连接数据库，也是成功</span><br></pre></td></tr></table></figure>
-<?xml version="1.0" encoding="UTF-8"?>
-<p><beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.springframework.org/schema/beans 
-     http://www.springframework.org/schema/beans/spring-beans-4.3.xsd"><br>    <!-- 1配置数据源 --><br>    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"><br>        <!--数据库驱动 --><br>        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property></bean></beans></p>
-<!--        //com.mysql.jdbc.Driver-->
-<pre><code>    &lt;!--连接数据库的url --&gt;
-    &lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://localhost:3306/spring?serverTimezone=GMT&quot; /&gt;
-    &lt;!--连接数据库的用户名 --&gt;
-    &lt;property name=&quot;username&quot; value=&quot;root&quot; /&gt;
-    &lt;!--连接数据库的密码 --&gt;
-    &lt;property name=&quot;password&quot; value=&quot;123456&quot; /&gt;
-&lt;/bean&gt;
 
-&lt;/bean&gt;</code></pre>
-```
+<h3 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机问世至今，新型机器不断推陈出新，不管怎样更新，依然保有“存储程序”的概念，最早提出这种概念的是______。</span><br><span class="line"></span><br><span class="line">A冯. 诺依曼</span><br><span class="line">B巴贝奇</span><br><span class="line">C贝尔</span><br><span class="line">D帕斯卡</span><br><span class="line"></span><br><span class="line">A</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.邮局把信件进行自动分拣，使用的计算机技术是______。</span><br><span class="line"></span><br><span class="line">A</span><br><span class="line"> 机器证明</span><br><span class="line">B</span><br><span class="line">自然语言理解</span><br><span class="line">C</span><br><span class="line">计算机辅助设计</span><br><span class="line">D</span><br><span class="line">机器翻译</span><br><span class="line">E</span><br><span class="line">模式识别</span><br><span class="line">F</span><br><span class="line">自动控制</span><br><span class="line"></span><br><span class="line">E</span><br></pre></td></tr></table></figure>
 
-<p>end</p>
-]]></content>
-      <categories>
-        <category>踩坑</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-        <tag>数据库</tag>
-      </tags>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">2. 计算机科技文献中，英文缩写CAI代表______。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">A</span><br><span class="line">计算机辅助管理</span><br><span class="line">B</span><br><span class="line">计算机辅助设计</span><br><span class="line">C</span><br><span class="line">计算机辅助加工</span><br><span class="line">D</span><br><span class="line">计算机辅助制造</span><br><span class="line">E</span><br><span class="line">计算机辅助教学</span><br><span class="line">F</span><br><span class="line">计算机辅助学习</span><br><span class="line"></span><br><span class="line">E</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">微型计算机的发展以______技术为指标。</span><br><span class="line"></span><br><span class="line">微处理器</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机中常以主频来评价机器的性能。以下为主频单位的是______。</span><br><span class="line"></span><br><span class="line">MHz</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机运算速度的单位是______。</span><br><span class="line"></span><br><span class="line">MIPS</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1946年研制成功的第一台电子数字计算机称为______，1949年研制成功的第一台程序内存的计算机称为______。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ENIAC， EDVAC</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机与日常使用的袖珍计算器的本质区别在于______。</span><br><span class="line"></span><br><span class="line">自动化程度的高低</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">下列______属于应用软件。</span><br><span class="line"></span><br><span class="line">文本处理</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">操作系统最现出现在_______。</span><br><span class="line">第3代计算机</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">至今为止，计算机中的所有信息仍以二进制方式表示的理由是______。</span><br><span class="line"></span><br><span class="line">###物理器件性能所至</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CPU主要包括______。</span><br><span class="line">控制器、运算器</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">完整的计算机应包括______。</span><br><span class="line"></span><br><span class="line">配套的硬件设备和软件系统</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">目前我们所说的个人台式商用机属于_______。</span><br><span class="line">###微型机</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ENIAC属于晶体管计算机</span><br><span class="line">F</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">编译方式是使用编译程序把源程序编译成机器代码的目标程序</span><br><span class="line">T</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机唯一能够直接执行的语言是机器语言</span><br><span class="line">T</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">用高级语言编写的程序称为目标程序</span><br><span class="line"></span><br><span class="line">F</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">冯诺依曼计算机体系结构的特点是什么？</span><br><span class="line">1、处理的数据和指令一律二进制</span><br><span class="line">2、顺序执行程序</span><br><span class="line">3、采用存储程序的方式</span><br><span class="line">4、计算机硬件由 运算器 、控制器、存储器、输入、输出设备五大部分组成</span><br><span class="line">5、用总线控制</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机的主要性能指标有哪些？它们的具体含义是什么？</span><br><span class="line"> 运算速度、字长、内存储器的容量、外存储器的容量、主频</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机的硬件由哪些部件组成？</span><br><span class="line"> 控制器、存储器、输入设备、输出设备、运算器</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">简要说明计算机系统的层次结构</span><br><span class="line"> 1、硬联逻辑级</span><br><span class="line">2、微程序级</span><br><span class="line">3、传统机器级</span><br><span class="line">4、操作系统</span><br><span class="line">5、汇编语言级</span><br><span class="line">6、高级语言级</span><br><span class="line">7、应用语言级</span><br></pre></td></tr></table></figure>
+
+<h3 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h3><h2 id><a href="#" class="headerlink" title="?"></a>?</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">通常把表示信息的数字符号称为什么？</span><br><span class="line"></span><br><span class="line">数码</span><br><span class="line"></span><br><span class="line">以下叙述错误的是______。</span><br><span class="line">A</span><br><span class="line">表示信息的数字符号称为代码</span><br><span class="line">B</span><br><span class="line">任何进制的数据都有基数和各位的”位权”</span><br><span class="line">C</span><br><span class="line">二进制数据的加减运算规则与逻辑加运算规则相同</span><br><span class="line">D</span><br><span class="line"> 8进制数据逢八进一 </span><br><span class="line"> </span><br><span class="line"> 正确答案：C ?????</span><br><span class="line"> (加法运算,其运算等价于两个数字的十进制数相加后转换成二进制,而逻辑运算是按位计算)</span><br></pre></td></tr></table></figure>
+
+<h3 id="zy★"><a href="#zy★" class="headerlink" title="zy★"></a>zy★</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">一种BCD码，其中0－9的编码为0000，0001，0010，0011，0100，0101，0110，0111，1110，1111，则各位的权值为______。</span><br><span class="line"></span><br><span class="line">2421</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在小型或微型计算机里，普遍采用的字符编码是______。</span><br><span class="line"></span><br><span class="line"> ASCⅡ码</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">根据国标规定，每个汉字在计算机内占用______存储。</span><br><span class="line">二个字节</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">十进制分数27/64的十六进制数表示为______。</span><br><span class="line">0.6CH</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">假定下列字符码中有奇偶校验位，但没有数据错误，采用偶校校验的字符码是______。</span><br><span class="line">11001001</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">假定下列字符码中有奇偶校验位，但没有数据错误，采用偶校校验的字符码是______。</span><br><span class="line"></span><br><span class="line">11001001</span><br></pre></td></tr></table></figure>
+<h3 id="ct★"><a href="#ct★" class="headerlink" title="ct★"></a>ct★</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">若浮点数的机器表示中，尾数用补码表示，则判断该浮点数是否为规格化的方法是尾数的最高数值位______。 </span><br><span class="line"></span><br><span class="line">与尾符相反 </span><br><span class="line">【数符为0，这个数就是正数，正数补码就是其本身，其最高有效位(阶码使用标准移码的话规格化后尾数最高有效位就是小数点后第一位)必定为1，数符0和最高有效位的1相异。</span><br><span class="line"></span><br><span class="line">数符为1，这个数就是个负数，求负数的补码有一步叫按位取反(一般来说浮点数可以存储的有效位不会小于6位)，原本最高有效位的1变成了0，所以数符1和最高有效位的0相异。）】</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在机器数______中，零的表示形式是唯一的。</span><br><span class="line"></span><br><span class="line">补码和移码</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">指令和数据都以十进制形式存放，（2000）10化成十六进制数是______。</span><br><span class="line"></span><br><span class="line">（7D0）16  </span><br><span class="line">【二进制转十六进制的时候要右移左边补0】</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">下列数中最小的数是______。</span><br><span class="line"></span><br><span class="line">A</span><br><span class="line">（100010）BCD </span><br><span class="line">B</span><br><span class="line">（100101）2     </span><br><span class="line">C</span><br><span class="line">（50）8      </span><br><span class="line">D</span><br><span class="line">（625）16</span><br><span class="line"></span><br><span class="line">A</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> 在定点二进制运算器中，减法运算一般通过______来实现。</span><br><span class="line"></span><br><span class="line">补码运算的二进制加法器</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">下列数中最大的数为______。</span><br><span class="line"></span><br><span class="line">A</span><br><span class="line">（143）5</span><br><span class="line">B</span><br><span class="line">（76）8 </span><br><span class="line">C</span><br><span class="line">（10010101）2    </span><br><span class="line">D</span><br><span class="line">（227）8  </span><br><span class="line"></span><br><span class="line">D</span><br><span class="line">[143 -&gt; 1*5^2+4*5^1+3*5^0=(48)10进制 -》110000二进制]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">下列叙述正确的是______。</span><br><span class="line"></span><br><span class="line">A</span><br><span class="line"> 定点数表示的是整数</span><br><span class="line">B</span><br><span class="line">对一个数据的原码的各位取反而且在末位再加1就可以得到这个数据的补码</span><br><span class="line">C</span><br><span class="line">原码是表示无符号数的编码方法</span><br><span class="line">D</span><br><span class="line">二进制数据表示在计算机中容易实现</span><br><span class="line"></span><br><span class="line">D</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在余3码表示的二-十进制数中，代码0011代表十进制数的______。</span><br><span class="line"></span><br><span class="line">0</span><br><span class="line">[余3码 :余3码是8421 BCD码的每个码组加3(0011)形成的。常用于BCD码的运算电路中。 ]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">设X= —0.1011，则[X]补为______。</span><br><span class="line"></span><br><span class="line">1.0101</span><br></pre></td></tr></table></figure>
+
+<h2 id="ct★-1"><a href="#ct★-1" class="headerlink" title="ct★"></a>ct★</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">______表示法主要用于表示浮点数中的阶码</span><br><span class="line"></span><br><span class="line">移码</span><br><span class="line">【移码（又叫增码）是符号位取反的补码，一般用指数的移码减去1来做浮点数的阶码，引入的目的是为了保证浮点数的机器零为全0。】</span><br><span class="line"></span><br><span class="line">【原码：1001101，反码，补码，移码各是多少？</span><br><span class="line"></span><br><span class="line">解：首位数字表示正负不做变（1为负数，0为正数）</span><br><span class="line"></span><br><span class="line">反码：1110010（正数反码等于原数，题中为负数，则除首位数对应取反）</span><br><span class="line"></span><br><span class="line">补码：1110011（得出反码数基础上末位加一）</span><br><span class="line"></span><br><span class="line">移码：0110011（补码符号位第一位数字取反）</span><br><span class="line">】</span><br></pre></td></tr></table></figure>
+<h2 id="zy★-1"><a href="#zy★-1" class="headerlink" title="zy★"></a>zy★</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">一个8位的二进制整数，若采用补码表示，且由3个“1”和5个“0”组成，则最小值为______。</span><br><span class="line"></span><br><span class="line"> -125</span><br><span class="line"> 【首先反推补码应该是：10000011</span><br><span class="line">  源码则为11111101 即-125</span><br><span class="line"> 】</span><br></pre></td></tr></table></figure>
+<p>##到23题</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在小型机运算器中，通过移位器对一个通用寄存器中存放的一个正定点数进行乘2操作（假定乘2后不会溢出），其方法是将该寄存器中的数据送入ALU，经移位器______。</span><br><span class="line"></span><br><span class="line">A左移1位</span><br><span class="line">B右移1位</span><br><span class="line">C左移2位</span><br><span class="line">D右移2位</span><br><span class="line"></span><br><span class="line">A</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">若存储器的容量为128KX8位，求：(1)访问该芯片需要多少位地址？(2)假定该芯片在存储器中首地址为A0000H，则末地址应为多少？</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
     <title>机器学习期末复习简答题</title>
@@ -720,139 +820,38 @@ your browser does not support the video tag
 ]]></content>
   </entry>
   <entry>
-    <title>Spring 的事务管理</title>
-    <url>/2019/11/11/Spring-%E7%9A%84%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/Spring-%E7%9A%84%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<p>实际开发中，操作数据库时还会涉及事物管理问题，为此Spring提供了专门用于事务处理的API。</p>
-<p>In the actural development,it involves things management when operating a database,for this purpose Spring provides apis specifically for transaction processing.</p>
+    <title>成功解决java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver</title>
+    <url>/2019/11/13/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/</url>
+    <content><![CDATA[<p>用Spring 通过applicationContext连接mySql</p>
+<p>发现报错  于是改回传统方式尝试连接 代码如下</p>
 <a id="more"></a>
 
-<p>依赖包：spring-tx-4.3.6.RELEASE的JAR包<br>3个接口文件PlatformTransactionManger、TransactionDefinition、TransactionStatus</p>
-<h6 id="1、PlatformTransactionManger：Spring-提供的平台事物管理器，主要用于管理事物。其中包含了三个事物操作的方法"><a href="#1、PlatformTransactionManger：Spring-提供的平台事物管理器，主要用于管理事物。其中包含了三个事物操作的方法" class="headerlink" title="1、PlatformTransactionManger：Spring 提供的平台事物管理器，主要用于管理事物。其中包含了三个事物操作的方法"></a>1、PlatformTransactionManger：Spring 提供的平台事物管理器，主要用于管理事物。其中包含了三个事物操作的方法</h6><p>1）TransactionStatus getTransaction (TransactionDefinition definition):</p>
-<p><strong>use to get Transaction Status</strong></p>
-<p>2) void commit(TransactionStatus status):** use to commit Transaction **</p>
-<p>3）void rollback(TransactionStatus status):** use to roll back the Transaction(回滚事务) **</p>
-<p>TransactionStatus 对象就表示一个事物</p>
-<h6 id="2、TransactionDefinition-：事物定义（描述）的对象-，定义了事物的规则，并且提供获取事物相关信息的方法"><a href="#2、TransactionDefinition-：事物定义（描述）的对象-，定义了事物的规则，并且提供获取事物相关信息的方法" class="headerlink" title="2、TransactionDefinition()：事物定义（描述）的对象 ，定义了事物的规则，并且提供获取事物相关信息的方法"></a>2、TransactionDefinition()：事物定义（描述）的对象 ，定义了事物的规则，并且提供获取事物相关信息的方法</h6><p>getName方法  getsolationLevel获取隔离级别  getPropagationBehavior获取事物传播行为  getTImeout获取事物超时时间  </p>
-<h6 id="3、TransactionStatus-事物的状态-描述了某一时间点上事物的状态信息。"><a href="#3、TransactionStatus-事物的状态-描述了某一时间点上事物的状态信息。" class="headerlink" title="3、TransactionStatus:事物的状态 描述了某一时间点上事物的状态信息。"></a>3、TransactionStatus:事物的状态 描述了某一时间点上事物的状态信息。</h6><p>flush方法：刷新事物</p>
-<p>hasSavepoint():是否存在保存点</p>
-<p>isCompleted():获取是否完成</p>
-<p>isNewTransaction():获取是否是新事物</p>
-<p>isRollbackOnly():获取是否回滚</p>
-<p>setRollbackOnly():设置事物回滚</p>
-<h3 id="事物管理方式"><a href="#事物管理方式" class="headerlink" title="事物管理方式"></a>事物管理方式</h3><p>1）传统的编程式事物管理</p>
-<p>基于XML的声明式事物 <a href="tx:advice" target="_blank" rel="noopener">tx:advice</a>配置事物的通知（增强处理）<br>需要指定id 和 transaction-manager属性（指定事物管理器） 还需要配置 一个<a href="tx:attributes" target="_blank" rel="noopener">tx:attributes</a>，该子元素中可以配置多个<a href="tr:method" target="_blank" rel="noopener">tr:method</a>子元素来配置事物的细节。<br>** 配置<a href="tr:advice" target="_blank" rel="noopener">tr:advice</a>重点是配置<a href="tx:method" target="_blank" rel="noopener">tx:method</a>子元素 **</p>
-<p>2）声明式事物管理</p>
-<p>案例</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">// 转账</span><br><span class="line">	package com.itheima.jdbc;</span><br><span class="line"></span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">public interface AccountDao &#123;</span><br><span class="line">	// 添加</span><br><span class="line">	public int addAccount(Account account);</span><br><span class="line">	// 更新</span><br><span class="line">	public int updateAccount(Account account);</span><br><span class="line">	// 删除</span><br><span class="line">	public int deleteAccount(int id);</span><br><span class="line">	</span><br><span class="line">	// 通过id查询</span><br><span class="line">	public Account findAccountById(int id);</span><br><span class="line">	// 查询所有账户</span><br><span class="line">	public List&lt;Account&gt; findAllAccount();</span><br><span class="line">	</span><br><span class="line">	// 转账</span><br><span class="line">	public void transfer(String outUser,String inUser,Double money);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@org.junit.Test</span><br><span class="line">	public void mainTest() &#123;</span><br><span class="line">//		// 加载配置文件</span><br><span class="line">//		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);</span><br><span class="line">//		// 获取JdbcTemplate实例</span><br><span class="line">//		JdbcTemplate jdTemplate = (JdbcTemplate) applicationContext.getBean(&quot;jdbcTemplate&quot;);</span><br><span class="line">//		// 使用execute()方法执行SQL语句，创建用户账户管理表account</span><br><span class="line">//		jdTemplate.execute(&quot;create table account(&quot; + &quot;id int primary key auto_increment,&quot; + &quot;username varchar(50),&quot;</span><br><span class="line">//				+ &quot;balance double)&quot;);</span><br><span class="line">//		System.out.println(&quot;账户表account创建成功！&quot;);</span><br><span class="line"></span><br><span class="line">		Connection conn=null;</span><br><span class="line">		try</span><br><span class="line">		&#123;</span><br><span class="line">			Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);// 加载驱动程序，此次无需更改</span><br><span class="line">			System.out.println(&quot;registered success!&quot;);//输出registered success表示驱动加载成功</span><br><span class="line">			//创建对象连接，连接数据库，此例中employeedbms为数据库名，root为用户名，123456位密码，该三项均需根据实际情况进行修改，其它代码无需变动。注：确保数据库名、用户名和密码的准确性。</span><br><span class="line">//			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/spring?useSSL=false&amp;serverTimezone=UTC&quot;,&quot;root&quot;,&quot;123456&quot;);</span><br><span class="line">			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://127.0.0.1:3306/spring?useSSL=true&amp;serverTimezone=GMT&quot;, &quot;root&quot;, &quot;123456&quot;);</span><br><span class="line">			System.out.println(&quot;connection success!&quot;);//输出connection success表示数据库已成功连接</span><br><span class="line">			conn.close();</span><br><span class="line">		&#125;</span><br><span class="line">		catch(Exception e)</span><br><span class="line">		&#123;</span><br><span class="line">			System.out.println(e);</span><br><span class="line">		&#125;</span><br><span class="line">		finally&#123;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    ``` </span><br><span class="line"> 出现错误提示</span><br></pre></td></tr></table></figure>
+<p> java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">由于我用的是mySQL 8.0.18</span><br></pre></td></tr></table></figure><br> //下面这个命令可以查你的mysql版本<br> mysql -uroot -p<br> //打开MySQL也可以看到<br> //利用navicat连接mysql的客户端工具可以查看<br> //连接之后右键——详细信息<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">数据库连接要和5.x的版本不一样驱动也是不一样</span><br><span class="line"></span><br><span class="line">https://mvnrepository.com/</span><br><span class="line"></span><br><span class="line">到上面这个网站搜索 mysql-connector-java-8.0.18.jar</span><br><span class="line">下载后导入到项目中  不要只是拖进去 还需要去建立依赖 否则没法用</span><br><span class="line"></span><br><span class="line">比如idea，要在Project Structure 里面的Modules 对应下的项目中点+号导入驱动。</span><br><span class="line">再次运行传统的连接数据库代码 发现成功</span><br></pre></td></tr></table></figure><br>registered success!<br>connection success!</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">注释掉用用以下xml配置连接数据库，也是成功</span><br></pre></td></tr></table></figure>
+<?xml version="1.0" encoding="UTF-8"?>
+<p><beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans-4.3.xsd"><br>    <!-- 1配置数据源 --><br>    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"><br>        <!--数据库驱动 --><br>        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property></bean></beans></p>
+<!--        //com.mysql.jdbc.Driver-->
+<pre><code>    &lt;!--连接数据库的url --&gt;
+    &lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://localhost:3306/spring?serverTimezone=GMT&quot; /&gt;
+    &lt;!--连接数据库的用户名 --&gt;
+    &lt;property name=&quot;username&quot; value=&quot;root&quot; /&gt;
+    &lt;!--连接数据库的密码 --&gt;
+    &lt;property name=&quot;password&quot; value=&quot;123456&quot; /&gt;
+&lt;/bean&gt;
 
+&lt;/bean&gt;</code></pre>
+```
 
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.itheima.jdbc;</span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">import org.springframework.jdbc.core.BeanPropertyRowMapper;</span><br><span class="line">import org.springframework.jdbc.core.JdbcTemplate;</span><br><span class="line">import org.springframework.jdbc.core.RowMapper;</span><br><span class="line">public class AccountDaoImpl implements AccountDao &#123;</span><br><span class="line">	// 声明JdbcTemplate属性及其setter方法</span><br><span class="line">	private JdbcTemplate jdbcTemplate;</span><br><span class="line">	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) &#123;</span><br><span class="line">		this.jdbcTemplate = jdbcTemplate;</span><br><span class="line">	&#125;</span><br><span class="line">    // 添加账户</span><br><span class="line">	public int addAccount(Account account) &#123;</span><br><span class="line">		// 定义SQL</span><br><span class="line">		String sql = &quot;insert into account(id,username,balance) value(?,?,?)&quot;;</span><br><span class="line">		// 定义数组来存放SQL语句中的参数</span><br><span class="line">		Object[] obj = new Object[] &#123;</span><br><span class="line">				           account.getId(),</span><br><span class="line">                           account.getUsername(), </span><br><span class="line">                           account.getBalance() </span><br><span class="line">         &#125;;</span><br><span class="line">		// 执行添加操作，返回的是受SQL语句影响的记录条数</span><br><span class="line">		int num = this.jdbcTemplate.update(sql, obj);</span><br><span class="line">		return num;</span><br><span class="line">	&#125;</span><br><span class="line">	// 更新账户</span><br><span class="line">	public int updateAccount(Account account) &#123;</span><br><span class="line">		// 定义SQL</span><br><span class="line">		String sql = &quot;update account set username=?,balance=? where id = ?&quot;;</span><br><span class="line">		// 定义数组来存放SQL语句中的参数</span><br><span class="line">		Object[] params = new Object[] &#123; </span><br><span class="line">                               account.getUsername(), </span><br><span class="line">                               account.getBalance(), </span><br><span class="line">                               account.getId() </span><br><span class="line">          &#125;;</span><br><span class="line">		// 执行添加操作，返回的是受SQL语句影响的记录条数</span><br><span class="line">		int num = this.jdbcTemplate.update(sql, params);</span><br><span class="line">		return num;</span><br><span class="line">	&#125;</span><br><span class="line">	// 删除账户</span><br><span class="line">	public int deleteAccount(int id) &#123;</span><br><span class="line">		// 定义SQL</span><br><span class="line">		String sql = &quot;delete  from account where id = ? &quot;;</span><br><span class="line">		// 执行添加操作，返回的是受SQL语句影响的记录条数</span><br><span class="line">		int num = this.jdbcTemplate.update(sql, id);</span><br><span class="line">		return num;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	// 通过id查询账户数据信息</span><br><span class="line">	public Account findAccountById(int id) &#123;</span><br><span class="line">	    //定义SQL语句</span><br><span class="line">	    String sql = &quot;select * from account where id = ?&quot;;</span><br><span class="line">	    // 创建一个新的BeanPropertyRowMapper对象</span><br><span class="line">	    RowMapper&lt;Account&gt; rowMapper = </span><br><span class="line">	new BeanPropertyRowMapper&lt;Account&gt;(Account.class);</span><br><span class="line">	    // 将id绑定到SQL语句中，并通过RowMapper返回一个Object类型的单行记录</span><br><span class="line">	    return this.jdbcTemplate.queryForObject(sql, rowMapper, id);</span><br><span class="line">	&#125;</span><br><span class="line">	// 查询所有账户信息</span><br><span class="line">	public List&lt;Account&gt; findAllAccount() &#123;</span><br><span class="line">	    // 定义SQL语句</span><br><span class="line">	    String sql = &quot;select * from account&quot;;</span><br><span class="line">	    // 创建一个新的BeanPropertyRowMapper对象</span><br><span class="line">	    RowMapper&lt;Account&gt; rowMapper = </span><br><span class="line">	new BeanPropertyRowMapper&lt;Account&gt;(Account.class);</span><br><span class="line">	    // 执行静态的SQL查询，并通过RowMapper返回结果</span><br><span class="line">	    return this.jdbcTemplate.query(sql, rowMapper);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>修改配置文件applicationContext.xml</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;</span><br><span class="line">    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; </span><br><span class="line">    xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;</span><br><span class="line">    xmlns:tx=&quot;http://www.springframework.org/schema/tx&quot; </span><br><span class="line">    xmlns:context=&quot;http://www.springframework.org/schema/context&quot;</span><br><span class="line">    xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans </span><br><span class="line">    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd</span><br><span class="line">    http://www.springframework.org/schema/tx </span><br><span class="line">    http://www.springframework.org/schema/tx/spring-tx-4.3.xsd</span><br><span class="line">    http://www.springframework.org/schema/context </span><br><span class="line">    http://www.springframework.org/schema/context/spring-context-4.3.xsd</span><br><span class="line">    http://www.springframework.org/schema/aop </span><br><span class="line">    http://www.springframework.org/schema/aop/spring-aop-4.3.xsd&quot;&gt;</span><br><span class="line">    &lt;!-- 1.配置数据源 --&gt;</span><br><span class="line">    &lt;bean id=&quot;dataSource&quot; </span><br><span class="line">    class=&quot;org.springframework.jdbc.datasource.DriverManagerDataSource&quot;&gt;</span><br><span class="line">		&lt;!--数据库驱动 --&gt;</span><br><span class="line">		&lt;property name=&quot;driverClassName&quot; value=&quot;com.mysql.jdbc.Driver&quot; /&gt;</span><br><span class="line">		&lt;!--连接数据库的url --&gt;</span><br><span class="line">		&lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://localhost/spring&quot; /&gt;</span><br><span class="line">		&lt;!--连接数据库的用户名 --&gt;</span><br><span class="line">		&lt;property name=&quot;username&quot; value=&quot;root&quot; /&gt;</span><br><span class="line">		&lt;!--连接数据库的密码 --&gt;</span><br><span class="line">		&lt;property name=&quot;password&quot; value=&quot;root&quot; /&gt;</span><br><span class="line">   &lt;/bean&gt;</span><br><span class="line">   &lt;!-- 2.配置JDBC模板 --&gt;</span><br><span class="line">   &lt;bean id=&quot;jdbcTemplate&quot; </span><br><span class="line">          class=&quot;org.springframework.jdbc.core.JdbcTemplate&quot;&gt;</span><br><span class="line">		 &lt;!-- 默认必须使用数据源 --&gt;</span><br><span class="line">		 &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt;</span><br><span class="line">   &lt;/bean&gt;</span><br><span class="line">   &lt;!--3.定义id为accountDao的Bean --&gt;</span><br><span class="line">   &lt;bean id=&quot;accountDao&quot; class=&quot;com.itheima.jdbc.AccountDaoImpl&quot;&gt;</span><br><span class="line">		 &lt;!-- 将jdbcTemplate注入到AccountDao实例中 --&gt;</span><br><span class="line">		 &lt;property name=&quot;jdbcTemplate&quot; ref=&quot;jdbcTemplate&quot; /&gt;</span><br><span class="line">   &lt;/bean&gt;	</span><br><span class="line">   &lt;!-- 4.事务管理器，依赖于数据源 --&gt;</span><br><span class="line">   &lt;bean id=&quot;transactionManager&quot; class=</span><br><span class="line">   &quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;&gt;</span><br><span class="line">		&lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt;</span><br><span class="line">   &lt;/bean&gt;	</span><br><span class="line">   &lt;!-- 5.编写通知：对事务进行增强(通知),需要编写对切入点和具体执行事务细节 --&gt;</span><br><span class="line">   &lt;tx:advice id=&quot;txAdvice&quot; transaction-manager=&quot;transactionManager&quot;&gt;</span><br><span class="line">		&lt;tx:attributes&gt;</span><br><span class="line">			&lt;!-- name：*表示任意方法名称 --&gt;</span><br><span class="line">			&lt;tx:method name=&quot;*&quot; propagation=&quot;REQUIRED&quot; </span><br><span class="line">                           isolation=&quot;DEFAULT&quot; read-only=&quot;false&quot; /&gt;</span><br><span class="line">		&lt;/tx:attributes&gt;</span><br><span class="line">	&lt;/tx:advice&gt;</span><br><span class="line">	&lt;!-- 6.编写aop，让spring自动对目标生成代理，需要使用AspectJ的表达式 --&gt;</span><br><span class="line">	&lt;aop:config&gt;</span><br><span class="line">		&lt;!-- 切入点 --&gt;</span><br><span class="line">		&lt;aop:pointcut expression=&quot;execution(* com.itheima.jdbc.*.*(..))&quot;</span><br><span class="line">			id=&quot;txPointCut&quot; /&gt;</span><br><span class="line">		&lt;!-- 切面：将切入点与通知整合 --&gt;</span><br><span class="line">		&lt;aop:advisor advice-ref=&quot;txAdvice&quot; pointcut-ref=&quot;txPointCut&quot; /&gt;</span><br><span class="line">	&lt;/aop:config&gt;</span><br><span class="line">&lt;/beans&gt;</span><br></pre></td></tr></table></figure>
-
-
-<h6 id="测试类"><a href="#测试类" class="headerlink" title="测试类"></a>测试类</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.itheima.jdbc;</span><br><span class="line">import org.junit.Test;</span><br><span class="line">import org.springframework.context.ApplicationContext;</span><br><span class="line">import </span><br><span class="line">org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line">//测试类</span><br><span class="line">public class TransactionTest &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	@Test</span><br><span class="line">	public void xmlTest()&#123;</span><br><span class="line">		ApplicationContext applicationContext = </span><br><span class="line">		   new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);</span><br><span class="line">		// 获取AccountDao实例</span><br><span class="line">		AccountDao accountDao = </span><br><span class="line">            (AccountDao)applicationContext.getBean(&quot;accountDao&quot;);</span><br><span class="line">		// 调用实例中的转账方法</span><br><span class="line">		accountDao.transfer(&quot;Jack&quot;, &quot;Rose&quot;, 100.0);</span><br><span class="line">	    // 输出提示信息</span><br><span class="line">	    System.out.println(&quot;转账成功！&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	@Test</span><br><span class="line">	public void annotationTest()&#123;</span><br><span class="line">	    ApplicationContext applicationContext = </span><br><span class="line">	new ClassPathXmlApplicationContext(&quot;applicationContext-annotation.xml&quot;);</span><br><span class="line">	    // 获取AccountDao实例</span><br><span class="line">	    AccountDao accountDao = </span><br><span class="line">	(AccountDao)applicationContext.getBean(&quot;accountDao&quot;);</span><br><span class="line">	    // 调用实例中的转账方法</span><br><span class="line">	    accountDao.transfer(&quot;Jack&quot;, &quot;Rose&quot;, 100.0);</span><br><span class="line">	    // 输出提示信息</span><br><span class="line">	    System.out.println(&quot;转账成功！&quot;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+<p>end</p>
+]]></content>
       <categories>
-        <category>Spring</category>
+        <category>踩坑</category>
       </categories>
       <tags>
-        <tag>Spring事物管理</tag>
+        <tag>Spring</tag>
+        <tag>数据库</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>计算机组成原理测试习题整理【一】（含答案解析）</title>
-    <url>/2019/11/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E4%B9%A0%E9%A2%98%E8%AE%AD%E7%BB%83%EF%BC%88%E5%90%AB%E7%AD%94%E6%A1%88%E8%A7%A3%E6%9E%90%EF%BC%89/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E4%B9%A0%E9%A2%98%E8%AE%AD%E7%BB%83%EF%BC%88%E5%90%AB%E7%AD%94%E6%A1%88%E8%A7%A3%E6%9E%90%EF%BC%89/</url>
-    <content><![CDATA[<p>目前共整理了三章</p>
-<a id="more"></a>
-
-
-<h3 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机问世至今，新型机器不断推陈出新，不管怎样更新，依然保有“存储程序”的概念，最早提出这种概念的是______。</span><br><span class="line"></span><br><span class="line">A冯. 诺依曼</span><br><span class="line">B巴贝奇</span><br><span class="line">C贝尔</span><br><span class="line">D帕斯卡</span><br><span class="line"></span><br><span class="line">A</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.邮局把信件进行自动分拣，使用的计算机技术是______。</span><br><span class="line"></span><br><span class="line">A</span><br><span class="line"> 机器证明</span><br><span class="line">B</span><br><span class="line">自然语言理解</span><br><span class="line">C</span><br><span class="line">计算机辅助设计</span><br><span class="line">D</span><br><span class="line">机器翻译</span><br><span class="line">E</span><br><span class="line">模式识别</span><br><span class="line">F</span><br><span class="line">自动控制</span><br><span class="line"></span><br><span class="line">E</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">2. 计算机科技文献中，英文缩写CAI代表______。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">A</span><br><span class="line">计算机辅助管理</span><br><span class="line">B</span><br><span class="line">计算机辅助设计</span><br><span class="line">C</span><br><span class="line">计算机辅助加工</span><br><span class="line">D</span><br><span class="line">计算机辅助制造</span><br><span class="line">E</span><br><span class="line">计算机辅助教学</span><br><span class="line">F</span><br><span class="line">计算机辅助学习</span><br><span class="line"></span><br><span class="line">E</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">微型计算机的发展以______技术为指标。</span><br><span class="line"></span><br><span class="line">微处理器</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机中常以主频来评价机器的性能。以下为主频单位的是______。</span><br><span class="line"></span><br><span class="line">MHz</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机运算速度的单位是______。</span><br><span class="line"></span><br><span class="line">MIPS</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1946年研制成功的第一台电子数字计算机称为______，1949年研制成功的第一台程序内存的计算机称为______。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ENIAC， EDVAC</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机与日常使用的袖珍计算器的本质区别在于______。</span><br><span class="line"></span><br><span class="line">自动化程度的高低</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">下列______属于应用软件。</span><br><span class="line"></span><br><span class="line">文本处理</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">操作系统最现出现在_______。</span><br><span class="line">第3代计算机</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">至今为止，计算机中的所有信息仍以二进制方式表示的理由是______。</span><br><span class="line"></span><br><span class="line">###物理器件性能所至</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CPU主要包括______。</span><br><span class="line">控制器、运算器</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">完整的计算机应包括______。</span><br><span class="line"></span><br><span class="line">配套的硬件设备和软件系统</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">目前我们所说的个人台式商用机属于_______。</span><br><span class="line">###微型机</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ENIAC属于晶体管计算机</span><br><span class="line">F</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">编译方式是使用编译程序把源程序编译成机器代码的目标程序</span><br><span class="line">T</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机唯一能够直接执行的语言是机器语言</span><br><span class="line">T</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">用高级语言编写的程序称为目标程序</span><br><span class="line"></span><br><span class="line">F</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">冯诺依曼计算机体系结构的特点是什么？</span><br><span class="line">1、处理的数据和指令一律二进制</span><br><span class="line">2、顺序执行程序</span><br><span class="line">3、采用存储程序的方式</span><br><span class="line">4、计算机硬件由 运算器 、控制器、存储器、输入、输出设备五大部分组成</span><br><span class="line">5、用总线控制</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机的主要性能指标有哪些？它们的具体含义是什么？</span><br><span class="line"> 运算速度、字长、内存储器的容量、外存储器的容量、主频</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算机的硬件由哪些部件组成？</span><br><span class="line"> 控制器、存储器、输入设备、输出设备、运算器</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">简要说明计算机系统的层次结构</span><br><span class="line"> 1、硬联逻辑级</span><br><span class="line">2、微程序级</span><br><span class="line">3、传统机器级</span><br><span class="line">4、操作系统</span><br><span class="line">5、汇编语言级</span><br><span class="line">6、高级语言级</span><br><span class="line">7、应用语言级</span><br></pre></td></tr></table></figure>
-
-<h3 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h3><h2 id><a href="#" class="headerlink" title="?"></a>?</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">通常把表示信息的数字符号称为什么？</span><br><span class="line"></span><br><span class="line">数码</span><br><span class="line"></span><br><span class="line">以下叙述错误的是______。</span><br><span class="line">A</span><br><span class="line">表示信息的数字符号称为代码</span><br><span class="line">B</span><br><span class="line">任何进制的数据都有基数和各位的”位权”</span><br><span class="line">C</span><br><span class="line">二进制数据的加减运算规则与逻辑加运算规则相同</span><br><span class="line">D</span><br><span class="line"> 8进制数据逢八进一 </span><br><span class="line"> </span><br><span class="line"> 正确答案：C ?????</span><br><span class="line"> (加法运算,其运算等价于两个数字的十进制数相加后转换成二进制,而逻辑运算是按位计算)</span><br></pre></td></tr></table></figure>
-
-<h3 id="zy★"><a href="#zy★" class="headerlink" title="zy★"></a>zy★</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">一种BCD码，其中0－9的编码为0000，0001，0010，0011，0100，0101，0110，0111，1110，1111，则各位的权值为______。</span><br><span class="line"></span><br><span class="line">2421</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在小型或微型计算机里，普遍采用的字符编码是______。</span><br><span class="line"></span><br><span class="line"> ASCⅡ码</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">根据国标规定，每个汉字在计算机内占用______存储。</span><br><span class="line">二个字节</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">十进制分数27/64的十六进制数表示为______。</span><br><span class="line">0.6CH</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">假定下列字符码中有奇偶校验位，但没有数据错误，采用偶校校验的字符码是______。</span><br><span class="line">11001001</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">假定下列字符码中有奇偶校验位，但没有数据错误，采用偶校校验的字符码是______。</span><br><span class="line"></span><br><span class="line">11001001</span><br></pre></td></tr></table></figure>
-<h3 id="ct★"><a href="#ct★" class="headerlink" title="ct★"></a>ct★</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">若浮点数的机器表示中，尾数用补码表示，则判断该浮点数是否为规格化的方法是尾数的最高数值位______。 </span><br><span class="line"></span><br><span class="line">与尾符相反 </span><br><span class="line">【数符为0，这个数就是正数，正数补码就是其本身，其最高有效位(阶码使用标准移码的话规格化后尾数最高有效位就是小数点后第一位)必定为1，数符0和最高有效位的1相异。</span><br><span class="line"></span><br><span class="line">数符为1，这个数就是个负数，求负数的补码有一步叫按位取反(一般来说浮点数可以存储的有效位不会小于6位)，原本最高有效位的1变成了0，所以数符1和最高有效位的0相异。）】</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在机器数______中，零的表示形式是唯一的。</span><br><span class="line"></span><br><span class="line">补码和移码</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">指令和数据都以十进制形式存放，（2000）10化成十六进制数是______。</span><br><span class="line"></span><br><span class="line">（7D0）16  </span><br><span class="line">【二进制转十六进制的时候要右移左边补0】</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">下列数中最小的数是______。</span><br><span class="line"></span><br><span class="line">A</span><br><span class="line">（100010）BCD </span><br><span class="line">B</span><br><span class="line">（100101）2     </span><br><span class="line">C</span><br><span class="line">（50）8      </span><br><span class="line">D</span><br><span class="line">（625）16</span><br><span class="line"></span><br><span class="line">A</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> 在定点二进制运算器中，减法运算一般通过______来实现。</span><br><span class="line"></span><br><span class="line">补码运算的二进制加法器</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">下列数中最大的数为______。</span><br><span class="line"></span><br><span class="line">A</span><br><span class="line">（143）5</span><br><span class="line">B</span><br><span class="line">（76）8 </span><br><span class="line">C</span><br><span class="line">（10010101）2    </span><br><span class="line">D</span><br><span class="line">（227）8  </span><br><span class="line"></span><br><span class="line">D</span><br><span class="line">[143 -&gt; 1*5^2+4*5^1+3*5^0=(48)10进制 -》110000二进制]</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">下列叙述正确的是______。</span><br><span class="line"></span><br><span class="line">A</span><br><span class="line"> 定点数表示的是整数</span><br><span class="line">B</span><br><span class="line">对一个数据的原码的各位取反而且在末位再加1就可以得到这个数据的补码</span><br><span class="line">C</span><br><span class="line">原码是表示无符号数的编码方法</span><br><span class="line">D</span><br><span class="line">二进制数据表示在计算机中容易实现</span><br><span class="line"></span><br><span class="line">D</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在余3码表示的二-十进制数中，代码0011代表十进制数的______。</span><br><span class="line"></span><br><span class="line">0</span><br><span class="line">[余3码 :余3码是8421 BCD码的每个码组加3(0011)形成的。常用于BCD码的运算电路中。 ]</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">设X= —0.1011，则[X]补为______。</span><br><span class="line"></span><br><span class="line">1.0101</span><br></pre></td></tr></table></figure>
-
-<h2 id="ct★-1"><a href="#ct★-1" class="headerlink" title="ct★"></a>ct★</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">______表示法主要用于表示浮点数中的阶码</span><br><span class="line"></span><br><span class="line">移码</span><br><span class="line">【移码（又叫增码）是符号位取反的补码，一般用指数的移码减去1来做浮点数的阶码，引入的目的是为了保证浮点数的机器零为全0。】</span><br><span class="line"></span><br><span class="line">【原码：1001101，反码，补码，移码各是多少？</span><br><span class="line"></span><br><span class="line">解：首位数字表示正负不做变（1为负数，0为正数）</span><br><span class="line"></span><br><span class="line">反码：1110010（正数反码等于原数，题中为负数，则除首位数对应取反）</span><br><span class="line"></span><br><span class="line">补码：1110011（得出反码数基础上末位加一）</span><br><span class="line"></span><br><span class="line">移码：0110011（补码符号位第一位数字取反）</span><br><span class="line">】</span><br></pre></td></tr></table></figure>
-<h2 id="zy★-1"><a href="#zy★-1" class="headerlink" title="zy★"></a>zy★</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">一个8位的二进制整数，若采用补码表示，且由3个“1”和5个“0”组成，则最小值为______。</span><br><span class="line"></span><br><span class="line"> -125</span><br><span class="line"> 【首先反推补码应该是：10000011</span><br><span class="line">  源码则为11111101 即-125</span><br><span class="line"> 】</span><br></pre></td></tr></table></figure>
-<p>##到23题</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在小型机运算器中，通过移位器对一个通用寄存器中存放的一个正定点数进行乘2操作（假定乘2后不会溢出），其方法是将该寄存器中的数据送入ALU，经移位器______。</span><br><span class="line"></span><br><span class="line">A左移1位</span><br><span class="line">B右移1位</span><br><span class="line">C左移2位</span><br><span class="line">D右移2位</span><br><span class="line"></span><br><span class="line">A</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">若存储器的容量为128KX8位，求：(1)访问该芯片需要多少位地址？(2)假定该芯片在存储器中首地址为A0000H，则末地址应为多少？</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
 </search>
