@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>pavlov技术分享(捂脸)</title>
+    <url>/2020/05/12/avlov%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB-%E6%8D%82%E8%84%B8/</url>
+    <content><![CDATA[<p>皮一下很开心</p>
+<a id="more"></a>
+
+<h3 id="手枪"><a href="#手枪" class="headerlink" title="手枪"></a>手枪</h3><video src="http://q9uen5wtx.bkt.clouddn.com/%E6%85%A2%E5%8A%A8%E4%BD%9C%E6%89%8B%E6%9E%AA.mp4" controls="controls" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;">
+your browser does not support the video tag
+</video>
+
+<h3 id="m4a1自动步枪"><a href="#m4a1自动步枪" class="headerlink" title="m4a1自动步枪"></a>m4a1自动步枪</h3><video src="http://q9uen5wtx.bkt.clouddn.com/%5Bpavlov%5DDie.mp4" controls="controls" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;">
+your browser does not support the video tag
+</video>
+
+<p>千钧一发 不是你Die就是我Die</p>
+<h3 id="完整版"><a href="#完整版" class="headerlink" title="完整版"></a>完整版</h3><p><a href="https://www.bilibili.com/video/BV1jQ4y1N7gj" target="_blank" rel="noopener">【VR放鞭炮】《Pavlov》爆头有种打气球的感觉</a></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>持枪要平滑移动 远距离一定要双手持枪</p>
+<p>快速分析先瞄准哪个方向</p>
+<p>已经到身边就不要再近距离机瞄瞄准应该马上切换为体态瞄准（自己瞎想的词）</p>
+<p>枪法 = 感觉 + 眼神好</p>
+]]></content>
+  </entry>
+  <entry>
     <title>7天前端面试复习（5.1-5.8）</title>
     <url>/2020/04/30/7%E5%A4%A9%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0%EF%BC%885.1-5.8%EF%BC%89/</url>
     <content><![CDATA[<p>由于才疏学浅本博客大部分内容都是引用其他大佬的博客<br>主要是为了方便复习和理解~</p>
@@ -418,27 +440,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[踩坑玄学]隐身[&amp;nbsp]</title>
-    <url>/2020/05/05/%E5%9D%91%E7%8E%84%E5%AD%A6-%E9%9A%90%E8%BA%AB-nbsp/</url>
-    <content><![CDATA[<p>具体如下</p>
-<video src="http://q9uen5wtx.bkt.clouddn.com/%E7%8E%84%E5%AD%A6%EF%BC%9F.mp4" controls="controls" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;">
-your browser does not support the video tag
-</video>
-
-<a id="more"></a>
-
-<p>空格把left div顶到下一行了。</p>
-<p>我删掉left div前面的空格就好了  之后就算再空格也不会影响，可能是极少数情况下编译器存在隐身的&amp;nbsp?  left div  左边少了一根线可能就是有个隐身的&amp;nbsp[捂脸哭]</p>
-]]></content>
-      <categories>
-        <category>VSCode</category>
-      </categories>
-      <tags>
-        <tag>踩坑</tag>
-        <tag>空格占位</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>vue</title>
     <url>/2020/05/02/page/</url>
     <content><![CDATA[<h3 id="Vue-实现数据双向绑定的原理"><a href="#Vue-实现数据双向绑定的原理" class="headerlink" title="Vue 实现数据双向绑定的原理"></a>Vue 实现数据双向绑定的原理</h3><a id="more"></a>
@@ -513,6 +514,102 @@ your browser does not support the video tag
 ]]></content>
   </entry>
   <entry>
+    <title>SpringBoot统一响应体（基于lombok）</title>
+    <url>/2020/05/11/pringBoot%E7%BB%9F%E4%B8%80%E5%93%8D%E5%BA%94%E4%BD%93%EF%BC%88%E5%9F%BA%E4%BA%8Elombok%EF%BC%89/</url>
+    <content><![CDATA[<p>抽点时间总结一下springBoot统一响应体，感觉以后会比较常用吧<br>由于是写给后端技术比较菜的（自己），所以会比较细，方便复习和理解。</p>
+<a id="more"></a>
+
+<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>1.HTTP状态码无法很好地表示业务中遇到的异常情况，通过修改响应返回的JSON数据，让其带上一些固有的字段</p>
+<p>关键属性：</p>
+<ul>
+<li>code为返回结果的状态码</li>
+<li>msg为返回结果的消息</li>
+<li>data为返回的业务数据</li>
+</ul>
+<p>2.不限制返回类型，返回的响应都有统一的响应格式</p>
+<p>3.代替基于AOP的实现方案（通过切面表达式+注解控制切点的Controller）<br>基于注解，而不需要修改AOP切面表达式。</p>
+<h3 id="方案思路"><a href="#方案思路" class="headerlink" title="方案思路"></a>方案思路</h3><p>选择使用Spring的Controller增强机制，其中关键的类为以下3个：</p>
+<ul>
+<li>@ControllerAdvice：类注解，用于指定Controller增强处理器类。</li>
+<li>ResponseBodyAdvice：接口，实现后beforeBodyWrite()方法后可以对响应的body进行修改，需要结合@ControllerAdvice使用。</li>
+<li>@ExceptionHandler：方法注解，用于指定异常处理方法，需要结合@ControllerAdvice和@ResponseBody使用。</li>
+</ul>
+<p>为了提高生产效率不做重复工作，这里再介绍一下Lombok</p>
+<p>lombok 提供了简单的注解的形式来帮助我们简化消除一些必须有但显得很臃肿的 java 代码。通过使用对应的注解，可以在编译源码的时候生成对应的方法，所以不会影响任何运行效率。</p>
+<p>用到如下注解：</p>
+<ul>
+<li>@Slf4j ：注解在类上；根据用户实际使用的日志框架生成log日志对象。</li>
+<li>@Data<br>使用这个注解，就不用再去手写Getter,Setter,equals,canEqual,hasCode,toString等方法了，注解后在编译时会自动加进去。</li>
+<li>@AllArgsConstructor<br>使用后添加一个构造函数，该构造函数含有所有已声明字段属性参数</li>
+<li>@NoArgsConstructor<br>使用后创建一个无参构造函数</li>
+<li>@Builder<br>关于Builder较为复杂一些，Builder的作用之一是为了解决在某个类有很多构造函数的情况，也省去写很多构造函数的麻烦，在设计模式中的思想是：用一个内部类去实例化一个对象，避免一个类出现过多构造函数，</li>
+</ul>
+<p>使用lombok可能会遇到注解失效的问题（我就遇到了）<br><a href="https://blog.csdn.net/qq_35868412/article/details/93137304" target="_blank" rel="noopener">解决办法</a></p>
+<p>再推荐个给用eclipise 的工具：OpenExplorer<a href="https://github.com/samsonw/OpenExplorer/downloads" target="_blank" rel="noopener">点我下载最新版</a></p>
+<p>放到eclipise的 plugins文件夹里，重启就可以用了</p>
+<h3 id="关键代码"><a href="#关键代码" class="headerlink" title="关键代码"></a>关键代码</h3><h4 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&lt;dependencies&gt;</span><br><span class="line">        &lt;!--web-starter--&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!--lombok--&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;lombok&lt;/artifactId&gt;</span><br><span class="line">            &lt;optional&gt;true&lt;/optional&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!--test-starter--&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span><br><span class="line">            &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">    &lt;/dependencies&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Controller增强后统一响应体对应的对象"><a href="#Controller增强后统一响应体对应的对象" class="headerlink" title="Controller增强后统一响应体对应的对象"></a>Controller增强后统一响应体对应的对象</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.springboot.response;</span><br><span class="line"></span><br><span class="line">import java.io.Serializable;</span><br><span class="line"></span><br><span class="line">import lombok.AllArgsConstructor;</span><br><span class="line">import lombok.Data;</span><br><span class="line"></span><br><span class="line">@Data</span><br><span class="line">@AllArgsConstructor</span><br><span class="line">public class ResponseResult implements Serializable&#123;</span><br><span class="line"></span><br><span class="line">	/**</span><br><span class="line">     * 返回的状态码</span><br><span class="line">     */</span><br><span class="line">    private Integer code;</span><br><span class="line">    /**</span><br><span class="line">     * 返回的信息</span><br><span class="line">     */</span><br><span class="line">    private String msg;</span><br><span class="line">    /**</span><br><span class="line">     * 返回的数据</span><br><span class="line">     */</span><br><span class="line">    private Object data;</span><br><span class="line"></span><br><span class="line">	public ResponseResult(Integer code2, String msg2, Object body) &#123;</span><br><span class="line">		// TODO Auto-generated constructor stub</span><br><span class="line">		this.code=code2;</span><br><span class="line">		this.msg = msg2;</span><br><span class="line">		this.data = body;</span><br><span class="line">	&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="统一响应注解-是否开启统一响应增强的注解"><a href="#统一响应注解-是否开启统一响应增强的注解" class="headerlink" title="统一响应注解 (是否开启统一响应增强的注解)"></a>统一响应注解 (是否开启统一响应增强的注解)</h4><p>添加注解后，统一响应体才能生效</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.springboot.response;</span><br><span class="line"></span><br><span class="line">import java.lang.annotation.ElementType;</span><br><span class="line">import java.lang.annotation.Retention;</span><br><span class="line">import java.lang.annotation.RetentionPolicy;</span><br><span class="line">import java.lang.annotation.Target;</span><br><span class="line"></span><br><span class="line">//统一响应注解--自定义注解。</span><br><span class="line">@Retention(RetentionPolicy.RUNTIME)  //运行时生效</span><br><span class="line">@Target(&#123;ElementType.METHOD, ElementType.TYPE&#125;) // 用于描述注解的使用范围</span><br><span class="line">public @interface BaseResponse &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="状态码枚举"><a href="#状态码枚举" class="headerlink" title="状态码枚举"></a>状态码枚举</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public enum ResponseCode &#123;</span><br><span class="line">SUCCESS(100, &quot;success&quot;),</span><br><span class="line">RESOURCES_NOT_EXIST(101, &quot;资源不存在&quot;),</span><br><span class="line">//看业务来吧</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><p>最好补补基础有助于理解代码<br><a href="https://baijiahao.baidu.com/s?id=1660216833170469764&wfr=spider&for=pc" target="_blank" rel="noopener">Java基础之异常处理机制</a></p>
+<h4 id="业务异常类"><a href="#业务异常类" class="headerlink" title="业务异常类"></a>业务异常类</h4><p>业务异常类是用于识别业务相关的异常，<br>异常类强制需要以ResponseCode作为构造方法入参，这样可以通过捕获异常获得返回的状态码信息</p>
+<p>关于这块需要重点理解</p>
+<p>否则会出现明明一切正常，返回结果确是异常的返回体。<br>比如我就遇到了👇<br>NullPointerException：空指针异常，一般当对象为null的时候，对该对象做操作时会出现该异常；</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.springboot.errorhandle.exception;</span><br><span class="line"></span><br><span class="line">import com.springboot.response.ResponseCode;</span><br><span class="line"></span><br><span class="line">import lombok.Data;</span><br><span class="line">import lombok.EqualsAndHashCode;</span><br><span class="line"></span><br><span class="line">// 业务异常类，继承运行时异常，确保事务正常回滚</span><br><span class="line">@Data</span><br><span class="line">@EqualsAndHashCode(callSuper = false)</span><br><span class="line">public class BaseException extends RuntimeException&#123;</span><br><span class="line"></span><br><span class="line">    private ResponseCode code;</span><br><span class="line"></span><br><span class="line">    public BaseException(ResponseCode code) &#123;</span><br><span class="line">        this.code = code;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public BaseException(Throwable cause, ResponseCode code) &#123;</span><br><span class="line">        super(cause);</span><br><span class="line">        this.code = code;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.springboot.errorhandle.exception;</span><br><span class="line"></span><br><span class="line">import org.springframework.web.bind.annotation.ControllerAdvice;</span><br><span class="line">import org.springframework.web.bind.annotation.ExceptionHandler;</span><br><span class="line">import org.springframework.web.bind.annotation.ResponseBody;</span><br><span class="line"></span><br><span class="line">import com.springboot.response.BaseResponse;</span><br><span class="line">import com.springboot.response.ResponseCode;</span><br><span class="line">import com.springboot.response.ResponseResult;</span><br><span class="line"></span><br><span class="line">import lombok.extern.slf4j.Slf4j;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 异常处理器</span><br><span class="line"></span><br><span class="line"> */</span><br><span class="line">@ControllerAdvice(annotations = BaseResponse.class)</span><br><span class="line">@ResponseBody</span><br><span class="line">@Slf4j</span><br><span class="line">public class ExceptionHandlerAdvice &#123;</span><br><span class="line">    /**</span><br><span class="line">     * 处理未捕获的Exception</span><br><span class="line">     * @param e 异常</span><br><span class="line">     * @return 统一响应体</span><br><span class="line">     */</span><br><span class="line">    @ExceptionHandler(Exception.class)</span><br><span class="line">    public ResponseResult handleException(Exception e)&#123;</span><br><span class="line">//        log.error(e.getMessage(),e);</span><br><span class="line">    	System.out.println(e.getMessage());</span><br><span class="line">    	System.out.println(e);</span><br><span class="line">    	System.out.println(&quot;3&quot;);</span><br><span class="line">        return new ResponseResult(ResponseCode.SERVICE_ERROR.getCode(),ResponseCode.SERVICE_ERROR.getMsg(),null);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 处理未捕获的RuntimeException</span><br><span class="line">     * @param e 运行时异常</span><br><span class="line">     * @return 统一响应体</span><br><span class="line">     */</span><br><span class="line">    @ExceptionHandler(RuntimeException.class)</span><br><span class="line">    public ResponseResult handleRuntimeException(RuntimeException e)&#123;</span><br><span class="line">//        log.error(e.getMessage(),e);</span><br><span class="line">    	System.out.println(&quot;2&quot;);</span><br><span class="line">        return new ResponseResult(ResponseCode.SERVICE_ERROR.getCode(),ResponseCode.SERVICE_ERROR.getMsg(),null);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 处理业务异常BaseException</span><br><span class="line">     * @param e 业务异常</span><br><span class="line">     * @return 统一响应体</span><br><span class="line">     */</span><br><span class="line">    @ExceptionHandler(CustomException.class)</span><br><span class="line">    public ResponseResult handleBaseException(CustomException e)&#123;</span><br><span class="line">//        log.error(e.getMessage(),e);</span><br><span class="line">        ResponseCode code=e.getCode();</span><br><span class="line">        System.out.println(&quot;1&quot;);</span><br><span class="line">        return new ResponseResult(code.getCode(),code.getMsg(),null);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="ControllerAdvice"><a href="#ControllerAdvice" class="headerlink" title="ControllerAdvice"></a>ControllerAdvice</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.springboot.advice;</span><br><span class="line"></span><br><span class="line">import org.springframework.core.MethodParameter;</span><br><span class="line">import org.springframework.http.server.ServerHttpRequest;</span><br><span class="line">import org.springframework.http.server.ServerHttpResponse;</span><br><span class="line">import org.springframework.web.bind.annotation.ControllerAdvice;</span><br><span class="line">import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;</span><br><span class="line"></span><br><span class="line">import com.springboot.response.BaseResponse;</span><br><span class="line">import com.springboot.response.ResponseCode;</span><br><span class="line">import com.springboot.response.ResponseResult;</span><br><span class="line"></span><br><span class="line">import lombok.extern.slf4j.Slf4j;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">import org.springframework.http.MediaType;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//如果全部异常处理都返回json，那么可以使用 @RestControllerAdvice 代替 @ControllerAdvice </span><br><span class="line">//这样在方法上就可以不需要添加 @ResponseBody。@RestControllerAdvice在注解上已经添加了@ResponseBody。</span><br><span class="line"></span><br><span class="line">//注：ControllerAdvice注解 只拦截Controller 不回拦截 Interceptor的异常</span><br><span class="line">@ControllerAdvice(annotations = BaseResponse.class)</span><br><span class="line">@Slf4j</span><br><span class="line">public class ResponseResultHandlerAdvice implements ResponseBodyAdvice&#123;</span><br><span class="line">	</span><br><span class="line">	private static final String logExceptionFormat = &quot;Capture Exception By GlobalExceptionHandler: Code: %s Detail: %s&quot;;</span><br><span class="line">    private static Logger log = LoggerFactory.getLogger(ResponseResultHandlerAdvice.class);</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">    public boolean supports(MethodParameter returnType, Class converterType) &#123;</span><br><span class="line"></span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public Object beforeBodyWrite(Object body, MethodParameter returnType,</span><br><span class="line">			org.springframework.http.MediaType selectedContentType, Class selectedConverterType,</span><br><span class="line">			ServerHttpRequest request, ServerHttpResponse response) &#123;</span><br><span class="line">		// TODO Auto-generated method stub</span><br><span class="line">		 if(body instanceof ResponseResult)&#123; // 如果响应返回的对象为统一响应体，则直接返回body</span><br><span class="line"></span><br><span class="line">             return body;</span><br><span class="line">         &#125;else&#123;</span><br><span class="line">             // 只有正常返回的结果才会进入这个判断流程，所以返回正常成功的状态码</span><br><span class="line">             ResponseResult responseResult =new ResponseResult(ResponseCode.SUCCESS.getCode(),ResponseCode.SUCCESS.getMsg(),body);</span><br><span class="line">			 System.out.println(&quot;return responseResult&quot;);</span><br><span class="line">             return responseResult;</span><br><span class="line">         &#125;</span><br><span class="line">		</span><br><span class="line">     </span><br><span class="line">     // 非JSON格式body直接返回即可</span><br><span class="line">//     return body;</span><br><span class="line">	&#125; </span><br><span class="line">	  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ok 这样我们在需要统一返回体的controller中加入@BaseResponse<br>就可以啦</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@BaseResponse</span><br><span class="line">@RestController</span><br><span class="line">public class UserController &#123;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="END"><a href="#END" class="headerlink" title="END"></a>END</h2>]]></content>
+  </entry>
+  <entry>
+    <title>[踩坑玄学]隐身[&amp;nbsp]</title>
+    <url>/2020/05/05/%E5%9D%91%E7%8E%84%E5%AD%A6-%E9%9A%90%E8%BA%AB-nbsp/</url>
+    <content><![CDATA[<p>具体如下</p>
+<video src="http://q9uen5wtx.bkt.clouddn.com/%E7%8E%84%E5%AD%A6%EF%BC%9F.mp4" controls="controls" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;">
+your browser does not support the video tag
+</video>
+
+<a id="more"></a>
+
+<p>空格把left div顶到下一行了。</p>
+<p>我删掉left div前面的空格就好了  之后就算再空格也不会影响，可能是极少数情况下编译器存在隐身的&amp;nbsp?  left div  左边少了一根线可能就是有个隐身的&amp;nbsp[捂脸哭]</p>
+]]></content>
+      <categories>
+        <category>VSCode</category>
+      </categories>
+      <tags>
+        <tag>踩坑</tag>
+        <tag>空格占位</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>小程序重力感应Uav实现</title>
+    <url>/2020/05/12/%E7%A8%8B%E5%BA%8F%E9%87%8D%E5%8A%9B%E6%84%9F%E5%BA%94%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<h3 id="效果如下"><a href="#效果如下" class="headerlink" title="效果如下"></a>效果如下</h3><video src="http://q9uen5wtx.bkt.clouddn.com/%E9%87%8D%E5%8A%9B%E6%84%9F%E5%BA%94Uav.mp4" controls="controls" style="max-width: 100%;max-height:500px; display: block; margin-left: auto; margin-right: auto;">
+your browser does not support the video tag
+</video>
+
+<a id="more"></a>
+
+<p>直接贴代码吧</p>
+<h3 id="wxml"><a href="#wxml" class="headerlink" title="wxml"></a>wxml</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;image class=&quot;img&quot; style=&quot;-webkit-transition: transform .5s ease-out;-webkit-transform:translate3d(&#123;&#123;transformX&#125;&#125;px,&#123;&#123;transformY&#125;&#125;px,0)&quot; src=&quot;/Images/start1/whiteUav.png&quot;&gt;&lt;/image&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h3> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"> data: &#123;</span><br><span class="line"> transformX:0,</span><br><span class="line"> transformY:0,</span><br><span class="line">   &#125;,</span><br><span class="line">   </span><br><span class="line">let obj = this;</span><br><span class="line">   var transformX = obj.data.transformX;</span><br><span class="line">   var transformY = obj.data.transformY;  //Y轴平移</span><br><span class="line">   wx.onAccelerometerChange(function (res) &#123;</span><br><span class="line">     console.log(res.x)</span><br><span class="line">     // console.log(res.y)</span><br><span class="line">     // console.log(res.z)</span><br><span class="line">     if (res.x &gt; 0) &#123;</span><br><span class="line">       transformX += 10;</span><br><span class="line">     &#125;</span><br><span class="line">     else if (res.x &lt; 0) &#123;</span><br><span class="line">       transformX -= 10;</span><br><span class="line">     &#125;</span><br><span class="line">     if (res.y &gt; 0) &#123;                     //Y轴平移</span><br><span class="line">       transformY -= 10;</span><br><span class="line">     &#125;</span><br><span class="line">     else if (res.y &lt; 0) &#123;</span><br><span class="line">       transformY += 10;</span><br><span class="line">     &#125;</span><br><span class="line">     if (transformY &gt; 220) &#123;    //限定下边界</span><br><span class="line">       transformY -= 10;</span><br><span class="line">     &#125;else if (transformY &lt; -300) &#123;  //限定上边界</span><br><span class="line">       transformY += 10;</span><br><span class="line">     &#125;</span><br><span class="line">     if (transformX &gt; 200) &#123;            //限定右边界</span><br><span class="line">       transformX -= 10;</span><br><span class="line">     &#125; else if (transformX &lt; -100) &#123;   //限定左边界</span><br><span class="line">       transformX += 10;</span><br><span class="line">     &#125;</span><br><span class="line">     obj.setData(&#123;</span><br><span class="line">       transformX: transformX,</span><br><span class="line">       transformY:transformY</span><br><span class="line">     &#125;)</span><br><span class="line">   &#125;)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>Spring 的事务管理</title>
     <url>/2019/11/11/Spring-%E7%9A%84%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/Spring-%E7%9A%84%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/</url>
     <content><![CDATA[<p>实际开发中，操作数据库时还会涉及事物管理问题，为此Spring提供了专门用于事务处理的API。</p>
@@ -552,41 +649,6 @@ your browser does not support the video tag
       </categories>
       <tags>
         <tag>Spring事物管理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>成功解决java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver</title>
-    <url>/2019/11/13/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/</url>
-    <content><![CDATA[<p>用Spring 通过applicationContext连接mySql</p>
-<p>发现报错  于是改回传统方式尝试连接 代码如下</p>
-<a id="more"></a>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@org.junit.Test</span><br><span class="line">	public void mainTest() &#123;</span><br><span class="line">//		// 加载配置文件</span><br><span class="line">//		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);</span><br><span class="line">//		// 获取JdbcTemplate实例</span><br><span class="line">//		JdbcTemplate jdTemplate = (JdbcTemplate) applicationContext.getBean(&quot;jdbcTemplate&quot;);</span><br><span class="line">//		// 使用execute()方法执行SQL语句，创建用户账户管理表account</span><br><span class="line">//		jdTemplate.execute(&quot;create table account(&quot; + &quot;id int primary key auto_increment,&quot; + &quot;username varchar(50),&quot;</span><br><span class="line">//				+ &quot;balance double)&quot;);</span><br><span class="line">//		System.out.println(&quot;账户表account创建成功！&quot;);</span><br><span class="line"></span><br><span class="line">		Connection conn=null;</span><br><span class="line">		try</span><br><span class="line">		&#123;</span><br><span class="line">			Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);// 加载驱动程序，此次无需更改</span><br><span class="line">			System.out.println(&quot;registered success!&quot;);//输出registered success表示驱动加载成功</span><br><span class="line">			//创建对象连接，连接数据库，此例中employeedbms为数据库名，root为用户名，123456位密码，该三项均需根据实际情况进行修改，其它代码无需变动。注：确保数据库名、用户名和密码的准确性。</span><br><span class="line">//			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/spring?useSSL=false&amp;serverTimezone=UTC&quot;,&quot;root&quot;,&quot;123456&quot;);</span><br><span class="line">			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://127.0.0.1:3306/spring?useSSL=true&amp;serverTimezone=GMT&quot;, &quot;root&quot;, &quot;123456&quot;);</span><br><span class="line">			System.out.println(&quot;connection success!&quot;);//输出connection success表示数据库已成功连接</span><br><span class="line">			conn.close();</span><br><span class="line">		&#125;</span><br><span class="line">		catch(Exception e)</span><br><span class="line">		&#123;</span><br><span class="line">			System.out.println(e);</span><br><span class="line">		&#125;</span><br><span class="line">		finally&#123;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    ``` </span><br><span class="line"> 出现错误提示</span><br></pre></td></tr></table></figure>
-<p> java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">由于我用的是mySQL 8.0.18</span><br></pre></td></tr></table></figure><br> //下面这个命令可以查你的mysql版本<br> mysql -uroot -p<br> //打开MySQL也可以看到<br> //利用navicat连接mysql的客户端工具可以查看<br> //连接之后右键——详细信息<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">数据库连接要和5.x的版本不一样驱动也是不一样</span><br><span class="line"></span><br><span class="line">https://mvnrepository.com/</span><br><span class="line"></span><br><span class="line">到上面这个网站搜索 mysql-connector-java-8.0.18.jar</span><br><span class="line">下载后导入到项目中  不要只是拖进去 还需要去建立依赖 否则没法用</span><br><span class="line"></span><br><span class="line">比如idea，要在Project Structure 里面的Modules 对应下的项目中点+号导入驱动。</span><br><span class="line">再次运行传统的连接数据库代码 发现成功</span><br></pre></td></tr></table></figure><br>registered success!<br>connection success!</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">注释掉用用以下xml配置连接数据库，也是成功</span><br></pre></td></tr></table></figure>
-<?xml version="1.0" encoding="UTF-8"?>
-<p><beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.springframework.org/schema/beans 
-     http://www.springframework.org/schema/beans/spring-beans-4.3.xsd"><br>    <!-- 1配置数据源 --><br>    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"><br>        <!--数据库驱动 --><br>        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property></bean></beans></p>
-<!--        //com.mysql.jdbc.Driver-->
-<pre><code>    &lt;!--连接数据库的url --&gt;
-    &lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://localhost:3306/spring?serverTimezone=GMT&quot; /&gt;
-    &lt;!--连接数据库的用户名 --&gt;
-    &lt;property name=&quot;username&quot; value=&quot;root&quot; /&gt;
-    &lt;!--连接数据库的密码 --&gt;
-    &lt;property name=&quot;password&quot; value=&quot;123456&quot; /&gt;
-&lt;/bean&gt;
-
-&lt;/bean&gt;</code></pre>
-```
-
-<p>end</p>
-]]></content>
-      <categories>
-        <category>踩坑</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -857,78 +919,38 @@ your browser does not support the video tag
       </tags>
   </entry>
   <entry>
-    <title>小程序重力感应Uav实现</title>
-    <url>/2020/05/12/%E7%A8%8B%E5%BA%8F%E9%87%8D%E5%8A%9B%E6%84%9F%E5%BA%94%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<h3 id="效果如下"><a href="#效果如下" class="headerlink" title="效果如下"></a>效果如下</h3><video src="http://q9uen5wtx.bkt.clouddn.com/%E9%87%8D%E5%8A%9B%E6%84%9F%E5%BA%94Uav.mp4" controls="controls" style="max-width: 100%;max-height:500px; display: block; margin-left: auto; margin-right: auto;">
-your browser does not support the video tag
-</video>
-
+    <title>成功解决java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver</title>
+    <url>/2019/11/13/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3java-lang-ClassNotFoundException-com-mysql-cj-jdbc-Driver/</url>
+    <content><![CDATA[<p>用Spring 通过applicationContext连接mySql</p>
+<p>发现报错  于是改回传统方式尝试连接 代码如下</p>
 <a id="more"></a>
 
-<p>直接贴代码吧</p>
-<h3 id="wxml"><a href="#wxml" class="headerlink" title="wxml"></a>wxml</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;image class=&quot;img&quot; style=&quot;-webkit-transition: transform .5s ease-out;-webkit-transform:translate3d(&#123;&#123;transformX&#125;&#125;px,&#123;&#123;transformY&#125;&#125;px,0)&quot; src=&quot;/Images/start1/whiteUav.png&quot;&gt;&lt;/image&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@org.junit.Test</span><br><span class="line">	public void mainTest() &#123;</span><br><span class="line">//		// 加载配置文件</span><br><span class="line">//		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);</span><br><span class="line">//		// 获取JdbcTemplate实例</span><br><span class="line">//		JdbcTemplate jdTemplate = (JdbcTemplate) applicationContext.getBean(&quot;jdbcTemplate&quot;);</span><br><span class="line">//		// 使用execute()方法执行SQL语句，创建用户账户管理表account</span><br><span class="line">//		jdTemplate.execute(&quot;create table account(&quot; + &quot;id int primary key auto_increment,&quot; + &quot;username varchar(50),&quot;</span><br><span class="line">//				+ &quot;balance double)&quot;);</span><br><span class="line">//		System.out.println(&quot;账户表account创建成功！&quot;);</span><br><span class="line"></span><br><span class="line">		Connection conn=null;</span><br><span class="line">		try</span><br><span class="line">		&#123;</span><br><span class="line">			Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);// 加载驱动程序，此次无需更改</span><br><span class="line">			System.out.println(&quot;registered success!&quot;);//输出registered success表示驱动加载成功</span><br><span class="line">			//创建对象连接，连接数据库，此例中employeedbms为数据库名，root为用户名，123456位密码，该三项均需根据实际情况进行修改，其它代码无需变动。注：确保数据库名、用户名和密码的准确性。</span><br><span class="line">//			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/spring?useSSL=false&amp;serverTimezone=UTC&quot;,&quot;root&quot;,&quot;123456&quot;);</span><br><span class="line">			conn = (Connection) DriverManager.getConnection(&quot;jdbc:mysql://127.0.0.1:3306/spring?useSSL=true&amp;serverTimezone=GMT&quot;, &quot;root&quot;, &quot;123456&quot;);</span><br><span class="line">			System.out.println(&quot;connection success!&quot;);//输出connection success表示数据库已成功连接</span><br><span class="line">			conn.close();</span><br><span class="line">		&#125;</span><br><span class="line">		catch(Exception e)</span><br><span class="line">		&#123;</span><br><span class="line">			System.out.println(e);</span><br><span class="line">		&#125;</span><br><span class="line">		finally&#123;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    ``` </span><br><span class="line"> 出现错误提示</span><br></pre></td></tr></table></figure>
+<p> java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">由于我用的是mySQL 8.0.18</span><br></pre></td></tr></table></figure><br> //下面这个命令可以查你的mysql版本<br> mysql -uroot -p<br> //打开MySQL也可以看到<br> //利用navicat连接mysql的客户端工具可以查看<br> //连接之后右键——详细信息<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">数据库连接要和5.x的版本不一样驱动也是不一样</span><br><span class="line"></span><br><span class="line">https://mvnrepository.com/</span><br><span class="line"></span><br><span class="line">到上面这个网站搜索 mysql-connector-java-8.0.18.jar</span><br><span class="line">下载后导入到项目中  不要只是拖进去 还需要去建立依赖 否则没法用</span><br><span class="line"></span><br><span class="line">比如idea，要在Project Structure 里面的Modules 对应下的项目中点+号导入驱动。</span><br><span class="line">再次运行传统的连接数据库代码 发现成功</span><br></pre></td></tr></table></figure><br>registered success!<br>connection success!</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">注释掉用用以下xml配置连接数据库，也是成功</span><br></pre></td></tr></table></figure>
+<?xml version="1.0" encoding="UTF-8"?>
+<p><beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans-4.3.xsd"><br>    <!-- 1配置数据源 --><br>    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"><br>        <!--数据库驱动 --><br>        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property></bean></beans></p>
+<!--        //com.mysql.jdbc.Driver-->
+<pre><code>    &lt;!--连接数据库的url --&gt;
+    &lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://localhost:3306/spring?serverTimezone=GMT&quot; /&gt;
+    &lt;!--连接数据库的用户名 --&gt;
+    &lt;property name=&quot;username&quot; value=&quot;root&quot; /&gt;
+    &lt;!--连接数据库的密码 --&gt;
+    &lt;property name=&quot;password&quot; value=&quot;123456&quot; /&gt;
+&lt;/bean&gt;
 
-<h3 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h3> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"> data: &#123;</span><br><span class="line"> transformX:0,</span><br><span class="line"> transformY:0,</span><br><span class="line">   &#125;,</span><br><span class="line">   </span><br><span class="line">let obj = this;</span><br><span class="line">   var transformX = obj.data.transformX;</span><br><span class="line">   var transformY = obj.data.transformY;  //Y轴平移</span><br><span class="line">   wx.onAccelerometerChange(function (res) &#123;</span><br><span class="line">     console.log(res.x)</span><br><span class="line">     // console.log(res.y)</span><br><span class="line">     // console.log(res.z)</span><br><span class="line">     if (res.x &gt; 0) &#123;</span><br><span class="line">       transformX += 10;</span><br><span class="line">     &#125;</span><br><span class="line">     else if (res.x &lt; 0) &#123;</span><br><span class="line">       transformX -= 10;</span><br><span class="line">     &#125;</span><br><span class="line">     if (res.y &gt; 0) &#123;                     //Y轴平移</span><br><span class="line">       transformY -= 10;</span><br><span class="line">     &#125;</span><br><span class="line">     else if (res.y &lt; 0) &#123;</span><br><span class="line">       transformY += 10;</span><br><span class="line">     &#125;</span><br><span class="line">     if (transformY &gt; 220) &#123;    //限定下边界</span><br><span class="line">       transformY -= 10;</span><br><span class="line">     &#125;else if (transformY &lt; -300) &#123;  //限定上边界</span><br><span class="line">       transformY += 10;</span><br><span class="line">     &#125;</span><br><span class="line">     if (transformX &gt; 200) &#123;            //限定右边界</span><br><span class="line">       transformX -= 10;</span><br><span class="line">     &#125; else if (transformX &lt; -100) &#123;   //限定左边界</span><br><span class="line">       transformX += 10;</span><br><span class="line">     &#125;</span><br><span class="line">     obj.setData(&#123;</span><br><span class="line">       transformX: transformX,</span><br><span class="line">       transformY:transformY</span><br><span class="line">     &#125;)</span><br><span class="line">   &#125;)</span><br></pre></td></tr></table></figure>
+&lt;/bean&gt;</code></pre>
+```
 
+<p>end</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>SpringBoot统一响应体（基于lombok）</title>
-    <url>/2020/05/11/pringBoot%E7%BB%9F%E4%B8%80%E5%93%8D%E5%BA%94%E4%BD%93%EF%BC%88%E5%9F%BA%E4%BA%8Elombok%EF%BC%89/</url>
-    <content><![CDATA[<p>抽点时间总结一下springBoot统一响应体，感觉以后会比较常用吧<br>由于是写给后端技术比较菜的（自己），所以会比较细，方便复习和理解。</p>
-<a id="more"></a>
-
-<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>1.HTTP状态码无法很好地表示业务中遇到的异常情况，通过修改响应返回的JSON数据，让其带上一些固有的字段</p>
-<p>关键属性：</p>
-<ul>
-<li>code为返回结果的状态码</li>
-<li>msg为返回结果的消息</li>
-<li>data为返回的业务数据</li>
-</ul>
-<p>2.不限制返回类型，返回的响应都有统一的响应格式</p>
-<p>3.代替基于AOP的实现方案（通过切面表达式+注解控制切点的Controller）<br>基于注解，而不需要修改AOP切面表达式。</p>
-<h3 id="方案思路"><a href="#方案思路" class="headerlink" title="方案思路"></a>方案思路</h3><p>选择使用Spring的Controller增强机制，其中关键的类为以下3个：</p>
-<ul>
-<li>@ControllerAdvice：类注解，用于指定Controller增强处理器类。</li>
-<li>ResponseBodyAdvice：接口，实现后beforeBodyWrite()方法后可以对响应的body进行修改，需要结合@ControllerAdvice使用。</li>
-<li>@ExceptionHandler：方法注解，用于指定异常处理方法，需要结合@ControllerAdvice和@ResponseBody使用。</li>
-</ul>
-<p>为了提高生产效率不做重复工作，这里再介绍一下Lombok</p>
-<p>lombok 提供了简单的注解的形式来帮助我们简化消除一些必须有但显得很臃肿的 java 代码。通过使用对应的注解，可以在编译源码的时候生成对应的方法，所以不会影响任何运行效率。</p>
-<p>用到如下注解：</p>
-<ul>
-<li>@Slf4j ：注解在类上；根据用户实际使用的日志框架生成log日志对象。</li>
-<li>@Data<br>使用这个注解，就不用再去手写Getter,Setter,equals,canEqual,hasCode,toString等方法了，注解后在编译时会自动加进去。</li>
-<li>@AllArgsConstructor<br>使用后添加一个构造函数，该构造函数含有所有已声明字段属性参数</li>
-<li>@NoArgsConstructor<br>使用后创建一个无参构造函数</li>
-<li>@Builder<br>关于Builder较为复杂一些，Builder的作用之一是为了解决在某个类有很多构造函数的情况，也省去写很多构造函数的麻烦，在设计模式中的思想是：用一个内部类去实例化一个对象，避免一个类出现过多构造函数，</li>
-</ul>
-<p>使用lombok可能会遇到注解失效的问题（我就遇到了）<br><a href="https://blog.csdn.net/qq_35868412/article/details/93137304" target="_blank" rel="noopener">解决办法</a></p>
-<p>再推荐个给用eclipise 的工具：OpenExplorer<a href="https://github.com/samsonw/OpenExplorer/downloads" target="_blank" rel="noopener">点我下载最新版</a></p>
-<p>放到eclipise的 plugins文件夹里，重启就可以用了</p>
-<h3 id="关键代码"><a href="#关键代码" class="headerlink" title="关键代码"></a>关键代码</h3><h4 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&lt;dependencies&gt;</span><br><span class="line">        &lt;!--web-starter--&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!--lombok--&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;lombok&lt;/artifactId&gt;</span><br><span class="line">            &lt;optional&gt;true&lt;/optional&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!--test-starter--&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span><br><span class="line">            &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">    &lt;/dependencies&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="Controller增强后统一响应体对应的对象"><a href="#Controller增强后统一响应体对应的对象" class="headerlink" title="Controller增强后统一响应体对应的对象"></a>Controller增强后统一响应体对应的对象</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.springboot.response;</span><br><span class="line"></span><br><span class="line">import java.io.Serializable;</span><br><span class="line"></span><br><span class="line">import lombok.AllArgsConstructor;</span><br><span class="line">import lombok.Data;</span><br><span class="line"></span><br><span class="line">@Data</span><br><span class="line">@AllArgsConstructor</span><br><span class="line">public class ResponseResult implements Serializable&#123;</span><br><span class="line"></span><br><span class="line">	/**</span><br><span class="line">     * 返回的状态码</span><br><span class="line">     */</span><br><span class="line">    private Integer code;</span><br><span class="line">    /**</span><br><span class="line">     * 返回的信息</span><br><span class="line">     */</span><br><span class="line">    private String msg;</span><br><span class="line">    /**</span><br><span class="line">     * 返回的数据</span><br><span class="line">     */</span><br><span class="line">    private Object data;</span><br><span class="line"></span><br><span class="line">	public ResponseResult(Integer code2, String msg2, Object body) &#123;</span><br><span class="line">		// TODO Auto-generated constructor stub</span><br><span class="line">		this.code=code2;</span><br><span class="line">		this.msg = msg2;</span><br><span class="line">		this.data = body;</span><br><span class="line">	&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="统一响应注解-是否开启统一响应增强的注解"><a href="#统一响应注解-是否开启统一响应增强的注解" class="headerlink" title="统一响应注解 (是否开启统一响应增强的注解)"></a>统一响应注解 (是否开启统一响应增强的注解)</h4><p>添加注解后，统一响应体才能生效</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.springboot.response;</span><br><span class="line"></span><br><span class="line">import java.lang.annotation.ElementType;</span><br><span class="line">import java.lang.annotation.Retention;</span><br><span class="line">import java.lang.annotation.RetentionPolicy;</span><br><span class="line">import java.lang.annotation.Target;</span><br><span class="line"></span><br><span class="line">//统一响应注解--自定义注解。</span><br><span class="line">@Retention(RetentionPolicy.RUNTIME)  //运行时生效</span><br><span class="line">@Target(&#123;ElementType.METHOD, ElementType.TYPE&#125;) // 用于描述注解的使用范围</span><br><span class="line">public @interface BaseResponse &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="状态码枚举"><a href="#状态码枚举" class="headerlink" title="状态码枚举"></a>状态码枚举</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public enum ResponseCode &#123;</span><br><span class="line">SUCCESS(100, &quot;success&quot;),</span><br><span class="line">RESOURCES_NOT_EXIST(101, &quot;资源不存在&quot;),</span><br><span class="line">//看业务来吧</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><p>最好补补基础有助于理解代码<br><a href="https://baijiahao.baidu.com/s?id=1660216833170469764&wfr=spider&for=pc" target="_blank" rel="noopener">Java基础之异常处理机制</a></p>
-<h4 id="业务异常类"><a href="#业务异常类" class="headerlink" title="业务异常类"></a>业务异常类</h4><p>业务异常类是用于识别业务相关的异常，<br>异常类强制需要以ResponseCode作为构造方法入参，这样可以通过捕获异常获得返回的状态码信息</p>
-<p>关于这块需要重点理解</p>
-<p>否则会出现明明一切正常，返回结果确是异常的返回体。<br>比如我就遇到了👇<br>NullPointerException：空指针异常，一般当对象为null的时候，对该对象做操作时会出现该异常；</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.springboot.errorhandle.exception;</span><br><span class="line"></span><br><span class="line">import com.springboot.response.ResponseCode;</span><br><span class="line"></span><br><span class="line">import lombok.Data;</span><br><span class="line">import lombok.EqualsAndHashCode;</span><br><span class="line"></span><br><span class="line">// 业务异常类，继承运行时异常，确保事务正常回滚</span><br><span class="line">@Data</span><br><span class="line">@EqualsAndHashCode(callSuper = false)</span><br><span class="line">public class BaseException extends RuntimeException&#123;</span><br><span class="line"></span><br><span class="line">    private ResponseCode code;</span><br><span class="line"></span><br><span class="line">    public BaseException(ResponseCode code) &#123;</span><br><span class="line">        this.code = code;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public BaseException(Throwable cause, ResponseCode code) &#123;</span><br><span class="line">        super(cause);</span><br><span class="line">        this.code = code;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.springboot.errorhandle.exception;</span><br><span class="line"></span><br><span class="line">import org.springframework.web.bind.annotation.ControllerAdvice;</span><br><span class="line">import org.springframework.web.bind.annotation.ExceptionHandler;</span><br><span class="line">import org.springframework.web.bind.annotation.ResponseBody;</span><br><span class="line"></span><br><span class="line">import com.springboot.response.BaseResponse;</span><br><span class="line">import com.springboot.response.ResponseCode;</span><br><span class="line">import com.springboot.response.ResponseResult;</span><br><span class="line"></span><br><span class="line">import lombok.extern.slf4j.Slf4j;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 异常处理器</span><br><span class="line"></span><br><span class="line"> */</span><br><span class="line">@ControllerAdvice(annotations = BaseResponse.class)</span><br><span class="line">@ResponseBody</span><br><span class="line">@Slf4j</span><br><span class="line">public class ExceptionHandlerAdvice &#123;</span><br><span class="line">    /**</span><br><span class="line">     * 处理未捕获的Exception</span><br><span class="line">     * @param e 异常</span><br><span class="line">     * @return 统一响应体</span><br><span class="line">     */</span><br><span class="line">    @ExceptionHandler(Exception.class)</span><br><span class="line">    public ResponseResult handleException(Exception e)&#123;</span><br><span class="line">//        log.error(e.getMessage(),e);</span><br><span class="line">    	System.out.println(e.getMessage());</span><br><span class="line">    	System.out.println(e);</span><br><span class="line">    	System.out.println(&quot;3&quot;);</span><br><span class="line">        return new ResponseResult(ResponseCode.SERVICE_ERROR.getCode(),ResponseCode.SERVICE_ERROR.getMsg(),null);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 处理未捕获的RuntimeException</span><br><span class="line">     * @param e 运行时异常</span><br><span class="line">     * @return 统一响应体</span><br><span class="line">     */</span><br><span class="line">    @ExceptionHandler(RuntimeException.class)</span><br><span class="line">    public ResponseResult handleRuntimeException(RuntimeException e)&#123;</span><br><span class="line">//        log.error(e.getMessage(),e);</span><br><span class="line">    	System.out.println(&quot;2&quot;);</span><br><span class="line">        return new ResponseResult(ResponseCode.SERVICE_ERROR.getCode(),ResponseCode.SERVICE_ERROR.getMsg(),null);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 处理业务异常BaseException</span><br><span class="line">     * @param e 业务异常</span><br><span class="line">     * @return 统一响应体</span><br><span class="line">     */</span><br><span class="line">    @ExceptionHandler(CustomException.class)</span><br><span class="line">    public ResponseResult handleBaseException(CustomException e)&#123;</span><br><span class="line">//        log.error(e.getMessage(),e);</span><br><span class="line">        ResponseCode code=e.getCode();</span><br><span class="line">        System.out.println(&quot;1&quot;);</span><br><span class="line">        return new ResponseResult(code.getCode(),code.getMsg(),null);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="ControllerAdvice"><a href="#ControllerAdvice" class="headerlink" title="ControllerAdvice"></a>ControllerAdvice</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.springboot.advice;</span><br><span class="line"></span><br><span class="line">import org.springframework.core.MethodParameter;</span><br><span class="line">import org.springframework.http.server.ServerHttpRequest;</span><br><span class="line">import org.springframework.http.server.ServerHttpResponse;</span><br><span class="line">import org.springframework.web.bind.annotation.ControllerAdvice;</span><br><span class="line">import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;</span><br><span class="line"></span><br><span class="line">import com.springboot.response.BaseResponse;</span><br><span class="line">import com.springboot.response.ResponseCode;</span><br><span class="line">import com.springboot.response.ResponseResult;</span><br><span class="line"></span><br><span class="line">import lombok.extern.slf4j.Slf4j;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">import org.springframework.http.MediaType;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//如果全部异常处理都返回json，那么可以使用 @RestControllerAdvice 代替 @ControllerAdvice </span><br><span class="line">//这样在方法上就可以不需要添加 @ResponseBody。@RestControllerAdvice在注解上已经添加了@ResponseBody。</span><br><span class="line"></span><br><span class="line">//注：ControllerAdvice注解 只拦截Controller 不回拦截 Interceptor的异常</span><br><span class="line">@ControllerAdvice(annotations = BaseResponse.class)</span><br><span class="line">@Slf4j</span><br><span class="line">public class ResponseResultHandlerAdvice implements ResponseBodyAdvice&#123;</span><br><span class="line">	</span><br><span class="line">	private static final String logExceptionFormat = &quot;Capture Exception By GlobalExceptionHandler: Code: %s Detail: %s&quot;;</span><br><span class="line">    private static Logger log = LoggerFactory.getLogger(ResponseResultHandlerAdvice.class);</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">    public boolean supports(MethodParameter returnType, Class converterType) &#123;</span><br><span class="line"></span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public Object beforeBodyWrite(Object body, MethodParameter returnType,</span><br><span class="line">			org.springframework.http.MediaType selectedContentType, Class selectedConverterType,</span><br><span class="line">			ServerHttpRequest request, ServerHttpResponse response) &#123;</span><br><span class="line">		// TODO Auto-generated method stub</span><br><span class="line">		 if(body instanceof ResponseResult)&#123; // 如果响应返回的对象为统一响应体，则直接返回body</span><br><span class="line"></span><br><span class="line">             return body;</span><br><span class="line">         &#125;else&#123;</span><br><span class="line">             // 只有正常返回的结果才会进入这个判断流程，所以返回正常成功的状态码</span><br><span class="line">             ResponseResult responseResult =new ResponseResult(ResponseCode.SUCCESS.getCode(),ResponseCode.SUCCESS.getMsg(),body);</span><br><span class="line">			 System.out.println(&quot;return responseResult&quot;);</span><br><span class="line">             return responseResult;</span><br><span class="line">         &#125;</span><br><span class="line">		</span><br><span class="line">     </span><br><span class="line">     // 非JSON格式body直接返回即可</span><br><span class="line">//     return body;</span><br><span class="line">	&#125; </span><br><span class="line">	  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>ok 这样我们在需要统一返回体的controller中加入@BaseResponse<br>就可以啦</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@BaseResponse</span><br><span class="line">@RestController</span><br><span class="line">public class UserController &#123;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="END"><a href="#END" class="headerlink" title="END"></a>END</h2>]]></content>
+      <categories>
+        <category>踩坑</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+        <tag>数据库</tag>
+      </tags>
   </entry>
 </search>
